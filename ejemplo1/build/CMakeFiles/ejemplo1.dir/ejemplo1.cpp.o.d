@@ -1,7 +1,6 @@
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: \
- /home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp \
- /usr/include/stdc-predef.h \
- /home/varo/robocomp4/examples/ejemplo1/ejemplo1.h \
+ /home/usuario/robomk/ejemplo1/ejemplo1.cpp /usr/include/stdc-predef.h \
+ /home/usuario/robomk/ejemplo1/ejemplo1.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -887,7 +886,7 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/include/ui_counterDlg.h \
+ /home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/include/ui_counterDlg.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -901,5 +900,8 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSlider \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h

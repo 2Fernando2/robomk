@@ -9,9 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "ejemplo1_autogen/timestamp" "custom" "ejemplo1_autogen/deps"
-  "/home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp" "CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o" "gcc" "CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d"
-  "/home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp" "CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d"
-  "/home/varo/robocomp4/examples/ejemplo1/main.cpp" "CMakeFiles/ejemplo1.dir/main.cpp.o" "gcc" "CMakeFiles/ejemplo1.dir/main.cpp.o.d"
+  "/home/usuario/robomk/ejemplo1/ejemplo1.cpp" "CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o" "gcc" "CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d"
+  "/home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp" "CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d"
+  "/home/usuario/robomk/ejemplo1/main.cpp" "CMakeFiles/ejemplo1.dir/main.cpp.o" "gcc" "CMakeFiles/ejemplo1.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

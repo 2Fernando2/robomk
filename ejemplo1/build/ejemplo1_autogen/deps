@@ -1,12 +1,12 @@
 ejemplo1_autogen/timestamp: \
-	/home/varo/robocomp4/examples/ejemplo1/CMakeLists.txt \
-	/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake \
-	/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
-	/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
-	/home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/moc_predefs.h \
-	/home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp \
-	/home/varo/robocomp4/examples/ejemplo1/ejemplo1.h \
-	/home/varo/robocomp4/examples/ejemplo1/main.cpp \
+	/home/usuario/robomk/ejemplo1/CMakeLists.txt \
+	/home/usuario/robomk/ejemplo1/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake \
+	/home/usuario/robomk/ejemplo1/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
+	/home/usuario/robomk/ejemplo1/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
+	/home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/moc_predefs.h \
+	/home/usuario/robomk/ejemplo1/ejemplo1.cpp \
+	/home/usuario/robomk/ejemplo1/ejemplo1.h \
+	/home/usuario/robomk/ejemplo1/main.cpp \
 	/usr/include/GL/gl.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
@@ -1001,5 +1001,5 @@ ejemplo1_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
-	/home/varo/robocomp4/examples/ejemplo1/counterDlg.ui \
+	/home/usuario/robomk/ejemplo1/counterDlg.ui \
 	/usr/bin/cmake

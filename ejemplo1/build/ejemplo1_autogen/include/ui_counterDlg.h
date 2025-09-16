@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +23,7 @@ class Ui_Counter
 public:
     QPushButton *button;
     QLCDNumber *lcdNumber;
+    QSlider *horizontalSlider;
 
     void setupUi(QWidget *Counter)
     {
@@ -30,10 +32,14 @@ public:
         Counter->resize(400, 300);
         button = new QPushButton(Counter);
         button->setObjectName("button");
-        button->setGeometry(QRect(80, 180, 251, 71));
+        button->setGeometry(QRect(80, 210, 251, 71));
         lcdNumber = new QLCDNumber(Counter);
         lcdNumber->setObjectName("lcdNumber");
         lcdNumber->setGeometry(QRect(50, 40, 301, 91));
+        horizontalSlider = new QSlider(Counter);
+        horizontalSlider->setObjectName("horizontalSlider");
+        horizontalSlider->setGeometry(QRect(39, 160, 321, 20));
+        horizontalSlider->setOrientation(Qt::Horizontal);
 
         retranslateUi(Counter);
 

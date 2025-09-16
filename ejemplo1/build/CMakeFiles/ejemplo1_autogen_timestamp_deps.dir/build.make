@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varo/robocomp4/examples/ejemplo1
+CMAKE_SOURCE_DIR = /home/usuario/robomk/ejemplo1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varo/robocomp4/examples/ejemplo1/build
+CMAKE_BINARY_DIR = /home/usuario/robomk/ejemplo1/build
 
 # Utility rule file for ejemplo1_autogen_timestamp_deps.
 
@@ -66,13 +66,13 @@ include CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
 CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
+CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
-CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Sql.so.6.4.2
+CMakeFiles/ejemplo1_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
 
 ejemplo1_autogen_timestamp_deps: CMakeFiles/ejemplo1_autogen_timestamp_deps
 ejemplo1_autogen_timestamp_deps: CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/build.make
@@ -87,6 +87,6 @@ CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/depend:
-	cd /home/varo/robocomp4/examples/ejemplo1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robocomp4/examples/ejemplo1 /home/varo/robocomp4/examples/ejemplo1 /home/varo/robocomp4/examples/ejemplo1/build /home/varo/robocomp4/examples/ejemplo1/build /home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/ejemplo1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1/build /home/usuario/robomk/ejemplo1/build /home/usuario/robomk/ejemplo1/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/depend
 

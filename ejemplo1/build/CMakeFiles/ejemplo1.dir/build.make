@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varo/robocomp4/examples/ejemplo1
+CMAKE_SOURCE_DIR = /home/usuario/robomk/ejemplo1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varo/robocomp4/examples/ejemplo1/build
+CMAKE_BINARY_DIR = /home/usuario/robomk/ejemplo1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ejemplo1.dir/depend.make
@@ -72,51 +72,51 @@ include CMakeFiles/ejemplo1.dir/flags.make
 ejemplo1_autogen/timestamp: /usr/lib/qt6/libexec/moc
 ejemplo1_autogen/timestamp: /usr/lib/qt6/libexec/uic
 ejemplo1_autogen/timestamp: CMakeFiles/ejemplo1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ejemplo1"
-	/usr/bin/cmake -E cmake_autogen /home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles/ejemplo1_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ejemplo1"
+	/usr/bin/cmake -E cmake_autogen /home/usuario/robomk/ejemplo1/build/CMakeFiles/ejemplo1_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/timestamp
 
 CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o: CMakeFiles/ejemplo1.dir/flags.make
 CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o: ejemplo1_autogen/mocs_compilation.cpp
 CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o: CMakeFiles/ejemplo1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o -c /home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o -c /home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp
 
 CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp > CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp > CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp -o CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/mocs_compilation.cpp -o CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: CMakeFiles/ejemplo1.dir/flags.make
-CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: /home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp
+CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: /home/usuario/robomk/ejemplo1/ejemplo1.cpp
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: CMakeFiles/ejemplo1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o -MF CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o -c /home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o -MF CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o -c /home/usuario/robomk/ejemplo1/ejemplo1.cpp
 
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp > CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/ejemplo1/ejemplo1.cpp > CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i
 
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robocomp4/examples/ejemplo1/ejemplo1.cpp -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/ejemplo1/ejemplo1.cpp -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s
 
 CMakeFiles/ejemplo1.dir/main.cpp.o: CMakeFiles/ejemplo1.dir/flags.make
-CMakeFiles/ejemplo1.dir/main.cpp.o: /home/varo/robocomp4/examples/ejemplo1/main.cpp
+CMakeFiles/ejemplo1.dir/main.cpp.o: /home/usuario/robomk/ejemplo1/main.cpp
 CMakeFiles/ejemplo1.dir/main.cpp.o: CMakeFiles/ejemplo1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ejemplo1.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ejemplo1.dir/main.cpp.o -MF CMakeFiles/ejemplo1.dir/main.cpp.o.d -o CMakeFiles/ejemplo1.dir/main.cpp.o -c /home/varo/robocomp4/examples/ejemplo1/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ejemplo1.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ejemplo1.dir/main.cpp.o -MF CMakeFiles/ejemplo1.dir/main.cpp.o.d -o CMakeFiles/ejemplo1.dir/main.cpp.o -c /home/usuario/robomk/ejemplo1/main.cpp
 
 CMakeFiles/ejemplo1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ejemplo1.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robocomp4/examples/ejemplo1/main.cpp > CMakeFiles/ejemplo1.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/ejemplo1/main.cpp > CMakeFiles/ejemplo1.dir/main.cpp.i
 
 CMakeFiles/ejemplo1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ejemplo1.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robocomp4/examples/ejemplo1/main.cpp -o CMakeFiles/ejemplo1.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/ejemplo1/main.cpp -o CMakeFiles/ejemplo1.dir/main.cpp.s
 
 # Object files for target ejemplo1
 ejemplo1_OBJECTS = \
@@ -139,7 +139,7 @@ ejemplo1: /usr/lib/x86_64-linux-gnu/libGLX.so
 ejemplo1: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 ejemplo1: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 ejemplo1: CMakeFiles/ejemplo1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ejemplo1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuario/robomk/ejemplo1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ejemplo1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ejemplo1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,6 +151,6 @@ CMakeFiles/ejemplo1.dir/clean:
 .PHONY : CMakeFiles/ejemplo1.dir/clean
 
 CMakeFiles/ejemplo1.dir/depend: ejemplo1_autogen/timestamp
-	cd /home/varo/robocomp4/examples/ejemplo1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robocomp4/examples/ejemplo1 /home/varo/robocomp4/examples/ejemplo1 /home/varo/robocomp4/examples/ejemplo1/build /home/varo/robocomp4/examples/ejemplo1/build /home/varo/robocomp4/examples/ejemplo1/build/CMakeFiles/ejemplo1.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/ejemplo1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1/build /home/usuario/robomk/ejemplo1/build /home/usuario/robomk/ejemplo1/build/CMakeFiles/ejemplo1.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ejemplo1.dir/depend
 

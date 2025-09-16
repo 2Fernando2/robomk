@@ -1,5 +1,5 @@
-/home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp: /home/varo/robocomp4/examples/ejemplo1/ejemplo1.h \
-  /home/varo/robocomp4/examples/ejemplo1/build/ejemplo1_autogen/moc_predefs.h \
+/home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp: /home/usuario/robomk/ejemplo1/ejemplo1.h \
+  /home/usuario/robomk/ejemplo1/build/ejemplo1_autogen/moc_predefs.h \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
