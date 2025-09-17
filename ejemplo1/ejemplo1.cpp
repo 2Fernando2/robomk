@@ -2,16 +2,22 @@
 
 ejemplo1::ejemplo1(): Ui_Counter()
 {
-	static int sliderValue = 0;
+	static int min = 100;
+	static int max = 500;
 
 	setupUi(this);
 	show();
 	connect(button, SIGNAL(clicked()), this, SLOT(doButton()) );
 
 	connect(&timer, SIGNAL(timeout()), this, SLOT(doCount()) );
-	timer.start(sliderValue);
+	connect(horizontalSlider, SIGNAL(valueChanged(int)), this, SLOT(doSlider(int)) );
 
-	connect(&slider, SIGNAL(valueChanged(int)), this, SLOT(doSlider()) );
+	lcdNumber_2->display(min);
+	horizontalSlider->setMinimum(min);
+	horizontalSlider->setMaximum(max);
+
+	horizontalSlider->setValue(lcdNumber_2->intValue());
+	timer.start(horizontalSlider->value());
 }
 
 void ejemplo1::doButton()
@@ -25,8 +31,10 @@ void ejemplo1::doCount()
 	lcdNumber->display(count++);
 }
 
-void ejemplo1::doSlider()
+void ejemplo1::doSlider(int value)
 {
-	timer.interval().setInterval(slider.tickInterval());
+    qDebug() << "doSlider!";
+	timer.setInterval(value);
+	lcdNumber_2->display(value);
 }
 

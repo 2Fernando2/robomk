@@ -1,0 +1,9 @@
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/ejemplo1.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/edit_cache.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/rebuild_cache.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/list_install_components.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/install.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/install/local.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/install/strip.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir
+/home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/ejemplo1_autogen.dir

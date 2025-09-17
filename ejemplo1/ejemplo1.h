@@ -13,11 +13,10 @@ class ejemplo1 : public QWidget, public Ui_Counter
     public slots:
         void doButton();
 		void doCount();
-		void doSlider();
+		void doSlider(int value);
 
 	private:
 		QTimer timer;
-		QSlider slider;
 
 };
 

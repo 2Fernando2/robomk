@@ -39,14 +39,33 @@
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
-     <x>39</x>
-     <y>160</y>
+     <x>40</x>
+     <y>150</y>
      <width>321</width>
      <height>20</height>
     </rect>
    </property>
+   <property name="minimum">
+    <number>20</number>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumber_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>180</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="intValue" stdset="0">
+    <number>20</number>
    </property>
   </widget>
  </widget>
