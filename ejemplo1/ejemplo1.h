@@ -17,6 +17,7 @@ class ejemplo1 : public QWidget, public Ui_Counter
 
 	private:
 		QTimer timer;
+		int count = 0;
 
 };
 

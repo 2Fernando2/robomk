@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>STOP</string>
+    <string>Reset</string>
    </property>
   </widget>
   <widget class="QLCDNumber" name="lcdNumber">

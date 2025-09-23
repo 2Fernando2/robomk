@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-f2ed4dd27538bdadbd96.json",
+					"jsonFile" : "directory-.-72a0138980bd60a707ac.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ejemplo1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ejemplo1-fcc2bc4e920c0c25a901.json",
+					"jsonFile" : "target-ejemplo1-d9e88192fefedace85d0.json",
 					"name" : "ejemplo1",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/varo/robocomp4/robomk/ejemplo1",
-		"source" : "/home/varo/robocomp4/robomk/ejemplo1"
+		"build" : "/home/usuario/robomk/ejemplo1",
+		"source" : "/home/usuario/robomk/ejemplo1"
 	},
 	"version" : 
 	{

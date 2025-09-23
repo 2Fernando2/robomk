@@ -3,9 +3,12 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -24,77 +27,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d5d1423-cca6-473a-95b9-54459321ca8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/QtSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QtSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Timer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cache-v2-5bb15a26d60a128665d6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cmakeFiles-v1-a1896f0d7113a6e2fe2f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/codemodel-v2-abb390bf201781971aa2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-.-f2ed4dd27538bdadbd96.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/index-2025-09-17T15-51-34-0703.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ejemplo1-fcc2bc4e920c0c25a901.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.qt/QtDeploySupport.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/.qt/QtDeploySupport.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/4.0.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/4.0.2/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/InstallScripts.json" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/InstallScripts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-Default-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/link.d" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/link.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/main.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/AutogenUsed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/.qt/QtDeploySupport.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/compiler_depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/compiler_depend.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/main.cpp.o.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/AutogenUsed.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/ParseCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/compiler_depend.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/compiler_depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/compiler_depend.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/include/ui_counterDlg.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/moc_predefs.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/mocs_compilation.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ejemplo1_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/counterDlg.ui" beforeDir="false" afterPath="$PROJECT_DIR$/counterDlg.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejemplo1" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejemplo1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejemplo1.h" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejemplo1_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1_autogen/deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejemplo1_autogen/include/ui_counterDlg.h" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1_autogen/include/ui_counterDlg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejemplo1_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1_autogen/moc_predefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,15 +102,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SandraMaldonado10"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/2Fernando2/robomk.git",
+    "accountId": "d6d68029-7f5d-4492-8eda-a4c4dd7aa4df"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Timer.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2025" />
     <option name="minorVersion" value="2.1" />
     <option name="productBranch" value="Classic" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="32pjCTQkesiI0q7I49HtYJUbZYt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -126,12 +135,14 @@
   "keyToString": {
     "CMake Application.ejemplo1.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
@@ -144,10 +155,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="ejemplo1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ejemplo1" TARGET_NAME="ejemplo1" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="ejemplo1" RUN_TARGET_NAME="ejemplo1">
@@ -164,6 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758124283653</updated>
       <workItem from="1758124285697" duration="3089000" />
+      <workItem from="1758635356051" duration="4765000" />
     </task>
     <servers />
   </component>

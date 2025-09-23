@@ -18,16 +18,21 @@ MACRO (QT_WRAP_UI output )
        ENDFOREACH( input_file)
        SET_PROPERTY(SOURCE ${${output}} PROPERTY SKIP_AUTOGEN ON)
 ENDMACRO(QT_WRAP_UI)
+set(CMAKE_CXX_STANDARD 23)
 
 include_directories(${QT_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})
 
 # Sources set
-SET ( SOURCES  ${SOURCES}  ejemplo1.cpp  main.cpp )
+SET ( SOURCES  ${SOURCES}  ejemplo1.cpp  main.cpp
+        Timer.h
+)
 # Headers set
 SET ( HEADERS  ${HEADERS} ejemplo1.h )
 
 SET( CMAKE_AUTOMOC ON )
 SET( CMAKE_AUTOUIC ON )
+
+add_definitions(-O3)
 
 # Specify construction and link process
 ADD_EXECUTABLE( ejemplo1 ${SOURCES} ${MOC_SOURCES} ${RC_SOURCES}  ${UI_HEADERS} )

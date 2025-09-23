@@ -252,13 +252,22 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: ejemplo1.cpp \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -297,6 +306,8 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: ejemplo1.cpp \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -1046,13 +1057,22 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o: ejemplo1_autoge
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -1091,6 +1111,8 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o: ejemplo1_autoge
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -1743,6 +1765,7 @@ CMakeFiles/ejemplo1.dir/main.cpp.o: main.cpp \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/limits \
@@ -1840,13 +1863,22 @@ CMakeFiles/ejemplo1.dir/main.cpp.o: main.cpp \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -1885,6 +1917,8 @@ CMakeFiles/ejemplo1.dir/main.cpp.o: main.cpp \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -2506,39 +2540,7 @@ CMakeFiles/ejemplo1.dir/main.cpp.o: main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h
 
-ejemplo1: /lib/i386-linux-gnu/libGLdispatch.so.0 \
-  /lib/i386-linux-gnu/libX11.so.6 \
-  /lib/i386-linux-gnu/libXau.so.6 \
-  /lib/i386-linux-gnu/libXdmcp.so.6 \
-  /lib/i386-linux-gnu/libbrotlicommon.so.1 \
-  /lib/i386-linux-gnu/libbrotlidec.so.1 \
-  /lib/i386-linux-gnu/libbsd.so.0 \
-  /lib/i386-linux-gnu/libbz2.so.1.0 \
-  /lib/i386-linux-gnu/libcap.so.2 \
-  /lib/i386-linux-gnu/libdbus-1.so.3 \
-  /lib/i386-linux-gnu/libexpat.so.1 \
-  /lib/i386-linux-gnu/libfontconfig.so.1 \
-  /lib/i386-linux-gnu/libfreetype.so.6 \
-  /lib/i386-linux-gnu/libgcrypt.so.20 \
-  /lib/i386-linux-gnu/libglib-2.0.so.0 \
-  /lib/i386-linux-gnu/libgomp.so.1 \
-  /lib/i386-linux-gnu/libgpg-error.so.0 \
-  /lib/i386-linux-gnu/libgraphite2.so.3 \
-  /lib/i386-linux-gnu/libharfbuzz.so.0 \
-  /lib/i386-linux-gnu/libicudata.so.74 \
-  /lib/i386-linux-gnu/libicui18n.so.74 \
-  /lib/i386-linux-gnu/libicuuc.so.74 \
-  /lib/i386-linux-gnu/liblz4.so.1 \
-  /lib/i386-linux-gnu/liblzma.so.5 \
-  /lib/i386-linux-gnu/libmd.so.0 \
-  /lib/i386-linux-gnu/libpcre2-8.so.0 \
-  /lib/i386-linux-gnu/libpng16.so.16 \
-  /lib/i386-linux-gnu/libsystemd.so.0 \
-  /lib/i386-linux-gnu/libxcb.so.1 \
-  /lib/i386-linux-gnu/libxkbcommon.so.0 \
-  /lib/i386-linux-gnu/libz.so.1 \
-  /lib/i386-linux-gnu/libzstd.so.1 \
-  /lib/x86_64-linux-gnu/libEGL.so.1 \
+ejemplo1: /lib/x86_64-linux-gnu/libEGL.so.1 \
   /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libQt6DBus.so.6 \
   /lib/x86_64-linux-gnu/libX11.so.6 \
@@ -2591,38 +2593,6 @@ ejemplo1: /lib/i386-linux-gnu/libGLdispatch.so.0 \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
-  /usr/lib/i386-linux-gnu/libGLdispatch.so.0 \
-  /usr/lib/i386-linux-gnu/libX11.so.6 \
-  /usr/lib/i386-linux-gnu/libXau.so.6 \
-  /usr/lib/i386-linux-gnu/libXdmcp.so.6 \
-  /usr/lib/i386-linux-gnu/libbrotlicommon.so.1 \
-  /usr/lib/i386-linux-gnu/libbrotlidec.so.1 \
-  /usr/lib/i386-linux-gnu/libbsd.so.0 \
-  /usr/lib/i386-linux-gnu/libbz2.so.1.0 \
-  /usr/lib/i386-linux-gnu/libcap.so.2 \
-  /usr/lib/i386-linux-gnu/libdbus-1.so.3 \
-  /usr/lib/i386-linux-gnu/libexpat.so.1 \
-  /usr/lib/i386-linux-gnu/libfontconfig.so.1 \
-  /usr/lib/i386-linux-gnu/libfreetype.so.6 \
-  /usr/lib/i386-linux-gnu/libgcrypt.so.20 \
-  /usr/lib/i386-linux-gnu/libglib-2.0.so.0 \
-  /usr/lib/i386-linux-gnu/libgomp.so.1 \
-  /usr/lib/i386-linux-gnu/libgpg-error.so.0 \
-  /usr/lib/i386-linux-gnu/libgraphite2.so.3 \
-  /usr/lib/i386-linux-gnu/libharfbuzz.so.0 \
-  /usr/lib/i386-linux-gnu/libicudata.so.74 \
-  /usr/lib/i386-linux-gnu/libicui18n.so.74 \
-  /usr/lib/i386-linux-gnu/libicuuc.so.74 \
-  /usr/lib/i386-linux-gnu/liblz4.so.1 \
-  /usr/lib/i386-linux-gnu/liblzma.so.5 \
-  /usr/lib/i386-linux-gnu/libmd.so.0 \
-  /usr/lib/i386-linux-gnu/libpcre2-8.so.0 \
-  /usr/lib/i386-linux-gnu/libpng16.so.16 \
-  /usr/lib/i386-linux-gnu/libsystemd.so.0 \
-  /usr/lib/i386-linux-gnu/libxcb.so.1 \
-  /usr/lib/i386-linux-gnu/libxkbcommon.so.0 \
-  /usr/lib/i386-linux-gnu/libz.so.1 \
-  /usr/lib/i386-linux-gnu/libzstd.so.1 \
   /usr/lib/x86_64-linux-gnu/libGLX.so \
   /usr/lib/x86_64-linux-gnu/libOpenGL.so \
   /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 \
@@ -2645,46 +2615,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2:
-
-/usr/lib/i386-linux-gnu/libzstd.so.1:
-
-/usr/lib/i386-linux-gnu/libz.so.1:
-
-/usr/lib/i386-linux-gnu/libxkbcommon.so.0:
-
-/usr/lib/i386-linux-gnu/libxcb.so.1:
-
-/usr/lib/i386-linux-gnu/libsystemd.so.0:
-
-/usr/lib/i386-linux-gnu/libicuuc.so.74:
-
-/usr/lib/i386-linux-gnu/libicui18n.so.74:
-
-/usr/lib/i386-linux-gnu/libicudata.so.74:
-
-/usr/lib/i386-linux-gnu/libharfbuzz.so.0:
-
-/usr/lib/i386-linux-gnu/libgraphite2.so.3:
-
-/usr/lib/i386-linux-gnu/libgpg-error.so.0:
-
-/usr/lib/i386-linux-gnu/libgcrypt.so.20:
-
-/usr/lib/i386-linux-gnu/libfreetype.so.6:
-
-/usr/lib/i386-linux-gnu/libexpat.so.1:
-
-/usr/lib/i386-linux-gnu/libdbus-1.so.3:
-
-/usr/lib/i386-linux-gnu/libcap.so.2:
-
-/usr/lib/i386-linux-gnu/libpcre2-8.so.0:
-
-/usr/lib/i386-linux-gnu/libbz2.so.1.0:
-
-/usr/lib/i386-linux-gnu/libbrotlidec.so.1:
-
-/usr/lib/i386-linux-gnu/libXdmcp.so.6:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so:
 
@@ -2718,8 +2648,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 
 /lib/x86_64-linux-gnu/libicuuc.so.74:
 
-/usr/lib/i386-linux-gnu/libXau.so.6:
-
 /lib/x86_64-linux-gnu/libicudata.so.74:
 
 /lib/x86_64-linux-gnu/libgraphite2.so.3:
@@ -2736,8 +2664,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 
 /lib/x86_64-linux-gnu/libc.so.6:
 
-/usr/lib/i386-linux-gnu/libfontconfig.so.1:
-
 /lib/x86_64-linux-gnu/libbrotlicommon.so.1:
 
 /lib/x86_64-linux-gnu/libb2.so.1:
@@ -2747,38 +2673,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 /lib/x86_64-linux-gnu/libQt6DBus.so.6:
 
 /lib/x86_64-linux-gnu/libEGL.so.1:
-
-/lib/i386-linux-gnu/libzstd.so.1:
-
-/lib/i386-linux-gnu/libxcb.so.1:
-
-/lib/i386-linux-gnu/libsystemd.so.0:
-
-/lib/i386-linux-gnu/libmd.so.0:
-
-/lib/i386-linux-gnu/libicui18n.so.74:
-
-/lib/i386-linux-gnu/libharfbuzz.so.0:
-
-/lib/i386-linux-gnu/libgraphite2.so.3:
-
-/lib/i386-linux-gnu/libgomp.so.1:
-
-/lib/i386-linux-gnu/libglib-2.0.so.0:
-
-/lib/i386-linux-gnu/libgcrypt.so.20:
-
-/lib/i386-linux-gnu/libfreetype.so.6:
-
-/lib/i386-linux-gnu/libcap.so.2:
-
-/lib/i386-linux-gnu/libbz2.so.1.0:
-
-/lib/i386-linux-gnu/libbsd.so.0:
-
-/lib/i386-linux-gnu/libbrotlidec.so.1:
-
-/lib/i386-linux-gnu/libX11.so.6:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qundoview.h:
 
@@ -2806,8 +2700,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h:
 
-/lib/i386-linux-gnu/libXdmcp.so.6:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizegrip.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollerproperties.h:
@@ -2828,10 +2720,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h:
 
-/lib/x86_64-linux-gnu/libmvec.so.1:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h:
@@ -2841,8 +2729,6 @@ CMakeFiles/ejemplo1.dir/main.cpp.o:
 /lib/x86_64-linux-gnu/libz.so.1:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h:
-
-/lib/i386-linux-gnu/libfontconfig.so.1:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qitemeditorfactory.h:
 
@@ -3036,17 +2922,23 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/q20algorithm.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h:
 
-/usr/lib/i386-linux-gnu/libglib-2.0.so.0:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qtemporaryfile.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap:
 
@@ -3055,8 +2947,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QList:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QHash:
-
-/lib/i386-linux-gnu/libdbus-1.so.3:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbutton.h:
 
@@ -3100,6 +2990,10 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+
+/usr/include/stdio.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -3112,11 +3006,7 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/13/locale:
 
-/lib/i386-linux-gnu/liblzma.so.5:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcommandlinkbutton.h:
 
@@ -3140,13 +3030,9 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
-/usr/lib/i386-linux-gnu/libmd.so.0:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwhatsthis.h:
 
 /usr/include/c++/13/variant:
-
-/lib/i386-linux-gnu/libgpg-error.so.0:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -3182,15 +3068,7 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/q23functional.h:
-
-/usr/include/c++/13/compare:
-
-/usr/include/c++/13/cstdint:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList:
-
-/usr/include/c++/13/bits/string_view.tcc:
+/usr/include/x86_64-linux-gnu/bits/stdio2-decl.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -3222,11 +3100,15 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h:
 
+/usr/include/string.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qassociativeiterable.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qopenglcontext_platform.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
@@ -3235,6 +3117,10 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrunnable.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h:
 
@@ -3248,10 +3134,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h:
 
-/usr/include/string.h:
-
-/usr/include/stdio.h:
-
 /usr/include/sched.h:
 
 /usr/include/c++/13/initializer_list:
@@ -3259,8 +3141,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h:
 
 /usr/include/pthread.h:
-
-/usr/lib/i386-linux-gnu/libbsd.so.0:
 
 /usr/include/stdint.h:
 
@@ -3284,13 +3164,15 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
-/lib/i386-linux-gnu/libz.so.1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h:
 
 /usr/include/c++/13/tr1/riemann_zeta.tcc:
-
-/lib/i386-linux-gnu/libGLdispatch.so.0:
 
 /usr/include/c++/13/tr1/poly_hermite.tcc:
 
@@ -3302,15 +3184,27 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/include/c++/13/iostream:
 
-/usr/lib/i386-linux-gnu/liblzma.so.5:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidget.h:
 
 /usr/include/c++/13/tr1/beta_function.tcc:
 
 /usr/include/c++/13/tr1/bessel_function.tcc:
+
+/lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2-decl.h:
+
+/usr/include/c++/13/bits/codecvt.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qsignalmapper.h:
 
 /usr/include/c++/13/string_view:
 
@@ -3321,8 +3215,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 /lib/x86_64-linux-gnu/libmd4c.so.0:
 
 /usr/include/c++/13/random:
-
-/lib/i386-linux-gnu/liblz4.so.1:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h:
 
@@ -3406,8 +3298,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/13/bits/ios_base.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
-
 /usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/c++/13/bits/hashtable_policy.h:
@@ -3432,15 +3322,23 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfuture_impl.h:
 
-/lib/i386-linux-gnu/libicuuc.so.74:
-
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/usr/include/c++/13/compare:
+
+/usr/include/c++/13/cstdint:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/q23functional.h:
 
 /usr/include/c++/13/bits/fs_dir.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfactoryinterface.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h:
+
+/usr/include/c++/13/bits/string_view.tcc:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList:
 
 /usr/include/c++/13/cmath:
 
@@ -3456,11 +3354,11 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/13/bits/basic_ios.h:
 
-/lib/i386-linux-gnu/libXau.so.6:
-
 /usr/include/c++/13/pstl/pstl_config.h:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/c++/13/functional:
 
@@ -3576,12 +3474,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsondocument.h:
 
-/usr/include/c++/13/bits/codecvt.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qsignalmapper.h:
-
 /usr/include/alloca.h:
 
 /usr/include/c++/13/algorithm:
@@ -3624,11 +3516,15 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/13/limits:
 
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h:
 
 /usr/include/c++/13/bits/exception_ptr.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h:
 
@@ -3643,10 +3539,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/13/bits/fs_ops.h:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
@@ -3748,27 +3640,17 @@ ejemplo1.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsemaphore.h:
 
-CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
-
-/usr/lib/i386-linux-gnu/libX11.so.6:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h:
-
-/usr/lib/i386-linux-gnu/libpng16.so.16:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonarray.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/lib/i386-linux-gnu/libicudata.so.74:
-
 /usr/include/c++/13/bits/sstream.tcc:
 
+/usr/include/x86_64-linux-gnu/bits/select-decl.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h:
+
 /usr/include/c++/13/future:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qidentityproxymodel.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h:
 
@@ -3862,6 +3744,10 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qparallelanimationgroup.h:
+
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -3944,15 +3830,11 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 
 /usr/include/c++/13/iomanip:
 
-/usr/lib/i386-linux-gnu/liblz4.so.1:
-
 /usr/include/c++/13/bits/move.h:
 
 /usr/include/c++/13/iterator:
 
 /usr/include/c++/13/type_traits:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h:
 
 /usr/include/c++/13/cerrno:
 
@@ -3961,6 +3843,24 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 /usr/include/c++/13/system_error:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmutex.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qtemporaryfile.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qidentityproxymodel.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/q20algorithm.h:
+
+CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h:
 
@@ -4013,8 +3913,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h:
-
-/usr/lib/i386-linux-gnu/libgomp.so.1:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfontdialog.h:
 
@@ -4092,8 +3990,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qconfig.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qopenglfunctions.h:
@@ -4107,8 +4003,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h:
 
@@ -4130,11 +4024,7 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qelapsedtimer.h:
-
-/lib/i386-linux-gnu/libpng16.so.16:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qendian.h:
 
@@ -4154,13 +4044,11 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileselector.h:
 
@@ -4213,8 +4101,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o:
 /usr/include/c++/13/tr1/legendre_function.tcc:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolortransform.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h:
 
@@ -4280,8 +4166,6 @@ ejemplo1_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h:
 
-/lib/i386-linux-gnu/libexpat.so.1:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextboundaryfinder.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h:
@@ -4312,9 +4196,9 @@ ejemplo1_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qpromise.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF:
-
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qproperty.h:
 
@@ -4322,17 +4206,11 @@ ejemplo1_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qpropertyprivate.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qparallelanimationgroup.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qqueue.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qreadwritelock.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h:
-
-/lib/i386-linux-gnu/libbrotlicommon.so.1:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h:
 
@@ -4410,8 +4288,6 @@ ejemplo1_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringfwd.h:
 
-/usr/lib/i386-linux-gnu/libGLdispatch.so.0:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h:
 
 /usr/include/c++/13/bits/vector.tcc:
@@ -4439,8 +4315,6 @@ ejemplo1_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qthread.h:
-
-/lib/i386-linux-gnu/libpcre2-8.so.0:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsystemtrayicon.h:
 
@@ -4496,6 +4370,8 @@ ejemplo1_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui:
 
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends:
@@ -4531,6 +4407,8 @@ ejemplo1_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qgenericplugin.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfilesystemmodel.h:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qgenericpluginfactory.h:
 
@@ -4590,8 +4468,6 @@ ejemplo1_autogen/include/ui_counterDlg.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevicewindow.h:
 
-/usr/lib/i386-linux-gnu/libbrotlicommon.so.1:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaccessiblewidget.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h:
@@ -4615,8 +4491,6 @@ ejemplo1_autogen/include/ui_counterDlg.h:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qrasterwindow.h:
-
-/lib/i386-linux-gnu/libxkbcommon.so.0:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
 
@@ -4647,8 +4521,6 @@ ejemplo1_autogen/include/ui_counterDlg.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringalgorithms.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtexttable.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h:
 
@@ -4725,9 +4597,3 @@ ejemplo1_autogen/include/ui_counterDlg.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsequentialanimationgroup.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h:

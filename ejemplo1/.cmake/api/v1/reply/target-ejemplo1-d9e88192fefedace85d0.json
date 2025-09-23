@@ -24,9 +24,9 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/snap/clion/377/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/clion/377/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -40,19 +40,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 33,
+				"line" : 38,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 34,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -132,7 +132,7 @@
 			{
 				"command" : 9,
 				"file" : 0,
-				"line" : 22,
+				"line" : 23,
 				"parent" : 0
 			}
 		]
@@ -143,7 +143,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-fdiagnostics-color=always"
+					"fragment" : "-std=gnu++23 -fdiagnostics-color=always   -O3"
 				},
 				{
 					"backtrace" : 3,
@@ -181,11 +181,11 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/varo/robocomp4/robomk/ejemplo1/ejemplo1_autogen/include"
+					"path" : "/home/usuario/robomk/ejemplo1/ejemplo1_autogen/include"
 				},
 				{
 					"backtrace" : 18,
-					"path" : "/home/varo/robocomp4/robomk/ejemplo1"
+					"path" : "/home/usuario/robomk/ejemplo1"
 				},
 				{
 					"backtrace" : 3,
@@ -224,6 +224,15 @@
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3,
+					3
+				],
+				"standard" : "23"
+			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -318,17 +327,24 @@
 			]
 		},
 		{
-			"name" : "",
+			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
 				3
 			]
 		},
 		{
-			"name" : "CMake Rules",
+			"name" : "",
 			"sourceIndexes" : 
 			[
 				4
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				5
 			]
 		}
 	],
@@ -354,16 +370,21 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "ejemplo1_autogen/timestamp",
+			"backtrace" : 1,
+			"path" : "Timer.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "ejemplo1_autogen/timestamp.rule",
+			"path" : "ejemplo1_autogen/timestamp",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "ejemplo1_autogen/timestamp.rule",
+			"sourceGroupIndex" : 3
 		}
 	],
 	"type" : "EXECUTABLE"

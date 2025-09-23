@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/varo/robocomp4/robomk/ejemplo1/cmake_install.cmake"
+		"/home/usuario/robomk/ejemplo1/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

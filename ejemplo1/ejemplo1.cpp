@@ -22,18 +22,16 @@ ejemplo1::ejemplo1(): Ui_Counter()
 
 void ejemplo1::doButton()
 {
-	qDebug() << "click on button";
+	count = 0;
 }
 
 void ejemplo1::doCount()
 {
-	static int count = 0;
 	lcdNumber->display(count++);
 }
 
 void ejemplo1::doSlider(int value)
 {
-    qDebug() << "doSlider!";
 	timer.setInterval(value);
 	lcdNumber_2->display(value);
 }

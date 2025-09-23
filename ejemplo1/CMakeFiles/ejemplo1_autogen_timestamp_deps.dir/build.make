@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/371/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/377/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/371/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/377/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varo/robocomp4/robomk/ejemplo1
+CMAKE_SOURCE_DIR = /home/usuario/robomk/ejemplo1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varo/robocomp4/robomk/ejemplo1
+CMAKE_BINARY_DIR = /home/usuario/robomk/ejemplo1
 
 # Utility rule file for ejemplo1_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/depend:
-	cd /home/varo/robocomp4/robomk/ejemplo1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robocomp4/robomk/ejemplo1 /home/varo/robocomp4/robomk/ejemplo1 /home/varo/robocomp4/robomk/ejemplo1 /home/varo/robocomp4/robomk/ejemplo1 /home/varo/robocomp4/robomk/ejemplo1/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/ejemplo1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1 /home/usuario/robomk/ejemplo1/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ejemplo1_autogen_timestamp_deps.dir/depend
 

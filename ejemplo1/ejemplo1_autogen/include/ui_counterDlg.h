@@ -56,7 +56,7 @@ public:
     void retranslateUi(QWidget *Counter)
     {
         Counter->setWindowTitle(QCoreApplication::translate("Counter", "Counter", nullptr));
-        button->setText(QCoreApplication::translate("Counter", "STOP", nullptr));
+        button->setText(QCoreApplication::translate("Counter", "Reset", nullptr));
     } // retranslateUi
 
 };
