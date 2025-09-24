@@ -953,4 +953,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+ /home/usuario/robomk/ejemplo1/ejemplo1_autogen/EWIEGA46WW/../../Timer.h \
+ /usr/include/c++/13/thread /usr/include/c++/13/iostream \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen

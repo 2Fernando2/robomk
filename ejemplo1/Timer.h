@@ -9,6 +9,7 @@
 
 template<typename T>
 
+//concept forces the template to be Callable
 concept Callable = std::invocable<T>;
 
 class Timer
@@ -16,6 +17,8 @@ class Timer
 public:
     Timer(){};
     template <class T>
+
+    //What is a templated method like connect?
     void connect(T f)
     {
         std::thread([this, f = std::move(f)]()
@@ -24,22 +27,23 @@ public:
             {
                   if(go.load())
                       std::invoke(f);
+                //How is the lambda thread capturing variables? Which variables?
                   std::this_thread::sleep_for(std::chrono::milliseconds(period.load()));
             }
         }).detach();
     };
     void start(int p)
     {
-        // COMPLETAR
-
+        go.store(true);
+        period.store(p);
     };
     void stop()
     {
-        // COMPLETAR
+        go.store(false);
     };
     void setInterval(int p)
     {
-        // COMPLETAR
+        period.store(p);
     }
 private:
     std::atomic_bool go = false;

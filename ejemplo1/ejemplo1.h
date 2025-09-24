@@ -4,6 +4,8 @@
 #include <QtGui>
 #include "ui_counterDlg.h"
 
+#include "Timer.h"
+
 class ejemplo1 : public QWidget, public Ui_Counter
 {
     Q_OBJECT
@@ -16,8 +18,9 @@ class ejemplo1 : public QWidget, public Ui_Counter
 		void doSlider(int value);
 
 	private:
-		QTimer timer;
+		Timer timer;
 		int count = 0;
+
 
 };
 

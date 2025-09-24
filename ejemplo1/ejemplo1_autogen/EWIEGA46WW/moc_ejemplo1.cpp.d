@@ -1,5 +1,6 @@
 /home/usuario/robomk/ejemplo1/ejemplo1_autogen/EWIEGA46WW/moc_ejemplo1.cpp: /home/usuario/robomk/ejemplo1/ejemplo1.h \
   /home/usuario/robomk/ejemplo1/ejemplo1_autogen/moc_predefs.h \
+  /home/usuario/robomk/ejemplo1/Timer.h \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -46,6 +47,7 @@
   /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/istream.tcc \
   /usr/include/c++/13/bits/iterator_concepts.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
@@ -130,6 +132,7 @@
   /usr/include/c++/13/concepts \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
+  /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
   /usr/include/c++/13/cstring \
   /usr/include/c++/13/ctime \
@@ -152,6 +155,8 @@
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
+  /usr/include/c++/13/istream \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
@@ -174,6 +179,7 @@
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tr1/bessel_function.tcc \
   /usr/include/c++/13/tr1/beta_function.tcc \
   /usr/include/c++/13/tr1/ell_integral.tcc \

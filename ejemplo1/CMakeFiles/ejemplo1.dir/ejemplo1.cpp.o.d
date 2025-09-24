@@ -950,4 +950,6 @@ CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+ /home/usuario/robomk/ejemplo1/Timer.h /usr/include/c++/13/thread \
+ /usr/include/c++/13/iostream

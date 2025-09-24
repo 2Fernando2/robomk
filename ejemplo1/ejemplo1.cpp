@@ -9,7 +9,9 @@ ejemplo1::ejemplo1(): Ui_Counter()
 	show();
 	connect(button, SIGNAL(clicked()), this, SLOT(doButton()) );
 
-	connect(&timer, SIGNAL(timeout()), this, SLOT(doCount()) );
+	//connect(timer, SIGNAL(timeout()), this, SLOT(doCount()) );
+	timer.connect(std::bind(&ejemplo1::doCount, this));
+
 	connect(horizontalSlider, SIGNAL(valueChanged(int)), this, SLOT(doSlider(int)) );
 
 	lcdNumber_2->display(min);
@@ -23,6 +25,7 @@ ejemplo1::ejemplo1(): Ui_Counter()
 void ejemplo1::doButton()
 {
 	count = 0;
+	timer.stop();
 }
 
 void ejemplo1::doCount()
