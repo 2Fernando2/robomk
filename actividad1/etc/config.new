@@ -1,0 +1,13 @@
+# Proxies for required interfaces
+Proxies.DifferentialRobot = "differentialrobot:tcp -h localhost -p 0"
+Proxies.Laser = "laser:tcp -h localhost -p 0"
+
+
+
+Period.Compute = 100
+Period.Emergency = 500
+
+Ice.Warn.Connections = "0"
+Ice.Trace.Network = "0"
+Ice.Trace.Protocol = "0"
+Ice.MessageSizeMax = "20004800"
