@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h"
+#include "../../../../../robocomp/classes/grafcetStep/GRAFCETStep.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'GRAFCETStep.h' doesn't include <QObject>."

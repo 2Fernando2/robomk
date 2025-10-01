@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h"
+#include "../../../../../robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'abstract_graphic_viewer.h' doesn't include <QObject>."

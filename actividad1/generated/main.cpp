@@ -78,9 +78,9 @@
 #include "../src/specificworker.h"
 
 
-#include <DifferentialRobot.h>
 #include <GenericBase.h>
-#include <Laser.h>
+#include <Lidar3D.h>
+#include <OmniRobot.h>
 
 #define USE_QTGUI
 
@@ -171,17 +171,17 @@ int chocachoca::run(int argc, char* argv[])
 
 	int status=EXIT_SUCCESS;
 
-	RoboCompDifferentialRobot::DifferentialRobotPrxPtr differentialrobot_proxy;
-	RoboCompLaser::LaserPrxPtr laser_proxy;
+	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
+	RoboCompOmniRobot::OmniRobotPrxPtr omnirobot_proxy;
 
 
 	//Require code
-	require<RoboCompDifferentialRobot::DifferentialRobotPrx, RoboCompDifferentialRobot::DifferentialRobotPrxPtr>(communicator(),
-	                    configLoader.get<std::string>("Proxies.DifferentialRobot"), "DifferentialRobotProxy", differentialrobot_proxy);
-	require<RoboCompLaser::LaserPrx, RoboCompLaser::LaserPrxPtr>(communicator(),
-	                    configLoader.get<std::string>("Proxies.Laser"), "LaserProxy", laser_proxy);
+	require<RoboCompLidar3D::Lidar3DPrx, RoboCompLidar3D::Lidar3DPrxPtr>(communicator(),
+	                    configLoader.get<std::string>("Proxies.Lidar3D"), "Lidar3DProxy", lidar3d_proxy);
+	require<RoboCompOmniRobot::OmniRobotPrx, RoboCompOmniRobot::OmniRobotPrxPtr>(communicator(),
+	                    configLoader.get<std::string>("Proxies.OmniRobot"), "OmniRobotProxy", omnirobot_proxy);
 
-	tprx = std::make_tuple(differentialrobot_proxy,laser_proxy);
+	tprx = std::make_tuple(lidar3d_proxy,omnirobot_proxy);
 	SpecificWorker *worker = new SpecificWorker(this->configLoader, tprx, startup_check_flag);
 	QObject::connect(worker, SIGNAL(kill()), &a, SLOT(quit()));
 

@@ -129,28 +129,32 @@ int SpecificWorker::startup_check()
 
 
 /**************************************/
-// From the RoboCompDifferentialRobot you can call this methods:
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->correctOdometer(int x, int z, float alpha)
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->getBasePose(int x, int z, float alpha)
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->getBaseState(RoboCompGenericBase::TBaseState state)
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->resetOdometer()
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->setOdometer(RoboCompGenericBase::TBaseState state)
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->setOdometerPose(int x, int z, float alpha)
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->setSpeedBase(float adv, float rot)
-// RoboCompDifferentialRobot::void this->differentialrobot_proxy->stopBase()
+// From the RoboCompLidar3D you can call this methods:
+// RoboCompLidar3D::TData this->lidar3d_proxy->getLidarData(string name, float start, float len, int decimationDegreeFactor)
+// RoboCompLidar3D::TDataImage this->lidar3d_proxy->getLidarDataArrayProyectedInImage(string name)
+// RoboCompLidar3D::TDataCategory this->lidar3d_proxy->getLidarDataByCategory(TCategories categories, long timestamp)
+// RoboCompLidar3D::TData this->lidar3d_proxy->getLidarDataProyectedInImage(string name)
+// RoboCompLidar3D::TData this->lidar3d_proxy->getLidarDataWithThreshold2d(string name, float distance, int decimationDegreeFactor)
 
 /**************************************/
-// From the RoboCompDifferentialRobot you can use this types:
-// RoboCompDifferentialRobot::TMechParams
+// From the RoboCompLidar3D you can use this types:
+// RoboCompLidar3D::TPoint
+// RoboCompLidar3D::TDataImage
+// RoboCompLidar3D::TData
+// RoboCompLidar3D::TDataCategory
 
 /**************************************/
-// From the RoboCompLaser you can call this methods:
-// RoboCompLaser::TLaserData this->laser_proxy->getLaserAndBStateData(RoboCompGenericBase::TBaseState bState)
-// RoboCompLaser::LaserConfData this->laser_proxy->getLaserConfData()
-// RoboCompLaser::TLaserData this->laser_proxy->getLaserData()
+// From the RoboCompOmniRobot you can call this methods:
+// RoboCompOmniRobot::void this->omnirobot_proxy->correctOdometer(int x, int z, float alpha)
+// RoboCompOmniRobot::void this->omnirobot_proxy->getBasePose(int x, int z, float alpha)
+// RoboCompOmniRobot::void this->omnirobot_proxy->getBaseState(RoboCompGenericBase::TBaseState state)
+// RoboCompOmniRobot::void this->omnirobot_proxy->resetOdometer()
+// RoboCompOmniRobot::void this->omnirobot_proxy->setOdometer(RoboCompGenericBase::TBaseState state)
+// RoboCompOmniRobot::void this->omnirobot_proxy->setOdometerPose(int x, int z, float alpha)
+// RoboCompOmniRobot::void this->omnirobot_proxy->setSpeedBase(float advx, float advz, float rot)
+// RoboCompOmniRobot::void this->omnirobot_proxy->stopBase()
 
 /**************************************/
-// From the RoboCompLaser you can use this types:
-// RoboCompLaser::LaserConfData
-// RoboCompLaser::TData
+// From the RoboCompOmniRobot you can use this types:
+// RoboCompOmniRobot::TMechParams
 

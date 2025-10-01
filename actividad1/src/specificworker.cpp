@@ -18,6 +18,8 @@
  */
 #include "specificworker.h"
 
+#include <ranges>
+
 SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, bool startup_check) : GenericWorker(configLoader, tprx)
 {
 	this->startup_check_flag = startup_check;
@@ -82,26 +84,45 @@ void SpecificWorker::compute()
 {
 	try
 	{
-		auto data = laser_proxy->getLaserData();
-		qInfo()	<< data.size();
+		auto data = lidar3d_proxy->getLidarDataWithThreshold2d("helios", 10000, 1);
+		// qInfo() << data.points.size();
 
-		auto pos = data.size() / 2;
-		std::vector<unsigned long> middle_vector(10);
+		// Mostrar los datos de la estructura
+		// auto punto = data.points[3000];
+		//
+		// qInfo() << "x " << punto.x;
+		// qInfo() << "y " << punto.y;
+		// qInfo() << "z " << punto.z;
+		// qInfo() << "Intensity: " << punto.intensity;
+		// qInfo() << "Phi: " << punto.phi;
+		// qInfo() << "Theta: " << punto.theta;
+		// qInfo() << "r: " << punto.r;
+		// qInfo() << "Distande2d: " << punto.distance2d;
+		// qInfo() << "PixelX: "<< punto.pixelX;
+		// qInfo() << "PixelY: " << punto.pixelY;
 
-		int i = 0;
-		for (unsigned long j = pos - 5; j < pos + 5; j++)
+
+		//Propuesta de algoritmo
+			//Vistas con todos los puntos con igual theta
+			//Sólo nos quedamos con el punto que tenga la minima z
+
+		struct point
 		{
-			middle_vector[i] = data[j];
-			i++;
-		}
+			float x;
+			float y;
+			float theta;
+		};
+
+		auto points = std::vector<point>();
+
+		// std::ranges::views::common[](){}
+
 
 	}
 	catch(const Ice::Exception& ex)
 	{
 		std::cout << ex << " Conexión cpm Laser" << std::endl;
 	}
-
-    std::cout << "Compute worker" << std::endl;
 
 }
 

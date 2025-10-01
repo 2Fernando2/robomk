@@ -1,6 +1,6 @@
 # Proxies for required interfaces
-Proxies.DifferentialRobot = "differentialrobot:tcp -h localhost -p 0"
-Proxies.Laser = "laser:tcp -h localhost -p 0"
+Proxies.Lidar3D = "lidar3d:tcp -h localhost -p 0"
+Proxies.OmniRobot = "omnirobot:tcp -h localhost -p 0"
 
 
 

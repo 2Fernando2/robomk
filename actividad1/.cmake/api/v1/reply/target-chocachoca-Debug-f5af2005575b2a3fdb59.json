@@ -26,15 +26,15 @@
 		"files" : 
 		[
 			"generated/CMakeLists.txt",
-			"/snap/clion/377/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/usr/share/cmake-3.28/Modules/FindOpenGL.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/clion/377/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
-			"/home/robocomp/robocomp/cmake/modules/qt.cmake",
-			"/home/robocomp/robocomp/cmake/robocomp.cmake"
+			"/home/usuario/robocomp/cmake/modules/qt.cmake",
+			"/home/usuario/robocomp/cmake/robocomp.cmake"
 		],
 		"nodes" : 
 		[
@@ -108,7 +108,7 @@
 			{
 				"command" : 3,
 				"file" : 3,
-				"line" : 78,
+				"line" : 76,
 				"parent" : 12
 			},
 			{
@@ -128,13 +128,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 712,
+				"line" : 673,
 				"parent" : 16
 			},
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 710,
+				"line" : 671,
 				"parent" : 16
 			},
 			{
@@ -179,7 +179,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=c++23 -fdiagnostics-color=always   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -fmax-errors=1 -fno-char8_t"
+					"fragment" : "-g -std=c++23 -fdiagnostics-color=always   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -fmax-errors=1 -fno-char8_t"
 				},
 				{
 					"backtrace" : 2,
@@ -199,10 +199,6 @@
 				{
 					"backtrace" : 2,
 					"define" : "QT_GUI_LIB"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "QT_NO_DEBUG"
 				},
 				{
 					"backtrace" : 2,
@@ -249,15 +245,15 @@
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/home/robocomp/robocomp/classes"
+					"path" : "/home/usuario/robocomp/classes"
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/home/robocomp/robocomp/libs"
+					"path" : "/home/usuario/robocomp/libs"
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/home/robocomp/robocomp/interfaces"
+					"path" : "/home/usuario/robocomp/interfaces"
 				},
 				{
 					"backtrace" : 24,
@@ -350,6 +346,14 @@
 		"commandFragments" : 
 		[
 			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
 				"backtrace" : 2,
 				"fragment" : "-L/opt/robocomp/lib",
 				"role" : "libraries"
@@ -376,7 +380,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/robocomp/robocomp///classes",
+				"fragment" : "-L/home/usuario/robocomp//classes",
 				"role" : "libraries"
 			},
 			{
@@ -509,7 +513,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
+			"path" : "/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -521,25 +525,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/robocomp/robocomp/classes/rapplication/rapplication.cpp",
+			"path" : "/home/usuario/robocomp/classes/rapplication/rapplication.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp",
+			"path" : "/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
+			"path" : "/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp",
+			"path" : "/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -558,6 +562,13 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
+			"path" : "generated/OmniRobot.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
 			"path" : "generated/GenericBase.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -565,14 +576,7 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "generated/DifferentialRobot.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"isGenerated" : true,
-			"path" : "generated/Laser.cpp",
+			"path" : "generated/Lidar3D.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -584,19 +588,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
+			"path" : "generated/OmniRobot.cpp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
 			"path" : "generated/GenericBase.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "generated/DifferentialRobot.cpp.rule",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "generated/Laser.cpp.rule",
+			"path" : "generated/Lidar3D.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{

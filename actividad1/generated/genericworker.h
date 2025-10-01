@@ -39,13 +39,13 @@
 #include <unordered_map>
 
 
-#include <DifferentialRobot.h>
 #include <GenericBase.h>
-#include <Laser.h>
+#include <Lidar3D.h>
+#include <OmniRobot.h>
 
 #define BASIC_PERIOD 100
 
-using TuplePrx = std::tuple<RoboCompDifferentialRobot::DifferentialRobotPrxPtr,RoboCompLaser::LaserPrxPtr>;
+using TuplePrx = std::tuple<RoboCompLidar3D::Lidar3DPrxPtr,RoboCompOmniRobot::OmniRobotPrxPtr>;
 
 
 class GenericWorker : public QWidget, public Ui_guiDlg
@@ -64,8 +64,8 @@ public:
 	std::atomic_bool hibernation = false;
 
 
-	RoboCompDifferentialRobot::DifferentialRobotPrxPtr differentialrobot_proxy;
-	RoboCompLaser::LaserPrxPtr laser_proxy;
+	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
+	RoboCompOmniRobot::OmniRobotPrxPtr omnirobot_proxy;
 
 
 protected:

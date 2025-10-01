@@ -11,7 +11,7 @@
 		],
 		"files" : 
 		[
-			"/home/robocomp/robocomp/cmake/robocomp.cmake",
+			"/home/usuario/robocomp/cmake/robocomp.cmake",
 			"generated/CMakeLists.txt"
 		],
 		"nodes" : 
@@ -73,15 +73,15 @@
 	[
 		{
 			"backtrace" : 4,
-			"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55"
+			"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55"
 		},
 		{
 			"backtrace" : 6,
-			"id" : "ICE_DifferentialRobot_target::@21bfa6e54ac71a0c1a55"
+			"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55"
 		},
 		{
 			"backtrace" : 8,
-			"id" : "ICE_Laser_target::@21bfa6e54ac71a0c1a55"
+			"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55"
 		}
 	],
 	"id" : "ICES__home_usuario_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
