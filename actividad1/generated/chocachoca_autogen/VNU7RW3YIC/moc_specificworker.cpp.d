@@ -2,8 +2,11 @@
   /home/usuario/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
   /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
   /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
+  /home/usuario/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
   /home/usuario/robomk/actividad1/generated/GenericBase.h \
+  /home/usuario/robomk/actividad1/generated/Lidar3D.h \
+  /home/usuario/robomk/actividad1/generated/OmniRobot.h \
   /home/usuario/robomk/actividad1/generated/genericworker.h \
   /usr/include/GL/gl.h \
   /usr/include/Ice/AsyncResult.h \
@@ -285,6 +288,7 @@
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
   /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/unordered_set \
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
@@ -412,6 +416,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMargins \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMutex \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QScopedPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
@@ -644,8 +649,10 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxpfunctional.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDevice \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDeviceWindow \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QResizeEvent \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QSurfaceFormat \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QWindow \
@@ -769,6 +776,31 @@
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachineglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachine-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachineexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
@@ -872,6 +904,40 @@
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h \
+  /usr/local/include/cppitertools/accumulate.hpp \
+  /usr/local/include/cppitertools/batched.hpp \
+  /usr/local/include/cppitertools/chain.hpp \
+  /usr/local/include/cppitertools/chunked.hpp \
+  /usr/local/include/cppitertools/combinations.hpp \
+  /usr/local/include/cppitertools/combinations_with_replacement.hpp \
+  /usr/local/include/cppitertools/compress.hpp \
+  /usr/local/include/cppitertools/count.hpp \
+  /usr/local/include/cppitertools/cycle.hpp \
+  /usr/local/include/cppitertools/dropwhile.hpp \
+  /usr/local/include/cppitertools/enumerate.hpp \
+  /usr/local/include/cppitertools/filter.hpp \
+  /usr/local/include/cppitertools/filterfalse.hpp \
+  /usr/local/include/cppitertools/groupby.hpp \
+  /usr/local/include/cppitertools/imap.hpp \
+  /usr/local/include/cppitertools/internal/iter_tuples.hpp \
+  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+  /usr/local/include/cppitertools/internal/iteratoriterator.hpp \
+  /usr/local/include/cppitertools/internal/iterbase.hpp \
+  /usr/local/include/cppitertools/itertools.hpp \
+  /usr/local/include/cppitertools/permutations.hpp \
+  /usr/local/include/cppitertools/powerset.hpp \
+  /usr/local/include/cppitertools/product.hpp \
+  /usr/local/include/cppitertools/range.hpp \
+  /usr/local/include/cppitertools/repeat.hpp \
+  /usr/local/include/cppitertools/reversed.hpp \
+  /usr/local/include/cppitertools/slice.hpp \
+  /usr/local/include/cppitertools/sliding_window.hpp \
+  /usr/local/include/cppitertools/sorted.hpp \
+  /usr/local/include/cppitertools/starmap.hpp \
+  /usr/local/include/cppitertools/takewhile.hpp \
+  /usr/local/include/cppitertools/unique_everseen.hpp \
+  /usr/local/include/cppitertools/unique_justseen.hpp \
+  /usr/local/include/cppitertools/zip.hpp \
   /usr/local/include/toml++/impl/array.hpp \
   /usr/local/include/toml++/impl/array.inl \
   /usr/local/include/toml++/impl/at_path.hpp \

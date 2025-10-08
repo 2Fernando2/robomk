@@ -13,9 +13,12 @@ chocachoca_autogen/timestamp: \
 	/home/usuario/robocomp/cmake/robocomp.cmake \
 	/home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
 	/home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
+	/home/usuario/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
 	/home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
 	/home/usuario/robomk/actividad1/generated/CMakeLists.txt \
 	/home/usuario/robomk/actividad1/generated/GenericBase.h \
+	/home/usuario/robomk/actividad1/generated/Lidar3D.h \
+	/home/usuario/robomk/actividad1/generated/OmniRobot.h \
 	/home/usuario/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
 	/home/usuario/robomk/actividad1/generated/genericworker.cpp \
 	/home/usuario/robomk/actividad1/generated/genericworker.h \
@@ -303,6 +306,7 @@ chocachoca_autogen/timestamp: \
 	/usr/include/c++/13/type_traits \
 	/usr/include/c++/13/typeinfo \
 	/usr/include/c++/13/unordered_map \
+	/usr/include/c++/13/unordered_set \
 	/usr/include/c++/13/utility \
 	/usr/include/c++/13/variant \
 	/usr/include/c++/13/vector \
@@ -451,6 +455,7 @@ chocachoca_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QMargins \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QMutex \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QScopedPointer \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
@@ -1055,6 +1060,40 @@ chocachoca_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlTargets-none.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlTargets.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake \
+	/usr/local/include/cppitertools/accumulate.hpp \
+	/usr/local/include/cppitertools/batched.hpp \
+	/usr/local/include/cppitertools/chain.hpp \
+	/usr/local/include/cppitertools/chunked.hpp \
+	/usr/local/include/cppitertools/combinations.hpp \
+	/usr/local/include/cppitertools/combinations_with_replacement.hpp \
+	/usr/local/include/cppitertools/compress.hpp \
+	/usr/local/include/cppitertools/count.hpp \
+	/usr/local/include/cppitertools/cycle.hpp \
+	/usr/local/include/cppitertools/dropwhile.hpp \
+	/usr/local/include/cppitertools/enumerate.hpp \
+	/usr/local/include/cppitertools/filter.hpp \
+	/usr/local/include/cppitertools/filterfalse.hpp \
+	/usr/local/include/cppitertools/groupby.hpp \
+	/usr/local/include/cppitertools/imap.hpp \
+	/usr/local/include/cppitertools/internal/iter_tuples.hpp \
+	/usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+	/usr/local/include/cppitertools/internal/iteratoriterator.hpp \
+	/usr/local/include/cppitertools/internal/iterbase.hpp \
+	/usr/local/include/cppitertools/itertools.hpp \
+	/usr/local/include/cppitertools/permutations.hpp \
+	/usr/local/include/cppitertools/powerset.hpp \
+	/usr/local/include/cppitertools/product.hpp \
+	/usr/local/include/cppitertools/range.hpp \
+	/usr/local/include/cppitertools/repeat.hpp \
+	/usr/local/include/cppitertools/reversed.hpp \
+	/usr/local/include/cppitertools/slice.hpp \
+	/usr/local/include/cppitertools/sliding_window.hpp \
+	/usr/local/include/cppitertools/sorted.hpp \
+	/usr/local/include/cppitertools/starmap.hpp \
+	/usr/local/include/cppitertools/takewhile.hpp \
+	/usr/local/include/cppitertools/unique_everseen.hpp \
+	/usr/local/include/cppitertools/unique_justseen.hpp \
+	/usr/local/include/cppitertools/zip.hpp \
 	/usr/local/include/toml++/impl/array.hpp \
 	/usr/local/include/toml++/impl/array.inl \
 	/usr/local/include/toml++/impl/at_path.hpp \

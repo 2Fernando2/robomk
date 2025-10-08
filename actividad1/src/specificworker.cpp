@@ -17,8 +17,8 @@
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "specificworker.h"
-
 #include <ranges>
+
 
 SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, bool startup_check) : GenericWorker(configLoader, tprx)
 {
@@ -70,6 +70,14 @@ void SpecificWorker::initialize()
 {
     std::cout << "initialize worker" << std::endl;
 
+	this->dimensions = QRectF(-6000, -3000, 12000, 6000);
+	viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
+	this->resize(900, 450);
+	viewer->show();
+	const auto rob = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
+	robot_polygon = std::get<0>(rob);
+	connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
+
     //initializeCODE
 
     /////////GET PARAMS, OPEND DEVICES....////////
@@ -78,51 +86,49 @@ void SpecificWorker::initialize()
 
 }
 
+void SpecificWorker::draw_lidar(const auto &points, QGraphicsScene* scene)
+{
+	static std::vector<QGraphicsItem*> draw_points;
+	for (const auto &p : draw_points)
+	{
+		scene->removeItem(p);
+		delete p;
+	}
+	draw_points.clear();
 
+	const QColor color("LightGreen");
+	const QPen pen(color, 10);
+	// const QBrush brush(color, Qt::SolidPattern);
+	for (const auto &p : points)
+	{
+		const auto dp = scene->addRect(-25, -25, 50, 50, pen);
+		dp->setPos(p.x, p.y);
+		draw_points.push_back(dp); // add to the list of points to be deleted next time
+	}
+
+}
 
 void SpecificWorker::compute()
 {
 	try
 	{
-		auto data = lidar3d_proxy->getLidarDataWithThreshold2d("helios", 10000, 1);
-		// qInfo() << data.points.size();
-
-		// Mostrar los datos de la estructura
-		// auto punto = data.points[3000];
-		//
-		// qInfo() << "x " << punto.x;
-		// qInfo() << "y " << punto.y;
-		// qInfo() << "z " << punto.z;
-		// qInfo() << "Intensity: " << punto.intensity;
-		// qInfo() << "Phi: " << punto.phi;
-		// qInfo() << "Theta: " << punto.theta;
-		// qInfo() << "r: " << punto.r;
-		// qInfo() << "Distande2d: " << punto.distance2d;
-		// qInfo() << "PixelX: "<< punto.pixelX;
-		// qInfo() << "PixelY: " << punto.pixelY;
-
-
-		//Propuesta de algoritmo
-			//Vistas con todos los puntos con igual theta
-			//Sólo nos quedamos con el punto que tenga la minima z
-
-		struct point
+		const auto data = lidar3d_proxy->getLidarDataWithThreshold2d("helios", 12000, 1);
+		qInfo() << "full" << data.points.size();
+		if (data.points.empty())
 		{
-			float x;
-			float y;
-			float theta;
-		};
+			qWarning() << "No points received";
+			return;
+		}
+		const auto filter_data = filter_min_distance_cppitertools(data.points);
+		qInfo() << filter_data.value().size();
 
-		auto points = std::vector<point>();
-
-		// std::ranges::views::common[](){}
-
-
+		if (filter_data.has_value())
+		{
+			draw_lidar(filter_data.value(), &viewer->scene);
+			update_report_posotion();
+		}
 	}
-	catch(const Ice::Exception& ex)
-	{
-		std::cout << ex << " Conexión cpm Laser" << std::endl;
-	}
+	catch(const Ice::Exception& ex){std::cout << ex.what() << std::endl; return;}
 
 }
 
@@ -156,6 +162,43 @@ int SpecificWorker::startup_check()
 	return 0;
 }
 
+
+std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points)
+{
+	// non-empty condition
+	if (points.empty())
+		return {};
+
+	RoboCompLidar3D::TPoints result; result.reserve(points.size());
+
+	// 3. Loop over the groups produced by iter::groupby
+	for (auto&& [angle, group] : iter::groupby(points, [](const auto& p)
+		{float multiplier = std::pow(10.0f, 2); return std::floor(p.phi * multiplier) / multiplier; }))
+	{
+		// 'group' is an iterable object containing all Points for the current angle.
+		auto min_it = std::min_element(std::begin(group), std::end(group),
+			[](const auto& a, const auto& b) { return a.r < b.r; });
+		result.emplace_back(RoboCompLidar3D::TPoint{.x=min_it->x, .y=min_it->y, .phi=min_it->phi,}); // Push the element with the minimum distance
+	}
+
+	return result;
+}
+
+void SpecificWorker::update_report_posotion()
+{
+	try
+	{
+		RoboCompGenericBase::TBaseState bState;
+		omnirobot_proxy->getBaseState(bState);
+		robot_polygon->setRotation(bState.alpha*180/M_PI);
+		robot_polygon->setPos(bState.x, bState.z);
+		std::cout << bState.alpha << " " << bState.x << " " << bState.z << std::endl;
+	}
+	catch (const Ice::Exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
 
 
 /**************************************/

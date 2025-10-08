@@ -32,6 +32,9 @@
 //#define HIBERNATION_ENABLED
 
 #include <genericworker.h>
+#include <cppitertools/itertools.hpp>
+#include <abstract_graphic_viewer/abstract_graphic_viewer.h>
+#include <QPointF>
 
 
 /**
@@ -83,12 +86,28 @@ public slots:
      */
 	int startup_check();
 
+	void new_target_slot(QPointF);
+
+	void draw_lidar(const auto &points, QGraphicsScene* scene);
+
+	std::optional<RoboCompLidar3D::TPoints> filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points);
+
+	void update_report_posotion();
+
+
+
 private:
 
 	/**
      * \brief Flag indicating whether startup checks are enabled.
      */
 	bool startup_check_flag;
+
+	// graphics
+	QRectF dimensions;
+	AbstractGraphicViewer *viewer;
+	const int ROBOT_LENGTH = 400;
+	QGraphicsPolygonItem *robot_polygon;
 
 signals:
 	//void customSignal();

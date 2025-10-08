@@ -4,6 +4,8 @@
   /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
   /home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
   /home/usuario/robomk/actividad1/generated/GenericBase.h \
+  /home/usuario/robomk/actividad1/generated/Lidar3D.h \
+  /home/usuario/robomk/actividad1/generated/OmniRobot.h \
   /usr/include/GL/gl.h \
   /usr/include/Ice/AsyncResult.h \
   /usr/include/Ice/BatchRequestQueueF.h \
