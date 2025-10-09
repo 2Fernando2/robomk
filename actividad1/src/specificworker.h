@@ -88,7 +88,7 @@ public slots:
 
 	void new_target_slot(QPointF);
 
-	void draw_lidar(const auto &points, QGraphicsScene* scene);
+	void draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene);
 
 	std::optional<RoboCompLidar3D::TPoints> filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points);
 

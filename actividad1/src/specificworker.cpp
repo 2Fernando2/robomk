@@ -86,27 +86,7 @@ void SpecificWorker::initialize()
 
 }
 
-void SpecificWorker::draw_lidar(const auto &points, QGraphicsScene* scene)
-{
-	static std::vector<QGraphicsItem*> draw_points;
-	for (const auto &p : draw_points)
-	{
-		scene->removeItem(p);
-		delete p;
-	}
-	draw_points.clear();
 
-	const QColor color("LightGreen");
-	const QPen pen(color, 10);
-	// const QBrush brush(color, Qt::SolidPattern);
-	for (const auto &p : points)
-	{
-		const auto dp = scene->addRect(-25, -25, 50, 50, pen);
-		dp->setPos(p.x, p.y);
-		draw_points.push_back(dp); // add to the list of points to be deleted next time
-	}
-
-}
 
 void SpecificWorker::compute()
 {
@@ -133,6 +113,53 @@ void SpecificWorker::compute()
 }
 
 //=========================================================================================================================================
+std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points)
+{
+	// non-empty condition
+	if (points.empty())
+		return {};
+
+	RoboCompLidar3D::TPoints result; result.reserve(points.size());
+
+	// 3. Loop over the groups produced by iter::groupby
+	for (auto&& [angle, group] : iter::groupby(points, [](const auto& p)
+		{float multiplier = std::pow(10.0f, 2); return std::floor(p.phi * multiplier) / multiplier; }))
+	{
+		// 'group' is an iterable object containing all Points for the current angle.
+		auto min_it = std::min_element(std::begin(group), std::end(group),
+			[](const auto& a, const auto& b) { return a.r < b.r; });
+		if (min_it->z > 300)
+			result.emplace_back(*min_it); // Push the element with the minimum distance
+	}
+
+	return result;
+}
+void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene)
+{
+	static std::vector<QGraphicsItem*> draw_points;
+	for (const auto &p : draw_points)
+	{
+		scene->removeItem(p);
+		delete p;
+	}
+	draw_points.clear();
+
+	const QColor color("LightGreen");
+	const QPen pen(color, 10);
+	// const QBrush brush(color, Qt::SolidPattern);
+	for (const auto &p : points)
+	{
+		const auto dp = scene->addRect(-25, -25, 50, 50, pen);
+		dp->setPos(p.x, p.y);
+		draw_points.push_back(dp); // add to the list of points to be deleted next time
+	}
+
+}
+
+void SpecificWorker::new_target_slot(QPointF point)
+{
+	qDebug() << "Slot new_target_slot llamado con el punto:" << point;
+}
 
 void SpecificWorker::emergency()
 {
@@ -163,26 +190,7 @@ int SpecificWorker::startup_check()
 }
 
 
-std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points)
-{
-	// non-empty condition
-	if (points.empty())
-		return {};
 
-	RoboCompLidar3D::TPoints result; result.reserve(points.size());
-
-	// 3. Loop over the groups produced by iter::groupby
-	for (auto&& [angle, group] : iter::groupby(points, [](const auto& p)
-		{float multiplier = std::pow(10.0f, 2); return std::floor(p.phi * multiplier) / multiplier; }))
-	{
-		// 'group' is an iterable object containing all Points for the current angle.
-		auto min_it = std::min_element(std::begin(group), std::end(group),
-			[](const auto& a, const auto& b) { return a.r < b.r; });
-		result.emplace_back(RoboCompLidar3D::TPoint{.x=min_it->x, .y=min_it->y, .phi=min_it->phi,}); // Push the element with the minimum distance
-	}
-
-	return result;
-}
 
 void SpecificWorker::update_report_posotion()
 {

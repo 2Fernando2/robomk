@@ -28,7 +28,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_SpecificWorker_t {
-    uint offsetsAndSizes[36];
+    uint offsetsAndSizes[32];
     char stringdata0[15];
     char stringdata1[11];
     char stringdata2[1];
@@ -37,16 +37,14 @@ struct qt_meta_stringdata_SpecificWorker_t {
     char stringdata5[8];
     char stringdata6[14];
     char stringdata7[16];
-    char stringdata8[7];
-    char stringdata9[11];
-    char stringdata10[5];
-    char stringdata11[7];
-    char stringdata12[16];
-    char stringdata13[6];
-    char stringdata14[33];
-    char stringdata15[40];
-    char stringdata16[25];
-    char stringdata17[23];
+    char stringdata8[11];
+    char stringdata9[25];
+    char stringdata10[7];
+    char stringdata11[16];
+    char stringdata12[6];
+    char stringdata13[33];
+    char stringdata14[40];
+    char stringdata15[23];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_SpecificWorker_t::offsetsAndSizes) + ofs), len 
@@ -60,16 +58,14 @@ Q_CONSTINIT static const qt_meta_stringdata_SpecificWorker_t qt_meta_stringdata_
         QT_MOC_LITERAL(45, 7),  // "restore"
         QT_MOC_LITERAL(53, 13),  // "startup_check"
         QT_MOC_LITERAL(67, 15),  // "new_target_slot"
-        QT_MOC_LITERAL(83, 6),  // "coords"
-        QT_MOC_LITERAL(90, 10),  // "draw_lidar"
-        QT_MOC_LITERAL(101, 4),  // "auto"
-        QT_MOC_LITERAL(106, 6),  // "points"
-        QT_MOC_LITERAL(113, 15),  // "QGraphicsScene*"
-        QT_MOC_LITERAL(129, 5),  // "scene"
-        QT_MOC_LITERAL(135, 32),  // "filter_min_distance_cppitertools"
-        QT_MOC_LITERAL(168, 39),  // "std::optional<RoboCompLidar3D..."
-        QT_MOC_LITERAL(208, 24),  // "RoboCompLidar3D::TPoints"
-        QT_MOC_LITERAL(233, 22)   // "update_report_posotion"
+        QT_MOC_LITERAL(83, 10),  // "draw_lidar"
+        QT_MOC_LITERAL(94, 24),  // "RoboCompLidar3D::TPoints"
+        QT_MOC_LITERAL(119, 6),  // "points"
+        QT_MOC_LITERAL(126, 15),  // "QGraphicsScene*"
+        QT_MOC_LITERAL(142, 5),  // "scene"
+        QT_MOC_LITERAL(148, 32),  // "filter_min_distance_cppitertools"
+        QT_MOC_LITERAL(181, 39),  // "std::optional<RoboCompLidar3D..."
+        QT_MOC_LITERAL(221, 22)   // "update_report_posotion"
     },
     "SpecificWorker",
     "initialize",
@@ -79,15 +75,13 @@ Q_CONSTINIT static const qt_meta_stringdata_SpecificWorker_t qt_meta_stringdata_
     "restore",
     "startup_check",
     "new_target_slot",
-    "coords",
     "draw_lidar",
-    "auto",
+    "RoboCompLidar3D::TPoints",
     "points",
     "QGraphicsScene*",
     "scene",
     "filter_min_distance_cppitertools",
     "std::optional<RoboCompLidar3D::TPoints>",
-    "RoboCompLidar3D::TPoints",
     "update_report_posotion"
 };
 #undef QT_MOC_LITERAL
@@ -113,9 +107,9 @@ Q_CONSTINIT static const uint qt_meta_data_SpecificWorker[] = {
        5,    0,   71,    2, 0x0a,    4 /* Public */,
        6,    0,   72,    2, 0x0a,    5 /* Public */,
        7,    1,   73,    2, 0x0a,    6 /* Public */,
-       9,    2,   76,    2, 0x0a,    8 /* Public */,
-      14,    1,   81,    2, 0x0a,   11 /* Public */,
-      17,    0,   84,    2, 0x0a,   13 /* Public */,
+       8,    2,   76,    2, 0x0a,    8 /* Public */,
+      13,    1,   81,    2, 0x0a,   11 /* Public */,
+      15,    0,   84,    2, 0x0a,   13 /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -123,9 +117,9 @@ Q_CONSTINIT static const uint qt_meta_data_SpecificWorker[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Int,
-    QMetaType::Void, QMetaType::QPointF,    8,
-    QMetaType::Void, 0x80000000 | 10, 0x80000000 | 12,   11,   13,
-    0x80000000 | 15, 0x80000000 | 16,   11,
+    QMetaType::Void, QMetaType::QPointF,    2,
+    QMetaType::Void, 0x80000000 | 9, 0x80000000 | 11,   10,   12,
+    0x80000000 | 14, 0x80000000 | 9,   10,
     QMetaType::Void,
 
        0        // eod
@@ -152,10 +146,10 @@ Q_CONSTINIT const QMetaObject SpecificWorker::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'new_target_slot'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QPointF &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QPointF, std::false_type>,
         // method 'draw_lidar'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const auto &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const RoboCompLidar3D::TPoints &, std::false_type>,
         QtPrivate::TypeAndForceComplete<QGraphicsScene *, std::false_type>,
         // method 'filter_min_distance_cppitertools'
         QtPrivate::TypeAndForceComplete<std::optional<RoboCompLidar3D::TPoints>, std::false_type>,
@@ -179,7 +173,7 @@ void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 4: { int _r = _t->startup_check();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 5: _t->new_target_slot((*reinterpret_cast< std::add_pointer_t<QPointF>>(_a[1]))); break;
-        case 6: _t->draw_lidar((*reinterpret_cast< std::add_pointer_t<auto>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QGraphicsScene*>>(_a[2]))); break;
+        case 6: _t->draw_lidar((*reinterpret_cast< std::add_pointer_t<RoboCompLidar3D::TPoints>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QGraphicsScene*>>(_a[2]))); break;
         case 7: { std::optional<RoboCompLidar3D::TPoints> _r = _t->filter_min_distance_cppitertools((*reinterpret_cast< std::add_pointer_t<RoboCompLidar3D::TPoints>>(_a[1])));
             if (_a[0]) *reinterpret_cast< std::optional<RoboCompLidar3D::TPoints>*>(_a[0]) = std::move(_r); }  break;
         case 8: _t->update_report_posotion(); break;

@@ -972,6 +972,8 @@ generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
  /home/usuario/robomk/actividad1/generated/chocachoca_autogen/include/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
  /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
@@ -1085,4 +1087,44 @@ generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
  /home/usuario/robomk/actividad1/generated/chocachoca_autogen/VNU7RW3YIC/moc_specificworker.cpp \
  /home/usuario/robomk/actividad1/generated/chocachoca_autogen/VNU7RW3YIC/../../../src/specificworker.h \
- /home/usuario/robomk/actividad1/generated/genericworker.h
+ /home/usuario/robomk/actividad1/generated/genericworker.h \
+ /usr/local/include/cppitertools/itertools.hpp \
+ /usr/local/include/cppitertools/accumulate.hpp \
+ /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+ /usr/local/include/cppitertools/internal/iterbase.hpp \
+ /usr/local/include/cppitertools/internal/iterbase.hpp \
+ /usr/local/include/cppitertools/batched.hpp \
+ /usr/local/include/cppitertools/internal/iteratoriterator.hpp \
+ /usr/local/include/cppitertools/chain.hpp \
+ /usr/local/include/cppitertools/internal/iter_tuples.hpp \
+ /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+ /usr/local/include/cppitertools/chunked.hpp \
+ /usr/local/include/cppitertools/combinations.hpp \
+ /usr/local/include/cppitertools/combinations_with_replacement.hpp \
+ /usr/local/include/cppitertools/compress.hpp \
+ /usr/local/include/cppitertools/count.hpp \
+ /usr/local/include/cppitertools/range.hpp \
+ /usr/local/include/cppitertools/cycle.hpp \
+ /usr/local/include/cppitertools/dropwhile.hpp \
+ /usr/local/include/cppitertools/filter.hpp \
+ /usr/local/include/cppitertools/enumerate.hpp \
+ /usr/local/include/cppitertools/filterfalse.hpp \
+ /usr/local/include/cppitertools/groupby.hpp \
+ /usr/local/include/cppitertools/imap.hpp \
+ /usr/local/include/cppitertools/starmap.hpp \
+ /usr/local/include/cppitertools/zip.hpp \
+ /usr/local/include/cppitertools/permutations.hpp \
+ /usr/local/include/cppitertools/powerset.hpp \
+ /usr/local/include/cppitertools/product.hpp \
+ /usr/local/include/cppitertools/repeat.hpp \
+ /usr/local/include/cppitertools/reversed.hpp \
+ /usr/local/include/cppitertools/slice.hpp \
+ /usr/local/include/cppitertools/sliding_window.hpp \
+ /usr/local/include/cppitertools/sorted.hpp \
+ /usr/local/include/cppitertools/takewhile.hpp \
+ /usr/local/include/cppitertools/unique_everseen.hpp \
+ /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/bits/unordered_set.h \
+ /usr/local/include/cppitertools/unique_justseen.hpp \
+ /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF
