@@ -28,7 +28,7 @@ NAME_Chocachoca="Chocachoca"
 # --- CREA LAS 5 PESTAÑAS ---
 # Formato: guake -n <TAB_INDEX> -e "<comando>" -r "<nombre de la pestaña>"
 [ -n "$CMD_WebotsBridge" ] && guake -n 0 -e "cd $DIR_WebotsBridge; $CMD_WebotsBridge" -r "$NAME_WebotsBridge" || guake -n 0 -e "cd $DIR_WebotsBridge" -r "$NAME_WebotsBridge"
-[ -n "$CMD_Joystick" ] && guake -n 1 -e "cd $DIR_Joystick; $CMD_Joystick" -r "$NAME_Joystick" || guake -n 1 -e "cd $DIR_Joystick -r "$NAME_Joystick"
+[ -n "$CMD_Joystick" ] && guake -n 1 -e "cd $DIR_Joystick; $CMD_Joystick" -r "$NAME_Joystick" || guake -n 1 -e "cd $DIR_Joystick" -r "$NAME_Joystick"
 [ -n "$CMD_Lidar3D" ] && guake -n 2 -e "cd $DIR_Lidar3D; $CMD_Lidar3D" -r "$NAME_Lidar3D" || guake -n 2 -e "cd $DIR_Lidar3D" -r "$NAME_Lidar3D"
 [ -n "$CMD_Chocachoca" ] && guake -n 3 -e "cd $DIR_Chocachoca; $CMD_Chocachoca" -r "$NAME_Chocachoca" || guake -n 3 -e "cd $DIR_Chocachoca" -r "$NAME_Chocachoca"
 
