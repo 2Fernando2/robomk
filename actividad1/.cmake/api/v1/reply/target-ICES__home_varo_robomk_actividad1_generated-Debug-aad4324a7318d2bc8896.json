@@ -1,0 +1,43 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ROBOCOMP_IDSL_TO_ICE"
+		],
+		"files" : 
+		[
+			"/home/robocomp/robocomp/cmake/robocomp.cmake",
+			"generated/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 100,
+				"parent" : 1
+			}
+		]
+	},
+	"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
+	"name" : "ICES__home_varo_robomk_actividad1_generated",
+	"paths" : 
+	{
+		"build" : "generated",
+		"source" : "generated"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

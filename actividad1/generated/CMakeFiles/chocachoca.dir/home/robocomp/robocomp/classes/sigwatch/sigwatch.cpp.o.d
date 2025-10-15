@@ -389,5 +389,5 @@ generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigw
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /home/usuario/robomk/actividad1/generated/chocachoca_autogen/include/moc_sigwatch.cpp \
- /home/usuario/robomk/actividad1/generated/chocachoca_autogen/include/../../../../../../robocomp/robocomp/classes/sigwatch/sigwatch.h
+ /home/varo/robomk/actividad1/generated/chocachoca_autogen/include/moc_sigwatch.cpp \
+ /home/varo/robomk/actividad1/generated/chocachoca_autogen/include/../../../../../../robocomp/robocomp/classes/sigwatch/sigwatch.h

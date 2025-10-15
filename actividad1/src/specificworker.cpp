@@ -18,6 +18,7 @@
  */
 #include "specificworker.h"
 #include <ranges>
+#include <random>
 
 
 SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, bool startup_check) : GenericWorker(configLoader, tprx)
@@ -100,42 +101,47 @@ void SpecificWorker::compute()
 	auto end = filter_data->begin() + size/2 + range;
 	auto min = std::min_element(begin, end);
 
+	// qInfo() << static_cast<int>(state);
+
 	switch (state)
 	{
 	case SpecificWorker::State::IDLE:
 		break;
 
 	case SpecificWorker::State::FORWARD:
-		// qInfo() << "FORWARD";
+        // qInfo() << "FORWARD";
 		// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
 		if (min->distance2d <= MIN_THRESHOLD)
 		{
 			qInfo() << "FORWARD -> TURN";
-			state = SpecificWorker::State::TURN;
-		}
-		else
+            result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 1.f);
+		} else
 		{
 			// qInfo() << "FORWARD -> FORWARD";
-			// RoboCompLidar3D::TPoints points;
-			// points.clear(); points.insert(points.begin(), *min);
-			// qInfo() << "Insert point";
-			// result = forward(points);
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 1000, 0);
-			// qInfo() << "Result calculated";
+			// RoboCompLidar3D::TPoints points; points.clear(); points.insert(points.begin(), *min); qInfo() << "Insert point"; result = forward(points);
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 4000.f, 0.f);
 		}
 		break;
 
 	case SpecificWorker::State::TURN:
-		qInfo() << "TURN";
+		// qInfo() << "TURN";
 		// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
-		if (std::min_element(begin, end)->distance2d > MIN_THRESHOLD) {
+		if (min->distance2d > MIN_THRESHOLD) {
 			qInfo() << "TURN -> FORWARD";
-			state = SpecificWorker::State::FORWARD;
-		}
-			else
-				result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0, 1);
-			break;
-		//case State::FOLLOW_WALL: {}
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<int> dice(1, 2);
+            qInfo() << "Dado entre 1 y 2: " << dice(gen);
+            result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 4000.f, 0.f);
+		} else
+        {
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 1.f);
+        }
+        break;
+		case State::FOLLOW_WALL:
+        {
+
+        }
 		//case State::SPIRAL: {}
 		default: break;
 	}
