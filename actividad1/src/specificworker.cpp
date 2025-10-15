@@ -90,65 +90,112 @@ void SpecificWorker::initialize()
 
 void SpecificWorker::compute()
 {
-	const auto data = lidar3d_proxy->getLidarDataWithThreshold2d("helios", 12000, 1);
-	std::optional<RoboCompLidar3D::TPoints> filter_data;
-
-	// State enum-class
-	State state = State::FORWARD;
-
-	// Try-Catch block to read the laser data
-	try
-	{
-
-		qInfo() << "full" << data.points.size();
-		if (data.points.empty())
-		{
-			qWarning() << "No points received";
-			return;
-		}
-		filter_data = filter_min_distance_cppitertools(data.points);
-		qInfo() << filter_data.value().size();
-
-		if (filter_data.has_value())
-		{
-			draw_lidar(filter_data.value(), &viewer->scene);
-			update_report_posotion();
-		}
-	}
-	catch(const Ice::Exception& ex){std::cout << ex.what() << std::endl; return;}
+	auto filter_data = read_data();
 
 	// State machine
-	std::tuple<State, float, float> result;
+	std::tuple<SpecificWorker::State, float, float> result;
+	auto size = filter_data->size();
+	auto range = size / 8;
+	auto begin = filter_data->begin() + size/2 - range;
+	auto end = filter_data->begin() + size/2 + range;
+	auto min = std::min_element(begin, end);
+
 	switch (state)
 	{
-	case State::IDLE:
-	case State::FORWARD:
-		// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
-		auto size = filter_data->size();
-		auto range = size / 8;
-		//std::vector<float>::iterator min_distance = std::min_element(filter_data->begin(), filter_data->end()) - range;
-		//if (std::min_element(size/2 - range, size/2 + range) < MIN_THRESHOLD)
-			//state = State::TURN;
-		//else
-			// 2º acción - result = ...(ldata)
-	case State::TURN:
-		// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
+		case SpecificWorker::State::IDLE:
+			break;
 
-		// 2º acción -
+		case SpecificWorker::State::FORWARD:
+			// qInfo() << "FORWARD";
+			// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
+			if (min->distance2d <= MIN_THRESHOLD)
+			{
+				// qInfo() << "FORWARD -> TURN";
+				state = SpecificWorker::State::TURN;
+			}
+			else
+			{
+				// qInfo() << "FORWARD -> FORWARD";
+				RoboCompLidar3D::TPoints points;
+				points.clear(); points.insert(points.begin(), *min);
+				// qInfo() << "Insert point";
+				result = forward(points);
+				// qInfo() << "Result calculated";
+			}
+			break;
 
-	//case State::FOLLOW_WALL:
-	//case State::SPIRAL:
-	//default:
+		case SpecificWorker::State::TURN:
+			// qInfo() << "TURN";
+			// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
+			if (std::min_element(begin, end)->distance2d > MIN_THRESHOLD)
+				state = SpecificWorker::State::FORWARD;
+			else
+				result = turn(filter_data.value());
+			break;
+		//case State::FOLLOW_WALL: {}
+		//case State::SPIRAL: {}
+		default: break;
 	}
-	state = std::get<State>(result);
-
+	state = std::get<SpecificWorker::State>(result);
 
 	// Try-Catch block to send velocities to the robot
+	send_velocities(result);
+}
+
+std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const RoboCompLidar3D::TPoints& points)
+{
+	auto point = points.front();
+	float break_adv = std::clamp(point.distance2d * (1/MIN_THRESHOLD), 1.f, 0.f);
+	float rot = atan2(point.x, point.z);
+	float brake_rot = rot>=0 ? std::clamp(rot+1, 1.f, 0.f) : std::clamp(1-rot, 0.f, 1.f);
+	float adv_speed = MAX_ADV * break_adv * brake_rot;
+
+	return std::tuple<SpecificWorker::State, float, float> (SpecificWorker::State::FORWARD, adv_speed, brake_rot);
+}
+
+std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(const RoboCompLidar3D::TPoints& points)
+{
+	return{};
 }
 
 
-
 //=========================================================================================================================================
+std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
+{
+	// Try-Catch block to read the laser data
+	RoboCompLidar3D::TData data;
+	try
+	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("helios", 12000, 1);
+	} catch(const Ice::Exception& ex){std::cout << ex.what() << std::endl; return {};}
+
+	// filter
+	//qInfo() << "full" << data.points.size();
+	if (data.points.empty())
+	{
+		qWarning() << "No points received";
+		return {};
+	}
+	RoboCompLidar3D::TPoints filter_data;
+	if (const auto &filter_data_ = filter_min_distance_cppitertools(data.points);  filter_data_.has_value())
+		filter_data = filter_data_.value();
+	else
+	{
+		qWarning() << "No points filtered";
+		return {};
+	}
+
+	// qInfo() << filter_data.size();
+
+	draw_lidar(filter_data, &viewer->scene);
+	return filter_data;
+}
+
+void SpecificWorker::send_velocities(std::tuple<SpecificWorker::State, float, float> state)
+{
+
+}
+
+
 std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points)
 {
 	// non-empty condition
@@ -164,7 +211,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppi
 		// 'group' is an iterable object containing all Points for the current angle.
 		auto min_it = std::min_element(std::begin(group), std::end(group),
 			[](const auto& a, const auto& b) { return a.r < b.r; });
-		if (min_it->z > 300)
+		//if (min_it->z > 300)
 			result.emplace_back(*min_it); // Push the element with the minimum distance
 	}
 

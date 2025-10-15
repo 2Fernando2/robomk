@@ -36,8 +36,6 @@
 #include <abstract_graphic_viewer/abstract_graphic_viewer.h>
 #include <QPointF>
 
-enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
-
 /**
  * \brief Class SpecificWorker implements the core functionality of the component.
  */
@@ -91,8 +89,6 @@ public slots:
 
 	void draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene);
 
-	std::tuple<State, float, float> forward(auto lidar_data);
-
 	std::optional<RoboCompLidar3D::TPoints> filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points);
 
 	void update_report_posotion();
@@ -113,6 +109,14 @@ private:
 	QGraphicsPolygonItem *robot_polygon;
 
 	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 1.5;
+	const float MAX_ADV = 100;
+
+	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
+	SpecificWorker::State state = SpecificWorker::State::FORWARD;
+	std::optional<RoboCompLidar3D::TPoints> read_data();
+	std::tuple<SpecificWorker::State, float, float> forward(const RoboCompLidar3D::TPoints& points);
+	std::tuple<SpecificWorker::State, float, float> turn(const RoboCompLidar3D::TPoints& points);
+	void send_velocities(std::tuple<SpecificWorker::State, float, float> state);
 
 signals:
 	//void customSignal();
