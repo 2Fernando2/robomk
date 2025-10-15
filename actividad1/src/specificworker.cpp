@@ -102,35 +102,38 @@ void SpecificWorker::compute()
 
 	switch (state)
 	{
-		case SpecificWorker::State::IDLE:
-			break;
+	case SpecificWorker::State::IDLE:
+		break;
 
-		case SpecificWorker::State::FORWARD:
-			// qInfo() << "FORWARD";
-			// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
-			if (min->distance2d <= MIN_THRESHOLD)
-			{
-				// qInfo() << "FORWARD -> TURN";
-				state = SpecificWorker::State::TURN;
-			}
-			else
-			{
-				// qInfo() << "FORWARD -> FORWARD";
-				RoboCompLidar3D::TPoints points;
-				points.clear(); points.insert(points.begin(), *min);
-				// qInfo() << "Insert point";
-				result = forward(points);
-				// qInfo() << "Result calculated";
-			}
-			break;
+	case SpecificWorker::State::FORWARD:
+		// qInfo() << "FORWARD";
+		// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
+		if (min->distance2d <= MIN_THRESHOLD)
+		{
+			qInfo() << "FORWARD -> TURN";
+			state = SpecificWorker::State::TURN;
+		}
+		else
+		{
+			// qInfo() << "FORWARD -> FORWARD";
+			// RoboCompLidar3D::TPoints points;
+			// points.clear(); points.insert(points.begin(), *min);
+			// qInfo() << "Insert point";
+			// result = forward(points);
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 1000, 0);
+			// qInfo() << "Result calculated";
+		}
+		break;
 
-		case SpecificWorker::State::TURN:
-			// qInfo() << "TURN";
-			// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
-			if (std::min_element(begin, end)->distance2d > MIN_THRESHOLD)
-				state = SpecificWorker::State::FORWARD;
+	case SpecificWorker::State::TURN:
+		qInfo() << "TURN";
+		// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
+		if (std::min_element(begin, end)->distance2d > MIN_THRESHOLD) {
+			qInfo() << "TURN -> FORWARD";
+			state = SpecificWorker::State::FORWARD;
+		}
 			else
-				result = turn(filter_data.value());
+				result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0, 1);
 			break;
 		//case State::FOLLOW_WALL: {}
 		//case State::SPIRAL: {}
@@ -139,7 +142,7 @@ void SpecificWorker::compute()
 	state = std::get<SpecificWorker::State>(result);
 
 	// Try-Catch block to send velocities to the robot
-	send_velocities(result);
+	omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
 }
 
 std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const RoboCompLidar3D::TPoints& points)
@@ -149,6 +152,7 @@ std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const Ro
 	float rot = atan2(point.x, point.z);
 	float brake_rot = rot>=0 ? std::clamp(rot+1, 1.f, 0.f) : std::clamp(1-rot, 0.f, 1.f);
 	float adv_speed = MAX_ADV * break_adv * brake_rot;
+
 
 	return std::tuple<SpecificWorker::State, float, float> (SpecificWorker::State::FORWARD, adv_speed, brake_rot);
 }

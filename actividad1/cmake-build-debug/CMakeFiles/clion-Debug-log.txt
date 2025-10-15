@@ -1,35 +1,25 @@
-/snap/clion/385/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/usuario/robomk/actividad1 -B /home/usuario/robomk/actividad1
--- The C compiler identification is GNU 13.3.0
--- The CXX compiler identification is GNU 13.3.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+/snap/clion/385/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/robocomp/robomk/actividad1 -B /home/robocomp/robomk/actividad1/cmake-build-debug
+CMake Warning at CMakeLists.txt:5 (MESSAGE):
+  ROBOCOMP variable not set.  Using the default value:
+  /home/robocomp/robocomp
+
+
+CMake Warning (dev) at CMakeLists.txt:22 (INSTALL):
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
 -- Using g++ 13 or higher, setting the C++23 standard.
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE
--- Performing Test HAVE_STDATOMIC
--- Performing Test HAVE_STDATOMIC - Success
--- Found WrapAtomic: TRUE
 -- COMPILING WITH QT6
 -- Configuring for x86_64 architecture
--- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
--- Found WrapOpenGL: TRUE
 -- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Found WrapVulkanHeaders: /usr/include
 -- Ice version: 3.7.10
 -- Found the following Ice libraries:
 --   Ice++11 (required)
 --   IceStorm++11 (required)
 -- Found Ice: /usr/bin/slice2cpp (found version "3.7.10")
--- RoboComp root is now set to /home/usuario/robocomp/
+-- RoboComp root is now set to /home/robocomp/robocomp//
 -- 
 -- Ice version: 3.7.10
 -- Found the following Ice libraries:
@@ -38,13 +28,19 @@
 -- The following Ice libraries were not found:
 --   IceUtil (optional)
 -- Found Ice: /usr/bin/slice2cpp (found version "3.7.10")
--- Generating ICE files in directory: /home/usuario/robomk/actividad1/generated
--- Adding rule to generate /home/usuario/robomk/actividad1/generated/OmniRobot.ice from /home/usuario/robocomp/interfaces/IDSLs/OmniRobot.idsl
--- Adding rule to generate /home/usuario/robomk/actividad1/generated/GenericBase.ice from /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl
--- Adding rule to generate /home/usuario/robomk/actividad1/generated/Lidar3D.ice from /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl
--- BU ice=>h/cpp: Adding rule to generate OmniRobot.h and OmniRobot.cpp from /home/usuario/robomk/actividad1/generated/OmniRobot.ice
--- BU ice=>h/cpp: Adding rule to generate GenericBase.h and GenericBase.cpp from /home/usuario/robomk/actividad1/generated/GenericBase.ice
--- BU ice=>h/cpp: Adding rule to generate Lidar3D.h and Lidar3D.cpp from /home/usuario/robomk/actividad1/generated/Lidar3D.ice
--- Configuring done (0.6s)
+-- Generating ICE files in directory: /home/robocomp/robomk/actividad1/generated
+-- Adding rule to generate /home/robocomp/robomk/actividad1/generated/OmniRobot.ice from /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl
+-- Adding rule to generate /home/robocomp/robomk/actividad1/generated/GenericBase.ice from /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl
+-- Adding rule to generate /home/robocomp/robomk/actividad1/generated/Lidar3D.ice from /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl
+-- BU ice=>h/cpp: Adding rule to generate OmniRobot.h and OmniRobot.cpp from /home/robocomp/robomk/actividad1/generated/OmniRobot.ice
+-- BU ice=>h/cpp: Adding rule to generate GenericBase.h and GenericBase.cpp from /home/robocomp/robomk/actividad1/generated/GenericBase.ice
+-- BU ice=>h/cpp: Adding rule to generate Lidar3D.h and Lidar3D.cpp from /home/robocomp/robomk/actividad1/generated/Lidar3D.ice
+CMake Warning (dev) at generated/CMakeLists.txt:59 (INSTALL):
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/usuario/robomk/actividad1
+-- Build files have been written to: /home/robocomp/robomk/actividad1/cmake-build-debug

@@ -93,8 +93,6 @@ public slots:
 
 	void update_report_posotion();
 
-
-
 private:
 
 	/**
@@ -108,8 +106,8 @@ private:
 	const int ROBOT_LENGTH = 400;
 	QGraphicsPolygonItem *robot_polygon;
 
-	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 1.5;
-	const float MAX_ADV = 100;
+	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3;
+	const float MAX_ADV = 1000;
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
 	SpecificWorker::State state = SpecificWorker::State::FORWARD;
