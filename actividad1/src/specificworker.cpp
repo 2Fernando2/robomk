@@ -100,15 +100,15 @@ void SpecificWorker::compute()
 	// State machine
 	std::tuple<SpecificWorker::State, float, float> result;
 	auto size = filter_data->size();
-	auto range = size / 8;
+	auto range = size / 5;
 	auto begin = filter_data->begin() + size/2 - range;
+	auto middle = filter_data->begin() + size/2;
 	auto end = filter_data->begin() + size/2 + range;
-	auto min = std::min_element(begin, end);
-	float dir = (min->phi < -0.5) ? -1.f : 1.f;
-	if (min->phi == -0.5) dir = dice(gen)==1 ? 1.f : -1.f;
 
-	// qInfo() << static_cast<int>(state);
-	qInfo() << "PHI de MIN: " << min->phi;
+	//Coger mínimos locales
+	auto min_izq = std::min_element(begin, middle);
+	auto min_der = std::min_element(middle, end);
+
 
 	switch (state)
 	{
@@ -117,29 +117,47 @@ void SpecificWorker::compute()
 
 	case SpecificWorker::State::FORWARD:
         // qInfo() << "FORWARD";
-		// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
-		if (min->distance2d <= MIN_THRESHOLD)
+		if (min_izq->distance2d > MIN_THRESHOLD && min_der->distance2d > MIN_THRESHOLD) {	//No supera el umbral
+			qInfo() << "FORWARD -> FORWARD";
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 1000.f, 0.f);
+		}
+		else	//Supera el umbral
 		{
-			qInfo() << "FORWARD -> TURN";
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 1.f);
-		} else
-		{
-			// qInfo() << "FORWARD -> FORWARD";
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 3000.f, 0.f);
+			float dir;
+			if (min_izq->distance2d == min_der->distance2d)
+			{
+				qInfo() << "Aleatorio (" << dir << ")";
+				dir = dice(gen)==1 ? 1.f : -1.f;
+			}
+			else
+				dir = (min_izq->distance2d < min_der->distance2d) ? 1.f : -1.f;
+
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
+			qInfo() << "FORWARD -> TURN (" << dir << ")";
 		}
 		break;
 
 	case SpecificWorker::State::TURN:
 		// qInfo() << "TURN";
-		// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
-		if (min->distance2d > MIN_THRESHOLD) {
+		if (min_izq->distance2d > MIN_THRESHOLD && min_der->distance2d > MIN_THRESHOLD) {	//No supera el umbral
 			qInfo() << "TURN -> FORWARD";
-            result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 3000.f, 0.f);
-		} else
-        {
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 1.f);
-        }
-        break;
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 1000.f, 0.f);
+		}
+		else	//Supera el umbral
+		{
+			float dir;
+			if (min_izq->distance2d == min_der->distance2d)
+			{
+				qInfo() << "Aleatorio (" << dir << ")";
+				dir = dice(gen)==1 ? 1.f : -1.f;
+			}
+			else
+				dir = (min_izq->distance2d < min_der->distance2d) ? 1.f : -1.f;
+
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
+			qInfo() << "TURN -> TURN (" << dir << ")";
+		}
+			break;
 		//case State::FOLLOW_WALL: {}
 		//case State::SPIRAL: {}
 		default: break;

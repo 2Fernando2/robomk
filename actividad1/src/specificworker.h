@@ -106,7 +106,7 @@ private:
 	const int ROBOT_LENGTH = 400;
 	QGraphicsPolygonItem *robot_polygon;
 
-	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3;
+	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2;
 	const float MAX_ADV = 1000;
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};

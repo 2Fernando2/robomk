@@ -1,11 +1,11 @@
-/home/varo/robomk/actividad1/generated/chocachoca_autogen/EWIEGA46WW/moc_genericworker.cpp: /home/varo/robomk/actividad1/generated/genericworker.h \
-  /home/varo/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
-  /home/varo/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
-  /home/varo/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
-  /home/varo/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
-  /home/varo/robomk/actividad1/generated/GenericBase.h \
-  /home/varo/robomk/actividad1/generated/Lidar3D.h \
-  /home/varo/robomk/actividad1/generated/OmniRobot.h \
+/home/usuario/robomk/actividad1/generated/chocachoca_autogen/EWIEGA46WW/moc_genericworker.cpp: /home/usuario/robomk/actividad1/generated/genericworker.h \
+  /home/usuario/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
+  /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
+  /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
+  /home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
+  /home/usuario/robomk/actividad1/generated/GenericBase.h \
+  /home/usuario/robomk/actividad1/generated/Lidar3D.h \
+  /home/usuario/robomk/actividad1/generated/OmniRobot.h \
   /usr/include/GL/gl.h \
   /usr/include/Ice/AsyncResult.h \
   /usr/include/Ice/BatchRequestQueueF.h \
