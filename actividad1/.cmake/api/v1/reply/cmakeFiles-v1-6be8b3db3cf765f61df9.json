@@ -1755,8 +1755,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/varo/robomk/actividad1",
-		"source" : "/home/varo/robomk/actividad1"
+		"build" : "/home/usuario/robomk/actividad1",
+		"source" : "/home/usuario/robomk/actividad1"
 	},
 	"version" : 
 	{

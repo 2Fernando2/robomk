@@ -8,34 +8,34 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "/snap/clion/385/bin/cmake/linux/x64/bin/cmake",
-			"cpack" : "/snap/clion/385/bin/cmake/linux/x64/bin/cpack",
-			"ctest" : "/snap/clion/385/bin/cmake/linux/x64/bin/ctest",
-			"root" : "/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0"
+			"cmake" : "/usr/bin/cmake",
+			"cpack" : "/usr/bin/cpack",
+			"ctest" : "/usr/bin/ctest",
+			"root" : "/usr/share/cmake-3.28"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
-			"major" : 4,
-			"minor" : 0,
-			"patch" : 2,
-			"string" : "4.0.2",
+			"major" : 3,
+			"minor" : 28,
+			"patch" : 3,
+			"string" : "3.28.3",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-1246b3f7e58e91d73871.json",
+			"jsonFile" : "codemodel-v2-38751b1b0e866ee10504.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
 				"major" : 2,
-				"minor" : 8
+				"minor" : 6
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-4ea64e239887db3c5d41.json",
+			"jsonFile" : "cache-v2-1db1b39ee772d1bce81b.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,12 +44,12 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-50b170aa203161a74e1c.json",
+			"jsonFile" : "cmakeFiles-v1-fdb01aa6e3d7503f8254.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
 				"major" : 1,
-				"minor" : 1
+				"minor" : 0
 			}
 		},
 		{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-4ea64e239887db3c5d41.json",
+			"jsonFile" : "cache-v2-1db1b39ee772d1bce81b.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,22 +76,22 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-50b170aa203161a74e1c.json",
+			"jsonFile" : "cmakeFiles-v1-fdb01aa6e3d7503f8254.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
 				"major" : 1,
-				"minor" : 1
+				"minor" : 0
 			}
 		},
 		"codemodel-v2" : 
 		{
-			"jsonFile" : "codemodel-v2-1246b3f7e58e91d73871.json",
+			"jsonFile" : "codemodel-v2-38751b1b0e866ee10504.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
 				"major" : 2,
-				"minor" : 8
+				"minor" : 6
 			}
 		},
 		"toolchains-v1" : 
