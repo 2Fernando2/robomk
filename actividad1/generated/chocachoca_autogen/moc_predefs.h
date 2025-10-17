@@ -36,6 +36,7 @@
 #define __CET__ 3
 #define __cpp_noexcept_function_type 201510L
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
+#define __cpp_variadic_templates 200704L
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
 #define __SIG_ATOMIC_TYPE__ int
 #define __DBL_MIN_10_EXP__ (-307)
@@ -65,6 +66,7 @@
 #define __BFLT16_MAX_10_EXP__ 38
 #define __BFLT16_MAX_EXP__ 128
 #define __LDBL_IS_IEC_60559__ 1
+#define QT_NO_DEBUG 1
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -239,7 +241,6 @@
 #define __cpp_unicode_characters 201411L
 #define __cpp_implicit_move 202207L
 #define _STDC_PREDEF_H 1
-#define __cpp_variadic_templates 200704L
 #define __cpp_if_consteval 202106L
 #define __INT_LEAST32_MAX__ 0x7fffffff
 #define __GCC_ATOMIC_INT_LOCK_FREE 2

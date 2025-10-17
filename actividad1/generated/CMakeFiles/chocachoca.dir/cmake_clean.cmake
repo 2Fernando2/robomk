@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "../bin/chocachoca"
   "../bin/chocachoca.pdb"
-  "CMakeFiles/chocachoca.dir/link.d"
   "CMakeFiles/chocachoca_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/chocachoca_autogen.dir/ParseCache.txt"
   "chocachoca_autogen"

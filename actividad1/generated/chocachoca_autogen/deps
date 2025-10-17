@@ -26,27 +26,6 @@ chocachoca_autogen/timestamp: \
 	/home/varo/robomk/actividad1/src/CMakeLists.txt \
 	/home/varo/robomk/actividad1/src/specificworker.cpp \
 	/home/varo/robomk/actividad1/src/specificworker.h \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckIncludeFile.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckLibraryExists.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FeatureSummary.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindIce.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPackageMessage.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPkgConfig.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindThreads.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindVulkan.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/GNUInstallDirs.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/MacroAddFileDependencies.cmake \
-	/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/SelectLibraryConfigurations.cmake \
 	/usr/include/GL/gl.h \
 	/usr/include/Ice/AsyncResult.h \
 	/usr/include/Ice/BatchRequestQueueF.h \
@@ -1165,5 +1144,26 @@ chocachoca_autogen/timestamp: \
 	/usr/local/include/toml++/impl/yaml_formatter.inl \
 	/usr/local/include/toml++/toml.h \
 	/usr/local/include/toml++/toml.hpp \
+	/usr/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake \
+	/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake \
+	/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake \
+	/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake \
+	/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake \
+	/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake \
+	/usr/share/cmake-3.28/Modules/FeatureSummary.cmake \
+	/usr/share/cmake-3.28/Modules/FindIce.cmake \
+	/usr/share/cmake-3.28/Modules/FindOpenGL.cmake \
+	/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake \
+	/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake \
+	/usr/share/cmake-3.28/Modules/FindPkgConfig.cmake \
+	/usr/share/cmake-3.28/Modules/FindThreads.cmake \
+	/usr/share/cmake-3.28/Modules/FindVulkan.cmake \
+	/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake \
+	/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake \
+	/usr/share/cmake-3.28/Modules/Internal/CheckFlagCommonConfig.cmake \
+	/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake \
+	/usr/share/cmake-3.28/Modules/MacroAddFileDependencies.cmake \
+	/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake \
 	/home/varo/robomk/actividad1/src/mainUI.ui \
-	/snap/clion/385/bin/cmake/linux/x64/bin/cmake
+	/usr/bin/cmake

@@ -8,7 +8,7 @@ LIST(APPEND HEADERS
   ../src/specificworker.h
 )
 
-
+SET(LIBS ${LIBS} tbb)
 LIST(APPEND LIBS ${LIBS})
 
 # no-char8_t to avoid a problem with ICE Connection lib.

@@ -16,8 +16,8 @@ DIR_Chocachoca="$HOME/robomk/actividad1"
 # --- CONFIGURA AQUÍ LOS COMANDOS QUE QUIERAS EJECUTAR ---
 CMD_WebotsBridge="bin/Webots2Robocomp etc/config"
 CMD_Joystick="bin/JoystickPublish etc/config_shadow"
-CMD_Lidar3D="bin/Lidar3D etc/config_helios_webots"        
-CMD_Chocachoca="bin/chocachoca etc/config"       
+CMD_Lidar3D="bin/Lidar3D etc/config_pearl_webots"
+CMD_Chocachoca="bin/chocachoca etc/config"
 
 # --- NOMBRES DE LAS PESTAÑAS ---
 NAME_WebotsBridge="WebotsBridge"

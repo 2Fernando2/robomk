@@ -103,17 +103,21 @@ private:
 	// graphics
 	QRectF dimensions;
 	AbstractGraphicViewer *viewer;
-	const int ROBOT_LENGTH = 400;
 	QGraphicsPolygonItem *robot_polygon;
 
-	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3;
+	const float ROBOT_LENGTH = 400;
+	const float MAX_THRESHOLD = 200;
+	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2;
 	const float MAX_ADV = 1000;
+	bool rotating = false;
+	float dir;
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
 	SpecificWorker::State state = SpecificWorker::State::FORWARD;
 	std::optional<RoboCompLidar3D::TPoints> read_data();
 	std::tuple<SpecificWorker::State, float, float> forward(const RoboCompLidar3D::TPoints& points);
-	std::tuple<SpecificWorker::State, float, float> turn(const RoboCompLidar3D::TPoints& points);
+	std::tuple<SpecificWorker::State, float, float> turn(const auto& min_izq, const auto& min_der);
+	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	void send_velocities(std::tuple<SpecificWorker::State, float, float> state);
 
 signals:

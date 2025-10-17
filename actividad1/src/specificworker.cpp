@@ -19,6 +19,14 @@
 #include "specificworker.h"
 #include <ranges>
 #include <random>
+#include <expected>
+
+#ifdef emit
+#undef emit
+#endif
+#include <execution>
+#include <algorithm>
+#include <cppitertools/enumerate.hpp>
 
 
 SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, bool startup_check) : GenericWorker(configLoader, tprx)
@@ -78,6 +86,7 @@ void SpecificWorker::initialize()
 	const auto rob = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
 	robot_polygon = std::get<0>(rob);
 	connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
+	rotating = false;
 
     //initializeCODE
 
@@ -103,42 +112,44 @@ void SpecificWorker::compute()
 	auto range = size / 8;
 	auto begin = filter_data->begin() + size/2 - range;
 	auto end = filter_data->begin() + size/2 + range;
-	auto min = std::min_element(begin, end);
-	float dir = (min->phi < -0.5) ? -1.f : 1.f;
-	if (min->phi == -0.5) dir = dice(gen)==1 ? 1.f : -1.f;
+	//auto middle = size/2;
 
-	// qInfo() << static_cast<int>(state);
-	qInfo() << "PHI de MIN: " << min->phi;
+	auto min = std::min_element(begin,  end,
+								[](auto& p1,auto& p2){return p1.distance2d < p2.distance2d;});
+	if (!rotating)
+		dir = (min->phi < 0.f) ? 0.5f : -0.5f;
+	// if (min->phi == 0.f) dir = dice(gen);
+	// Local min
+	auto min_izq = std::min_element(std::begin(filter_data.value()) + 3*filter_data->size()/8,  std::begin(filter_data.value()) + 4*filter_data->size()/8,
+								[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
+	auto min_der = std::min_element(std::begin(filter_data.value()) + 4*filter_data->size()/8,  std::begin(filter_data.value()) + 5*filter_data->size()/8,
+								[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
 
+	// qInfo() << "DIS2D de MIN: " << min->distance2d;
 	switch (state)
 	{
 	case SpecificWorker::State::IDLE:
 		break;
-
 	case SpecificWorker::State::FORWARD:
-        // qInfo() << "FORWARD";
-		// 1º condición de salida - FORWARD -> TURN : < mín en la nube de puntos
-		if (min->distance2d <= MIN_THRESHOLD)
-		{
-			qInfo() << "FORWARD -> TURN";
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 1.f);
-		} else
-		{
-			// qInfo() << "FORWARD -> FORWARD";
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 3000.f, 0.f);
-		}
-		break;
-
-	case SpecificWorker::State::TURN:
-		// qInfo() << "TURN";
-		// 1º condición de salida - TURN -> FORWARD : > mín en la nube de puntos
-		if (min->distance2d > MIN_THRESHOLD) {
-			qInfo() << "TURN -> FORWARD";
-            result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 3000.f, 0.f);
-		} else
-        {
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 1.f);
+		if (min->distance2d <= MIN_THRESHOLD) {
+            qInfo() << "FORWARD -> TURN";
+            // result = turn(min_izq, min_der);
+            result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 0.f);
         }
+		else { result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 3000.f, 0.f); }
+		break;
+	case SpecificWorker::State::TURN:
+        if (min->distance2d > MIN_THRESHOLD) {
+			qInfo() << "TURN -> FORWARD";
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 0.f, 0.f);
+			rotating = false;
+        }
+		else {
+            //qInfo() << "-> TURN - PHI de MIN: " << min->phi << " - dis2d: " << min->distance2d;
+            // result = turn(min_izq, min_der);
+			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
+			rotating = true;
+		}
         break;
 		//case State::FOLLOW_WALL: {}
 		//case State::SPIRAL: {}
@@ -159,13 +170,25 @@ std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const Ro
 	float brake_rot = rot>=0 ? std::clamp(rot+1, 1.f, 0.f) : std::clamp(1-rot, 0.f, 1.f);
 	float adv_speed = MAX_ADV * break_adv * brake_rot;
 
-
 	return std::tuple<SpecificWorker::State, float, float> (SpecificWorker::State::FORWARD, adv_speed, brake_rot);
 }
 
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(const RoboCompLidar3D::TPoints& points)
+std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(const auto &min_izq, const auto &min_der)
 {
-	return{};
+    float dir;
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dice(1, 2);
+
+    if (min_izq->distance2d == min_der->distance2d)
+    {
+        dir = dice(gen)==1 ? 1.f : -1.f;
+        qInfo() << "Aleatorio (" << dir << ")";
+    }
+    else
+        dir = (min_izq->distance2d < min_der->distance2d) ? 1.f : -1.f;
+
+    return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
 }
 
 
@@ -175,7 +198,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
 	// Try-Catch block to read the laser data
 	RoboCompLidar3D::TData data;
 	try
-	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("helios", 12000, 1);
+	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 12000, 1);
 	} catch(const Ice::Exception& ex){std::cout << ex.what() << std::endl; return {};}
 
 	// filter
@@ -198,6 +221,44 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
 
 	draw_lidar(filter_data, &viewer->scene);
 	return filter_data;
+	// return filter_isolated_points(filter_data, 200);
+}
+
+std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d)
+{
+    if (points.empty()) return {};
+
+    const float d_squared = d*d; // avoid sqrt by comparing squared distances
+    std::vector<bool> hasNeighbor(points.size(), false);
+
+    // Create index vector for parallel iteration
+    std::vector<size_t> indices(points.size());
+    std::iota(indices.begin(), indices.end(), size_t{0});
+
+    // Parallelize outer loop - each thread checks one point
+    std::for_each(std::execution::par, indices.begin(), indices.end(), [&](size_t i){
+        const auto& p1 = points[i];
+        // Sequential inner loop (avoid nested parallelism)
+        for(auto &&[j,p2] : iter::enumerate(points))
+        {
+            if (i == j) continue;
+            const float dx = p1.x - p2.x;
+            const float dy = p1.y - p2.y;
+            if (dx * dx + dy * dy <= d_squared)
+            {
+                hasNeighbor[i] = true;
+                break;
+            }
+        }
+    });
+
+    // Collect result
+    std::vector<RoboCompLidar3D::TPoint> result;
+    result.reserve(points.size());
+    for(auto &&[i,p] : iter::enumerate(points))
+        if (hasNeighbor[i])
+            result.push_back(points[i]);
+    return result;
 }
 
 void SpecificWorker::send_velocities(std::tuple<SpecificWorker::State, float, float> state)
@@ -221,12 +282,13 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppi
 		// 'group' is an iterable object containing all Points for the current angle.
 		auto min_it = std::min_element(std::begin(group), std::end(group),
 			[](const auto& a, const auto& b) { return a.r < b.r; });
-		//if (min_it->z > 300)
+		if (min_it->z > 300)
 			result.emplace_back(*min_it); // Push the element with the minimum distance
 	}
 
 	return result;
 }
+
 void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene)
 {
 	static std::vector<QGraphicsItem*> draw_points;
@@ -247,7 +309,29 @@ void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphic
 		draw_points.push_back(dp); // add to the list of points to be deleted next time
 	}
 
+	// draw min point
+	auto size = points.size();
+	auto range = size / 8;
+	auto begin = points.begin() + size/2 - range;
+	auto middle = points.begin() + size/2;
+	auto end = points.begin() + size/2 + range;
+	auto min = std::min_element(begin,  end,
+								[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
+	qInfo() << "DIS2D: " << min->distance2d << " PHI: " << min->phi << " r: " << min->r << " z: " << min->z;
+	QColor dcolor;
+	if (min->distance2d < MIN_THRESHOLD){
+		// qInfo() << "MIN detected! - DIS2D: " << min->distance2d << " r: " << min->r << " z: " << min->z;
+		dcolor = QColor(Qt::red);}
+	else
+		dcolor = QColor(Qt::magenta);
+
+	auto ditem = scene->addRect(-100, -100, 200, 200, dcolor, QBrush(dcolor));
+	ditem->setPos(min->x, min->y);
+	draw_points.push_back(ditem);
 }
+
+
+
 
 void SpecificWorker::new_target_slot(QPointF point)
 {

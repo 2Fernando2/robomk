@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader">{
-  &quot;useNewFormat&quot;: true
-}</component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -20,15 +20,75 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G &quot;Unix Makefiles&quot;" BUILD_OPTIONS="-j22" />
+      <configuration PROFILE_NAME="Default" ENABLED="true" GENERATION_DIR="." GENERATION_OPTIONS="-G &quot;Unix Makefiles&quot;" BUILD_OPTIONS="-j22" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45571d35-f7b9-4a6f-9c79-c1c15431a2a6" name="Changes" comment="">
+    <list default="true" id="825a2d50-b72d-4af3-bf23-818724918d15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cache-v2-4ea64e239887db3c5d41.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cmakeFiles-v1-50b170aa203161a74e1c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/codemodel-v2-1246b3f7e58e91d73871.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-.-Debug-7e1bb129831da72a9f11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-generated-Debug-903eec4cc1064f1f9fc9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/index-2025-10-15T18-21-07-0284.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ICES__home_varo_robomk_actividad1_generated-Debug-aad4324a7318d2bc8896.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-chocachoca-Debug-f37df6db1f4e8cc3b54a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-chocachoca_autogen-Debug-d2e308b4536f1d57d5d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-chocachoca_autogen_timestamp_deps-Debug-fcaed0fe0f95176fe6ae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QtSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QtSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.qt/QtDeploySupport.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/.qt/QtDeploySupport.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/chocachoca" beforeDir="false" afterPath="$PROJECT_DIR$/bin/chocachoca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/config" beforeDir="false" afterPath="$PROJECT_DIR$/etc/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/ICES__home_varo_robomk_actividad1_generated.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/ICES__home_varo_robomk_actividad1_generated.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/genericworker.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/genericworker.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/link.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/link.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenUsed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/generated/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/moc_predefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/specificworker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/specificworker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/specificworker.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/specificworker.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robomk_startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../robomk_startup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +98,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -48,38 +108,37 @@
     <option name="minorVersion" value="2.3" />
     <option name="productBranch" value="Classic" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="346xBq247BL1vqg9L4bbq9rUiy6" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="34CoKjiqlJJF56MZXqKz7A0Gj7u" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;CMake Application.chocachoca.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/robocomp/robomk/actividad1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="CMake Application.chocachoca">
-    <configuration name="ICES__home_varo_robomk_actividad1_generated" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="chocachoca" TARGET_NAME="ICES__home_varo_robomk_actividad1_generated" CONFIG_NAME="Debug">
+    <configuration name="ICES__home_varo_robomk_actividad1_generated" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="chocachoca" TARGET_NAME="ICES__home_varo_robomk_actividad1_generated" CONFIG_NAME="Default">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -89,7 +148,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="chocachoca" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="chocachoca" TARGET_NAME="chocachoca" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="chocachoca" RUN_TARGET_NAME="chocachoca">
+    <configuration name="chocachoca" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="chocachoca" TARGET_NAME="chocachoca" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="chocachoca" RUN_TARGET_NAME="chocachoca">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -101,14 +160,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="45571d35-f7b9-4a6f-9c79-c1c15431a2a6" name="Changes" comment="" />
-      <created>1760547689312</created>
+      <changelist id="825a2d50-b72d-4af3-bf23-818724918d15" name="Changes" comment="" />
+      <created>1760726856439</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1760547689312</updated>
-      <workItem from="1760547690385" duration="2255000" />
-      <workItem from="1760552464085" duration="456000" />
-      <workItem from="1760559331278" duration="8388000" />
+      <updated>1760726856439</updated>
+      <workItem from="1760726858620" duration="3378000" />
     </task>
     <servers />
   </component>
@@ -119,16 +176,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/specificworker.cpp</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
