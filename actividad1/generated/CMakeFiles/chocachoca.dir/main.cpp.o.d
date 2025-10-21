@@ -1,5 +1,5 @@
 generated/CMakeFiles/chocachoca.dir/main.cpp.o: \
- /home/varo/robomk/actividad1/generated/main.cpp \
+ /home/usuario/robomk/actividad1/generated/main.cpp \
  /usr/include/stdc-predef.h /usr/include/signal.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -1251,9 +1251,9 @@ generated/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /home/varo/robomk/actividad1/generated/genericworker.h \
+ /home/usuario/robomk/actividad1/generated/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/varo/robomk/actividad1/generated/chocachoca_autogen/include/ui_mainUI.h \
+ /home/usuario/robomk/actividad1/generated/chocachoca_autogen/include/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
@@ -1270,11 +1270,12 @@ generated/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/varo/robomk/actividad1/generated/GenericBase.h \
- /home/varo/robomk/actividad1/generated/Lidar3D.h \
- /home/varo/robomk/actividad1/generated/OmniRobot.h \
- /home/varo/robomk/actividad1/generated/../src/specificworker.h \
- /home/varo/robomk/actividad1/generated/genericworker.h \
+ /home/usuario/robomk/actividad1/generated/GenericBase.h \
+ /home/usuario/robomk/actividad1/generated/Lidar3D.h \
+ /home/usuario/robomk/actividad1/generated/OmniRobot.h \
+ /home/usuario/robomk/actividad1/generated/../src/specificworker.h \
+ /usr/include/c++/13/expected \
+ /home/usuario/robomk/actividad1/generated/genericworker.h \
  /usr/local/include/cppitertools/itertools.hpp \
  /usr/local/include/cppitertools/accumulate.hpp \
  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \

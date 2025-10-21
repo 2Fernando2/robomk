@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"generated/CMakeLists.txt"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 59,
+				"line" : 22,
 				"parent" : 0
 			}
 		]
@@ -27,17 +27,20 @@
 		{
 			"backtrace" : 1,
 			"component" : "Unspecified",
-			"destination" : "/home/robocomp/robocomp/bin",
+			"destination" : "/home/usuario/robocomp/etc-default",
 			"paths" : 
 			[
-				"bin/chocachoca"
+				{
+					"from" : "etc/config",
+					"to" : "chocachoca.conf"
+				}
 			],
 			"type" : "file"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "generated",
-		"source" : "generated"
+		"build" : ".",
+		"source" : "."
 	}
 }

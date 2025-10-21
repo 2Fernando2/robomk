@@ -31,6 +31,7 @@
 // If you want to reduce the period automatically due to lack of use, you must uncomment the following line
 //#define HIBERNATION_ENABLED
 
+#include <expected>
 #include <genericworker.h>
 #include <cppitertools/itertools.hpp>
 #include <abstract_graphic_viewer/abstract_graphic_viewer.h>
@@ -105,9 +106,18 @@ private:
 	AbstractGraphicViewer *viewer;
 	QGraphicsPolygonItem *robot_polygon;
 
+	struct LidarAngles
+	{
+		static constexpr float FRONT = 0.0;
+		static constexpr float FRONT_VISION = std::numbers::pi_v<float>/4.f;
+		static constexpr float BACK = -std::numbers::pi_v<float>;
+		static constexpr float LEFT = std::numbers::pi_v<float>/2.f;
+		static constexpr float RIGHT = -std::numbers::pi_v<float>/2.f;
+	};
+
 	const float ROBOT_LENGTH = 400;
 	const float MAX_THRESHOLD = 200;
-	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2;
+	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3;
 	const float MAX_ADV = 1000;
 	bool rotating = false;
 	float dir;
@@ -115,9 +125,10 @@ private:
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
 	SpecificWorker::State state = SpecificWorker::State::FORWARD;
 	std::optional<RoboCompLidar3D::TPoints> read_data();
-	std::tuple<SpecificWorker::State, float, float> forward(const RoboCompLidar3D::TPoints& points);
-	std::tuple<SpecificWorker::State, float, float> turn(const auto& min_izq, const auto& min_der);
+	std::tuple<SpecificWorker::State, float, float> forward(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
+	std::tuple<SpecificWorker::State, float, float> turn(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
+	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 	void send_velocities(std::tuple<SpecificWorker::State, float, float> state);
 
 signals:

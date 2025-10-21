@@ -101,58 +101,47 @@ void SpecificWorker::initialize()
 void SpecificWorker::compute()
 {
 	auto filter_data = read_data();
+	auto result = std::tuple<SpecificWorker::State, float, float>();
 
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> dice(1, 2);
 
 	// State machine
-	std::tuple<SpecificWorker::State, float, float> result;
-	auto size = filter_data->size();
-	auto range = size / 8;
-	auto begin = filter_data->begin() + size/2 - range;
-	auto end = filter_data->begin() + size/2 + range;
-	//auto middle = size/2;
+	auto begin = closest_lidar_index_to_given_angle(filter_data.value(),  -LidarAngles::FRONT_VISION);
+	auto end = closest_lidar_index_to_given_angle(filter_data.value(), LidarAngles::FRONT_VISION);
+	if (not begin or not end){std::cout << begin.error() << " " << end.error() << std::endl; return;}
+	auto min = std::min_element(std::begin(filter_data.value()) + begin.value(),  std::begin(filter_data.value()) + end.value(),
+								[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
 
-	auto min = std::min_element(begin,  end,
-								[](auto& p1,auto& p2){return p1.distance2d < p2.distance2d;});
+
 	if (!rotating)
-		dir = (min->phi < 0.f) ? 0.5f : -0.5f;
+		dir = (min->phi < 0.f) ? 0.6f : -0.6f;
 	// if (min->phi == 0.f) dir = dice(gen);
 	// Local min
-	auto min_izq = std::min_element(std::begin(filter_data.value()) + 3*filter_data->size()/8,  std::begin(filter_data.value()) + 4*filter_data->size()/8,
-								[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
-	auto min_der = std::min_element(std::begin(filter_data.value()) + 4*filter_data->size()/8,  std::begin(filter_data.value()) + 5*filter_data->size()/8,
-								[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
+	//auto min_izq = std::min_element(std::begin(filter_data.value()) + 3*filter_data->size()/8,  std::begin(filter_data.value()) + 4*filter_data->size()/8,
+	//							[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
+	//auto min_der = std::min_element(std::begin(filter_data.value()) + 4*filter_data->size()/8,  std::begin(filter_data.value()) + 5*filter_data->size()/8,
+	//							[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
 
 	// qInfo() << "DIS2D de MIN: " << min->distance2d;
 	switch (state)
 	{
-	case SpecificWorker::State::IDLE:
+		case SpecificWorker::State::IDLE:
+			break;
+
+		case SpecificWorker::State::FORWARD:
+			result = forward(min);
 		break;
-	case SpecificWorker::State::FORWARD:
-		if (min->distance2d <= MIN_THRESHOLD) {
-            qInfo() << "FORWARD -> TURN";
-            // result = turn(min_izq, min_der);
-            result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 0.f);
-        }
-		else { result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 3000.f, 0.f); }
-		break;
-	case SpecificWorker::State::TURN:
-        if (min->distance2d > MIN_THRESHOLD) {
-			qInfo() << "TURN -> FORWARD";
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 0.f, 0.f);
-			rotating = false;
-        }
-		else {
-            //qInfo() << "-> TURN - PHI de MIN: " << min->phi << " - dis2d: " << min->distance2d;
-            // result = turn(min_izq, min_der);
-			result = std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
-			rotating = true;
-		}
-        break;
+
+		case SpecificWorker::State::TURN:
+	        result = turn(min);
+	        break;
+
 		//case State::FOLLOW_WALL: {}
+
 		//case State::SPIRAL: {}
+
 		default: break;
 	}
 	state = std::get<SpecificWorker::State>(result);
@@ -162,33 +151,21 @@ void SpecificWorker::compute()
 
 }
 
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const RoboCompLidar3D::TPoints& points)
+std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point)
 {
-	auto point = points.front();
-	float break_adv = std::clamp(point.distance2d * (1/MIN_THRESHOLD), 1.f, 0.f);
-	float rot = atan2(point.x, point.z);
-	float brake_rot = rot>=0 ? std::clamp(rot+1, 1.f, 0.f) : std::clamp(1-rot, 0.f, 1.f);
-	float adv_speed = MAX_ADV * break_adv * brake_rot;
-
-	return std::tuple<SpecificWorker::State, float, float> (SpecificWorker::State::FORWARD, adv_speed, brake_rot);
+	if (point->distance2d <= MIN_THRESHOLD && point->phi == std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION))
+			return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 0.f);
+	return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 1000.f, 0.f);
 }
 
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(const auto &min_izq, const auto &min_der)
+std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point)
 {
-    float dir;
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dice(1, 2);
-
-    if (min_izq->distance2d == min_der->distance2d)
-    {
-        dir = dice(gen)==1 ? 1.f : -1.f;
-        qInfo() << "Aleatorio (" << dir << ")";
-    }
-    else
-        dir = (min_izq->distance2d < min_der->distance2d) ? 1.f : -1.f;
-
-    return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
+	if (point->phi != std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION)) {
+			rotating = false;
+			return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 0.f, 0.f);
+		}
+	rotating = true;
+	return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
 }
 
 
@@ -198,7 +175,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
 	// Try-Catch block to read the laser data
 	RoboCompLidar3D::TData data;
 	try
-	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 12000, 1);
+	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 15000, 1);
 	} catch(const Ice::Exception& ex){std::cout << ex.what() << std::endl; return {};}
 
 	// filter
@@ -282,12 +259,23 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppi
 		// 'group' is an iterable object containing all Points for the current angle.
 		auto min_it = std::min_element(std::begin(group), std::end(group),
 			[](const auto& a, const auto& b) { return a.r < b.r; });
-		if (min_it->z > 300)
+		// if (min_it->z > 300)
 			result.emplace_back(*min_it); // Push the element with the minimum distance
 	}
 
 	return result;
 }
+
+std::expected<int, std::string> SpecificWorker::closest_lidar_index_to_given_angle(const auto &points, float angle)
+{
+	// search for the point in points whose phi value is closest to angle
+	auto res = std::ranges::find_if(points, [angle](auto &a){ return a.phi > angle;});
+	if(res != std::end(points))
+		return std::distance(std::begin(points), res);
+	else
+		return std::unexpected("No closest value found in method <closest_lidar_index_to_given_angle>");
+}
+
 
 void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene)
 {
@@ -310,13 +298,12 @@ void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphic
 	}
 
 	// draw min point
-	auto size = points.size();
-	auto range = size / 8;
-	auto begin = points.begin() + size/2 - range;
-	auto middle = points.begin() + size/2;
-	auto end = points.begin() + size/2 + range;
-	auto min = std::min_element(begin,  end,
-								[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
+	auto begin = closest_lidar_index_to_given_angle(points,  -LidarAngles::FRONT_VISION);
+	auto end = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_VISION);
+	if (not begin or not end){std::cout << begin.error() << " " << end.error() << std::endl; return;}
+	auto middle = points[closest_lidar_index_to_given_angle(points, LidarAngles::FRONT).value()];
+	auto min = std::min_element(std::begin(points) + begin.value(),  std::begin(points) + end.value(),
+	                            [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
 	qInfo() << "DIS2D: " << min->distance2d << " PHI: " << min->phi << " r: " << min->r << " z: " << min->z;
 	QColor dcolor;
 	if (min->distance2d < MIN_THRESHOLD){
@@ -325,9 +312,13 @@ void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphic
 	else
 		dcolor = QColor(Qt::magenta);
 
+
 	auto ditem = scene->addRect(-100, -100, 200, 200, dcolor, QBrush(dcolor));
+	auto mitem = scene->addRect(-100, -100, 200, 200, QColor(Qt::black), QColor(Qt::black));
 	ditem->setPos(min->x, min->y);
+	mitem->setPos(middle.x, middle.y);
 	draw_points.push_back(ditem);
+	draw_points.push_back(mitem);
 }
 
 
