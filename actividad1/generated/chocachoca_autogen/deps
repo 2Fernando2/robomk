@@ -1,31 +1,31 @@
 chocachoca_autogen/timestamp: \
-	/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp \
-	/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
-	/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp \
-	/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-	/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp \
-	/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
-	/home/robocomp/robocomp/classes/rapplication/rapplication.cpp \
-	/home/robocomp/robocomp/classes/rapplication/rapplication.h \
-	/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp \
-	/home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
-	/home/robocomp/robocomp/cmake/modules/qt.cmake \
-	/home/robocomp/robocomp/cmake/robocomp.cmake \
-	/home/varo/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
-	/home/varo/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
-	/home/varo/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-	/home/varo/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
-	/home/varo/robomk/actividad1/generated/CMakeLists.txt \
-	/home/varo/robomk/actividad1/generated/GenericBase.h \
-	/home/varo/robomk/actividad1/generated/Lidar3D.h \
-	/home/varo/robomk/actividad1/generated/OmniRobot.h \
-	/home/varo/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
-	/home/varo/robomk/actividad1/generated/genericworker.cpp \
-	/home/varo/robomk/actividad1/generated/genericworker.h \
-	/home/varo/robomk/actividad1/generated/main.cpp \
-	/home/varo/robomk/actividad1/src/CMakeLists.txt \
-	/home/varo/robomk/actividad1/src/specificworker.cpp \
-	/home/varo/robomk/actividad1/src/specificworker.h \
+	/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp \
+	/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
+	/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp \
+	/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+	/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp \
+	/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
+	/home/usuario/robocomp/classes/rapplication/rapplication.cpp \
+	/home/usuario/robocomp/classes/rapplication/rapplication.h \
+	/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp \
+	/home/usuario/robocomp/classes/sigwatch/sigwatch.h \
+	/home/usuario/robocomp/cmake/modules/qt.cmake \
+	/home/usuario/robocomp/cmake/robocomp.cmake \
+	/home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
+	/home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
+	/home/usuario/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+	/home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
+	/home/usuario/robomk/actividad1/generated/CMakeLists.txt \
+	/home/usuario/robomk/actividad1/generated/GenericBase.h \
+	/home/usuario/robomk/actividad1/generated/Lidar3D.h \
+	/home/usuario/robomk/actividad1/generated/OmniRobot.h \
+	/home/usuario/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
+	/home/usuario/robomk/actividad1/generated/genericworker.cpp \
+	/home/usuario/robomk/actividad1/generated/genericworker.h \
+	/home/usuario/robomk/actividad1/generated/main.cpp \
+	/home/usuario/robomk/actividad1/src/CMakeLists.txt \
+	/home/usuario/robomk/actividad1/src/specificworker.cpp \
+	/home/usuario/robomk/actividad1/src/specificworker.h \
 	/usr/include/GL/gl.h \
 	/usr/include/Ice/AsyncResult.h \
 	/usr/include/Ice/BatchRequestQueueF.h \
@@ -1166,5 +1166,5 @@ chocachoca_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake \
 	/usr/share/cmake-3.28/Modules/MacroAddFileDependencies.cmake \
 	/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake \
-	/home/varo/robomk/actividad1/src/mainUI.ui \
+	/home/usuario/robomk/actividad1/src/mainUI.ui \
 	/usr/bin/cmake

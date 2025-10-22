@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varo/robomk/actividad1
+CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varo/robomk/actividad1
+CMAKE_BINARY_DIR = /home/usuario/robomk/actividad1
 
 # Utility rule file for chocachoca_autogen_timestamp_deps.
 
@@ -82,10 +82,10 @@ generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/build: chocachoca_aut
 .PHONY : generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/build
 
 generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/clean:
-	cd /home/varo/robomk/actividad1/generated && $(CMAKE_COMMAND) -P CMakeFiles/chocachoca_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd /home/usuario/robomk/actividad1/generated && $(CMAKE_COMMAND) -P CMakeFiles/chocachoca_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/clean
 
 generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/depend:
-	cd /home/varo/robomk/actividad1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad1 /home/varo/robomk/actividad1/generated /home/varo/robomk/actividad1 /home/varo/robomk/actividad1/generated /home/varo/robomk/actividad1/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/actividad1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad1 /home/usuario/robomk/actividad1/generated /home/usuario/robomk/actividad1 /home/usuario/robomk/actividad1/generated /home/usuario/robomk/actividad1/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/depend
 

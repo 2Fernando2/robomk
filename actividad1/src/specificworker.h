@@ -106,14 +106,14 @@ private:
 
 	struct LidarAngles
 	{
-		static constexpr float FRONT = 0.0;
-		static constexpr float FRONT_VISION = std::numbers::pi_v<float>/4.f;
-		static constexpr float FRONT_VISION_FW = std::numbers::pi_v<float>/16.f;
-		static constexpr float BACK = -std::numbers::pi_v<float>;
-		static constexpr float LEFT = std::numbers::pi_v<float>/2.f;
-		static constexpr float RIGHT = -std::numbers::pi_v<float>/2.f;
-		static constexpr float FRONT_LEFT = std::numbers::pi_v<float>/4.f; // FRONT_RIGHT is negative
-		static constexpr float BACK_LEFT = 3*std::numbers::pi_v<float>/4.f; // BACK_RIGHT is negative
+		static constexpr float FRONT = 0.0f;
+		static constexpr float FRONT_VISION = M_PI/8.f;
+		static constexpr float FRONT_VISION_FW = M_PI/16.f;
+		static constexpr float BACK = -M_PI;
+		static constexpr float LEFT = -M_PI_2;
+		static constexpr float RIGHT = M_PI_2;
+		static constexpr float FRONT_LEFT = -M_PI_4; // FRONT_RIGHT is negative
+		static constexpr float BACK_LEFT = -3.f*M_PI_4; // BACK_RIGHT is negative
 	};
 
 	const float ROBOT_LENGTH = 400.f;
@@ -121,7 +121,7 @@ private:
 	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3.f;
 	const float MAX_ADV = 1000.f;
 	bool rotating = false;
-	float dir;
+	float rot;
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
 	SpecificWorker::State state = SpecificWorker::State::FORWARD;

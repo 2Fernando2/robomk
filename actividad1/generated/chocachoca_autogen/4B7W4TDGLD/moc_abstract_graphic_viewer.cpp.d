@@ -1,4 +1,4 @@
-/home/usuario/robomk/actividad1/generated/chocachoca_autogen/4B7W4TDGLD/moc_abstract_graphic_viewer.cpp: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+/home/usuario/robomk/actividad1/generated/chocachoca_autogen/4B7W4TDGLD/moc_abstract_graphic_viewer.cpp: /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robomk/actividad1/generated/chocachoca_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

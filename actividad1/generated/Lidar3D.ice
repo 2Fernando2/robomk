@@ -27,6 +27,8 @@ module RoboCompLidar3D
 	sequence <TPoint> TPoints;
 	sequence <float> TFloatArray;
 	sequence <int> TIntArray;
+	sequence <short> TShortArray;
+	sequence <byte> TByteArray;
 	struct TDataImage
 	{
 		long timestamp;
@@ -51,8 +53,18 @@ module RoboCompLidar3D
 		float period;
 		long timestamp;
 	};
+	struct TColorCloudData
+	{
+		TShortArray X;
+		TShortArray Y;
+		TShortArray Z;
+		TByteArray R;
+		TByteArray G;
+		TByteArray B;
+	};
 	interface Lidar3D
 	{
+		TColorCloudData getColorCloudData ();
 		TData getLidarData (string name, float start, float len, int decimationDegreeFactor);
 		TDataImage getLidarDataArrayProyectedInImage (string name);
 		TDataCategory getLidarDataByCategory (TCategories categories, long timestamp);
