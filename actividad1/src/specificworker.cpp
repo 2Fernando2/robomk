@@ -25,6 +25,7 @@
 #undef emit
 #endif
 #include <execution>
+#include <expected>
 #include <algorithm>
 #include <cppitertools/enumerate.hpp>
 
@@ -81,7 +82,9 @@ void SpecificWorker::initialize()
 
 	this->dimensions = QRectF(-6000, -3000, 12000, 6000);
 	viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
-	this->resize(900, 450);
+	auto [r, e] = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+    robot_polygon = r;
+    this->resize(900, 450);
 	viewer->show();
 	const auto rob = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
 	robot_polygon = std::get<0>(rob);
@@ -103,10 +106,6 @@ void SpecificWorker::compute()
 	auto filter_data = read_data();
 	auto result = std::tuple<SpecificWorker::State, float, float>();
 
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int> dice(1, 2);
-
 	// State machine
 	auto begin = closest_lidar_index_to_given_angle(filter_data.value(),  -LidarAngles::FRONT_VISION);
 	auto end = closest_lidar_index_to_given_angle(filter_data.value(), LidarAngles::FRONT_VISION);
@@ -114,33 +113,29 @@ void SpecificWorker::compute()
 	auto min = std::min_element(std::begin(filter_data.value()) + begin.value(),  std::begin(filter_data.value()) + end.value(),
 								[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
 
-
 	if (!rotating)
 		dir = (min->phi < 0.f) ? 0.6f : -0.6f;
-	// if (min->phi == 0.f) dir = dice(gen);
-	// Local min
-	//auto min_izq = std::min_element(std::begin(filter_data.value()) + 3*filter_data->size()/8,  std::begin(filter_data.value()) + 4*filter_data->size()/8,
-	//							[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
-	//auto min_der = std::min_element(std::begin(filter_data.value()) + 4*filter_data->size()/8,  std::begin(filter_data.value()) + 5*filter_data->size()/8,
-	//							[](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
 
-	// qInfo() << "DIS2D de MIN: " << min->distance2d;
 	switch (state)
 	{
 		case SpecificWorker::State::IDLE:
 			break;
 
 		case SpecificWorker::State::FORWARD:
+			//qInfo() << "State: FORWARD";
 			result = forward(min);
 		break;
 
 		case SpecificWorker::State::TURN:
+			//qInfo() << "State: TURN";
 	        result = turn(min);
 	        break;
 
-		//case State::FOLLOW_WALL: {}
-
-		//case State::SPIRAL: {}
+		case State::FOLLOW_WALL:
+			//qInfo() << "State: FOLLOW_WALL";
+			result = follow_wall(filter_data);
+			break;
+		//case State::SPIRAL:
 
 		default: break;
 	}
@@ -151,21 +146,64 @@ void SpecificWorker::compute()
 
 }
 
+std::tuple<SpecificWorker::State, float, float> SpecificWorker::follow_wall(auto &points)
+{
+	// Switch state condition
+	auto begin_offset = closest_lidar_index_to_given_angle(points.value(), -LidarAngles::FRONT_VISION_FW);
+	auto end_offset = closest_lidar_index_to_given_angle(points.value(), LidarAngles::FRONT_VISION_FW);
+	if (not begin_offset or not end_offset){std::cout << begin_offset.error() << " " << end_offset.error() << std::endl; return {};}
+	auto min_point = std::min_element(std::begin(points.value()) + begin_offset.value(), std::begin(points.value()) + end_offset.value(),
+									  [](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
+	if (min_point->distance2d <= MIN_THRESHOLD)
+		return std::make_tuple(SpecificWorker::State::TURN, 0.f, 0.f);
+
+	// Lateral check: ¿right or left?
+	auto left = closest_lidar_index_to_given_angle(points.value(), LidarAngles::LEFT);
+	auto right = closest_lidar_index_to_given_angle(points.value(), LidarAngles::RIGHT);
+	if (not left or not right){std::cout << left.error() << " " << right.error() << std::endl; return {};}
+	auto left_point = points.value()[left.value()];
+	auto right_point = points.value()[right.value()];
+	bool left_side = (left_point.distance2d < right_point.distance2d);
+
+	auto side_begin_offset = closest_lidar_index_to_given_angle(points.value(), (left_side) ? LidarAngles::FRONT_LEFT : -LidarAngles::BACK_LEFT);
+	auto side_end_offset = closest_lidar_index_to_given_angle(points.value(), (left_side) ? LidarAngles::BACK_LEFT : -LidarAngles::FRONT_LEFT);
+	if (not side_begin_offset or not side_end_offset){std::cout << side_begin_offset.error() << "" << side_end_offset.error() << std::endl; return {};}
+	auto min_lateral_point = std::min_element(std::begin(points.value()) + side_begin_offset.value(), std::begin(points.value()) + side_end_offset.value(),
+											  [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
+
+	float adjusted_rot = () ? 0.1 : -0.1;
+	if(lateral_point.distance2d < MIN_THRESHOLD){
+		//if(left_side) qInfo() << "Turn: right"; else qInfo() << "Turn: left";
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 250.f, adjusted_dir);}
+	else if (lateral_point > MIN_THRESHOLD){
+		//if(left_side) qInfo() << "Turn: left"; else qInfo() << "Turn: right";
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 250.f, -adjusted_dir);}
+	else{
+		qInfo() << "Following wall!";
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 1000.f, 0.f);}
+}
+
 std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point)
 {
-	if (point->distance2d <= MIN_THRESHOLD && point->phi == std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION))
-			return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, 0.f);
-	return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 1000.f, 0.f);
+	//  && point->phi == std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION)
+	if (point->distance2d <= MIN_THRESHOLD)
+			return std::make_tuple(SpecificWorker::State::TURN, 0.f, 0.f);
+	return std::make_tuple(SpecificWorker::State::FORWARD, 1000.f, 0.f);
 }
 
 std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point)
 {
-	if (point->phi != std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION)) {
-			rotating = false;
-			return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::FORWARD, 0.f, 0.f);
-		}
+	// point->phi != std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION)
+	if (point->distance2d > MIN_THRESHOLD) {
+		rotating = false;
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<int> dice(1, 2);
+		auto _state = (dice(gen) == 1) ? SpecificWorker::State::FORWARD : SpecificWorker::State::FOLLOW_WALL;
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 0.f, 0.f);
+	}
 	rotating = true;
-	return std::tuple<SpecificWorker::State, float, float>(SpecificWorker::State::TURN, 0.f, dir);
+	return std::make_tuple(SpecificWorker::State::TURN, 0.f, dir);
 }
 
 
@@ -197,8 +235,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
 	// qInfo() << filter_data.size();
 
 	draw_lidar(filter_data, &viewer->scene);
-	return filter_data;
-	// return filter_isolated_points(filter_data, 200);
+	return filter_isolated_points(filter_data, 200);
 }
 
 std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d)
@@ -277,50 +314,84 @@ std::expected<int, std::string> SpecificWorker::closest_lidar_index_to_given_ang
 }
 
 
-void SpecificWorker::draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene)
+void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 {
-	static std::vector<QGraphicsItem*> draw_points;
-	for (const auto &p : draw_points)
-	{
-		scene->removeItem(p);
-		delete p;
-	}
-	draw_points.clear();
+    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
 
-	const QColor color("LightGreen");
-	const QPen pen(color, 10);
-	// const QBrush brush(color, Qt::SolidPattern);
-	for (const auto &p : points)
-	{
-		const auto dp = scene->addRect(-25, -25, 50, 50, pen);
-		dp->setPos(p.x, p.y);
-		draw_points.push_back(dp); // add to the list of points to be deleted next time
-	}
+    // remove all items drawn in the previous iteration
+    for(auto i: items)
+    {
+        scene->removeItem(i);
+        delete i;
+    }
+    items.clear();
 
-	// draw min point
-	auto begin = closest_lidar_index_to_given_angle(points,  -LidarAngles::FRONT_VISION);
-	auto end = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_VISION);
-	if (not begin or not end){std::cout << begin.error() << " " << end.error() << std::endl; return;}
-	auto middle = points[closest_lidar_index_to_given_angle(points, LidarAngles::FRONT).value()];
-	auto min = std::min_element(std::begin(points) + begin.value(),  std::begin(points) + end.value(),
-	                            [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-	qInfo() << "DIS2D: " << min->distance2d << " PHI: " << min->phi << " r: " << min->r << " z: " << min->z;
-	QColor dcolor;
-	if (min->distance2d < MIN_THRESHOLD){
-		// qInfo() << "MIN detected! - DIS2D: " << min->distance2d << " r: " << min->r << " z: " << min->z;
-		dcolor = QColor(Qt::red);}
-	else
-		dcolor = QColor(Qt::magenta);
+    auto color = QColor(Qt::green);
+    auto brush = QBrush(QColor(Qt::green));
+    for(const auto &p : filtered_points)
+    {
+        auto item = scene->addRect(-50, -50, 100, 100, color, brush);
+        item->setPos(p.x, p.y);
+        items.push_back(item);
+    }
 
+    // compute and draw minimum distance point in frontal range
+    auto offset_begin = closest_lidar_index_to_given_angle(filtered_points, -LidarAngles::FRONT_VISION);
+    auto offset_end = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::FRONT_VISION);
+    if(not offset_begin or not offset_end)
+    { std::cout << offset_begin.error() << " " << offset_end.error() << std::endl; return ;}    // abandon the ship
+    auto min_point = std::min_element(std::begin(filtered_points) + offset_begin.value(), std::begin(filtered_points) + offset_end.value(), [](auto &a, auto &b)
+    { return a.distance2d < b.distance2d; });
+    QColor dcolor;
+    if(min_point->distance2d < MIN_THRESHOLD)
+        dcolor = QColor(Qt::red);
+    else
+        dcolor = QColor(Qt::magenta);
+    auto ditem = scene->addRect(-100, -100, 200, 200, dcolor, QBrush(dcolor));
+    ditem->setPos(min_point->x, min_point->y);
+    items.push_back(ditem);
 
-	auto ditem = scene->addRect(-100, -100, 200, 200, dcolor, QBrush(dcolor));
-	auto mitem = scene->addRect(-100, -100, 200, 200, QColor(Qt::black), QColor(Qt::black));
-	ditem->setPos(min->x, min->y);
-	mitem->setPos(middle.x, middle.y);
-	draw_points.push_back(ditem);
-	draw_points.push_back(mitem);
+    // compute and draw minimum distance point to wall
+    auto wall_res_right = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::RIGHT);
+    auto wall_res_left = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::LEFT);
+    if(not wall_res_right or not wall_res_left)   // abandon the ship
+    {
+        qWarning() << "No valid lateral readings" << QString::fromStdString(wall_res_right.error()) << QString::fromStdString(wall_res_left.error());
+        return;
+    }
+    auto right_point = filtered_points[wall_res_right.value()];
+    auto left_point = filtered_points[wall_res_left.value()];
+    // compare both to get the one with minimum distance
+    auto min_obj = (right_point.distance2d < left_point.distance2d) ? right_point : left_point;
+    auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange), QBrush(QColor(QColorConstants::Svg::orange)));
+    item->setPos(min_obj.x, min_obj.y);
+    items.push_back(item);
+    // draw a line from the robot to the minimum distance point
+    auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f), QPointF(min_obj.x, min_obj.y)), QPen(QColorConstants::Svg::orange, 10));
+    items.push_back(item_line);
+
+    // Draw two lines coming out from the robot at angles given by params.LIDAR_OFFSET
+    // Calculate the end points of the lines
+    auto res_right = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::FRONT_VISION);
+    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -LidarAngles::FRONT_VISION);
+    if(not res_right or not res_left)
+    { std::cout << res_right.error() << " " << res_left.error() << std::endl; return ;}
+    // draw two lines at the edges of the range
+    float right_line_length = filtered_points[res_right.value()].distance2d;
+    float left_line_length = filtered_points[res_left.value()].distance2d;
+    float angle1 = filtered_points[res_left.value()].phi;
+    float angle2 = filtered_points[res_right.value()].phi;
+    QLineF line_left{QPointF(0.f, 0.f),
+                     robot_polygon->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
+    QLineF line_right{QPointF(0.f, 0.f),
+                      robot_polygon->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
+    QPen left_pen(Qt::blue, 10); // Blue color pen with thickness 3
+    QPen right_pen(Qt::red, 10); // Blue color pen with thickness 3
+    auto line1 = scene->addLine(line_left, left_pen);
+    auto line2 = scene->addLine(line_right, right_pen);
+    items.push_back(line1);
+    items.push_back(line2);
 }
-
 
 
 

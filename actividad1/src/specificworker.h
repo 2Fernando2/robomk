@@ -88,8 +88,6 @@ public slots:
 
 	void new_target_slot(QPointF);
 
-	void draw_lidar(const RoboCompLidar3D::TPoints &points, QGraphicsScene* scene);
-
 	std::optional<RoboCompLidar3D::TPoints> filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints& points);
 
 	void update_report_posotion();
@@ -110,15 +108,18 @@ private:
 	{
 		static constexpr float FRONT = 0.0;
 		static constexpr float FRONT_VISION = std::numbers::pi_v<float>/4.f;
+		static constexpr float FRONT_VISION_FW = std::numbers::pi_v<float>/16.f;
 		static constexpr float BACK = -std::numbers::pi_v<float>;
 		static constexpr float LEFT = std::numbers::pi_v<float>/2.f;
 		static constexpr float RIGHT = -std::numbers::pi_v<float>/2.f;
+		static constexpr float FRONT_LEFT = std::numbers::pi_v<float>/4.f; // FRONT_RIGHT is negative
+		static constexpr float BACK_LEFT = 3*std::numbers::pi_v<float>/4.f; // BACK_RIGHT is negative
 	};
 
-	const float ROBOT_LENGTH = 400;
-	const float MAX_THRESHOLD = 200;
-	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3;
-	const float MAX_ADV = 1000;
+	const float ROBOT_LENGTH = 400.f;
+	const float MAX_THRESHOLD = 200.f;
+	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3.f;
+	const float MAX_ADV = 1000.f;
 	bool rotating = false;
 	float dir;
 
@@ -127,9 +128,11 @@ private:
 	std::optional<RoboCompLidar3D::TPoints> read_data();
 	std::tuple<SpecificWorker::State, float, float> forward(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
 	std::tuple<SpecificWorker::State, float, float> turn(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
+	std::tuple<SpecificWorker::State, float, float> follow_wall(auto &points);
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 	void send_velocities(std::tuple<SpecificWorker::State, float, float> state);
+	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
 signals:
 	//void customSignal();

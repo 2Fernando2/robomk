@@ -26,9 +26,9 @@
 		"files" : 
 		[
 			"generated/CMakeLists.txt",
-			"/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/usr/share/cmake-3.28/Modules/FindOpenGL.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -108,7 +108,7 @@
 			{
 				"command" : 3,
 				"file" : 3,
-				"line" : 78,
+				"line" : 76,
 				"parent" : 12
 			},
 			{
@@ -128,13 +128,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 712,
+				"line" : 673,
 				"parent" : 16
 			},
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 710,
+				"line" : 671,
 				"parent" : 16
 			},
 			{
@@ -179,7 +179,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=c++23 -fdiagnostics-color=always   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -fmax-errors=1 -fno-char8_t"
+					"fragment" : "-std=c++23   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -fmax-errors=1 -fno-char8_t"
 				},
 				{
 					"backtrace" : 2,
@@ -225,15 +225,15 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/usuario/robomk/actividad1/generated/chocachoca_autogen/include"
+					"path" : "/home/varo/robomk/actividad1/generated/chocachoca_autogen/include"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/usuario/robomk/actividad1/generated"
+					"path" : "/home/varo/robomk/actividad1/generated"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/usuario/robomk/actividad1/generated/."
+					"path" : "/home/varo/robomk/actividad1/generated/."
 				},
 				{
 					"backtrace" : 22,
@@ -245,7 +245,7 @@
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/usuario/robomk/actividad1"
+					"path" : "/home/varo/robomk/actividad1"
 				},
 				{
 					"backtrace" : 24,
@@ -334,7 +334,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_usuario_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55"
+			"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55"
 		},
 		{
 			"id" : "chocachoca_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55"
@@ -349,6 +349,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
 			{
 				"backtrace" : 2,
 				"fragment" : "-ltbb",
@@ -386,7 +390,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/robocomp/robocomp///classes",
+				"fragment" : "-L/home/robocomp/robocomp//classes",
 				"role" : "libraries"
 			},
 			{

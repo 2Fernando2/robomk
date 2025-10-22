@@ -11,7 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-b71922aea531a1444e9d.json",
+					"jsonFile" : "directory-.-7e1bb129831da72a9f11.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -22,7 +22,7 @@
 				{
 					"build" : "generated",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-generated-6a2e0dd9e8e4907a1e11.json",
+					"jsonFile" : "directory-generated-903eec4cc1064f1f9fc9.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -35,10 +35,7 @@
 						0,
 						1,
 						2,
-						3,
-						4,
-						5,
-						6
+						3
 					]
 				}
 			],
@@ -57,10 +54,7 @@
 						0,
 						1,
 						2,
-						3,
-						4,
-						5,
-						6
+						3
 					]
 				}
 			],
@@ -68,36 +62,15 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_usuario_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICES__home_usuario_robomk_actividad1_generated-78c6206865369aa51f43.json",
-					"name" : "ICES__home_usuario_robomk_actividad1_generated",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_GenericBase_target-9f173fd6d6f7ba33363a.json",
-					"name" : "ICE_GenericBase_target",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_Lidar3D_target-b231c5aae2c8bc86f660.json",
-					"name" : "ICE_Lidar3D_target",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_OmniRobot_target-4bdaf86b90ce12625ab5.json",
-					"name" : "ICE_OmniRobot_target",
+					"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_varo_robomk_actividad1_generated-aad4324a7318d2bc8896.json",
+					"name" : "ICES__home_varo_robomk_actividad1_generated",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "chocachoca::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-chocachoca-a56b61af9057491b3a55.json",
+					"jsonFile" : "target-chocachoca-9dadf8fb2527e7419242.json",
 					"name" : "chocachoca",
 					"projectIndex" : 0
 				},
@@ -111,7 +84,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "chocachoca_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-chocachoca_autogen_timestamp_deps-fcaed0fe0f95176fe6ae.json",
+					"jsonFile" : "target-chocachoca_autogen_timestamp_deps-1e039fd02239afe21c20.json",
 					"name" : "chocachoca_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
@@ -121,12 +94,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robomk/actividad1",
-		"source" : "/home/usuario/robomk/actividad1"
+		"build" : "/home/varo/robomk/actividad1",
+		"source" : "/home/varo/robomk/actividad1"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 8
+		"minor" : 6
 	}
 }

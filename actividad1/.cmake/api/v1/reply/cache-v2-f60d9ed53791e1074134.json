@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/usuario/robomk/actividad1"
+			"value" : "/home/varo/robomk/actividad1"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_CACHE_MINOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "28"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,19 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
-		},
-		{
-			"name" : "CMAKE_COLOR_DIAGNOSTICS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enable colored diagnostics throughout."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -131,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/385/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/usr/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/385/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/usr/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/385/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/usr/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -559,7 +547,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/usuario/robomk/actividad1/CMakeFiles/pkgRedirects"
+			"value" : "/home/varo/robomk/actividad1/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +619,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/usuario/robomk/actividad1"
+			"value" : "/home/varo/robomk/actividad1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -930,18 +918,6 @@
 			"value" : "/usr/bin/ld"
 		},
 		{
-			"name" : "CMAKE_LIST_FILE_NAME",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Name of CMakeLists files to read"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "CMakeLists.txt"
-		},
-		{
 			"name" : "CMAKE_MAKE_PROGRAM",
 			"properties" : 
 			[
@@ -1187,7 +1163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0"
+			"value" : "/usr/share/cmake-3.28"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1463,7 +1439,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][ ][v()]"
+			"value" : "[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -1512,6 +1488,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "[/usr/include][v()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_XKB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding XKB"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/lib/x86_64-linux-gnu/libxkbcommon.so][/usr/include][v1.6.0(0.5.0)]"
 		},
 		{
 			"name" : "Freeze_INCLUDE_DIR",
@@ -1627,7 +1615,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_ARCHIVE_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_archive"
 		},
 		{
 			"name" : "Ice_DB_CHECKPOINT_EXECUTABLE",
@@ -1639,7 +1627,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_CHECKPOINT_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_checkpoint"
 		},
 		{
 			"name" : "Ice_DB_DEADLOCK_EXECUTABLE",
@@ -1651,7 +1639,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_DEADLOCK_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_deadlock"
 		},
 		{
 			"name" : "Ice_DB_DUMP_EXECUTABLE",
@@ -1663,7 +1651,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_DUMP_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_dump"
 		},
 		{
 			"name" : "Ice_DB_HOTBACKUP_EXECUTABLE",
@@ -1675,7 +1663,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_HOTBACKUP_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_hotbackup"
 		},
 		{
 			"name" : "Ice_DB_LOAD_EXECUTABLE",
@@ -1687,7 +1675,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_LOAD_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_load"
 		},
 		{
 			"name" : "Ice_DB_LOG_VERIFY_EXECUTABLE",
@@ -1699,7 +1687,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_LOG_VERIFY_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_log_verify"
 		},
 		{
 			"name" : "Ice_DB_PRINTLOG_EXECUTABLE",
@@ -1711,7 +1699,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_PRINTLOG_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_printlog"
 		},
 		{
 			"name" : "Ice_DB_RECOVER_EXECUTABLE",
@@ -1723,7 +1711,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_RECOVER_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_recover"
 		},
 		{
 			"name" : "Ice_DB_STAT_EXECUTABLE",
@@ -1735,7 +1723,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_STAT_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_stat"
 		},
 		{
 			"name" : "Ice_DB_TUNER_EXECUTABLE",
@@ -1759,7 +1747,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_UPGRADE_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_upgrade"
 		},
 		{
 			"name" : "Ice_DB_VERIFY_EXECUTABLE",
@@ -1771,7 +1759,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_VERIFY_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_verify"
 		},
 		{
 			"name" : "Ice_DUMPDB_EXECUTABLE",
@@ -2339,7 +2327,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/usuario/software/pip_venv/bin/slice2py"
+			"value" : "/home/varo/software/pip_venv/bin/slice2py"
 		},
 		{
 			"name" : "Ice_SLICE2RB_EXECUTABLE",
@@ -2411,22 +2399,6 @@
 		},
 		{
 			"name" : "OPENGL_GLES3_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include"
-		},
-		{
-			"name" : "OPENGL_GLU_INCLUDE_DIR",
 			"properties" : 
 			[
 				{
@@ -2627,7 +2599,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-I/usr/include"
 		},
 		{
 			"name" : "PKG_XKB_CFLAGS_I",
@@ -2663,10 +2635,46 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "1"
 		},
 		{
 			"name" : "PKG_XKB_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_XKB_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_XKB_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib/x86_64-linux-gnu;-lxkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_LDFLAGS_OTHER",
 			"properties" : 
 			[
 				{
@@ -2687,7 +2695,31 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "/usr/lib/x86_64-linux-gnu"
+		},
+		{
+			"name" : "PKG_XKB_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "xkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "PKG_XKB_LIBS",
@@ -2747,7 +2779,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "xkbcommon"
 		},
 		{
 			"name" : "PKG_XKB_PREFIX",
@@ -2759,7 +2791,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "/usr"
 		},
 		{
 			"name" : "PKG_XKB_STATIC_CFLAGS",
@@ -2771,7 +2803,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-I/usr/include"
 		},
 		{
 			"name" : "PKG_XKB_STATIC_CFLAGS_I",
@@ -2798,6 +2830,42 @@
 			"value" : ""
 		},
 		{
+			"name" : "PKG_XKB_STATIC_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib/x86_64-linux-gnu;-lxkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
 			"name" : "PKG_XKB_STATIC_LIBDIR",
 			"properties" : 
 			[
@@ -2808,6 +2876,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : ""
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "xkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "PKG_XKB_STATIC_LIBS",
@@ -2867,7 +2959,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "1.6.0"
 		},
 		{
 			"name" : "PKG_XKB_xkbcommon_INCLUDEDIR",
@@ -7391,7 +7483,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/usuario/robomk/actividad1"
+			"value" : "/home/varo/robomk/actividad1"
 		},
 		{
 			"name" : "RC_COMPONENT_INSTALL_PATH",
@@ -7403,7 +7495,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/usuario/robocomp"
+			"value" : "/home/robocomp/robocomp"
 		},
 		{
 			"name" : "RC_COMPONENT_PATH",
@@ -7415,7 +7507,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/usuario/robomk/actividad1"
+			"value" : "/home/varo/robomk/actividad1"
 		},
 		{
 			"name" : "RoboComp_VERSION",
@@ -7539,7 +7631,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "XKB_INCLUDE_DIR-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "XKB_LIBRARY",
@@ -7551,7 +7643,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "XKB_LIBRARY-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxkbcommon.so"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
@@ -7576,6 +7668,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "/usr/local"
+		},
+		{
+			"name" : "__pkg_config_arguments_PKG_XKB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "QUIET;xkbcommon"
 		},
 		{
 			"name" : "__pkg_config_checked_PKG_XKB",
@@ -7615,7 +7719,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/usuario/robomk/actividad1"
+			"value" : "/home/varo/robomk/actividad1"
 		},
 		{
 			"name" : "chocachoca_IS_TOP_LEVEL",
@@ -7639,7 +7743,35 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/usuario/robomk/actividad1"
+			"value" : "/home/varo/robomk/actividad1"
+		},
+		{
+			"name" : "pkgcfg_lib_PKG_XKB_xkbcommon",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/libxkbcommon.so"
+		},
+		{
+			"name" : "prefix_result",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		}
 	],
 	"kind" : "cache",
