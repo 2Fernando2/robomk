@@ -122,17 +122,17 @@ void SpecificWorker::compute()
 			break;
 
 		case SpecificWorker::State::FORWARD:
-			//qInfo() << "State: FORWARD";
+			qInfo() << "State: FORWARD";
 			result = forward(min);
 		break;
 
 		case SpecificWorker::State::TURN:
-			//qInfo() << "State: TURN";
+			qInfo() << "State: TURN";
 	        result = turn(min);
 	        break;
 
 		case State::FOLLOW_WALL:
-			//qInfo() << "State: FOLLOW_WALL";
+			// qInfo() << "State: FOLLOW_WALL";
 			result = follow_wall(filter_data);
 			break;
 		//case State::SPIRAL:
@@ -168,18 +168,18 @@ std::tuple<SpecificWorker::State, float, float> SpecificWorker::follow_wall(auto
 	auto side_begin_offset = closest_lidar_index_to_given_angle(points.value(), (left_side) ? LidarAngles::FRONT_LEFT : -LidarAngles::BACK_LEFT);
 	auto side_end_offset = closest_lidar_index_to_given_angle(points.value(), (left_side) ? LidarAngles::BACK_LEFT : -LidarAngles::FRONT_LEFT);
 	if (not side_begin_offset or not side_end_offset){std::cout << side_begin_offset.error() << "" << side_end_offset.error() << std::endl; return {};}
-	auto min_lateral_point = std::min_element(std::begin(points.value()) + side_begin_offset.value(), std::begin(points.value()) + side_end_offset.value(),
+	auto min_side_point = std::min_element(std::begin(points.value()) + side_begin_offset.value(), std::begin(points.value()) + side_end_offset.value(),
 											  [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
 
-	float adjusted_rot = () ? 0.1 : -0.1;
-	if(lateral_point.distance2d < MIN_THRESHOLD){
-		//if(left_side) qInfo() << "Turn: right"; else qInfo() << "Turn: left";
-		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 250.f, adjusted_dir);}
-	else if (lateral_point > MIN_THRESHOLD){
-		//if(left_side) qInfo() << "Turn: left"; else qInfo() << "Turn: right";
-		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 250.f, -adjusted_dir);}
+	float adjusted_rot = (min_side_point->phi < ((left_side) ? LidarAngles::LEFT : LidarAngles::RIGHT)) ? 0.1 : -0.1;
+	if(min_side_point->distance2d < MIN_THRESHOLD){
+		if(left_side) qInfo() << "FOLLOW_WALL - Turn: right"; else qInfo() << "Turn: left";
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 250.f, adjusted_rot);}
+	else if (min_side_point->distance2d > MIN_THRESHOLD){
+		if(left_side) qInfo() << "FOLLOW_WALL - Turn: left"; else qInfo() << "Turn: right";
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 250.f, -adjusted_rot);}
 	else{
-		qInfo() << "Following wall!";
+		qInfo() << "FOLLOW_WALL - Following wall!";
 		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 1000.f, 0.f);}
 }
 
