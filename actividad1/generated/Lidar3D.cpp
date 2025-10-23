@@ -54,6 +54,7 @@ const ::std::string iceC_RoboCompLidar3D_Lidar3D_ids[2] =
 };
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_ops[] =
 {
+    "getColorCloudData",
     "getLidarData",
     "getLidarDataArrayProyectedInImage",
     "getLidarDataByCategory",
@@ -64,6 +65,7 @@ const ::std::string iceC_RoboCompLidar3D_Lidar3D_ops[] =
     "ice_isA",
     "ice_ping"
 };
+const ::std::string iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name = "getColorCloudData";
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_getLidarData_name = "getLidarData";
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_getLidarDataArrayProyectedInImage_name = "getLidarDataArrayProyectedInImage";
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_getLidarDataByCategory_name = "getLidarDataByCategory";
@@ -96,6 +98,20 @@ RoboCompLidar3D::Lidar3D::ice_staticId()
     static const ::std::string typeId = "::RoboCompLidar3D::Lidar3D";
     return typeId;
 }
+
+/// \cond INTERNAL
+bool
+RoboCompLidar3D::Lidar3D::_iceD_getColorCloudData(::IceInternal::Incoming& inS, const ::Ice::Current& current)
+{
+    _iceCheckMode(::Ice::OperationMode::Normal, current.mode);
+    inS.readEmptyParams();
+    TColorCloudData ret = this->getColorCloudData(current);
+    auto ostr = inS.startWriteParams();
+    ostr->writeAll(ret);
+    inS.endWriteParams();
+    return true;
+}
+/// \endcond
 
 /// \cond INTERNAL
 bool
@@ -192,7 +208,7 @@ RoboCompLidar3D::Lidar3D::_iceD_getLidarDataWithThreshold2d(::IceInternal::Incom
 bool
 RoboCompLidar3D::Lidar3D::_iceDispatch(::IceInternal::Incoming& in, const ::Ice::Current& current)
 {
-    ::std::pair<const ::std::string*, const ::std::string*> r = ::std::equal_range(iceC_RoboCompLidar3D_Lidar3D_ops, iceC_RoboCompLidar3D_Lidar3D_ops + 9, current.operation);
+    ::std::pair<const ::std::string*, const ::std::string*> r = ::std::equal_range(iceC_RoboCompLidar3D_Lidar3D_ops, iceC_RoboCompLidar3D_Lidar3D_ops + 10, current.operation);
     if(r.first == r.second)
     {
         throw ::Ice::OperationNotExistException(__FILE__, __LINE__, current.id, current.facet, current.operation);
@@ -202,37 +218,41 @@ RoboCompLidar3D::Lidar3D::_iceDispatch(::IceInternal::Incoming& in, const ::Ice:
     {
         case 0:
         {
-            return _iceD_getLidarData(in, current);
+            return _iceD_getColorCloudData(in, current);
         }
         case 1:
         {
-            return _iceD_getLidarDataArrayProyectedInImage(in, current);
+            return _iceD_getLidarData(in, current);
         }
         case 2:
         {
-            return _iceD_getLidarDataByCategory(in, current);
+            return _iceD_getLidarDataArrayProyectedInImage(in, current);
         }
         case 3:
         {
-            return _iceD_getLidarDataProyectedInImage(in, current);
+            return _iceD_getLidarDataByCategory(in, current);
         }
         case 4:
         {
-            return _iceD_getLidarDataWithThreshold2d(in, current);
+            return _iceD_getLidarDataProyectedInImage(in, current);
         }
         case 5:
         {
-            return _iceD_ice_id(in, current);
+            return _iceD_getLidarDataWithThreshold2d(in, current);
         }
         case 6:
         {
-            return _iceD_ice_ids(in, current);
+            return _iceD_ice_id(in, current);
         }
         case 7:
         {
-            return _iceD_ice_isA(in, current);
+            return _iceD_ice_ids(in, current);
         }
         case 8:
+        {
+            return _iceD_ice_isA(in, current);
+        }
+        case 9:
         {
             return _iceD_ice_ping(in, current);
         }
@@ -242,6 +262,17 @@ RoboCompLidar3D::Lidar3D::_iceDispatch(::IceInternal::Incoming& in, const ::Ice:
             throw ::Ice::OperationNotExistException(__FILE__, __LINE__, current.id, current.facet, current.operation);
         }
     }
+}
+/// \endcond
+
+/// \cond INTERNAL
+void
+RoboCompLidar3D::Lidar3DPrx::_iceI_getColorCloudData(const ::std::shared_ptr<::IceInternal::OutgoingAsyncT<::RoboCompLidar3D::TColorCloudData>>& outAsync, const ::Ice::Context& context)
+{
+    _checkTwowayOnly(iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name);
+    outAsync->invoke(iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name, ::Ice::OperationMode::Normal, ::Ice::FormatType::DefaultFormat, context,
+        nullptr,
+        nullptr);
 }
 /// \endcond
 
@@ -338,6 +369,8 @@ namespace Ice
 namespace
 {
 
+const ::std::string iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name = "getColorCloudData";
+
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_getLidarData_name = "getLidarData";
 
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_getLidarDataArrayProyectedInImage_name = "getLidarDataArrayProyectedInImage";
@@ -369,6 +402,46 @@ void
     }
 }
 /// \endcond
+
+::Ice::AsyncResultPtr
+IceProxy::RoboCompLidar3D::Lidar3D::_iceI_begin_getColorCloudData(const ::Ice::Context& context, const ::IceInternal::CallbackBasePtr& del, const ::Ice::LocalObjectPtr& cookie, bool sync)
+{
+    _checkTwowayOnly(iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name, sync);
+    ::IceInternal::OutgoingAsyncPtr result = new ::IceInternal::CallbackOutgoing(this, iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name, del, cookie, sync);
+    try
+    {
+        result->prepare(iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name, ::Ice::Normal, context);
+        result->writeEmptyParams();
+        result->invoke(iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name);
+    }
+    catch(const ::Ice::Exception& ex)
+    {
+        result->abort(ex);
+    }
+    return result;
+}
+
+::RoboCompLidar3D::TColorCloudData
+IceProxy::RoboCompLidar3D::Lidar3D::end_getColorCloudData(const ::Ice::AsyncResultPtr& result)
+{
+    ::Ice::AsyncResult::_check(result, this, iceC_RoboCompLidar3D_Lidar3D_getColorCloudData_name);
+    ::RoboCompLidar3D::TColorCloudData ret;
+    if(!result->_waitForResponse())
+    {
+        try
+        {
+            result->_throwUserException();
+        }
+        catch(const ::Ice::UserException& ex)
+        {
+            throw ::Ice::UnknownUserException(__FILE__, __LINE__, ex.ice_id());
+        }
+    }
+    ::Ice::InputStream* istr = result->_startReadParams();
+    istr->read(ret);
+    result->_endReadParams();
+    return ret;
+}
 
 ::Ice::AsyncResultPtr
 IceProxy::RoboCompLidar3D::Lidar3D::_iceI_begin_getLidarData(const ::std::string& iceP_name, ::Ice::Float iceP_start, ::Ice::Float iceP_len, ::Ice::Int iceP_decimationDegreeFactor, const ::Ice::Context& context, const ::IceInternal::CallbackBasePtr& del, const ::Ice::LocalObjectPtr& cookie, bool sync)
@@ -650,6 +723,20 @@ RoboCompLidar3D::Lidar3D::ice_staticId()
 
 /// \cond INTERNAL
 bool
+RoboCompLidar3D::Lidar3D::_iceD_getColorCloudData(::IceInternal::Incoming& inS, const ::Ice::Current& current)
+{
+    _iceCheckMode(::Ice::Normal, current.mode);
+    inS.readEmptyParams();
+    TColorCloudData ret = this->getColorCloudData(current);
+    ::Ice::OutputStream* ostr = inS.startWriteParams();
+    ostr->write(ret);
+    inS.endWriteParams();
+    return true;
+}
+/// \endcond
+
+/// \cond INTERNAL
+bool
 RoboCompLidar3D::Lidar3D::_iceD_getLidarData(::IceInternal::Incoming& inS, const ::Ice::Current& current)
 {
     _iceCheckMode(::Ice::Normal, current.mode);
@@ -749,6 +836,7 @@ namespace
 {
 const ::std::string iceC_RoboCompLidar3D_Lidar3D_all[] =
 {
+    "getColorCloudData",
     "getLidarData",
     "getLidarDataArrayProyectedInImage",
     "getLidarDataByCategory",
@@ -766,7 +854,7 @@ const ::std::string iceC_RoboCompLidar3D_Lidar3D_all[] =
 bool
 RoboCompLidar3D::Lidar3D::_iceDispatch(::IceInternal::Incoming& in, const ::Ice::Current& current)
 {
-    ::std::pair<const ::std::string*, const ::std::string*> r = ::std::equal_range(iceC_RoboCompLidar3D_Lidar3D_all, iceC_RoboCompLidar3D_Lidar3D_all + 9, current.operation);
+    ::std::pair<const ::std::string*, const ::std::string*> r = ::std::equal_range(iceC_RoboCompLidar3D_Lidar3D_all, iceC_RoboCompLidar3D_Lidar3D_all + 10, current.operation);
     if(r.first == r.second)
     {
         throw ::Ice::OperationNotExistException(__FILE__, __LINE__, current.id, current.facet, current.operation);
@@ -776,37 +864,41 @@ RoboCompLidar3D::Lidar3D::_iceDispatch(::IceInternal::Incoming& in, const ::Ice:
     {
         case 0:
         {
-            return _iceD_getLidarData(in, current);
+            return _iceD_getColorCloudData(in, current);
         }
         case 1:
         {
-            return _iceD_getLidarDataArrayProyectedInImage(in, current);
+            return _iceD_getLidarData(in, current);
         }
         case 2:
         {
-            return _iceD_getLidarDataByCategory(in, current);
+            return _iceD_getLidarDataArrayProyectedInImage(in, current);
         }
         case 3:
         {
-            return _iceD_getLidarDataProyectedInImage(in, current);
+            return _iceD_getLidarDataByCategory(in, current);
         }
         case 4:
         {
-            return _iceD_getLidarDataWithThreshold2d(in, current);
+            return _iceD_getLidarDataProyectedInImage(in, current);
         }
         case 5:
         {
-            return _iceD_ice_id(in, current);
+            return _iceD_getLidarDataWithThreshold2d(in, current);
         }
         case 6:
         {
-            return _iceD_ice_ids(in, current);
+            return _iceD_ice_id(in, current);
         }
         case 7:
         {
-            return _iceD_ice_isA(in, current);
+            return _iceD_ice_ids(in, current);
         }
         case 8:
+        {
+            return _iceD_ice_isA(in, current);
+        }
+        case 9:
         {
             return _iceD_ice_ping(in, current);
         }

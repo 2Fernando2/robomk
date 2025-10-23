@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad1
+CMAKE_SOURCE_DIR = /home/varo/robomk/actividad1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robomk/actividad1
+CMAKE_BINARY_DIR = /home/varo/robomk/actividad1
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robomk/actividad1/CMakeFiles /home/usuario/robomk/actividad1//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/varo/robomk/actividad1/CMakeFiles /home/varo/robomk/actividad1//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robomk/actividad1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/varo/robomk/actividad1/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,43 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ICES__home_usuario_robomk_actividad1_generated
+# Target rules for targets named ICES__home_varo_robomk_actividad1_generated
 
 # Build rule for target.
-ICES__home_usuario_robomk_actividad1_generated: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_usuario_robomk_actividad1_generated
-.PHONY : ICES__home_usuario_robomk_actividad1_generated
+ICES__home_varo_robomk_actividad1_generated: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_varo_robomk_actividad1_generated
+.PHONY : ICES__home_varo_robomk_actividad1_generated
 
 # fast build rule for target.
-ICES__home_usuario_robomk_actividad1_generated/fast:
-	$(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICES__home_usuario_robomk_actividad1_generated.dir/build.make generated/CMakeFiles/ICES__home_usuario_robomk_actividad1_generated.dir/build
-.PHONY : ICES__home_usuario_robomk_actividad1_generated/fast
-
-#=============================================================================
-# Target rules for targets named ICE_OmniRobot_target
-
-# Build rule for target.
-ICE_OmniRobot_target: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICE_OmniRobot_target
-.PHONY : ICE_OmniRobot_target
-
-# fast build rule for target.
-ICE_OmniRobot_target/fast:
-	$(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_OmniRobot_target.dir/build.make generated/CMakeFiles/ICE_OmniRobot_target.dir/build
-.PHONY : ICE_OmniRobot_target/fast
-
-#=============================================================================
-# Target rules for targets named ICE_GenericBase_target
-
-# Build rule for target.
-ICE_GenericBase_target: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICE_GenericBase_target
-.PHONY : ICE_GenericBase_target
-
-# fast build rule for target.
-ICE_GenericBase_target/fast:
-	$(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_GenericBase_target.dir/build.make generated/CMakeFiles/ICE_GenericBase_target.dir/build
-.PHONY : ICE_GenericBase_target/fast
+ICES__home_varo_robomk_actividad1_generated/fast:
+	$(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICES__home_varo_robomk_actividad1_generated.dir/build.make generated/CMakeFiles/ICES__home_varo_robomk_actividad1_generated.dir/build
+.PHONY : ICES__home_varo_robomk_actividad1_generated/fast
 
 #=============================================================================
 # Target rules for targets named ICE_Lidar3D_target
@@ -264,10 +238,8 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ICES__home_usuario_robomk_actividad1_generated"
-	@echo "... ICE_GenericBase_target"
+	@echo "... ICES__home_varo_robomk_actividad1_generated"
 	@echo "... ICE_Lidar3D_target"
-	@echo "... ICE_OmniRobot_target"
 	@echo "... chocachoca_autogen"
 	@echo "... chocachoca_autogen_timestamp_deps"
 	@echo "... chocachoca"

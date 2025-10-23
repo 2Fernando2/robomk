@@ -112,12 +112,11 @@ private:
 		static constexpr float BACK = -M_PI;
 		static constexpr float LEFT = -M_PI_2;
 		static constexpr float RIGHT = M_PI_2;
-		static constexpr float FRONT_LEFT = -M_PI_4; // FRONT_RIGHT is negative
-		static constexpr float BACK_LEFT = -3.f*M_PI_4; // BACK_RIGHT is negative
+		static constexpr float FRONT_LEFT = -3.f*M_PI/8.f; // FRONT_RIGHT is positive
+		static constexpr float BACK_LEFT = -5.f*M_PI/8.f; // BACK_RIGHT is positive
 	};
 
 	const float ROBOT_LENGTH = 400.f;
-	const float MAX_THRESHOLD = 200.f;
 	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3.f;
 	const float MAX_ADV = 1000.f;
 	bool rotating = false;
@@ -129,6 +128,7 @@ private:
 	std::tuple<SpecificWorker::State, float, float> forward(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
 	std::tuple<SpecificWorker::State, float, float> turn(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
 	std::tuple<SpecificWorker::State, float, float> follow_wall(auto &points);
+	std::tuple<SpecificWorker::State, float, float> spiral(auto &points);
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 	void send_velocities(std::tuple<SpecificWorker::State, float, float> state);

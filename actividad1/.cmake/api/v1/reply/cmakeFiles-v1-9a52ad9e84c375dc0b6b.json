@@ -764,11 +764,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/usuario/robocomp/cmake/robocomp.cmake"
+			"path" : "/home/robocomp/robocomp/cmake/robocomp.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/usuario/robocomp/cmake/modules/qt.cmake"
+			"path" : "/home/robocomp/robocomp/cmake/modules/qt.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1655,8 +1655,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robomk/actividad1",
-		"source" : "/home/usuario/robomk/actividad1"
+		"build" : "/home/varo/robomk/actividad1",
+		"source" : "/home/varo/robomk/actividad1"
 	},
 	"version" : 
 	{

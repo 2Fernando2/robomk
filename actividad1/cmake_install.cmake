@@ -1,4 +1,4 @@
-# Install script for directory: /home/usuario/robomk/actividad1
+# Install script for directory: /home/varo/robomk/actividad1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,19 +44,19 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/usuario/robocomp/etc-default/chocachoca.conf")
+   "/home/robocomp/robocomp/etc-default/chocachoca.conf")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/usuario/robocomp/etc-default" TYPE FILE RENAME "chocachoca.conf" FILES "/home/usuario/robomk/actividad1/etc/config")
+  file(INSTALL DESTINATION "/home/robocomp/robocomp/etc-default" TYPE FILE RENAME "chocachoca.conf" FILES "/home/varo/robomk/actividad1/etc/config")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/usuario/robomk/actividad1/generated/cmake_install.cmake")
+  include("/home/varo/robomk/actividad1/generated/cmake_install.cmake")
 
 endif()
 
@@ -68,5 +68,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/usuario/robomk/actividad1/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/varo/robomk/actividad1/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

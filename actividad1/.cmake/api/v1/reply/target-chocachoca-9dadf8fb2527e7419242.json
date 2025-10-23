@@ -33,8 +33,8 @@
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
-			"/home/usuario/robocomp/cmake/modules/qt.cmake",
-			"/home/usuario/robocomp/cmake/robocomp.cmake"
+			"/home/robocomp/robocomp/cmake/modules/qt.cmake",
+			"/home/robocomp/robocomp/cmake/robocomp.cmake"
 		],
 		"nodes" : 
 		[
@@ -225,15 +225,15 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/usuario/robomk/actividad1/generated/chocachoca_autogen/include"
+					"path" : "/home/varo/robomk/actividad1/generated/chocachoca_autogen/include"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/usuario/robomk/actividad1/generated"
+					"path" : "/home/varo/robomk/actividad1/generated"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/usuario/robomk/actividad1/generated/."
+					"path" : "/home/varo/robomk/actividad1/generated/."
 				},
 				{
 					"backtrace" : 22,
@@ -245,19 +245,19 @@
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/usuario/robomk/actividad1"
+					"path" : "/home/varo/robomk/actividad1"
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/home/usuario/robocomp/classes"
+					"path" : "/home/robocomp/robocomp/classes"
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/home/usuario/robocomp/libs"
+					"path" : "/home/robocomp/robocomp/libs"
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/home/usuario/robocomp/interfaces"
+					"path" : "/home/robocomp/robocomp/interfaces"
 				},
 				{
 					"backtrace" : 24,
@@ -334,7 +334,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_usuario_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55"
+			"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55"
 		},
 		{
 			"id" : "chocachoca_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55"
@@ -390,7 +390,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/usuario/robocomp//classes",
+				"fragment" : "-L/home/robocomp/robocomp//classes",
 				"role" : "libraries"
 			},
 			{
@@ -523,7 +523,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
+			"path" : "/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -535,25 +535,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/usuario/robocomp/classes/rapplication/rapplication.cpp",
+			"path" : "/home/robocomp/robocomp/classes/rapplication/rapplication.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp",
+			"path" : "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
+			"path" : "/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp",
+			"path" : "/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

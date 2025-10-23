@@ -73,8 +73,6 @@ protected:
 	ConfigLoader configLoader;
 
 
-
-
 private:
 
 public slots:

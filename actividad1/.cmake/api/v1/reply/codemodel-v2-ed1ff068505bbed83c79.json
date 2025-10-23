@@ -11,7 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-b71922aea531a1444e9d.json",
+					"jsonFile" : "directory-.-7e1bb129831da72a9f11.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -22,7 +22,7 @@
 				{
 					"build" : "generated",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-generated-6a2e0dd9e8e4907a1e11.json",
+					"jsonFile" : "directory-generated-903eec4cc1064f1f9fc9.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -36,9 +36,7 @@
 						1,
 						2,
 						3,
-						4,
-						5,
-						6
+						4
 					]
 				}
 			],
@@ -58,9 +56,7 @@
 						1,
 						2,
 						3,
-						4,
-						5,
-						6
+						4
 					]
 				}
 			],
@@ -68,36 +64,22 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_usuario_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICES__home_usuario_robomk_actividad1_generated-803a6345adf21ee63b1a.json",
-					"name" : "ICES__home_usuario_robomk_actividad1_generated",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_GenericBase_target-a9f5621596054f64ebf0.json",
-					"name" : "ICE_GenericBase_target",
+					"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_varo_robomk_actividad1_generated-77f975cd593dc29285e8.json",
+					"name" : "ICES__home_varo_robomk_actividad1_generated",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_Lidar3D_target-ed19db56f778d8ef166f.json",
+					"jsonFile" : "target-ICE_Lidar3D_target-b231c5aae2c8bc86f660.json",
 					"name" : "ICE_Lidar3D_target",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_OmniRobot_target-6f747443caeb22fc22c9.json",
-					"name" : "ICE_OmniRobot_target",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
 					"id" : "chocachoca::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-chocachoca-a0c074113064a1cce51a.json",
+					"jsonFile" : "target-chocachoca-9dadf8fb2527e7419242.json",
 					"name" : "chocachoca",
 					"projectIndex" : 0
 				},
@@ -121,8 +103,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robomk/actividad1",
-		"source" : "/home/usuario/robomk/actividad1"
+		"build" : "/home/varo/robomk/actividad1",
+		"source" : "/home/varo/robomk/actividad1"
 	},
 	"version" : 
 	{

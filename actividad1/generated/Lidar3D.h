@@ -90,6 +90,10 @@ using TFloatArray = ::std::vector<float>;
 
 using TIntArray = ::std::vector<int>;
 
+using TShortArray = ::std::vector<short>;
+
+using TByteArray = ::std::vector<::Ice::Byte>;
+
 struct TDataImage
 {
     long long int timestamp;
@@ -144,6 +148,25 @@ struct TDataCategory
     }
 };
 
+struct TColorCloudData
+{
+    ::RoboCompLidar3D::TShortArray X;
+    ::RoboCompLidar3D::TShortArray Y;
+    ::RoboCompLidar3D::TShortArray Z;
+    ::RoboCompLidar3D::TByteArray R;
+    ::RoboCompLidar3D::TByteArray G;
+    ::RoboCompLidar3D::TByteArray B;
+
+    /**
+     * Obtains a tuple containing all of the struct's data members.
+     * @return The data members in a tuple.
+     */
+    std::tuple<const ::RoboCompLidar3D::TShortArray&, const ::RoboCompLidar3D::TShortArray&, const ::RoboCompLidar3D::TShortArray&, const ::RoboCompLidar3D::TByteArray&, const ::RoboCompLidar3D::TByteArray&, const ::RoboCompLidar3D::TByteArray&> ice_tuple() const
+    {
+        return std::tie(X, Y, Z, R, G, B);
+    }
+};
+
 using Ice::operator<;
 using Ice::operator<=;
 using Ice::operator>;
@@ -190,6 +213,11 @@ public:
      */
     static const ::std::string& ice_staticId();
 
+    virtual TColorCloudData getColorCloudData(const ::Ice::Current& current) = 0;
+    /// \cond INTERNAL
+    bool _iceD_getColorCloudData(::IceInternal::Incoming&, const ::Ice::Current&);
+    /// \endcond
+
     virtual TData getLidarData(::std::string name, float start, float len, int decimationDegreeFactor, const ::Ice::Current& current) = 0;
     /// \cond INTERNAL
     bool _iceD_getLidarData(::IceInternal::Incoming&, const ::Ice::Current&);
@@ -228,6 +256,31 @@ namespace RoboCompLidar3D
 class Lidar3DPrx : public virtual ::Ice::Proxy<Lidar3DPrx, ::Ice::ObjectPrx>
 {
 public:
+
+    TColorCloudData getColorCloudData(const ::Ice::Context& context = ::Ice::noExplicitContext)
+    {
+        return _makePromiseOutgoing<::RoboCompLidar3D::TColorCloudData>(true, this, &Lidar3DPrx::_iceI_getColorCloudData, context).get();
+    }
+
+    template<template<typename> class P = ::std::promise>
+    auto getColorCloudDataAsync(const ::Ice::Context& context = ::Ice::noExplicitContext)
+        -> decltype(::std::declval<P<::RoboCompLidar3D::TColorCloudData>>().get_future())
+    {
+        return _makePromiseOutgoing<::RoboCompLidar3D::TColorCloudData, P>(false, this, &Lidar3DPrx::_iceI_getColorCloudData, context);
+    }
+
+    ::std::function<void()>
+    getColorCloudDataAsync(::std::function<void(::RoboCompLidar3D::TColorCloudData)> response,
+                           ::std::function<void(::std::exception_ptr)> ex = nullptr,
+                           ::std::function<void(bool)> sent = nullptr,
+                           const ::Ice::Context& context = ::Ice::noExplicitContext)
+    {
+        return _makeLamdaOutgoing<::RoboCompLidar3D::TColorCloudData>(std::move(response), std::move(ex), std::move(sent), this, &RoboCompLidar3D::Lidar3DPrx::_iceI_getColorCloudData, context);
+    }
+
+    /// \cond INTERNAL
+    void _iceI_getColorCloudData(const ::std::shared_ptr<::IceInternal::OutgoingAsyncT<::RoboCompLidar3D::TColorCloudData>>&, const ::Ice::Context&);
+    /// \endcond
 
     TData getLidarData(const ::std::string& name, float start, float len, int decimationDegreeFactor, const ::Ice::Context& context = ::Ice::noExplicitContext)
     {
@@ -449,6 +502,23 @@ struct StreamReader<::RoboCompLidar3D::TDataCategory, S>
     }
 };
 
+template<>
+struct StreamableTraits<::RoboCompLidar3D::TColorCloudData>
+{
+    static const StreamHelperCategory helper = StreamHelperCategoryStruct;
+    static const int minWireSize = 6;
+    static const bool fixedLength = false;
+};
+
+template<typename S>
+struct StreamReader<::RoboCompLidar3D::TColorCloudData, S>
+{
+    static void read(S* istr, ::RoboCompLidar3D::TColorCloudData& v)
+    {
+        istr->readAll(v.X, v.Y, v.Z, v.R, v.G, v.B);
+    }
+};
+
 }
 /// \endcond
 
@@ -521,6 +591,10 @@ typedef ::std::vector< ::Ice::Float> TFloatArray;
 
 typedef ::std::vector< ::Ice::Int> TIntArray;
 
+typedef ::std::vector< ::Ice::Short> TShortArray;
+
+typedef ::std::vector< ::Ice::Byte> TByteArray;
+
 struct TDataImage
 {
     ::Ice::Long timestamp;
@@ -548,10 +622,28 @@ struct TDataCategory
     ::Ice::Long timestamp;
 };
 
+struct TColorCloudData
+{
+    ::RoboCompLidar3D::TShortArray X;
+    ::RoboCompLidar3D::TShortArray Y;
+    ::RoboCompLidar3D::TShortArray Z;
+    ::RoboCompLidar3D::TByteArray R;
+    ::RoboCompLidar3D::TByteArray G;
+    ::RoboCompLidar3D::TByteArray B;
+};
+
 }
 
 namespace RoboCompLidar3D
 {
+
+/**
+ * Base class for asynchronous callback wrapper classes used for calls to
+ * IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ * Create a wrapper instance by calling ::RoboCompLidar3D::newCallback_Lidar3D_getColorCloudData.
+ */
+class Callback_Lidar3D_getColorCloudData_Base : public virtual ::IceInternal::CallbackBase { };
+typedef ::IceUtil::Handle< Callback_Lidar3D_getColorCloudData_Base> Callback_Lidar3D_getColorCloudDataPtr;
 
 /**
  * Base class for asynchronous callback wrapper classes used for calls to
@@ -603,6 +695,44 @@ namespace RoboCompLidar3D
 
 class Lidar3D : public virtual ::Ice::Proxy<Lidar3D, ::IceProxy::Ice::Object>
 {
+public:
+
+    ::RoboCompLidar3D::TColorCloudData getColorCloudData(const ::Ice::Context& context = ::Ice::noExplicitContext)
+    {
+        return end_getColorCloudData(_iceI_begin_getColorCloudData(context, ::IceInternal::dummyCallback, 0, true));
+    }
+
+    ::Ice::AsyncResultPtr begin_getColorCloudData(const ::Ice::Context& context = ::Ice::noExplicitContext)
+    {
+        return _iceI_begin_getColorCloudData(context, ::IceInternal::dummyCallback, 0);
+    }
+
+    ::Ice::AsyncResultPtr begin_getColorCloudData(const ::Ice::CallbackPtr& cb, const ::Ice::LocalObjectPtr& cookie = 0)
+    {
+        return _iceI_begin_getColorCloudData(::Ice::noExplicitContext, cb, cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_getColorCloudData(const ::Ice::Context& context, const ::Ice::CallbackPtr& cb, const ::Ice::LocalObjectPtr& cookie = 0)
+    {
+        return _iceI_begin_getColorCloudData(context, cb, cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_getColorCloudData(const ::RoboCompLidar3D::Callback_Lidar3D_getColorCloudDataPtr& cb, const ::Ice::LocalObjectPtr& cookie = 0)
+    {
+        return _iceI_begin_getColorCloudData(::Ice::noExplicitContext, cb, cookie);
+    }
+
+    ::Ice::AsyncResultPtr begin_getColorCloudData(const ::Ice::Context& context, const ::RoboCompLidar3D::Callback_Lidar3D_getColorCloudDataPtr& cb, const ::Ice::LocalObjectPtr& cookie = 0)
+    {
+        return _iceI_begin_getColorCloudData(context, cb, cookie);
+    }
+
+    ::RoboCompLidar3D::TColorCloudData end_getColorCloudData(const ::Ice::AsyncResultPtr& result);
+
+private:
+
+    ::Ice::AsyncResultPtr _iceI_begin_getColorCloudData(const ::Ice::Context&, const ::IceInternal::CallbackBasePtr&, const ::Ice::LocalObjectPtr& cookie = 0, bool sync = false);
+
 public:
 
     ::RoboCompLidar3D::TData getLidarData(const ::std::string& name, ::Ice::Float start, ::Ice::Float len, ::Ice::Int decimationDegreeFactor, const ::Ice::Context& context = ::Ice::noExplicitContext)
@@ -858,6 +988,11 @@ public:
      */
     static const ::std::string& ice_staticId();
 
+    virtual TColorCloudData getColorCloudData(const ::Ice::Current& current = ::Ice::emptyCurrent) = 0;
+    /// \cond INTERNAL
+    bool _iceD_getColorCloudData(::IceInternal::Incoming&, const ::Ice::Current&);
+    /// \endcond
+
     virtual TData getLidarData(const ::std::string& name, ::Ice::Float start, ::Ice::Float len, ::Ice::Int decimationDegreeFactor, const ::Ice::Current& current = ::Ice::emptyCurrent) = 0;
     /// \cond INTERNAL
     bool _iceD_getLidarData(::IceInternal::Incoming&, const ::Ice::Current&);
@@ -1059,11 +1194,199 @@ struct StreamReader< ::RoboCompLidar3D::TDataCategory, S>
     }
 };
 
+template<>
+struct StreamableTraits< ::RoboCompLidar3D::TColorCloudData>
+{
+    static const StreamHelperCategory helper = StreamHelperCategoryStruct;
+    static const int minWireSize = 6;
+    static const bool fixedLength = false;
+};
+
+template<typename S>
+struct StreamWriter< ::RoboCompLidar3D::TColorCloudData, S>
+{
+    static void write(S* ostr, const ::RoboCompLidar3D::TColorCloudData& v)
+    {
+        ostr->write(v.X);
+        ostr->write(v.Y);
+        ostr->write(v.Z);
+        ostr->write(v.R);
+        ostr->write(v.G);
+        ostr->write(v.B);
+    }
+};
+
+template<typename S>
+struct StreamReader< ::RoboCompLidar3D::TColorCloudData, S>
+{
+    static void read(S* istr, ::RoboCompLidar3D::TColorCloudData& v)
+    {
+        istr->read(v.X);
+        istr->read(v.Y);
+        istr->read(v.Z);
+        istr->read(v.R);
+        istr->read(v.G);
+        istr->read(v.B);
+    }
+};
+
 }
 /// \endcond
 
 namespace RoboCompLidar3D
 {
+
+/**
+ * Type-safe asynchronous callback wrapper class used for calls to
+ * IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ * Create a wrapper instance by calling ::RoboCompLidar3D::newCallback_Lidar3D_getColorCloudData.
+ */
+template<class T>
+class CallbackNC_Lidar3D_getColorCloudData : public Callback_Lidar3D_getColorCloudData_Base, public ::IceInternal::TwowayCallbackNC<T>
+{
+public:
+
+    typedef IceUtil::Handle<T> TPtr;
+
+    typedef void (T::*Exception)(const ::Ice::Exception&);
+    typedef void (T::*Sent)(bool);
+    typedef void (T::*Response)(const TColorCloudData&);
+
+    CallbackNC_Lidar3D_getColorCloudData(const TPtr& obj, Response cb, Exception excb, Sent sentcb)
+        : ::IceInternal::TwowayCallbackNC<T>(obj, cb != 0, excb, sentcb), _response(cb)
+    {
+    }
+
+    /// \cond INTERNAL
+    virtual void completed(const ::Ice::AsyncResultPtr& result) const
+    {
+        Lidar3DPrx proxy = Lidar3DPrx::uncheckedCast(result->getProxy());
+        TColorCloudData ret;
+        try
+        {
+            ret = proxy->end_getColorCloudData(result);
+        }
+        catch(const ::Ice::Exception& ex)
+        {
+            ::IceInternal::CallbackNC<T>::exception(result, ex);
+            return;
+        }
+        if(_response)
+        {
+            (::IceInternal::CallbackNC<T>::_callback.get()->*_response)(ret);
+        }
+    }
+    /// \endcond
+
+private:
+
+    Response _response;
+};
+
+/**
+ * Creates a callback wrapper instance that delegates to your object.
+ * @param instance The callback object.
+ * @param cb The success method of the callback object.
+ * @param excb The exception method of the callback object.
+ * @param sentcb The sent method of the callback object.
+ * @return An object that can be passed to an asynchronous invocation of IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ */
+template<class T> Callback_Lidar3D_getColorCloudDataPtr
+newCallback_Lidar3D_getColorCloudData(const IceUtil::Handle<T>& instance, void (T::*cb)(const TColorCloudData&), void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_Lidar3D_getColorCloudData<T>(instance, cb, excb, sentcb);
+}
+
+/**
+ * Creates a callback wrapper instance that delegates to your object.
+ * @param instance The callback object.
+ * @param cb The success method of the callback object.
+ * @param excb The exception method of the callback object.
+ * @param sentcb The sent method of the callback object.
+ * @return An object that can be passed to an asynchronous invocation of IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ */
+template<class T> Callback_Lidar3D_getColorCloudDataPtr
+newCallback_Lidar3D_getColorCloudData(T* instance, void (T::*cb)(const TColorCloudData&), void (T::*excb)(const ::Ice::Exception&), void (T::*sentcb)(bool) = 0)
+{
+    return new CallbackNC_Lidar3D_getColorCloudData<T>(instance, cb, excb, sentcb);
+}
+
+/**
+ * Type-safe asynchronous callback wrapper class with cookie support used for calls to
+ * IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ * Create a wrapper instance by calling ::RoboCompLidar3D::newCallback_Lidar3D_getColorCloudData.
+ */
+template<class T, typename CT>
+class Callback_Lidar3D_getColorCloudData : public Callback_Lidar3D_getColorCloudData_Base, public ::IceInternal::TwowayCallback<T, CT>
+{
+public:
+
+    typedef IceUtil::Handle<T> TPtr;
+
+    typedef void (T::*Exception)(const ::Ice::Exception& , const CT&);
+    typedef void (T::*Sent)(bool , const CT&);
+    typedef void (T::*Response)(const TColorCloudData&, const CT&);
+
+    Callback_Lidar3D_getColorCloudData(const TPtr& obj, Response cb, Exception excb, Sent sentcb)
+        : ::IceInternal::TwowayCallback<T, CT>(obj, cb != 0, excb, sentcb), _response(cb)
+    {
+    }
+
+    /// \cond INTERNAL
+    virtual void completed(const ::Ice::AsyncResultPtr& result) const
+    {
+        Lidar3DPrx proxy = Lidar3DPrx::uncheckedCast(result->getProxy());
+        TColorCloudData ret;
+        try
+        {
+            ret = proxy->end_getColorCloudData(result);
+        }
+        catch(const ::Ice::Exception& ex)
+        {
+            ::IceInternal::Callback<T, CT>::exception(result, ex);
+            return;
+        }
+        if(_response)
+        {
+            (::IceInternal::Callback<T, CT>::_callback.get()->*_response)(ret, CT::dynamicCast(result->getCookie()));
+        }
+    }
+    /// \endcond
+
+private:
+
+    Response _response;
+};
+
+/**
+ * Creates a callback wrapper instance that delegates to your object.
+ * Use this overload when your callback methods receive a cookie value.
+ * @param instance The callback object.
+ * @param cb The success method of the callback object.
+ * @param excb The exception method of the callback object.
+ * @param sentcb The sent method of the callback object.
+ * @return An object that can be passed to an asynchronous invocation of IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ */
+template<class T, typename CT> Callback_Lidar3D_getColorCloudDataPtr
+newCallback_Lidar3D_getColorCloudData(const IceUtil::Handle<T>& instance, void (T::*cb)(const TColorCloudData&, const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_Lidar3D_getColorCloudData<T, CT>(instance, cb, excb, sentcb);
+}
+
+/**
+ * Creates a callback wrapper instance that delegates to your object.
+ * Use this overload when your callback methods receive a cookie value.
+ * @param instance The callback object.
+ * @param cb The success method of the callback object.
+ * @param excb The exception method of the callback object.
+ * @param sentcb The sent method of the callback object.
+ * @return An object that can be passed to an asynchronous invocation of IceProxy::RoboCompLidar3D::Lidar3D::begin_getColorCloudData.
+ */
+template<class T, typename CT> Callback_Lidar3D_getColorCloudDataPtr
+newCallback_Lidar3D_getColorCloudData(T* instance, void (T::*cb)(const TColorCloudData&, const CT&), void (T::*excb)(const ::Ice::Exception&, const CT&), void (T::*sentcb)(bool, const CT&) = 0)
+{
+    return new Callback_Lidar3D_getColorCloudData<T, CT>(instance, cb, excb, sentcb);
+}
 
 /**
  * Type-safe asynchronous callback wrapper class used for calls to
