@@ -34,76 +34,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="825a2d50-b72d-4af3-bf23-818724918d15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cache-v2-6c36bc83523ca6196f8c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cmakeFiles-v1-640a6c6f9f4e83febd4a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/codemodel-v2-cacb9eb7dd18b36d70c3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-.-b71922aea531a1444e9d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-generated-6a2e0dd9e8e4907a1e11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/index-2025-10-22T13-43-02-0093.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ICES__home_usuario_robomk_actividad1_generated-803a6345adf21ee63b1a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ICE_GenericBase_target-a9f5621596054f64ebf0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ICE_Lidar3D_target-ed19db56f778d8ef166f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ICE_OmniRobot_target-6f747443caeb22fc22c9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-chocachoca-a0c074113064a1cce51a.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.qt/QtDeploySupport.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/.qt/QtDeploySupport.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/3.28.3/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/chocachoca" beforeDir="false" afterPath="$PROJECT_DIR$/bin/chocachoca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/ICE_Lidar3D_target.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/ICE_Lidar3D_target.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/ICE_Lidar3D_target.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/ICE_Lidar3D_target.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/__/src/specificworker.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/genericworker.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/genericworker.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/main.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/AutogenUsed.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/chocachoca_autogen_timestamp_deps.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/generated/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/Lidar3D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/generated/Lidar3D.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/Lidar3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/generated/Lidar3D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/generated/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/EWIEGA46WW/moc_genericworker.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/EWIEGA46WW/moc_genericworker.cpp.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/VNU7RW3YIC/moc_specificworker.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/VNU7RW3YIC/moc_specificworker.cpp.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/include/moc_sigwatch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/include/moc_sigwatch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/include/moc_sigwatch.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/include/moc_sigwatch.cpp.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/chocachoca_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/generated/chocachoca_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/generated/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated/genericworker.h" beforeDir="false" afterPath="$PROJECT_DIR$/generated/genericworker.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/specificworker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/specificworker.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/specificworker.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/specificworker.h" afterDir="false" />
     </list>
@@ -217,7 +158,8 @@
       <workItem from="1761137579324" duration="2136000" />
       <workItem from="1761154805184" duration="3900000" />
       <workItem from="1761215743593" duration="5478000" />
-      <workItem from="1761226351789" duration="3412000" />
+      <workItem from="1761226351789" duration="15358000" />
+      <workItem from="1761294781890" duration="24336000" />
     </task>
     <servers />
   </component>

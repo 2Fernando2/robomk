@@ -117,21 +117,25 @@ private:
 	};
 
 	const float ROBOT_LENGTH = 400.f;
-	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 3.f;
-	const float MAX_ADV = 1000.f;
+	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2.f;
+	const float MAX_ADV_SPEED = 1000.f;
+	float adv_speed = MAX_ADV_SPEED;
+	float rot_speed = 0.f;
 	bool rotating = false;
-	float rot;
+	bool rot_direction = false; // true: right - false: left
+	bool spiraling = false;
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
 	SpecificWorker::State state = SpecificWorker::State::FORWARD;
 	std::optional<RoboCompLidar3D::TPoints> read_data();
-	std::tuple<SpecificWorker::State, float, float> forward(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
-	std::tuple<SpecificWorker::State, float, float> turn(const __gnu_cxx::__normal_iterator<RoboCompLidar3D::TPoint*, std::vector<RoboCompLidar3D::TPoint>> &point);
+	std::tuple<SpecificWorker::State, float, float> forward(auto &points);
+	std::tuple<SpecificWorker::State, float, float> turn(auto &points);
 	std::tuple<SpecificWorker::State, float, float> follow_wall(auto &points);
 	std::tuple<SpecificWorker::State, float, float> spiral(auto &points);
+	std::expected<bool, std::string> open_space(auto &points);
+
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
-	void send_velocities(std::tuple<SpecificWorker::State, float, float> state);
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
 signals:
