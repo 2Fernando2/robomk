@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/robocomp/robomk/actividad1/cmake-build-debug/cmake_install.cmake",
+		"/home/robocomp/robomk/actividad1/cmake-build-debug/generated/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

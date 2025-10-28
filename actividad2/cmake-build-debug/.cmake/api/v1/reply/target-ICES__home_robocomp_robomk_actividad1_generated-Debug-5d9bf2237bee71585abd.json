@@ -1,0 +1,96 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_CUSTOM_TARGET",
+			"ROBOCOMP_IDSL_TO_ICE",
+			"add_dependencies",
+			"PROCESS_IDSL_FILE"
+		],
+		"files" : 
+		[
+			"/home/robocomp/robocomp/cmake/robocomp.cmake",
+			"generated/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 100,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 7
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55"
+		}
+	],
+	"id" : "ICES__home_robocomp_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
+	"name" : "ICES__home_robocomp_robomk_actividad1_generated",
+	"paths" : 
+	{
+		"build" : "generated",
+		"source" : "generated"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
