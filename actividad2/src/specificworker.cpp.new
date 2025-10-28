@@ -130,6 +130,7 @@ int SpecificWorker::startup_check()
 
 /**************************************/
 // From the RoboCompLidar3D you can call this methods:
+// RoboCompLidar3D::TColorCloudData this->lidar3d_proxy->getColorCloudData()
 // RoboCompLidar3D::TData this->lidar3d_proxy->getLidarData(string name, float start, float len, int decimationDegreeFactor)
 // RoboCompLidar3D::TDataImage this->lidar3d_proxy->getLidarDataArrayProyectedInImage(string name)
 // RoboCompLidar3D::TDataCategory this->lidar3d_proxy->getLidarDataByCategory(TCategories categories, long timestamp)
@@ -142,6 +143,7 @@ int SpecificWorker::startup_check()
 // RoboCompLidar3D::TDataImage
 // RoboCompLidar3D::TData
 // RoboCompLidar3D::TDataCategory
+// RoboCompLidar3D::TColorCloudData
 
 /**************************************/
 // From the RoboCompOmniRobot you can call this methods:

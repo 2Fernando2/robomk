@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad1
+CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robomk/actividad1
+CMAKE_BINARY_DIR = /home/usuario/robomk/actividad2
 
 # Utility rule file for ICE_GenericBase_target.
 
@@ -69,8 +69,8 @@ include generated/CMakeFiles/ICE_GenericBase_target.dir/progress.make
 generated/CMakeFiles/ICE_GenericBase_target: generated/GenericBase.ice
 
 generated/GenericBase.ice: /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad1/generated/GenericBase.ice from /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl"
-	cd /home/usuario/robomk/actividad1/generated && robocompdsl /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl /home/usuario/robomk/actividad1/generated/GenericBase.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad2/generated/GenericBase.ice from /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl"
+	cd /home/usuario/robomk/actividad2/generated && robocompdsl /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl /home/usuario/robomk/actividad2/generated/GenericBase.ice
 
 ICE_GenericBase_target: generated/CMakeFiles/ICE_GenericBase_target
 ICE_GenericBase_target: generated/GenericBase.ice
@@ -82,10 +82,10 @@ generated/CMakeFiles/ICE_GenericBase_target.dir/build: ICE_GenericBase_target
 .PHONY : generated/CMakeFiles/ICE_GenericBase_target.dir/build
 
 generated/CMakeFiles/ICE_GenericBase_target.dir/clean:
-	cd /home/usuario/robomk/actividad1/generated && $(CMAKE_COMMAND) -P CMakeFiles/ICE_GenericBase_target.dir/cmake_clean.cmake
+	cd /home/usuario/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/ICE_GenericBase_target.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/ICE_GenericBase_target.dir/clean
 
 generated/CMakeFiles/ICE_GenericBase_target.dir/depend:
-	cd /home/usuario/robomk/actividad1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad1 /home/usuario/robomk/actividad1/generated /home/usuario/robomk/actividad1 /home/usuario/robomk/actividad1/generated /home/usuario/robomk/actividad1/generated/CMakeFiles/ICE_GenericBase_target.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2/generated/CMakeFiles/ICE_GenericBase_target.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/ICE_GenericBase_target.dir/depend
 

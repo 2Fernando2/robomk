@@ -18,11 +18,11 @@
  */
 
 
-/** \mainpage RoboComp::chocachoca
+/** \mainpage RoboComp::localiser
  *
  * \section intro_sec Introduction
  *
- * The chocachoca component...
+ * The localiser component...
  *
  * \section interface_sec Interface
  *
@@ -34,7 +34,7 @@
  * ...
  *
  * \subsection install2_ssec Compile and install
- * cd chocachoca
+ * cd localiser
  * <br>
  * cmake . && make
  * <br>
@@ -52,7 +52,7 @@
  *
  * \subsection execution_ssec Execution
  *
- * Just: "${PATH_TO_BINARY}/chocachoca --Ice.Config=${PATH_TO_CONFIG_FILE}"
+ * Just: "${PATH_TO_BINARY}/localiser --Ice.Config=${PATH_TO_CONFIG_FILE}"
  *
  * \subsection running_ssec Once running
  *
@@ -84,8 +84,8 @@
 
 #define USE_QTGUI
 
-#define PROGRAM_NAME    "chocachoca"
-#define SERVER_FULL_NAME   "RoboComp chocachoca::chocachoca"
+#define PROGRAM_NAME    "localiser"
+#define SERVER_FULL_NAME   "RoboComp localiser::localiser"
 
 
 template <typename ProxyType, typename ProxyPointer>
@@ -107,10 +107,10 @@ void require(const Ice::CommunicatorPtr& communicator,
 }
 
 
-class chocachoca : public Ice::Application
+class localiser : public Ice::Application
 {
 public:
-	chocachoca (QString configFile, QString prfx, bool startup_check) { 
+	localiser (QString configFile, QString prfx, bool startup_check) { 
 		this->configFile = configFile.toStdString();
 		this->prefix = prfx.toStdString();
 		this->startup_check_flag=startup_check; 
@@ -131,7 +131,7 @@ public:
 	virtual int run(int, char*[]);
 };
 
-Ice::InitializationData chocachoca::getInitializationDataIce(){
+Ice::InitializationData localiser::getInitializationDataIce(){
         Ice::InitializationData initData;
         initData.properties = Ice::createProperties();
         initData.properties->setProperty("Ice.Warn.Connections", this->configLoader.get<std::string>("Ice.Warn.Connections"));
@@ -141,14 +141,14 @@ Ice::InitializationData chocachoca::getInitializationDataIce(){
 		return initData;
 }
 
-void chocachoca::initialize()
+void localiser::initialize()
 {
     this->configLoader.load(this->configFile);
 	this->configLoader.printConfig();
 	std::cout<<std::endl;
 }
 
-int chocachoca::run(int argc, char* argv[])
+int localiser::run(int argc, char* argv[])
 {
 #ifdef USE_QTGUI
 	QApplication a(argc, argv);  // GUI application
@@ -263,7 +263,7 @@ int main(int argc, char* argv[])
 		}
 
 	}
-	chocachoca app(configFile, prefix, startup_check_flag);
+	localiser app(configFile, prefix, startup_check_flag);
 
 	return app.main(argc, argv, app.getInitializationDataIce());
 }
