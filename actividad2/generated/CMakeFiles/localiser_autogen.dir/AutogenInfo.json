@@ -338,7 +338,7 @@
 		"/home/usuario/robomk/actividad2/generated/OmniRobot.cpp"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
+	"PARALLEL" : 16,
 	"PARSE_CACHE_FILE" : "/home/usuario/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",

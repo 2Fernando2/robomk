@@ -133,6 +133,9 @@ private:
 	std::tuple<SpecificWorker::State, float, float> follow_wall(auto &points);
 	std::tuple<SpecificWorker::State, float, float> spiral(auto &points);
 	std::expected<bool, std::string> open_space(auto &points);
+	std::optional<RoboCompLidar3D::TPoint> get_min_point(const auto &points, const auto &angle_begin, const auto &angle_end);
+
+	std::tuple<SpecificWorker::State, float, float> state_Machine(auto &points);
 
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);

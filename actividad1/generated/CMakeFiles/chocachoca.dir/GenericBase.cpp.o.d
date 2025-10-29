@@ -1,7 +1,7 @@
 generated/CMakeFiles/chocachoca.dir/GenericBase.cpp.o: \
- /home/varo/robomk/actividad1/generated/GenericBase.cpp \
+ /home/usuario/robomk/actividad1/generated/GenericBase.cpp \
  /usr/include/stdc-predef.h \
- /home/varo/robomk/actividad1/generated/GenericBase.h \
+ /home/usuario/robomk/actividad1/generated/GenericBase.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/13/stdlib.h /usr/include/c++/13/cstdlib \
