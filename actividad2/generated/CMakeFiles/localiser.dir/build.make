@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad2
+CMAKE_SOURCE_DIR = /home/varo/robomk/actividad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robomk/actividad2
+CMAKE_BINARY_DIR = /home/varo/robomk/actividad2
 
 # Include any dependencies generated for this target.
 include generated/CMakeFiles/localiser.dir/depend.make
@@ -70,22 +70,22 @@ include generated/CMakeFiles/localiser.dir/progress.make
 include generated/CMakeFiles/localiser.dir/flags.make
 
 generated/GenericBase.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BU ice=>h/cpp: Generating GenericBase.h and GenericBase.cpp from /home/usuario/robomk/actividad2/generated/GenericBase.ice"
-	cd /home/usuario/robomk/actividad2/generated && slice2cpp --underscore /home/usuario/robomk/actividad2/generated/GenericBase.ice -I/home/usuario/robomk/actividad2/generated/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BU ice=>h/cpp: Generating GenericBase.h and GenericBase.cpp from /home/varo/robomk/actividad2/generated/GenericBase.ice"
+	cd /home/varo/robomk/actividad2/generated && slice2cpp --underscore /home/varo/robomk/actividad2/generated/GenericBase.ice -I/home/varo/robomk/actividad2/generated/ --output-dir .
 
 generated/GenericBase.h: generated/GenericBase.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate generated/GenericBase.h
 
 generated/OmniRobot.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/usuario/robomk/actividad2/generated/OmniRobot.ice"
-	cd /home/usuario/robomk/actividad2/generated && slice2cpp --underscore /home/usuario/robomk/actividad2/generated/OmniRobot.ice -I/home/usuario/robomk/actividad2/generated/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/varo/robomk/actividad2/generated/OmniRobot.ice"
+	cd /home/varo/robomk/actividad2/generated && slice2cpp --underscore /home/varo/robomk/actividad2/generated/OmniRobot.ice -I/home/varo/robomk/actividad2/generated/ --output-dir .
 
 generated/OmniRobot.h: generated/OmniRobot.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate generated/OmniRobot.h
 
 generated/Lidar3D.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating Lidar3D.h and Lidar3D.cpp from /home/usuario/robomk/actividad2/generated/Lidar3D.ice"
-	cd /home/usuario/robomk/actividad2/generated && slice2cpp --underscore /home/usuario/robomk/actividad2/generated/Lidar3D.ice -I/home/usuario/robomk/actividad2/generated/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating Lidar3D.h and Lidar3D.cpp from /home/varo/robomk/actividad2/generated/Lidar3D.ice"
+	cd /home/varo/robomk/actividad2/generated && slice2cpp --underscore /home/varo/robomk/actividad2/generated/Lidar3D.ice -I/home/varo/robomk/actividad2/generated/ --output-dir .
 
 generated/Lidar3D.h: generated/Lidar3D.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate generated/Lidar3D.h
@@ -93,187 +93,187 @@ generated/Lidar3D.h: generated/Lidar3D.cpp
 generated/localiser_autogen/timestamp: /usr/lib/qt6/libexec/moc
 generated/localiser_autogen/timestamp: /usr/lib/qt6/libexec/uic
 generated/localiser_autogen/timestamp: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Automatic MOC and UIC for target localiser"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/cmake -E cmake_autogen /home/usuario/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/AutogenInfo.json ""
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/cmake -E touch /home/usuario/robomk/actividad2/generated/localiser_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Automatic MOC and UIC for target localiser"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/cmake -E cmake_autogen /home/varo/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/AutogenInfo.json ""
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/cmake -E touch /home/varo/robomk/actividad2/generated/localiser_autogen/timestamp
 
 generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: generated/localiser_autogen/mocs_compilation.cpp
 generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o -MF CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o -c /home/usuario/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o -MF CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o -c /home/varo/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp
 
 generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp > CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp > CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.i
 
 generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp -o CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp -o CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.s
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
 generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o: src/specificworker.cpp
 generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o -MF CMakeFiles/localiser.dir/__/src/specificworker.cpp.o.d -o CMakeFiles/localiser.dir/__/src/specificworker.cpp.o -c /home/usuario/robomk/actividad2/src/specificworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o -MF CMakeFiles/localiser.dir/__/src/specificworker.cpp.o.d -o CMakeFiles/localiser.dir/__/src/specificworker.cpp.o -c /home/varo/robomk/actividad2/src/specificworker.cpp
 
 generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/__/src/specificworker.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/src/specificworker.cpp > CMakeFiles/localiser.dir/__/src/specificworker.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/src/specificworker.cpp > CMakeFiles/localiser.dir/__/src/specificworker.cpp.i
 
 generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/__/src/specificworker.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/src/specificworker.cpp -o CMakeFiles/localiser.dir/__/src/specificworker.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/src/specificworker.cpp -o CMakeFiles/localiser.dir/__/src/specificworker.cpp.s
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o: /home/usuario/robocomp/classes/rapplication/rapplication.cpp
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o -c /home/usuario/robocomp/classes/rapplication/rapplication.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -MF CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o.d -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -c /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -MF CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o.d -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -c /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp > CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp > CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
 
-generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp -o CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
+generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp -o CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
 
 generated/CMakeFiles/localiser.dir/main.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/main.cpp.o: generated/main.cpp
 generated/CMakeFiles/localiser.dir/main.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object generated/CMakeFiles/localiser.dir/main.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/main.cpp.o -MF CMakeFiles/localiser.dir/main.cpp.o.d -o CMakeFiles/localiser.dir/main.cpp.o -c /home/usuario/robomk/actividad2/generated/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object generated/CMakeFiles/localiser.dir/main.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/main.cpp.o -MF CMakeFiles/localiser.dir/main.cpp.o.d -o CMakeFiles/localiser.dir/main.cpp.o -c /home/varo/robomk/actividad2/generated/main.cpp
 
 generated/CMakeFiles/localiser.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/main.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/generated/main.cpp > CMakeFiles/localiser.dir/main.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/generated/main.cpp > CMakeFiles/localiser.dir/main.cpp.i
 
 generated/CMakeFiles/localiser.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/main.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/generated/main.cpp -o CMakeFiles/localiser.dir/main.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/generated/main.cpp -o CMakeFiles/localiser.dir/main.cpp.s
 
 generated/CMakeFiles/localiser.dir/genericworker.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/genericworker.cpp.o: generated/genericworker.cpp
 generated/CMakeFiles/localiser.dir/genericworker.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object generated/CMakeFiles/localiser.dir/genericworker.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/genericworker.cpp.o -MF CMakeFiles/localiser.dir/genericworker.cpp.o.d -o CMakeFiles/localiser.dir/genericworker.cpp.o -c /home/usuario/robomk/actividad2/generated/genericworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object generated/CMakeFiles/localiser.dir/genericworker.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/genericworker.cpp.o -MF CMakeFiles/localiser.dir/genericworker.cpp.o.d -o CMakeFiles/localiser.dir/genericworker.cpp.o -c /home/varo/robomk/actividad2/generated/genericworker.cpp
 
 generated/CMakeFiles/localiser.dir/genericworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/genericworker.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/generated/genericworker.cpp > CMakeFiles/localiser.dir/genericworker.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/generated/genericworker.cpp > CMakeFiles/localiser.dir/genericworker.cpp.i
 
 generated/CMakeFiles/localiser.dir/genericworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/genericworker.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/generated/genericworker.cpp -o CMakeFiles/localiser.dir/genericworker.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/generated/genericworker.cpp -o CMakeFiles/localiser.dir/genericworker.cpp.s
 
 generated/CMakeFiles/localiser.dir/GenericBase.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/GenericBase.cpp.o: generated/GenericBase.cpp
 generated/CMakeFiles/localiser.dir/GenericBase.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object generated/CMakeFiles/localiser.dir/GenericBase.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/GenericBase.cpp.o -MF CMakeFiles/localiser.dir/GenericBase.cpp.o.d -o CMakeFiles/localiser.dir/GenericBase.cpp.o -c /home/usuario/robomk/actividad2/generated/GenericBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object generated/CMakeFiles/localiser.dir/GenericBase.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/GenericBase.cpp.o -MF CMakeFiles/localiser.dir/GenericBase.cpp.o.d -o CMakeFiles/localiser.dir/GenericBase.cpp.o -c /home/varo/robomk/actividad2/generated/GenericBase.cpp
 
 generated/CMakeFiles/localiser.dir/GenericBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/GenericBase.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/generated/GenericBase.cpp > CMakeFiles/localiser.dir/GenericBase.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/generated/GenericBase.cpp > CMakeFiles/localiser.dir/GenericBase.cpp.i
 
 generated/CMakeFiles/localiser.dir/GenericBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/GenericBase.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/generated/GenericBase.cpp -o CMakeFiles/localiser.dir/GenericBase.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/generated/GenericBase.cpp -o CMakeFiles/localiser.dir/GenericBase.cpp.s
 
 generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o: generated/OmniRobot.cpp
 generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o -MF CMakeFiles/localiser.dir/OmniRobot.cpp.o.d -o CMakeFiles/localiser.dir/OmniRobot.cpp.o -c /home/usuario/robomk/actividad2/generated/OmniRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o -MF CMakeFiles/localiser.dir/OmniRobot.cpp.o.d -o CMakeFiles/localiser.dir/OmniRobot.cpp.o -c /home/varo/robomk/actividad2/generated/OmniRobot.cpp
 
 generated/CMakeFiles/localiser.dir/OmniRobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/OmniRobot.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/generated/OmniRobot.cpp > CMakeFiles/localiser.dir/OmniRobot.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/generated/OmniRobot.cpp > CMakeFiles/localiser.dir/OmniRobot.cpp.i
 
 generated/CMakeFiles/localiser.dir/OmniRobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/OmniRobot.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/generated/OmniRobot.cpp -o CMakeFiles/localiser.dir/OmniRobot.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/generated/OmniRobot.cpp -o CMakeFiles/localiser.dir/OmniRobot.cpp.s
 
 generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o: generated/CMakeFiles/localiser.dir/flags.make
 generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o: generated/Lidar3D.cpp
 generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o: generated/CMakeFiles/localiser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o -MF CMakeFiles/localiser.dir/Lidar3D.cpp.o.d -o CMakeFiles/localiser.dir/Lidar3D.cpp.o -c /home/usuario/robomk/actividad2/generated/Lidar3D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o -MF CMakeFiles/localiser.dir/Lidar3D.cpp.o.d -o CMakeFiles/localiser.dir/Lidar3D.cpp.o -c /home/varo/robomk/actividad2/generated/Lidar3D.cpp
 
 generated/CMakeFiles/localiser.dir/Lidar3D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/localiser.dir/Lidar3D.cpp.i"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad2/generated/Lidar3D.cpp > CMakeFiles/localiser.dir/Lidar3D.cpp.i
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/varo/robomk/actividad2/generated/Lidar3D.cpp > CMakeFiles/localiser.dir/Lidar3D.cpp.i
 
 generated/CMakeFiles/localiser.dir/Lidar3D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/localiser.dir/Lidar3D.cpp.s"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad2/generated/Lidar3D.cpp -o CMakeFiles/localiser.dir/Lidar3D.cpp.s
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/varo/robomk/actividad2/generated/Lidar3D.cpp -o CMakeFiles/localiser.dir/Lidar3D.cpp.s
 
 # Object files for target localiser
 localiser_OBJECTS = \
 "CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
+"CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
 "CMakeFiles/localiser.dir/__/src/specificworker.cpp.o" \
-"CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o" \
-"CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o" \
-"CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" \
-"CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o" \
+"CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o" \
+"CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o" \
+"CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" \
+"CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o" \
 "CMakeFiles/localiser.dir/main.cpp.o" \
 "CMakeFiles/localiser.dir/genericworker.cpp.o" \
 "CMakeFiles/localiser.dir/GenericBase.cpp.o" \
@@ -284,12 +284,12 @@ localiser_OBJECTS = \
 localiser_EXTERNAL_OBJECTS =
 
 bin/localiser: generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o
-bin/localiser: generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+bin/localiser: generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 bin/localiser: generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o
-bin/localiser: generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o
-bin/localiser: generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o
-bin/localiser: generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
-bin/localiser: generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
+bin/localiser: generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+bin/localiser: generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+bin/localiser: generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+bin/localiser: generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
 bin/localiser: generated/CMakeFiles/localiser.dir/main.cpp.o
 bin/localiser: generated/CMakeFiles/localiser.dir/genericworker.cpp.o
 bin/localiser: generated/CMakeFiles/localiser.dir/GenericBase.cpp.o
@@ -309,15 +309,15 @@ bin/localiser: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 bin/localiser: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/localiser: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/localiser: generated/CMakeFiles/localiser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable ../bin/localiser"
-	cd /home/usuario/robomk/actividad2/generated && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/localiser.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable ../bin/localiser"
+	cd /home/varo/robomk/actividad2/generated && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/localiser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 generated/CMakeFiles/localiser.dir/build: bin/localiser
 .PHONY : generated/CMakeFiles/localiser.dir/build
 
 generated/CMakeFiles/localiser.dir/clean:
-	cd /home/usuario/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/localiser.dir/cmake_clean.cmake
+	cd /home/varo/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/localiser.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/localiser.dir/clean
 
 generated/CMakeFiles/localiser.dir/depend: generated/GenericBase.cpp
@@ -327,6 +327,6 @@ generated/CMakeFiles/localiser.dir/depend: generated/Lidar3D.h
 generated/CMakeFiles/localiser.dir/depend: generated/OmniRobot.cpp
 generated/CMakeFiles/localiser.dir/depend: generated/OmniRobot.h
 generated/CMakeFiles/localiser.dir/depend: generated/localiser_autogen/timestamp
-	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2/generated/CMakeFiles/localiser.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2/generated/CMakeFiles/localiser.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/localiser.dir/depend
 

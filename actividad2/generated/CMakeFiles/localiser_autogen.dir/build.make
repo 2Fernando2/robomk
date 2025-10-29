@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad2
+CMAKE_SOURCE_DIR = /home/varo/robomk/actividad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robomk/actividad2
+CMAKE_BINARY_DIR = /home/varo/robomk/actividad2
 
 # Utility rule file for localiser_autogen.
 
@@ -71,9 +71,9 @@ generated/CMakeFiles/localiser_autogen: generated/localiser_autogen/timestamp
 generated/localiser_autogen/timestamp: /usr/lib/qt6/libexec/moc
 generated/localiser_autogen/timestamp: /usr/lib/qt6/libexec/uic
 generated/localiser_autogen/timestamp: generated/CMakeFiles/localiser_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target localiser"
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/cmake -E cmake_autogen /home/usuario/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/AutogenInfo.json ""
-	cd /home/usuario/robomk/actividad2/generated && /usr/bin/cmake -E touch /home/usuario/robomk/actividad2/generated/localiser_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target localiser"
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/cmake -E cmake_autogen /home/varo/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/AutogenInfo.json ""
+	cd /home/varo/robomk/actividad2/generated && /usr/bin/cmake -E touch /home/varo/robomk/actividad2/generated/localiser_autogen/timestamp
 
 localiser_autogen: generated/CMakeFiles/localiser_autogen
 localiser_autogen: generated/localiser_autogen/timestamp
@@ -85,10 +85,10 @@ generated/CMakeFiles/localiser_autogen.dir/build: localiser_autogen
 .PHONY : generated/CMakeFiles/localiser_autogen.dir/build
 
 generated/CMakeFiles/localiser_autogen.dir/clean:
-	cd /home/usuario/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/localiser_autogen.dir/cmake_clean.cmake
+	cd /home/varo/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/localiser_autogen.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/localiser_autogen.dir/clean
 
 generated/CMakeFiles/localiser_autogen.dir/depend:
-	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2/generated/CMakeFiles/localiser_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/localiser_autogen.dir/depend
 

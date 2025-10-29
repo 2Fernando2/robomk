@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad2
+CMAKE_SOURCE_DIR = /home/varo/robomk/actividad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robomk/actividad2
+CMAKE_BINARY_DIR = /home/varo/robomk/actividad2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robomk/actividad2/CMakeFiles /home/usuario/robomk/actividad2/generated//CMakeFiles/progress.marks
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robomk/actividad2/CMakeFiles 0
+	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_progress_start /home/varo/robomk/actividad2/CMakeFiles /home/varo/robomk/actividad2/generated//CMakeFiles/progress.marks
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/varo/robomk/actividad2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/clean
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,36 +148,36 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/preinstall
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/preinstall
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-generated/CMakeFiles/ICES__home_usuario_robomk_actividad2_generated.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICES__home_usuario_robomk_actividad2_generated.dir/rule
-.PHONY : generated/CMakeFiles/ICES__home_usuario_robomk_actividad2_generated.dir/rule
+generated/CMakeFiles/ICES__home_varo_robomk_actividad2_generated.dir/rule:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICES__home_varo_robomk_actividad2_generated.dir/rule
+.PHONY : generated/CMakeFiles/ICES__home_varo_robomk_actividad2_generated.dir/rule
 
 # Convenience name for target.
-ICES__home_usuario_robomk_actividad2_generated: generated/CMakeFiles/ICES__home_usuario_robomk_actividad2_generated.dir/rule
-.PHONY : ICES__home_usuario_robomk_actividad2_generated
+ICES__home_varo_robomk_actividad2_generated: generated/CMakeFiles/ICES__home_varo_robomk_actividad2_generated.dir/rule
+.PHONY : ICES__home_varo_robomk_actividad2_generated
 
 # fast build rule for target.
-ICES__home_usuario_robomk_actividad2_generated/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICES__home_usuario_robomk_actividad2_generated.dir/build.make generated/CMakeFiles/ICES__home_usuario_robomk_actividad2_generated.dir/build
-.PHONY : ICES__home_usuario_robomk_actividad2_generated/fast
+ICES__home_varo_robomk_actividad2_generated/fast:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICES__home_varo_robomk_actividad2_generated.dir/build.make generated/CMakeFiles/ICES__home_varo_robomk_actividad2_generated.dir/build
+.PHONY : ICES__home_varo_robomk_actividad2_generated/fast
 
 # Convenience name for target.
 generated/CMakeFiles/ICE_GenericBase_target.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICE_GenericBase_target.dir/rule
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICE_GenericBase_target.dir/rule
 .PHONY : generated/CMakeFiles/ICE_GenericBase_target.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ ICE_GenericBase_target: generated/CMakeFiles/ICE_GenericBase_target.dir/rule
 
 # fast build rule for target.
 ICE_GenericBase_target/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_GenericBase_target.dir/build.make generated/CMakeFiles/ICE_GenericBase_target.dir/build
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_GenericBase_target.dir/build.make generated/CMakeFiles/ICE_GenericBase_target.dir/build
 .PHONY : ICE_GenericBase_target/fast
 
 # Convenience name for target.
 generated/CMakeFiles/ICE_OmniRobot_target.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICE_OmniRobot_target.dir/rule
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICE_OmniRobot_target.dir/rule
 .PHONY : generated/CMakeFiles/ICE_OmniRobot_target.dir/rule
 
 # Convenience name for target.
@@ -200,12 +200,12 @@ ICE_OmniRobot_target: generated/CMakeFiles/ICE_OmniRobot_target.dir/rule
 
 # fast build rule for target.
 ICE_OmniRobot_target/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_OmniRobot_target.dir/build.make generated/CMakeFiles/ICE_OmniRobot_target.dir/build
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_OmniRobot_target.dir/build.make generated/CMakeFiles/ICE_OmniRobot_target.dir/build
 .PHONY : ICE_OmniRobot_target/fast
 
 # Convenience name for target.
 generated/CMakeFiles/ICE_Lidar3D_target.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICE_Lidar3D_target.dir/rule
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/ICE_Lidar3D_target.dir/rule
 .PHONY : generated/CMakeFiles/ICE_Lidar3D_target.dir/rule
 
 # Convenience name for target.
@@ -214,12 +214,12 @@ ICE_Lidar3D_target: generated/CMakeFiles/ICE_Lidar3D_target.dir/rule
 
 # fast build rule for target.
 ICE_Lidar3D_target/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_Lidar3D_target.dir/build.make generated/CMakeFiles/ICE_Lidar3D_target.dir/build
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/ICE_Lidar3D_target.dir/build.make generated/CMakeFiles/ICE_Lidar3D_target.dir/build
 .PHONY : ICE_Lidar3D_target/fast
 
 # Convenience name for target.
 generated/CMakeFiles/localiser.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/localiser.dir/rule
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/localiser.dir/rule
 .PHONY : generated/CMakeFiles/localiser.dir/rule
 
 # Convenience name for target.
@@ -228,12 +228,12 @@ localiser: generated/CMakeFiles/localiser.dir/rule
 
 # fast build rule for target.
 localiser/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/build
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/build
 .PHONY : localiser/fast
 
 # Convenience name for target.
 generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/rule
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/rule
 .PHONY : generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -242,12 +242,12 @@ localiser_autogen_timestamp_deps: generated/CMakeFiles/localiser_autogen_timesta
 
 # fast build rule for target.
 localiser_autogen_timestamp_deps/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/build.make generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/build
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/build.make generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/build
 .PHONY : localiser_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 generated/CMakeFiles/localiser_autogen.dir/rule:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/localiser_autogen.dir/rule
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generated/CMakeFiles/localiser_autogen.dir/rule
 .PHONY : generated/CMakeFiles/localiser_autogen.dir/rule
 
 # Convenience name for target.
@@ -256,7 +256,7 @@ localiser_autogen: generated/CMakeFiles/localiser_autogen.dir/rule
 
 # fast build rule for target.
 localiser_autogen/fast:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser_autogen.dir/build.make generated/CMakeFiles/localiser_autogen.dir/build
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser_autogen.dir/build.make generated/CMakeFiles/localiser_autogen.dir/build
 .PHONY : localiser_autogen/fast
 
 GenericBase.o: GenericBase.cpp.o
@@ -264,7 +264,7 @@ GenericBase.o: GenericBase.cpp.o
 
 # target to build an object file
 GenericBase.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/GenericBase.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/GenericBase.cpp.o
 .PHONY : GenericBase.cpp.o
 
 GenericBase.i: GenericBase.cpp.i
@@ -272,7 +272,7 @@ GenericBase.i: GenericBase.cpp.i
 
 # target to preprocess a source file
 GenericBase.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/GenericBase.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/GenericBase.cpp.i
 .PHONY : GenericBase.cpp.i
 
 GenericBase.s: GenericBase.cpp.s
@@ -280,7 +280,7 @@ GenericBase.s: GenericBase.cpp.s
 
 # target to generate assembly for a file
 GenericBase.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/GenericBase.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/GenericBase.cpp.s
 .PHONY : GenericBase.cpp.s
 
 Lidar3D.o: Lidar3D.cpp.o
@@ -288,7 +288,7 @@ Lidar3D.o: Lidar3D.cpp.o
 
 # target to build an object file
 Lidar3D.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/Lidar3D.cpp.o
 .PHONY : Lidar3D.cpp.o
 
 Lidar3D.i: Lidar3D.cpp.i
@@ -296,7 +296,7 @@ Lidar3D.i: Lidar3D.cpp.i
 
 # target to preprocess a source file
 Lidar3D.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/Lidar3D.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/Lidar3D.cpp.i
 .PHONY : Lidar3D.cpp.i
 
 Lidar3D.s: Lidar3D.cpp.s
@@ -304,7 +304,7 @@ Lidar3D.s: Lidar3D.cpp.s
 
 # target to generate assembly for a file
 Lidar3D.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/Lidar3D.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/Lidar3D.cpp.s
 .PHONY : Lidar3D.cpp.s
 
 OmniRobot.o: OmniRobot.cpp.o
@@ -312,7 +312,7 @@ OmniRobot.o: OmniRobot.cpp.o
 
 # target to build an object file
 OmniRobot.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/OmniRobot.cpp.o
 .PHONY : OmniRobot.cpp.o
 
 OmniRobot.i: OmniRobot.cpp.i
@@ -320,7 +320,7 @@ OmniRobot.i: OmniRobot.cpp.i
 
 # target to preprocess a source file
 OmniRobot.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/OmniRobot.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/OmniRobot.cpp.i
 .PHONY : OmniRobot.cpp.i
 
 OmniRobot.s: OmniRobot.cpp.s
@@ -328,7 +328,7 @@ OmniRobot.s: OmniRobot.cpp.s
 
 # target to generate assembly for a file
 OmniRobot.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/OmniRobot.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/OmniRobot.cpp.s
 .PHONY : OmniRobot.cpp.s
 
 __/src/specificworker.o: __/src/specificworker.cpp.o
@@ -336,7 +336,7 @@ __/src/specificworker.o: __/src/specificworker.cpp.o
 
 # target to build an object file
 __/src/specificworker.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.o
 .PHONY : __/src/specificworker.cpp.o
 
 __/src/specificworker.i: __/src/specificworker.cpp.i
@@ -344,7 +344,7 @@ __/src/specificworker.i: __/src/specificworker.cpp.i
 
 # target to preprocess a source file
 __/src/specificworker.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.i
 .PHONY : __/src/specificworker.cpp.i
 
 __/src/specificworker.s: __/src/specificworker.cpp.s
@@ -352,7 +352,7 @@ __/src/specificworker.s: __/src/specificworker.cpp.s
 
 # target to generate assembly for a file
 __/src/specificworker.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/__/src/specificworker.cpp.s
 .PHONY : __/src/specificworker.cpp.s
 
 genericworker.o: genericworker.cpp.o
@@ -360,7 +360,7 @@ genericworker.o: genericworker.cpp.o
 
 # target to build an object file
 genericworker.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/genericworker.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/genericworker.cpp.o
 .PHONY : genericworker.cpp.o
 
 genericworker.i: genericworker.cpp.i
@@ -368,7 +368,7 @@ genericworker.i: genericworker.cpp.i
 
 # target to preprocess a source file
 genericworker.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/genericworker.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/genericworker.cpp.i
 .PHONY : genericworker.cpp.i
 
 genericworker.s: genericworker.cpp.s
@@ -376,135 +376,135 @@ genericworker.s: genericworker.cpp.s
 
 # target to generate assembly for a file
 genericworker.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/genericworker.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
-home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.o: home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
-.PHONY : home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.o
+home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.o: home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
+.PHONY : home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.o
 
 # target to build an object file
-home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
-.PHONY : home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
+home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
+.PHONY : home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
 
-home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.i: home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
-.PHONY : home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.i
+home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.i: home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
+.PHONY : home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.i
 
 # target to preprocess a source file
-home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
-.PHONY : home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
+home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
+.PHONY : home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
 
-home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.s: home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
-.PHONY : home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.s
+home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.s: home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
+.PHONY : home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.s
 
 # target to generate assembly for a file
-home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
-.PHONY : home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
+home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
+.PHONY : home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
 
-home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o: home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
-.PHONY : home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o
 
 # target to build an object file
-home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
-.PHONY : home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 
-home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i: home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
-.PHONY : home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i
 
 # target to preprocess a source file
-home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
-.PHONY : home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
-home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s: home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
-.PHONY : home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s
 
 # target to generate assembly for a file
-home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
-.PHONY : home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
-home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.o: home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
-.PHONY : home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.o
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o
 
 # target to build an object file
-home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
-.PHONY : home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
 
-home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.i: home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
-.PHONY : home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.i
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i
 
 # target to preprocess a source file
-home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
-.PHONY : home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 
-home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.s: home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
-.PHONY : home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.s
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s
 
 # target to generate assembly for a file
-home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
-.PHONY : home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
-home/usuario/robocomp/classes/rapplication/rapplication.o: home/usuario/robocomp/classes/rapplication/rapplication.cpp.o
-.PHONY : home/usuario/robocomp/classes/rapplication/rapplication.o
+home/robocomp/robocomp/classes/rapplication/rapplication.o: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.o
 
 # target to build an object file
-home/usuario/robocomp/classes/rapplication/rapplication.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o
-.PHONY : home/usuario/robocomp/classes/rapplication/rapplication.cpp.o
+home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
 
-home/usuario/robocomp/classes/rapplication/rapplication.i: home/usuario/robocomp/classes/rapplication/rapplication.cpp.i
-.PHONY : home/usuario/robocomp/classes/rapplication/rapplication.i
+home/robocomp/robocomp/classes/rapplication/rapplication.i: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.i
 
 # target to preprocess a source file
-home/usuario/robocomp/classes/rapplication/rapplication.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i
-.PHONY : home/usuario/robocomp/classes/rapplication/rapplication.cpp.i
+home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
-home/usuario/robocomp/classes/rapplication/rapplication.s: home/usuario/robocomp/classes/rapplication/rapplication.cpp.s
-.PHONY : home/usuario/robocomp/classes/rapplication/rapplication.s
+home/robocomp/robocomp/classes/rapplication/rapplication.s: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.s
 
 # target to generate assembly for a file
-home/usuario/robocomp/classes/rapplication/rapplication.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s
-.PHONY : home/usuario/robocomp/classes/rapplication/rapplication.cpp.s
+home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
-home/usuario/robocomp/classes/sigwatch/sigwatch.o: home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o
-.PHONY : home/usuario/robocomp/classes/sigwatch/sigwatch.o
+home/robocomp/robocomp/classes/sigwatch/sigwatch.o: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.o
 
 # target to build an object file
-home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o
-.PHONY : home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o
+home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
 
-home/usuario/robocomp/classes/sigwatch/sigwatch.i: home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i
-.PHONY : home/usuario/robocomp/classes/sigwatch/sigwatch.i
+home/robocomp/robocomp/classes/sigwatch/sigwatch.i: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.i
 
 # target to preprocess a source file
-home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i
-.PHONY : home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i
+home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
-home/usuario/robocomp/classes/sigwatch/sigwatch.s: home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s
-.PHONY : home/usuario/robocomp/classes/sigwatch/sigwatch.s
+home/robocomp/robocomp/classes/sigwatch/sigwatch.s: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.s
 
 # target to generate assembly for a file
-home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s
-.PHONY : home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s
+home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s:
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
 localiser_autogen/mocs_compilation.o: localiser_autogen/mocs_compilation.cpp.o
 .PHONY : localiser_autogen/mocs_compilation.o
 
 # target to build an object file
 localiser_autogen/mocs_compilation.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o
 .PHONY : localiser_autogen/mocs_compilation.cpp.o
 
 localiser_autogen/mocs_compilation.i: localiser_autogen/mocs_compilation.cpp.i
@@ -512,7 +512,7 @@ localiser_autogen/mocs_compilation.i: localiser_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 localiser_autogen/mocs_compilation.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.i
 .PHONY : localiser_autogen/mocs_compilation.cpp.i
 
 localiser_autogen/mocs_compilation.s: localiser_autogen/mocs_compilation.cpp.s
@@ -520,7 +520,7 @@ localiser_autogen/mocs_compilation.s: localiser_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 localiser_autogen/mocs_compilation.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.s
 .PHONY : localiser_autogen/mocs_compilation.cpp.s
 
 main.o: main.cpp.o
@@ -528,7 +528,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/main.cpp.o
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -536,7 +536,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/main.cpp.i
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -544,7 +544,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/usuario/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/main.cpp.s
+	cd /home/varo/robomk/actividad2 && $(MAKE) $(MAKESILENT) -f generated/CMakeFiles/localiser.dir/build.make generated/CMakeFiles/localiser.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -559,7 +559,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ICES__home_usuario_robomk_actividad2_generated"
+	@echo "... ICES__home_varo_robomk_actividad2_generated"
 	@echo "... ICE_GenericBase_target"
 	@echo "... ICE_Lidar3D_target"
 	@echo "... ICE_OmniRobot_target"
@@ -581,21 +581,21 @@ help:
 	@echo "... genericworker.o"
 	@echo "... genericworker.i"
 	@echo "... genericworker.s"
-	@echo "... home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.o"
-	@echo "... home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.i"
-	@echo "... home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.s"
-	@echo "... home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o"
-	@echo "... home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i"
-	@echo "... home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s"
-	@echo "... home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.o"
-	@echo "... home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.i"
-	@echo "... home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.s"
-	@echo "... home/usuario/robocomp/classes/rapplication/rapplication.o"
-	@echo "... home/usuario/robocomp/classes/rapplication/rapplication.i"
-	@echo "... home/usuario/robocomp/classes/rapplication/rapplication.s"
-	@echo "... home/usuario/robocomp/classes/sigwatch/sigwatch.o"
-	@echo "... home/usuario/robocomp/classes/sigwatch/sigwatch.i"
-	@echo "... home/usuario/robocomp/classes/sigwatch/sigwatch.s"
+	@echo "... home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.o"
+	@echo "... home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.i"
+	@echo "... home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.s"
+	@echo "... home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o"
+	@echo "... home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i"
+	@echo "... home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s"
+	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o"
+	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i"
+	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s"
+	@echo "... home/robocomp/robocomp/classes/rapplication/rapplication.o"
+	@echo "... home/robocomp/robocomp/classes/rapplication/rapplication.i"
+	@echo "... home/robocomp/robocomp/classes/rapplication/rapplication.s"
+	@echo "... home/robocomp/robocomp/classes/sigwatch/sigwatch.o"
+	@echo "... home/robocomp/robocomp/classes/sigwatch/sigwatch.i"
+	@echo "... home/robocomp/robocomp/classes/sigwatch/sigwatch.s"
 	@echo "... localiser_autogen/mocs_compilation.o"
 	@echo "... localiser_autogen/mocs_compilation.i"
 	@echo "... localiser_autogen/mocs_compilation.s"
@@ -613,6 +613,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
