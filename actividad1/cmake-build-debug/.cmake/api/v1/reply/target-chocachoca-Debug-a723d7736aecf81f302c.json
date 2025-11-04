@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/robocomp/robomk/actividad1/bin/chocachoca"
+			"path" : "/home/varo/robomk/actividad1/bin/chocachoca"
 		}
 	],
 	"backtrace" : 1,
@@ -26,9 +26,9 @@
 		"files" : 
 		[
 			"generated/CMakeLists.txt",
-			"/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindOpenGL.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/clion/385/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -221,15 +221,15 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/robocomp/robomk/actividad1/cmake-build-debug/generated/chocachoca_autogen/include"
+					"path" : "/home/varo/robomk/actividad1/cmake-build-debug/generated/chocachoca_autogen/include"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/robocomp/robomk/actividad1/cmake-build-debug/generated"
+					"path" : "/home/varo/robomk/actividad1/cmake-build-debug/generated"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/robocomp/robomk/actividad1/generated/."
+					"path" : "/home/varo/robomk/actividad1/generated/."
 				},
 				{
 					"backtrace" : 22,
@@ -241,7 +241,7 @@
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/robocomp/robomk/actividad1/cmake-build-debug"
+					"path" : "/home/varo/robomk/actividad1/cmake-build-debug"
 				},
 				{
 					"backtrace" : 24,
@@ -330,7 +330,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_robocomp_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55"
+			"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55"
 		},
 		{
 			"id" : "chocachoca_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55"
@@ -348,6 +348,16 @@
 			{
 				"fragment" : "-g",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-ltbb",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-ltbb",
+				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robocomp/robomk/actividad1/generated/Lidar3D.ice"
+  "/home/varo/robomk/actividad1/generated/Lidar3D.ice"
   "CMakeFiles/ICE_Lidar3D_target"
 )
 

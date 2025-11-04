@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/385/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/393/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/385/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/393/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robocomp/robomk/actividad1
+CMAKE_SOURCE_DIR = /home/varo/robomk/actividad1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robocomp/robomk/actividad1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/varo/robomk/actividad1/cmake-build-debug
 
 # Utility rule file for chocachoca_autogen.
 
@@ -71,9 +71,9 @@ generated/CMakeFiles/chocachoca_autogen: generated/chocachoca_autogen/timestamp
 generated/chocachoca_autogen/timestamp: /usr/lib/qt6/libexec/moc
 generated/chocachoca_autogen/timestamp: /usr/lib/qt6/libexec/uic
 generated/chocachoca_autogen/timestamp: generated/CMakeFiles/chocachoca_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robocomp/robomk/actividad1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target chocachoca"
-	cd /home/robocomp/robomk/actividad1/cmake-build-debug/generated && /snap/clion/385/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/robocomp/robomk/actividad1/cmake-build-debug/generated/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json Debug
-	cd /home/robocomp/robomk/actividad1/cmake-build-debug/generated && /snap/clion/385/bin/cmake/linux/x64/bin/cmake -E touch /home/robocomp/robomk/actividad1/cmake-build-debug/generated/chocachoca_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target chocachoca"
+	cd /home/varo/robomk/actividad1/cmake-build-debug/generated && /snap/clion/393/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/varo/robomk/actividad1/cmake-build-debug/generated/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json Debug
+	cd /home/varo/robomk/actividad1/cmake-build-debug/generated && /snap/clion/393/bin/cmake/linux/x64/bin/cmake -E touch /home/varo/robomk/actividad1/cmake-build-debug/generated/chocachoca_autogen/timestamp
 
 generated/CMakeFiles/chocachoca_autogen.dir/codegen:
 .PHONY : generated/CMakeFiles/chocachoca_autogen.dir/codegen
@@ -88,10 +88,10 @@ generated/CMakeFiles/chocachoca_autogen.dir/build: chocachoca_autogen
 .PHONY : generated/CMakeFiles/chocachoca_autogen.dir/build
 
 generated/CMakeFiles/chocachoca_autogen.dir/clean:
-	cd /home/robocomp/robomk/actividad1/cmake-build-debug/generated && $(CMAKE_COMMAND) -P CMakeFiles/chocachoca_autogen.dir/cmake_clean.cmake
+	cd /home/varo/robomk/actividad1/cmake-build-debug/generated && $(CMAKE_COMMAND) -P CMakeFiles/chocachoca_autogen.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/chocachoca_autogen.dir/clean
 
 generated/CMakeFiles/chocachoca_autogen.dir/depend:
-	cd /home/robocomp/robomk/actividad1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocomp/robomk/actividad1 /home/robocomp/robomk/actividad1/generated /home/robocomp/robomk/actividad1/cmake-build-debug /home/robocomp/robomk/actividad1/cmake-build-debug/generated /home/robocomp/robomk/actividad1/cmake-build-debug/generated/CMakeFiles/chocachoca_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/varo/robomk/actividad1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad1 /home/varo/robomk/actividad1/generated /home/varo/robomk/actividad1/cmake-build-debug /home/varo/robomk/actividad1/cmake-build-debug/generated /home/varo/robomk/actividad1/cmake-build-debug/generated/CMakeFiles/chocachoca_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/chocachoca_autogen.dir/depend
 

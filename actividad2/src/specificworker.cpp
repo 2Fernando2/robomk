@@ -122,15 +122,48 @@ void SpecificWorker::compute()
 	auto filter_data = read_data();
 	if (not filter_data.has_value()){std::cerr << "No filter data found" << std::endl; return;}
 
-	const auto measured_corners = room_detector.compute_corners(filter_data.value(), &viewer_room->scene);
+	const auto corners = room_detector.compute_corners(filter_data.value(), &viewer_room->scene);
+	const auto match = hungarian.match(corners, room.transform_corners_to(robot_pose.inverse()), 1000);
 	// robot to room -> robot_pose | room to robot -> robot_pose.inverse()
-	const auto match = hungarian.match(measured_corners, room.transform_corners_to(robot_pose.inverse()), 1000);
-	//for (auto )
+	for (auto &m : match)
+    {
+        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
+        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
+    }
+    qDebug() << "----------------------------";
 
-	// matriz -> set up matrices W and b
-	// r[x, y, phi] = new pose of the robot
-	//robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
-	// robot_pose.rotate(r[2]);
+	// matrix
+	Eigen::MatrixXd W(match.size()*2,3);
+    Eigen::VectorXd b(match.size()*2);
+    for (const auto &[i, m] : match | iter::enumerate)
+    {
+        auto &[cm, cn, d] = m;
+        auto &[cmc, _, __] = cm;
+        auto &[cnc, ___, ____] = cn;
+        W(i, 0) = 1.0;
+        W(i ,1) = 0.0;
+        if (i%2 == 0)
+        {
+            W(i, 2) = -cmc.y();
+            b(i) = cnc.x() - cmc.x();
+        }
+        else
+        {
+            W(1, 2) = cmc.x();
+            b(i) = cnc.y() - cmc.y();
+        }
+    }
+
+    // operate
+    const auto r = (W.transpose()*W).inverse()*W.transpose()*b;
+
+    // update robot pose
+    robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
+    robot_pose.rotate(r(2));
+
+    // update robot draw
+    robot_polygon->setPos(r(0), r(1));
+    robot_polygon->setRotation(r(2));
 
 	// auto result = state_Machine(filter_data);
 	// omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));

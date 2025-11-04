@@ -1,5 +1,5 @@
 generated/CMakeFiles/localiser.dir/main.cpp.o: \
- /home/usuario/robomk/actividad2/generated/main.cpp \
+ /home/varo/robomk/actividad2/generated/main.cpp \
  /usr/include/stdc-predef.h /usr/include/signal.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -1191,7 +1191,7 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/include/langinfo.h /usr/include/nl_types.h /usr/include/Ice/UUID.h \
  /usr/include/IceUtil/UUID.h /usr/include/IceStorm/IceStorm.h \
  /usr/include/IceStorm/Metrics.h /usr/include/IceStorm/Config.h \
- /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
@@ -1247,13 +1247,13 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/local/include/toml++/impl/toml_formatter.inl \
  /usr/local/include/toml++/impl/json_formatter.inl \
  /usr/local/include/toml++/impl/yaml_formatter.inl \
- /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
- /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
- /home/usuario/robocomp/classes/sigwatch/sigwatch.h \
+ /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
+ /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /home/usuario/robomk/actividad2/generated/genericworker.h \
+ /home/varo/robomk/actividad2/generated/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/usuario/robomk/actividad2/generated/localiser_autogen/include/ui_mainUI.h \
+ /home/varo/robomk/actividad2/generated/localiser_autogen/include/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
@@ -1263,7 +1263,7 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qabstractstate.h \
@@ -1276,12 +1276,12 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/usuario/robomk/actividad2/generated/GenericBase.h \
- /home/usuario/robomk/actividad2/generated/Lidar3D.h \
- /home/usuario/robomk/actividad2/generated/OmniRobot.h \
- /home/usuario/robomk/actividad2/generated/../src/specificworker.h \
+ /home/varo/robomk/actividad2/generated/GenericBase.h \
+ /home/varo/robomk/actividad2/generated/Lidar3D.h \
+ /home/varo/robomk/actividad2/generated/OmniRobot.h \
+ /home/varo/robomk/actividad2/generated/../src/specificworker.h \
  /usr/include/c++/13/expected \
- /home/usuario/robomk/actividad2/generated/genericworker.h \
+ /home/varo/robomk/actividad2/generated/genericworker.h \
  /usr/local/include/cppitertools/itertools.hpp \
  /usr/local/include/cppitertools/accumulate.hpp \
  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
@@ -1320,7 +1320,7 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
  /usr/local/include/cppitertools/unique_justseen.hpp \
- /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
@@ -1335,7 +1335,7 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
- /home/usuario/robomk/actividad2/generated/../src/common_types.h \
+ /home/varo/robomk/actividad2/generated/../src/common_types.h \
  /usr/include/Eigen/Dense /usr/include/Eigen/Core \
  /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/Eigen/src/Core/util/Macros.h \
@@ -1677,11 +1677,11 @@ generated/CMakeFiles/localiser.dir/main.cpp.o: \
  /usr/include/boost/circular_buffer/space_optimized.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
  /usr/include/Eigen/src/Geometry/ParametrizedLine.h \
- /home/usuario/robomk/actividad2/generated/../src/hungarian.h \
+ /home/varo/robomk/actividad2/generated/../src/hungarian.h \
  /usr/include/Eigen/Geometry \
- /home/usuario/robomk/actividad2/generated/../src/munkres.hpp \
- /home/usuario/robomk/actividad2/generated/../src/ransac_line_detector.h \
- /home/usuario/robomk/actividad2/generated/../src/room_detector.h \
+ /home/varo/robomk/actividad2/generated/../src/munkres.hpp \
+ /home/varo/robomk/actividad2/generated/../src/ransac_line_detector.h \
+ /home/varo/robomk/actividad2/generated/../src/room_detector.h \
  /usr/include/opencv4/opencv2/core.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
  /usr/include/opencv4/opencv2/core/version.hpp \

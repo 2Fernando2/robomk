@@ -27,7 +27,7 @@
 		{
 			"backtrace" : 1,
 			"component" : "Unspecified",
-			"destination" : "/home/usuario/robocomp/etc-default",
+			"destination" : "/home/robocomp/robocomp/etc-default",
 			"paths" : 
 			[
 				{

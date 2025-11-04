@@ -36,9 +36,7 @@
 						1,
 						2,
 						3,
-						4,
-						5,
-						6
+						4
 					]
 				}
 			],
@@ -58,9 +56,7 @@
 						1,
 						2,
 						3,
-						4,
-						5,
-						6
+						4
 					]
 				}
 			],
@@ -68,16 +64,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_robocomp_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICES__home_robocomp_robomk_actividad1_generated-Debug-5d9bf2237bee71585abd.json",
-					"name" : "ICES__home_robocomp_robomk_actividad1_generated",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_GenericBase_target-Debug-b15f2aba97697e369bc2.json",
-					"name" : "ICE_GenericBase_target",
+					"id" : "ICES__home_varo_robomk_actividad1_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_varo_robomk_actividad1_generated-Debug-77f975cd593dc29285e8.json",
+					"name" : "ICES__home_varo_robomk_actividad1_generated",
 					"projectIndex" : 0
 				},
 				{
@@ -89,15 +78,8 @@
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_OmniRobot_target-Debug-a78e3db8ec164bfa2aec.json",
-					"name" : "ICE_OmniRobot_target",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
 					"id" : "chocachoca::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-chocachoca-Debug-a8db25126a5036f08996.json",
+					"jsonFile" : "target-chocachoca-Debug-a723d7736aecf81f302c.json",
 					"name" : "chocachoca",
 					"projectIndex" : 0
 				},
@@ -121,8 +103,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/robocomp/robomk/actividad1/cmake-build-debug",
-		"source" : "/home/robocomp/robomk/actividad1"
+		"build" : "/home/varo/robomk/actividad1/cmake-build-debug",
+		"source" : "/home/varo/robomk/actividad1"
 	},
 	"version" : 
 	{
