@@ -1,7 +1,7 @@
 generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
- /home/varo/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/varo/robomk/actividad2/generated/localiser_autogen/E2F7QNVQJQ/moc_abstract_graphic_viewer.cpp \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/4B7W4TDGLD/moc_abstract_graphic_viewer.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -196,7 +196,7 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/varo/robomk/actividad2/generated/localiser_autogen/E2F7QNVQJQ/../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/4B7W4TDGLD/../../../../../robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -452,8 +452,8 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/c++/13/iostream \
- /home/varo/robomk/actividad2/generated/localiser_autogen/RTU3I37G4L/moc_GRAFCETStep.cpp \
- /home/varo/robomk/actividad2/generated/localiser_autogen/RTU3I37G4L/../../../../../../robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/UITLZZOD3R/moc_GRAFCETStep.cpp \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/UITLZZOD3R/../../../../../robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -465,8 +465,8 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/unique_lock.h \
- /home/varo/robomk/actividad2/generated/localiser_autogen/EWIEGA46WW/moc_genericworker.cpp \
- /home/varo/robomk/actividad2/generated/localiser_autogen/EWIEGA46WW/../../genericworker.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/EWIEGA46WW/moc_genericworker.cpp \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/EWIEGA46WW/../../genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -970,12 +970,24 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/varo/robomk/actividad2/generated/localiser_autogen/include/ui_mainUI.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/include/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
- /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlcdnumber.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+ /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
@@ -1031,15 +1043,15 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/local/include/toml++/impl/toml_formatter.inl \
  /usr/local/include/toml++/impl/json_formatter.inl \
  /usr/local/include/toml++/impl/yaml_formatter.inl \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
- /home/varo/robomk/actividad2/generated/GenericBase.h \
+ /home/usuario/robomk/actividad2/generated/GenericBase.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/13/cassert /usr/include/Ice/ProxyHandle.h \
@@ -1082,13 +1094,13 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
  /usr/include/c++/13/bits/deque.tcc /usr/include/Ice/FactoryTableInit.h \
  /usr/include/Ice/DefaultValueFactory.h \
- /home/varo/robomk/actividad2/generated/Lidar3D.h \
- /home/varo/robomk/actividad2/generated/OmniRobot.h \
+ /home/usuario/robomk/actividad2/generated/Lidar3D.h \
+ /home/usuario/robomk/actividad2/generated/OmniRobot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
- /home/varo/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/moc_specificworker.cpp \
- /home/varo/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/specificworker.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/moc_specificworker.cpp \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/specificworker.h \
  /usr/include/c++/13/expected \
- /home/varo/robomk/actividad2/generated/genericworker.h \
+ /home/usuario/robomk/actividad2/generated/genericworker.h \
  /usr/local/include/cppitertools/itertools.hpp \
  /usr/local/include/cppitertools/accumulate.hpp \
  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
@@ -1127,5 +1139,379 @@ generated/CMakeFiles/localiser.dir/localiser_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
  /usr/local/include/cppitertools/unique_justseen.hpp \
- /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF
+ /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/common_types.h \
+ /usr/include/Eigen/Dense /usr/include/Eigen/Core \
+ /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /usr/include/Eigen/src/Core/util/Macros.h \
+ /usr/include/Eigen/src/Core/util/ConfigureVectorization.h \
+ /usr/include/c++/13/complex \
+ /usr/include/Eigen/src/Core/util/MKL_support.h \
+ /usr/include/Eigen/src/Core/util/Constants.h \
+ /usr/include/Eigen/src/Core/util/Meta.h \
+ /usr/include/Eigen/src/Core/util/ForwardDeclarations.h \
+ /usr/include/Eigen/src/Core/util/StaticAssert.h \
+ /usr/include/Eigen/src/Core/util/XprHelper.h \
+ /usr/include/Eigen/src/Core/util/Memory.h \
+ /usr/include/Eigen/src/Core/util/IntegralConstant.h \
+ /usr/include/Eigen/src/Core/util/SymbolicIndex.h \
+ /usr/include/Eigen/src/Core/NumTraits.h \
+ /usr/include/Eigen/src/Core/MathFunctions.h \
+ /usr/include/Eigen/src/Core/GenericPacketMath.h \
+ /usr/include/Eigen/src/Core/MathFunctionsImpl.h \
+ /usr/include/Eigen/src/Core/arch/Default/ConjHelper.h \
+ /usr/include/Eigen/src/Core/arch/Default/Half.h \
+ /usr/include/Eigen/src/Core/arch/Default/BFloat16.h \
+ /usr/include/Eigen/src/Core/arch/Default/TypeCasting.h \
+ /usr/include/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+ /usr/include/Eigen/src/Core/arch/SSE/PacketMath.h \
+ /usr/include/Eigen/src/Core/arch/SSE/TypeCasting.h \
+ /usr/include/Eigen/src/Core/arch/SSE/MathFunctions.h \
+ /usr/include/Eigen/src/Core/arch/SSE/Complex.h \
+ /usr/include/Eigen/src/Core/arch/Default/Settings.h \
+ /usr/include/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+ /usr/include/Eigen/src/Core/functors/TernaryFunctors.h \
+ /usr/include/Eigen/src/Core/functors/BinaryFunctors.h \
+ /usr/include/Eigen/src/Core/functors/UnaryFunctors.h \
+ /usr/include/Eigen/src/Core/functors/NullaryFunctors.h \
+ /usr/include/Eigen/src/Core/functors/StlFunctors.h \
+ /usr/include/Eigen/src/Core/functors/AssignmentFunctors.h \
+ /usr/include/Eigen/src/Core/util/IndexedViewHelper.h \
+ /usr/include/Eigen/src/Core/util/ReshapedHelper.h \
+ /usr/include/Eigen/src/Core/ArithmeticSequence.h \
+ /usr/include/Eigen/src/Core/IO.h \
+ /usr/include/Eigen/src/Core/DenseCoeffsBase.h \
+ /usr/include/Eigen/src/Core/DenseBase.h \
+ /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+ /usr/include/Eigen/src/Core/MatrixBase.h \
+ /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+ /usr/include/Eigen/src/Core/EigenBase.h \
+ /usr/include/Eigen/src/Core/Product.h \
+ /usr/include/Eigen/src/Core/CoreEvaluators.h \
+ /usr/include/Eigen/src/Core/AssignEvaluator.h \
+ /usr/include/Eigen/src/Core/Assign.h \
+ /usr/include/Eigen/src/Core/ArrayBase.h \
+ /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+ /usr/include/Eigen/src/Core/util/BlasUtil.h \
+ /usr/include/Eigen/src/Core/DenseStorage.h \
+ /usr/include/Eigen/src/Core/NestByValue.h \
+ /usr/include/Eigen/src/Core/ReturnByValue.h \
+ /usr/include/Eigen/src/Core/NoAlias.h \
+ /usr/include/Eigen/src/Core/PlainObjectBase.h \
+ /usr/include/Eigen/src/Core/Matrix.h /usr/include/Eigen/src/Core/Array.h \
+ /usr/include/Eigen/src/Core/CwiseTernaryOp.h \
+ /usr/include/Eigen/src/Core/CwiseBinaryOp.h \
+ /usr/include/Eigen/src/Core/CwiseUnaryOp.h \
+ /usr/include/Eigen/src/Core/CwiseNullaryOp.h \
+ /usr/include/Eigen/src/Core/CwiseUnaryView.h \
+ /usr/include/Eigen/src/Core/SelfCwiseBinaryOp.h \
+ /usr/include/Eigen/src/Core/Dot.h \
+ /usr/include/Eigen/src/Core/StableNorm.h \
+ /usr/include/Eigen/src/Core/Stride.h \
+ /usr/include/Eigen/src/Core/MapBase.h /usr/include/Eigen/src/Core/Map.h \
+ /usr/include/Eigen/src/Core/Ref.h /usr/include/Eigen/src/Core/Block.h \
+ /usr/include/Eigen/src/Core/VectorBlock.h \
+ /usr/include/Eigen/src/Core/IndexedView.h \
+ /usr/include/Eigen/src/Core/Reshaped.h \
+ /usr/include/Eigen/src/Core/Transpose.h \
+ /usr/include/Eigen/src/Core/DiagonalMatrix.h \
+ /usr/include/Eigen/src/Core/Diagonal.h \
+ /usr/include/Eigen/src/Core/DiagonalProduct.h \
+ /usr/include/Eigen/src/Core/Redux.h \
+ /usr/include/Eigen/src/Core/Visitor.h \
+ /usr/include/Eigen/src/Core/Fuzzy.h /usr/include/Eigen/src/Core/Swap.h \
+ /usr/include/Eigen/src/Core/CommaInitializer.h \
+ /usr/include/Eigen/src/Core/GeneralProduct.h \
+ /usr/include/Eigen/src/Core/Solve.h \
+ /usr/include/Eigen/src/Core/Inverse.h \
+ /usr/include/Eigen/src/Core/SolverBase.h \
+ /usr/include/Eigen/src/Core/PermutationMatrix.h \
+ /usr/include/Eigen/src/Core/Transpositions.h \
+ /usr/include/Eigen/src/Core/TriangularMatrix.h \
+ /usr/include/Eigen/src/Core/SelfAdjointView.h \
+ /usr/include/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+ /usr/include/Eigen/src/Core/products/Parallelizer.h \
+ /usr/include/Eigen/src/Core/ProductEvaluators.h \
+ /usr/include/Eigen/src/Core/products/GeneralMatrixVector.h \
+ /usr/include/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+ /usr/include/Eigen/src/Core/SolveTriangular.h \
+ /usr/include/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+ /usr/include/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+ /usr/include/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+ /usr/include/Eigen/src/Core/products/SelfadjointProduct.h \
+ /usr/include/Eigen/src/Core/products/SelfadjointRank2Update.h \
+ /usr/include/Eigen/src/Core/products/TriangularMatrixVector.h \
+ /usr/include/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+ /usr/include/Eigen/src/Core/products/TriangularSolverMatrix.h \
+ /usr/include/Eigen/src/Core/products/TriangularSolverVector.h \
+ /usr/include/Eigen/src/Core/BandMatrix.h \
+ /usr/include/Eigen/src/Core/CoreIterators.h \
+ /usr/include/Eigen/src/Core/ConditionEstimator.h \
+ /usr/include/Eigen/src/Core/BooleanRedux.h \
+ /usr/include/Eigen/src/Core/Select.h \
+ /usr/include/Eigen/src/Core/VectorwiseOp.h \
+ /usr/include/Eigen/src/Core/PartialReduxEvaluator.h \
+ /usr/include/Eigen/src/Core/Random.h \
+ /usr/include/Eigen/src/Core/Replicate.h \
+ /usr/include/Eigen/src/Core/Reverse.h \
+ /usr/include/Eigen/src/Core/ArrayWrapper.h \
+ /usr/include/Eigen/src/Core/StlIterators.h \
+ /usr/include/Eigen/src/Core/GlobalFunctions.h \
+ /usr/include/Eigen/src/Core/util/ReenableStupidWarnings.h \
+ /usr/include/Eigen/LU /usr/include/Eigen/src/misc/Kernel.h \
+ /usr/include/Eigen/src/misc/Image.h \
+ /usr/include/Eigen/src/LU/FullPivLU.h \
+ /usr/include/Eigen/src/LU/PartialPivLU.h \
+ /usr/include/Eigen/src/LU/Determinant.h \
+ /usr/include/Eigen/src/LU/InverseImpl.h \
+ /usr/include/Eigen/src/LU/arch/InverseSize4.h \
+ /usr/include/Eigen/Cholesky /usr/include/Eigen/Jacobi \
+ /usr/include/Eigen/src/Jacobi/Jacobi.h \
+ /usr/include/Eigen/src/Cholesky/LLT.h \
+ /usr/include/Eigen/src/Cholesky/LDLT.h /usr/include/Eigen/QR \
+ /usr/include/Eigen/Householder \
+ /usr/include/Eigen/src/Householder/Householder.h \
+ /usr/include/Eigen/src/Householder/HouseholderSequence.h \
+ /usr/include/Eigen/src/Householder/BlockHouseholder.h \
+ /usr/include/Eigen/src/QR/HouseholderQR.h \
+ /usr/include/Eigen/src/QR/FullPivHouseholderQR.h \
+ /usr/include/Eigen/src/QR/ColPivHouseholderQR.h \
+ /usr/include/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+ /usr/include/Eigen/SVD /usr/include/Eigen/src/misc/RealSvd2x2.h \
+ /usr/include/Eigen/src/SVD/UpperBidiagonalization.h \
+ /usr/include/Eigen/src/SVD/SVDBase.h \
+ /usr/include/Eigen/src/SVD/JacobiSVD.h \
+ /usr/include/Eigen/src/SVD/BDCSVD.h /usr/include/Eigen/Geometry \
+ /usr/include/Eigen/src/Geometry/OrthoMethods.h \
+ /usr/include/Eigen/src/Geometry/EulerAngles.h \
+ /usr/include/Eigen/src/Geometry/Homogeneous.h \
+ /usr/include/Eigen/src/Geometry/RotationBase.h \
+ /usr/include/Eigen/src/Geometry/Rotation2D.h \
+ /usr/include/Eigen/src/Geometry/Quaternion.h \
+ /usr/include/Eigen/src/Geometry/AngleAxis.h \
+ /usr/include/Eigen/src/Geometry/Transform.h \
+ /usr/include/Eigen/src/Geometry/Translation.h \
+ /usr/include/Eigen/src/Geometry/Scaling.h \
+ /usr/include/Eigen/src/Geometry/Hyperplane.h \
+ /usr/include/Eigen/src/Geometry/ParametrizedLine.h \
+ /usr/include/Eigen/src/Geometry/AlignedBox.h \
+ /usr/include/Eigen/src/Geometry/Umeyama.h \
+ /usr/include/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /usr/include/Eigen/Eigenvalues \
+ /usr/include/Eigen/src/Eigenvalues/Tridiagonalization.h \
+ /usr/include/Eigen/src/Eigenvalues/RealSchur.h \
+ /usr/include/Eigen/src/Eigenvalues/./HessenbergDecomposition.h \
+ /usr/include/Eigen/src/Eigenvalues/EigenSolver.h \
+ /usr/include/Eigen/src/Eigenvalues/./RealSchur.h \
+ /usr/include/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+ /usr/include/Eigen/src/Eigenvalues/./Tridiagonalization.h \
+ /usr/include/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+ /usr/include/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+ /usr/include/Eigen/src/Eigenvalues/ComplexSchur.h \
+ /usr/include/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+ /usr/include/Eigen/src/Eigenvalues/./ComplexSchur.h \
+ /usr/include/Eigen/src/Eigenvalues/RealQZ.h \
+ /usr/include/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+ /usr/include/Eigen/src/Eigenvalues/./RealQZ.h \
+ /usr/include/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /usr/include/boost/circular_buffer.hpp \
+ /usr/include/boost/circular_buffer_fwd.hpp /usr/include/boost/config.hpp \
+ /usr/include/boost/config/user.hpp \
+ /usr/include/boost/config/detail/select_compiler_config.hpp \
+ /usr/include/boost/config/compiler/gcc.hpp \
+ /usr/include/boost/config/detail/select_stdlib_config.hpp \
+ /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+ /usr/include/boost/config/detail/select_platform_config.hpp \
+ /usr/include/boost/config/platform/linux.hpp \
+ /usr/include/boost/config/detail/posix_features.hpp \
+ /usr/include/boost/config/detail/suffix.hpp \
+ /usr/include/boost/config/helper_macros.hpp \
+ /usr/include/boost/config/detail/cxx_composite.hpp \
+ /usr/include/boost/config/workaround.hpp \
+ /usr/include/boost/static_assert.hpp \
+ /usr/include/boost/detail/workaround.hpp \
+ /usr/include/boost/type_traits/is_convertible.hpp \
+ /usr/include/boost/type_traits/intrinsics.hpp \
+ /usr/include/boost/type_traits/detail/config.hpp \
+ /usr/include/boost/version.hpp \
+ /usr/include/boost/type_traits/integral_constant.hpp \
+ /usr/include/boost/type_traits/is_complete.hpp \
+ /usr/include/boost/type_traits/declval.hpp \
+ /usr/include/boost/type_traits/add_rvalue_reference.hpp \
+ /usr/include/boost/type_traits/is_void.hpp \
+ /usr/include/boost/type_traits/is_reference.hpp \
+ /usr/include/boost/type_traits/is_lvalue_reference.hpp \
+ /usr/include/boost/type_traits/is_rvalue_reference.hpp \
+ /usr/include/boost/type_traits/remove_reference.hpp \
+ /usr/include/boost/type_traits/is_function.hpp \
+ /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
+ /usr/include/boost/type_traits/detail/yes_no_type.hpp \
+ /usr/include/boost/type_traits/is_array.hpp \
+ /usr/include/boost/type_traits/is_arithmetic.hpp \
+ /usr/include/boost/type_traits/is_integral.hpp \
+ /usr/include/boost/type_traits/is_floating_point.hpp \
+ /usr/include/boost/type_traits/is_abstract.hpp \
+ /usr/include/boost/type_traits/add_lvalue_reference.hpp \
+ /usr/include/boost/type_traits/add_reference.hpp \
+ /usr/include/boost/circular_buffer/debug.hpp \
+ /usr/include/boost/circular_buffer/details.hpp \
+ /usr/include/boost/throw_exception.hpp \
+ /usr/include/boost/exception/exception.hpp \
+ /usr/include/boost/assert/source_location.hpp \
+ /usr/include/boost/current_function.hpp /usr/include/boost/cstdint.hpp \
+ /usr/include/boost/core/allocator_access.hpp \
+ /usr/include/boost/core/pointer_traits.hpp \
+ /usr/include/boost/core/addressof.hpp /usr/include/boost/move/move.hpp \
+ /usr/include/boost/move/detail/config_begin.hpp \
+ /usr/include/boost/move/utility.hpp \
+ /usr/include/boost/move/detail/workaround.hpp \
+ /usr/include/boost/move/utility_core.hpp \
+ /usr/include/boost/move/core.hpp \
+ /usr/include/boost/move/detail/config_end.hpp \
+ /usr/include/boost/move/detail/meta_utils.hpp \
+ /usr/include/boost/move/detail/meta_utils_core.hpp \
+ /usr/include/boost/move/detail/addressof.hpp \
+ /usr/include/boost/move/traits.hpp \
+ /usr/include/boost/move/detail/type_traits.hpp \
+ /usr/include/boost/move/iterator.hpp \
+ /usr/include/boost/move/detail/iterator_traits.hpp \
+ /usr/include/boost/move/algorithm.hpp \
+ /usr/include/boost/move/algo/move.hpp \
+ /usr/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+ /usr/include/boost/move/detail/to_raw_pointer.hpp \
+ /usr/include/boost/move/detail/pointer_element.hpp \
+ /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp \
+ /usr/include/boost/type_traits/enable_if.hpp \
+ /usr/include/boost/core/no_exceptions_support.hpp \
+ /usr/include/boost/circular_buffer/base.hpp \
+ /usr/include/boost/concept_check.hpp \
+ /usr/include/boost/concept/assert.hpp \
+ /usr/include/boost/concept/detail/general.hpp \
+ /usr/include/boost/preprocessor/cat.hpp \
+ /usr/include/boost/preprocessor/config/config.hpp \
+ /usr/include/boost/concept/detail/backward_compatibility.hpp \
+ /usr/include/boost/concept/detail/has_constraints.hpp \
+ /usr/include/boost/type_traits/conditional.hpp \
+ /usr/include/boost/type_traits/conversion_traits.hpp \
+ /usr/include/boost/type_traits/is_same.hpp \
+ /usr/include/boost/concept/usage.hpp \
+ /usr/include/boost/concept/detail/concept_def.hpp \
+ /usr/include/boost/preprocessor/seq/for_each_i.hpp \
+ /usr/include/boost/preprocessor/arithmetic/dec.hpp \
+ /usr/include/boost/preprocessor/config/limits.hpp \
+ /usr/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+ /usr/include/boost/preprocessor/arithmetic/inc.hpp \
+ /usr/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+ /usr/include/boost/preprocessor/control/if.hpp \
+ /usr/include/boost/preprocessor/control/iif.hpp \
+ /usr/include/boost/preprocessor/logical/bool.hpp \
+ /usr/include/boost/preprocessor/logical/limits/bool_256.hpp \
+ /usr/include/boost/preprocessor/repetition/for.hpp \
+ /usr/include/boost/preprocessor/debug/error.hpp \
+ /usr/include/boost/preprocessor/facilities/empty.hpp \
+ /usr/include/boost/preprocessor/detail/auto_rec.hpp \
+ /usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+ /usr/include/boost/preprocessor/repetition/detail/for.hpp \
+ /usr/include/boost/preprocessor/control/expr_iif.hpp \
+ /usr/include/boost/preprocessor/tuple/eat.hpp \
+ /usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp \
+ /usr/include/boost/preprocessor/repetition/limits/for_256.hpp \
+ /usr/include/boost/preprocessor/seq/seq.hpp \
+ /usr/include/boost/preprocessor/seq/elem.hpp \
+ /usr/include/boost/preprocessor/seq/limits/elem_256.hpp \
+ /usr/include/boost/preprocessor/seq/size.hpp \
+ /usr/include/boost/preprocessor/seq/limits/size_256.hpp \
+ /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
+ /usr/include/boost/preprocessor/logical/compl.hpp \
+ /usr/include/boost/preprocessor/tuple/elem.hpp \
+ /usr/include/boost/preprocessor/facilities/expand.hpp \
+ /usr/include/boost/preprocessor/facilities/overload.hpp \
+ /usr/include/boost/preprocessor/variadic/size.hpp \
+ /usr/include/boost/preprocessor/facilities/check_empty.hpp \
+ /usr/include/boost/preprocessor/variadic/has_opt.hpp \
+ /usr/include/boost/preprocessor/variadic/detail/has_opt.hpp \
+ /usr/include/boost/preprocessor/facilities/is_empty_variadic.hpp \
+ /usr/include/boost/preprocessor/punctuation/is_begin_parens.hpp \
+ /usr/include/boost/preprocessor/punctuation/detail/is_begin_parens.hpp \
+ /usr/include/boost/preprocessor/facilities/detail/is_empty.hpp \
+ /usr/include/boost/preprocessor/variadic/limits/size_64.hpp \
+ /usr/include/boost/preprocessor/tuple/rem.hpp \
+ /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
+ /usr/include/boost/preprocessor/variadic/elem.hpp \
+ /usr/include/boost/preprocessor/variadic/limits/elem_64.hpp \
+ /usr/include/boost/preprocessor/seq/enum.hpp \
+ /usr/include/boost/preprocessor/seq/limits/enum_256.hpp \
+ /usr/include/boost/preprocessor/comma_if.hpp \
+ /usr/include/boost/preprocessor/punctuation/comma_if.hpp \
+ /usr/include/boost/preprocessor/punctuation/comma.hpp \
+ /usr/include/boost/concept/detail/concept_undef.hpp \
+ /usr/include/boost/limits.hpp /usr/include/boost/core/empty_value.hpp \
+ /usr/include/boost/type_traits/is_stateless.hpp \
+ /usr/include/boost/type_traits/has_trivial_constructor.hpp \
+ /usr/include/boost/type_traits/is_pod.hpp \
+ /usr/include/boost/type_traits/is_scalar.hpp \
+ /usr/include/boost/type_traits/is_enum.hpp \
+ /usr/include/boost/type_traits/is_pointer.hpp \
+ /usr/include/boost/type_traits/is_member_pointer.hpp \
+ /usr/include/boost/type_traits/is_member_function_pointer.hpp \
+ /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+ /usr/include/boost/type_traits/is_default_constructible.hpp \
+ /usr/include/boost/type_traits/is_volatile.hpp \
+ /usr/include/boost/type_traits/has_trivial_copy.hpp \
+ /usr/include/boost/type_traits/is_copy_constructible.hpp \
+ /usr/include/boost/type_traits/is_constructible.hpp \
+ /usr/include/boost/type_traits/is_destructible.hpp \
+ /usr/include/boost/type_traits/has_trivial_destructor.hpp \
+ /usr/include/boost/type_traits/is_class.hpp \
+ /usr/include/boost/type_traits/is_empty.hpp \
+ /usr/include/boost/type_traits/remove_cv.hpp \
+ /usr/include/boost/type_traits/is_nothrow_move_assignable.hpp \
+ /usr/include/boost/type_traits/has_trivial_move_assign.hpp \
+ /usr/include/boost/type_traits/is_assignable.hpp \
+ /usr/include/boost/type_traits/has_nothrow_assign.hpp \
+ /usr/include/boost/type_traits/is_const.hpp \
+ /usr/include/boost/move/adl_move_swap.hpp \
+ /usr/include/boost/circular_buffer/space_optimized.hpp \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
+ /usr/include/Eigen/src/Geometry/ParametrizedLine.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/hungarian.h \
+ /usr/include/Eigen/Geometry \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/munkres.hpp \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/ransac_line_detector.h \
+ /home/usuario/robomk/actividad2/generated/localiser_autogen/VNU7RW3YIC/../../../src/room_detector.h \
+ /usr/include/opencv4/opencv2/core.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/version.hpp \
+ /usr/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/include/opencv4/opencv2/core/check.hpp \
+ /usr/include/opencv4/opencv2/core/traits.hpp \
+ /usr/include/opencv4/opencv2/core/matx.hpp \
+ /usr/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/include/opencv4/opencv2/core/types.hpp \
+ /usr/include/opencv4/opencv2/core/mat.hpp \
+ /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/include/opencv4/opencv2/core/operations.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/opencv4/opencv2/core/optim.hpp \
+ /usr/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h /usr/include/c++/13/ranges

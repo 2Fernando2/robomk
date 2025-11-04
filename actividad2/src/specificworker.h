@@ -36,6 +36,11 @@
 #include <cppitertools/itertools.hpp>
 #include <abstract_graphic_viewer/abstract_graphic_viewer.h>
 #include <QPointF>
+#include "common_types.h"
+#include "hungarian.h"
+#include "ransac_line_detector.h"
+#include "room_detector.h"
+
 
 /**
  * \brief Class SpecificWorker implements the core functionality of the component.
@@ -100,9 +105,13 @@ private:
 	bool startup_check_flag;
 
 	// graphics
-	QRectF dimensions, dimensions_2;
-	AbstractGraphicViewer *viewer, *viewer_2;
-	QGraphicsPolygonItem *robot_polygon, *robot_polygon_2;
+	QRectF dimensions;
+	AbstractGraphicViewer *viewer, *viewer_room;
+	QGraphicsPolygonItem *robot_polygon;
+	Eigen::Affine2d robot_pose;  // Eigen type to represent a rotation+translation
+	rc::Room_Detector room_detector; // object to compute the corners
+	rc::Hungarian hungarian; // object to match the two sets of corners
+	QGraphicsPolygonItem *room_draw_robot; // to draw the robot inside room
 
 	struct LidarAngles
 	{
@@ -116,6 +125,33 @@ private:
 		static constexpr float BACK_LEFT = -5.f*M_PI/8.f; // BACK_RIGHT is positive
 	};
 
+	struct NominalRoom
+	{
+		float width;
+		float length;
+		Corners corners;
+			explicit NominalRoom(const float width_=10000.f, const float length_=5000.f, Corners corners_ = {}) :
+			width(width_), length(length_), corners(std::move(corners_)){};
+		Corners transform_corners_to(const Eigen::Affine2d &transform) const //for room to robot pass the inverse of
+		// robot_pose
+		{
+			Corners transformed_corners;
+			for (const auto&[p,_,__]:corners)
+			{
+				auto ep = Eigen::Vector2d{p.x(), p.y()};
+				Eigen::Vector2d tp = transform * ep;
+				transformed_corners.emplace_back(QPointF{static_cast<float>(tp.x()), static_cast<float>(tp.y())}, 0.f, 0.f);
+			}
+			return transformed_corners;
+		}
+	};
+	NominalRoom room{10000.f, 5000.f,
+			{{QPointF{-5000.f, -2500.f}, 0.f, 0.f},
+				   {QPointF{5000.f, -2500.f}, 0.f, 0.f},
+				   {QPointF{5000.f, 2500.f}, 0.f, 0.f},
+				   {QPointF{-5000.f, 2500.f}, 0.f, 0.f}}};
+
+
 	const float ROBOT_LENGTH = 400.f;
 	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2.f;
 	const float MAX_ADV_SPEED = 1000.f;
@@ -124,6 +160,9 @@ private:
 	bool rotating = false;
 	bool rot_direction = false; // true: right - false: left
 	bool spiraling = false;
+
+
+
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
 	SpecificWorker::State state = SpecificWorker::State::FORWARD;
@@ -141,6 +180,8 @@ private:
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 	void draw_room();
+
+
 
 signals:
 	//void customSignal();

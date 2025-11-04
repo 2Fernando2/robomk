@@ -18,6 +18,7 @@
  */
 #ifndef GENERICWORKER_H
 #define GENERICWORKER_H
+#define USE_QTGUI
 
 #include <stdint.h>
 

@@ -27,7 +27,7 @@
 		{
 			"backtrace" : 1,
 			"component" : "Unspecified",
-			"destination" : "/home/robocomp/robocomp/bin",
+			"destination" : "/home/usuario/robocomp/bin",
 			"paths" : 
 			[
 				"bin/localiser"

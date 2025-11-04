@@ -29,7 +29,10 @@
 #include <expected>
 #include <algorithm>
 #include <cppitertools/enumerate.hpp>
-
+#include "common_types.h"
+#include "hungarian.h"
+#include "ransac_line_detector.h"
+#include "room_detector.h"
 
 SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, bool startup_check) : GenericWorker(configLoader, tprx)
 {
@@ -83,24 +86,22 @@ void SpecificWorker::initialize()
 
 	this->dimensions = QRectF(-6000, -3000, 12000, 6000);
 	viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
+	viewer_room = new AbstractGraphicViewer(this->frame_room, this->dimensions);
 	auto [r, e] = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
-    robot_polygon = r;
+	auto [rr, re] = viewer_room->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+	robot_polygon = r;
+	room_draw_robot = rr;
     this->resize(900, 450);
 	viewer->show();
 	const auto rob = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
 	robot_polygon = std::get<0>(rob);
 	connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
-
-	this->dimensions_2 = QRectF(-6000, -3000, 12000, 6000);
-	viewer_2 = new AbstractGraphicViewer(this->frame_2, this->dimensions_2);
-	auto [r_2, e_2] = viewer_2->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
-	robot_polygon = r_2;
-	this->resize(900, 450);
-	viewer_2->show();
-	const auto rob_2 = viewer_2->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
-	robot_polygon = std::get<0>(rob_2);
-	connect(viewer_2, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
-
+	// draw room in viewer_room
+	viewer_room->scene.addRect(this->dimensions, QPen(Qt::black, 30));
+	viewer_room->show();
+	// init robot pose
+	robot_pose.setIdentity();
+	robot_pose.translate(Eigen::Vector2d(0.0,0.0));
 
 	adv_speed = MAX_ADV_SPEED;
 	rotating = false;
@@ -120,6 +121,16 @@ void SpecificWorker::compute()
 {
 	auto filter_data = read_data();
 	if (not filter_data.has_value()){std::cerr << "No filter data found" << std::endl; return;}
+
+	const auto measured_corners = room_detector.compute_corners(filter_data.value(), &viewer_room->scene);
+	// robot to room -> robot_pose | room to robot -> robot_pose.inverse()
+	const auto match = hungarian.match(measured_corners, room.transform_corners_to(robot_pose.inverse()), 1000);
+	//for (auto )
+
+	// matriz -> set up matrices W and b
+	// r[x, y, phi] = new pose of the robot
+	//robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
+	// robot_pose.rotate(r[2]);
 
 	// auto result = state_Machine(filter_data);
 	// omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
