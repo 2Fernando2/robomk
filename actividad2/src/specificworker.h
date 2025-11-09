@@ -106,12 +106,13 @@ private:
 
 	// graphics
 	QRectF dimensions;
+	QRectF room_dimensions{-5000, -2500, 10000, 5000};
 	AbstractGraphicViewer *viewer, *viewer_room;
-	QGraphicsPolygonItem *robot_polygon;
 	Eigen::Affine2d robot_pose;  // Eigen type to represent a rotation+translation
 	rc::Room_Detector room_detector; // object to compute the corners
 	rc::Hungarian hungarian; // object to match the two sets of corners
-	QGraphicsPolygonItem *room_draw_robot; // to draw the robot inside room
+	QGraphicsPolygonItem *robot_polygon;
+	QGraphicsPolygonItem *robot_room_draw; // to draw the robot inside room
 
 	struct LidarAngles
 	{

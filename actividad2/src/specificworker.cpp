@@ -86,29 +86,25 @@ void SpecificWorker::initialize()
 
 	this->dimensions = QRectF(-6000, -3000, 12000, 6000);
 	viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
-	viewer_room = new AbstractGraphicViewer(this->frame_room, this->dimensions);
-	auto [r, e] = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
-	auto [rr, re] = viewer_room->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
-	robot_polygon = r;
-	room_draw_robot = rr;
     this->resize(900, 450);
 	viewer->show();
 	const auto rob = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
 	robot_polygon = std::get<0>(rob);
-	connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
+
+	viewer_room = new AbstractGraphicViewer(this->frame_room, this->room_dimensions);
+	auto [rr, re] = viewer_room->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+	robot_room_draw = rr;
+
 	// draw room in viewer_room
-	viewer_room->scene.addRect(this->dimensions, QPen(Qt::black, 30));
+	viewer_room->scene.addRect(this->room_dimensions, QPen(Qt::black, 30));
 	viewer_room->show();
+
 	// init robot pose
 	robot_pose.setIdentity();
 	robot_pose.translate(Eigen::Vector2d(0.0,0.0));
 
-	adv_speed = MAX_ADV_SPEED;
-	rotating = false;
-	spiraling = false;
-
-    //initializeCODE
-
+	setPeriod("compute", 50);
+	connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
     /////////GET PARAMS, OPEND DEVICES....////////
     //int period = configLoader.get<int>("Period.Compute") //NOTE: If you want get period of compute use getPeriod("compute")
     //std::string device = configLoader.get<std::string>("Device.name") 
@@ -122,7 +118,7 @@ void SpecificWorker::compute()
 	auto filter_data = read_data();
 	if (not filter_data.has_value()){std::cerr << "No filter data found" << std::endl; return;}
 
-	const auto corners = room_detector.compute_corners(filter_data.value(), &viewer_room->scene);
+	const auto corners = room_detector.compute_corners(filter_data.value(), &viewer->scene);
 	const auto match = hungarian.match(corners, room.transform_corners_to(robot_pose.inverse()), 1000);
 	// robot to room -> robot_pose | room to robot -> robot_pose.inverse()
 	for (auto &m : match)
@@ -135,38 +131,31 @@ void SpecificWorker::compute()
 	// matrix
 	Eigen::MatrixXd W(match.size()*2,3);
     Eigen::VectorXd b(match.size()*2);
-    for (const auto &[i, m] : match | iter::enumerate)
+    for (const auto &&[i, m] : match | iter::enumerate)
     {
-        auto &[cm, cn, d] = m;
-        auto &[cmc, _, __] = cm;
-        auto &[cnc, ___, ____] = cn;
-        W(i, 0) = 1.0;
-        W(i ,1) = 0.0;
-        if (i%2 == 0)
-        {
-            W(i, 2) = -cmc.y();
-            b(i) = cnc.x() - cmc.x();
-        }
-        else
-        {
-            W(1, 2) = cmc.x();
-            b(i) = cnc.y() - cmc.y();
-        }
+        auto &[meas_c, nom_c, _] = m;
+        auto &[p_meas, __, ___] = meas_c;
+        auto &[p_nom, ____, _____] = nom_c;
+        b(2*i) = p_nom.x() - p_meas.x();
+		b(2*i+1) = p_nom.y() - p_meas.y();
+		W.block<1, 3>(2*i, 0) << 1.0, 0.0, -p_meas.y();
+		W.block<1, 3>(2*i+1, 0) << 0.0, 1.0, p_meas.x();
     }
-
-    // operate
+    // estimate new pose with pseudoinverse
     const auto r = (W.transpose()*W).inverse()*W.transpose()*b;
+    if (r.array().isNaN().any()) return;
 
     // update robot pose
     robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
     robot_pose.rotate(r(2));
 
     // update robot draw
-    robot_polygon->setPos(r(0), r(1));
-    robot_polygon->setRotation(r(2));
+    robot_room_draw->setPos(robot_pose.translation().x(), robot_pose.translation().y());
+    double angle = std::atan2(robot_pose.rotation()(1, 0), robot_pose.rotation()(0, 0));
+	robot_room_draw->setRotation(qRadiansToDegrees(angle));
 
-	// auto result = state_Machine(filter_data);
-	// omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
+	auto result = state_Machine(filter_data);
+	omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
 }
 
 void SpecificWorker::draw_room()
