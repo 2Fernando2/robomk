@@ -53,10 +53,10 @@ RM = /snap/clion/393/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varo/robomk/actividad2
+CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varo/robomk/actividad2
+CMAKE_BINARY_DIR = /home/usuario/robomk/actividad2
 
 # Utility rule file for ICE_OmniRobot_target.
 
@@ -69,8 +69,8 @@ include generated/CMakeFiles/ICE_OmniRobot_target.dir/progress.make
 generated/CMakeFiles/ICE_OmniRobot_target: generated/OmniRobot.ice
 
 generated/OmniRobot.ice: /home/robocomp/robocomp/interfaces/IDSLs/OmniRobot.idsl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/varo/robomk/actividad2/generated/OmniRobot.ice from /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl"
-	cd /home/varo/robomk/actividad2/generated && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl /home/varo/robomk/actividad2/generated/OmniRobot.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad2/generated/OmniRobot.ice from /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl"
+	cd /home/usuario/robomk/actividad2/generated && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl /home/usuario/robomk/actividad2/generated/OmniRobot.ice
 
 generated/CMakeFiles/ICE_OmniRobot_target.dir/codegen:
 .PHONY : generated/CMakeFiles/ICE_OmniRobot_target.dir/codegen
@@ -85,10 +85,10 @@ generated/CMakeFiles/ICE_OmniRobot_target.dir/build: ICE_OmniRobot_target
 .PHONY : generated/CMakeFiles/ICE_OmniRobot_target.dir/build
 
 generated/CMakeFiles/ICE_OmniRobot_target.dir/clean:
-	cd /home/varo/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/ICE_OmniRobot_target.dir/cmake_clean.cmake
+	cd /home/usuario/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/ICE_OmniRobot_target.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/ICE_OmniRobot_target.dir/clean
 
 generated/CMakeFiles/ICE_OmniRobot_target.dir/depend:
-	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2/generated/CMakeFiles/ICE_OmniRobot_target.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2/generated/CMakeFiles/ICE_OmniRobot_target.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/ICE_OmniRobot_target.dir/depend
 

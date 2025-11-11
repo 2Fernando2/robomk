@@ -53,10 +53,10 @@ RM = /snap/clion/393/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/varo/robomk/actividad2
+CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/varo/robomk/actividad2
+CMAKE_BINARY_DIR = /home/usuario/robomk/actividad2
 
 # Utility rule file for localiser_autogen_timestamp_deps.
 
@@ -77,10 +77,10 @@ generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/build: localiser_autog
 .PHONY : generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/build
 
 generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/clean:
-	cd /home/varo/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/localiser_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd /home/usuario/robomk/actividad2/generated && $(CMAKE_COMMAND) -P CMakeFiles/localiser_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/clean
 
 generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/depend:
-	cd /home/varo/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2 /home/varo/robomk/actividad2/generated /home/varo/robomk/actividad2/generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robomk/actividad2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2 /home/usuario/robomk/actividad2/generated /home/usuario/robomk/actividad2/generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/localiser_autogen_timestamp_deps.dir/depend
 
