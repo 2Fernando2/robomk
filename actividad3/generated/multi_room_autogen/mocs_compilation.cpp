@@ -2,4 +2,5 @@
 #include "4B7W4TDGLD/moc_abstract_graphic_viewer.cpp"
 #include "UITLZZOD3R/moc_GRAFCETStep.cpp"
 #include "EWIEGA46WW/moc_genericworker.cpp"
+#include "VNU7RW3YIC/moc_qcustomplot.cpp"
 #include "VNU7RW3YIC/moc_specificworker.cpp"

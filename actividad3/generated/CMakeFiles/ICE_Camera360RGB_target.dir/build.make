@@ -68,9 +68,9 @@ include generated/CMakeFiles/ICE_Camera360RGB_target.dir/progress.make
 
 generated/CMakeFiles/ICE_Camera360RGB_target: generated/Camera360RGB.ice
 
-generated/Camera360RGB.ice: /home/usuario/robocomp/interfaces/IDSLs/Camera360RGB.idsl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad3/generated/Camera360RGB.ice from /home/usuario/robocomp/interfaces/IDSLs/Camera360RGB.idsl"
-	cd /home/usuario/robomk/actividad3/generated && robocompdsl /home/usuario/robocomp/interfaces/IDSLs/Camera360RGB.idsl /home/usuario/robomk/actividad3/generated/Camera360RGB.ice
+generated/Camera360RGB.ice: /home/robocomp/robocomp/interfaces/IDSLs/Camera360RGB.idsl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad3/generated/Camera360RGB.ice from /home/robocomp/robocomp//interfaces/IDSLs/Camera360RGB.idsl"
+	cd /home/usuario/robomk/actividad3/generated && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Camera360RGB.idsl /home/usuario/robomk/actividad3/generated/Camera360RGB.ice
 
 ICE_Camera360RGB_target: generated/CMakeFiles/ICE_Camera360RGB_target
 ICE_Camera360RGB_target: generated/Camera360RGB.ice

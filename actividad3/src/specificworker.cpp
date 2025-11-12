@@ -83,84 +83,96 @@ SpecificWorker::~SpecificWorker()
 void SpecificWorker::initialize()
 {
     std::cout << "initialize worker" << std::endl;
+	//this->dimensions = QRectF(-6000, -3000, 12000, 6000);
 
-	this->dimensions = QRectF(-6000, -3000, 12000, 6000);
-	viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
-    const auto rob = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 190, QColor("Blue"));
-    robot_polygon = std::get<0>(rob);
-    this->resize(900, 450);
-    viewer->show();
+	if (this->startup_check_flag) {this->startup_check();}
+	else
+	{
+		// Viewer
+		viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
+		auto [r, e] = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+		robot_draw = r;
+		//this->resize(900, 450);
 
-    viewer_room = new AbstractGraphicViewer(this->frame_room, this->dimensions);
-    auto [rr, re] = viewer_room->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
-    robot_room_draw = rr;
+		viewer_room = new AbstractGraphicViewer(this->frame_room, this->dimensions);
+		auto [rr, re] = viewer_room->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+		robot_room_draw = rr;
 
-    // draw room in viewer_room
-    viewer_room->scene.addRect(this->dimensions, QPen(Qt::black, 30));
-    viewer_room->show();
+		// draw room in viewer_room
+		viewer_room->scene.addRect(nominal_rooms[0].rect(), QPen(Qt::black, 30));
 
-	// init robot pose
-	robot_pose.setIdentity();
-	robot_pose.translate(Eigen::Vector2d(0.0,0.0));
+		show();
 
-	setPeriod("compute", 50);
-	connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_target_slot);
-    /////////GET PARAMS, OPEND DEVICES....////////
-    //int period = configLoader.get<int>("Period.Compute") //NOTE: If you want get period of compute use getPeriod("compute")
-    //std::string device = configLoader.get<std::string>("Device.name")
+		// init robot pose
+		robot_pose.setIdentity();
+		robot_pose.translate(Eigen::Vector2d(0.0,0.0));
 
+	}
 }
-
-
 
 void SpecificWorker::compute()
 {
-	auto filter_data = read_data();
-	if (not filter_data.has_value()){std::cerr << "No filter data found" << std::endl; return;}
+	RoboCompLidar3D::TPoints points;
+	if ( auto filter_data = read_data(); not filter_data.has_value())
+	{ std::cerr << "No filter data found" << std::endl; return;}
+	else points = filter_data.value();
+	points = door_detector.filter_points(points, &viewer->scene);
+	draw_lidar(points, &viewer->scene);
 
-	const auto corners = room_detector.compute_corners(filter_data.value(), &viewer->scene);
-	const auto match = hungarian.match(corners, room.transform_corners_to(robot_pose.inverse()), 1000);
-	// robot to room -> robot_pose | room to robot -> robot_pose.inverse()
-	for (auto &m : match)
-    {
-        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
-        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
-    }
-    qDebug() << "----------------------------";
+	// corners,match, max_distance
+	// compute corners
+	//const auto &[corners, lines] = room_detector.compute_corners(points, &viewer->scene);
+	// room_detector.estimate_center_from_walls(lines);
 
-	// matrix
-	Eigen::MatrixXd W(match.size()*2,3);
-    Eigen::VectorXd b(match.size()*2);
-    for (const auto &&[i, m] : match | iter::enumerate)
-    {
-        auto &[meas_c, nom_c, _] = m;
-        auto &[p_meas, __, ___] = meas_c;
-        auto &[p_nom, ____, _____] = nom_c;
-        b(2*i) = p_nom.x() - p_meas.x();
-		b(2*i+1) = p_nom.y() - p_meas.y();
-		W.block<1, 3>(2*i, 0) << 1.0, 0.0, -p_meas.y();
-		W.block<1, 3>(2*i+1, 0) << 0.0, 1.0, p_meas.x();
-    }
-    // estimate new pose with pseudoinverse
-    const auto r = (W.transpose()*W).inverse()*W.transpose()*b;
-    if (r.array().isNaN().any()) return;
+	// match
+	// const auto match = hungarian.match(corners, nominal_rooms[0].transform_corners_to(robot_pose.inverse()));
 
-    // update robot pose
-    robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
-    robot_pose.rotate(r(2));
+	// compute max of match error
 
-    // update robot draw
-    robot_room_draw->setPos(robot_pose.translation().x(), robot_pose.translation().y());
-    double angle = std::atan2(robot_pose.rotation()(1, 0), robot_pose.rotation()(0, 0));
-	robot_room_draw->setRotation(qRadiansToDegrees(angle));
+	// if(localised)
+		  // update_robot_pose(corners, match);
 
-	auto result = state_Machine(filter_data);
-	omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
-}
+	//state machine
 
-void SpecificWorker::draw_room()
-{
 
+	// const auto corners = room_detector.compute_corners(filter_data.value(), &viewer->scene);
+	// const auto match = hungarian.match(std::get<0>(corners), nominal_rooms[0].transform_corners_to(robot_pose.inverse()), 1000);
+	// // robot to room -> robot_pose | room to robot -> robot_pose.inverse()
+	// for (auto &m : match)
+ //    {
+ //        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
+ //        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
+ //    }
+ //    qDebug() << "----------------------------";
+ //
+	// // matrix
+	// Eigen::MatrixXd W(match.size()*2,3);
+ //    Eigen::VectorXd b(match.size()*2);
+ //    for (const auto &&[i, m] : match | iter::enumerate)
+ //    {
+ //        auto &[meas_c, nom_c, _] = m;
+ //        auto &[p_meas, __, ___] = meas_c;
+ //        auto &[p_nom, ____, _____] = nom_c;
+ //        b(2*i) = p_nom.x() - p_meas.x();
+	// 	b(2*i+1) = p_nom.y() - p_meas.y();
+	// 	W.block<1, 3>(2*i, 0) << 1.0, 0.0, -p_meas.y();
+	// 	W.block<1, 3>(2*i+1, 0) << 0.0, 1.0, p_meas.x();
+ //    }
+ //    // estimate new pose with pseudoinverse
+ //    const auto r = (W.transpose()*W).inverse()*W.transpose()*b;
+ //    if (r.array().isNaN().any()) return;
+ //
+ //    // update robot pose
+ //    robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
+ //    robot_pose.rotate(r(2));
+ //
+ //    // update robot draw
+ //    robot_room_draw->setPos(robot_pose.translation().x(), robot_pose.translation().y());
+ //    double angle = std::atan2(robot_pose.rotation()(1, 0), robot_pose.rotation()(0, 0));
+	// robot_room_draw->setRotation(qRadiansToDegrees(angle));
+ //
+	// auto result = state_Machine(filter_data);
+	// omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
 }
 
 std::tuple<SpecificWorker::State, float, float> SpecificWorker::state_Machine(auto& points)
@@ -394,8 +406,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
 
 	// qInfo() << filter_data.size();
 
-	// draw_lidar(filter_data, &viewer->scene);
-	draw_lidar(data.points, &viewer->scene);
+
 	//return filter_data;
 	return filter_isolated_points(filter_data, 200);
 }
@@ -567,9 +578,9 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     float angle1 = filtered_points[res_left.value()].phi;
     float angle2 = filtered_points[res_right.value()].phi;
     QLineF line_left{QPointF(0.f, 0.f),
-                     robot_polygon->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
+                     robot_draw->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
     QLineF line_right{QPointF(0.f, 0.f),
-                      robot_polygon->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
+                      robot_draw->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
     QPen left_pen(Qt::blue, 10); // Blue color pen with thickness 3
     QPen right_pen(Qt::red, 10); // Blue color pen with thickness 3
     auto line1 = scene->addLine(line_left, left_pen);
@@ -622,8 +633,8 @@ void SpecificWorker::update_report_posotion()
 	{
 		RoboCompGenericBase::TBaseState bState;
 		omnirobot_proxy->getBaseState(bState);
-		robot_polygon->setRotation(bState.alpha*180/M_PI);
-		robot_polygon->setPos(bState.x, bState.z);
+		robot_draw->setRotation(bState.alpha*180/M_PI);
+		robot_draw->setPos(bState.x, bState.z);
 		std::cout << bState.alpha << " " << bState.x << " " << bState.z << std::endl;
 	}
 	catch (const Ice::Exception &e)

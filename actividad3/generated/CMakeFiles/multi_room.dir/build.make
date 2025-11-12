@@ -118,19 +118,19 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.s"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad3/generated/multi_room_autogen/mocs_compilation.cpp -o CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.s
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
 generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: src/specificworker.cpp
@@ -188,66 +188,108 @@ generated/CMakeFiles/multi_room.dir/__/src/room_detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/__/src/room_detector.cpp.s"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad3/src/room_detector.cpp -o CMakeFiles/multi_room.dir/__/src/room_detector.cpp.s
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o: /home/usuario/robocomp/classes/rapplication/rapplication.cpp
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o -c /home/usuario/robocomp/classes/rapplication/rapplication.cpp
+generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o: src/door_detector.cpp
+generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o -MF CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o.d -o CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o -c /home/usuario/robomk/actividad3/src/door_detector.cpp
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.i
+generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/__/src/door_detector.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad3/src/door_detector.cpp > CMakeFiles/multi_room.dir/__/src/door_detector.cpp.i
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.s
+generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/__/src/door_detector.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad3/src/door_detector.cpp -o CMakeFiles/multi_room.dir/__/src/door_detector.cpp.s
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp
+generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o: src/qcustomplot.cpp
+generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o -MF CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o.d -o CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o -c /home/usuario/robomk/actividad3/src/qcustomplot.cpp
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.i
+generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad3/src/qcustomplot.cpp > CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.i
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.s
+generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad3/src/qcustomplot.cpp -o CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.s
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o: src/time_series_plotter.cpp
+generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o -MF CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o.d -o CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o -c /home/usuario/robomk/actividad3/src/time_series_plotter.cpp
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robomk/actividad3/src/time_series_plotter.cpp > CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.i
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robomk/actividad3/src/time_series_plotter.cpp -o CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.s
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -MF CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o.d -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -c /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp > CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
-generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s"
-	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp -o CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -MF CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o.d -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o -c /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp > CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.i
+
+generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s"
+	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp -o CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.s
 
 generated/CMakeFiles/multi_room.dir/main.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/main.cpp.o: generated/main.cpp
 generated/CMakeFiles/multi_room.dir/main.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object generated/CMakeFiles/multi_room.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object generated/CMakeFiles/multi_room.dir/main.cpp.o"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/main.cpp.o -MF CMakeFiles/multi_room.dir/main.cpp.o.d -o CMakeFiles/multi_room.dir/main.cpp.o -c /home/usuario/robomk/actividad3/generated/main.cpp
 
 generated/CMakeFiles/multi_room.dir/main.cpp.i: cmake_force
@@ -261,7 +303,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.s: cmake_force
 generated/CMakeFiles/multi_room.dir/genericworker.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/genericworker.cpp.o: generated/genericworker.cpp
 generated/CMakeFiles/multi_room.dir/genericworker.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object generated/CMakeFiles/multi_room.dir/genericworker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object generated/CMakeFiles/multi_room.dir/genericworker.cpp.o"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/genericworker.cpp.o -MF CMakeFiles/multi_room.dir/genericworker.cpp.o.d -o CMakeFiles/multi_room.dir/genericworker.cpp.o -c /home/usuario/robomk/actividad3/generated/genericworker.cpp
 
 generated/CMakeFiles/multi_room.dir/genericworker.cpp.i: cmake_force
@@ -275,7 +317,7 @@ generated/CMakeFiles/multi_room.dir/genericworker.cpp.s: cmake_force
 generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o: generated/GenericBase.cpp
 generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o -MF CMakeFiles/multi_room.dir/GenericBase.cpp.o.d -o CMakeFiles/multi_room.dir/GenericBase.cpp.o -c /home/usuario/robomk/actividad3/generated/GenericBase.cpp
 
 generated/CMakeFiles/multi_room.dir/GenericBase.cpp.i: cmake_force
@@ -289,7 +331,7 @@ generated/CMakeFiles/multi_room.dir/GenericBase.cpp.s: cmake_force
 generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.o: generated/Camera360RGB.cpp
 generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.o"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.o -MF CMakeFiles/multi_room.dir/Camera360RGB.cpp.o.d -o CMakeFiles/multi_room.dir/Camera360RGB.cpp.o -c /home/usuario/robomk/actividad3/generated/Camera360RGB.cpp
 
 generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.i: cmake_force
@@ -303,7 +345,7 @@ generated/CMakeFiles/multi_room.dir/Camera360RGB.cpp.s: cmake_force
 generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o: generated/OmniRobot.cpp
 generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o -MF CMakeFiles/multi_room.dir/OmniRobot.cpp.o.d -o CMakeFiles/multi_room.dir/OmniRobot.cpp.o -c /home/usuario/robomk/actividad3/generated/OmniRobot.cpp
 
 generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.i: cmake_force
@@ -317,7 +359,7 @@ generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.s: cmake_force
 generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.o: generated/CMakeFiles/multi_room.dir/flags.make
 generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.o: generated/Lidar3D.cpp
 generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.o: generated/CMakeFiles/multi_room.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.o"
 	cd /home/usuario/robomk/actividad3/generated && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.o -MF CMakeFiles/multi_room.dir/Lidar3D.cpp.o.d -o CMakeFiles/multi_room.dir/Lidar3D.cpp.o -c /home/usuario/robomk/actividad3/generated/Lidar3D.cpp
 
 generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.i: cmake_force
@@ -331,15 +373,18 @@ generated/CMakeFiles/multi_room.dir/Lidar3D.cpp.s: cmake_force
 # Object files for target multi_room
 multi_room_OBJECTS = \
 "CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
+"CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
 "CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o" \
 "CMakeFiles/multi_room.dir/__/src/hungarian.cpp.o" \
 "CMakeFiles/multi_room.dir/__/src/ransac_line_detector.cpp.o" \
 "CMakeFiles/multi_room.dir/__/src/room_detector.cpp.o" \
-"CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o" \
-"CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o" \
-"CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" \
-"CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o" \
+"CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o" \
+"CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o" \
+"CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o" \
+"CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o" \
+"CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o" \
+"CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" \
+"CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o" \
 "CMakeFiles/multi_room.dir/main.cpp.o" \
 "CMakeFiles/multi_room.dir/genericworker.cpp.o" \
 "CMakeFiles/multi_room.dir/GenericBase.cpp.o" \
@@ -351,15 +396,18 @@ multi_room_OBJECTS = \
 multi_room_EXTERNAL_OBJECTS =
 
 bin/multi_room: generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o
-bin/multi_room: generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/hungarian.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/ransac_line_detector.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/room_detector.cpp.o
-bin/multi_room: generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/rapplication/rapplication.cpp.o
-bin/multi_room: generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp.o
-bin/multi_room: generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
-bin/multi_room: generated/CMakeFiles/multi_room.dir/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+bin/multi_room: generated/CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/main.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/genericworker.cpp.o
 bin/multi_room: generated/CMakeFiles/multi_room.dir/GenericBase.cpp.o
@@ -435,7 +483,7 @@ bin/multi_room: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 bin/multi_room: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/multi_room: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/multi_room: generated/CMakeFiles/multi_room.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable ../bin/multi_room"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable ../bin/multi_room"
 	cd /home/usuario/robomk/actividad3/generated && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/multi_room.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

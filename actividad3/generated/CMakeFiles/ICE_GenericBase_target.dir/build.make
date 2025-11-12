@@ -68,9 +68,9 @@ include generated/CMakeFiles/ICE_GenericBase_target.dir/progress.make
 
 generated/CMakeFiles/ICE_GenericBase_target: generated/GenericBase.ice
 
-generated/GenericBase.ice: /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad3/generated/GenericBase.ice from /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl"
-	cd /home/usuario/robomk/actividad3/generated && robocompdsl /home/usuario/robocomp/interfaces/IDSLs/GenericBase.idsl /home/usuario/robomk/actividad3/generated/GenericBase.ice
+generated/GenericBase.ice: /home/robocomp/robocomp/interfaces/IDSLs/GenericBase.idsl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad3/generated/GenericBase.ice from /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl"
+	cd /home/usuario/robomk/actividad3/generated && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl /home/usuario/robomk/actividad3/generated/GenericBase.ice
 
 ICE_GenericBase_target: generated/CMakeFiles/ICE_GenericBase_target
 ICE_GenericBase_target: generated/GenericBase.ice

@@ -40,6 +40,9 @@
 #include "hungarian.h"
 #include "ransac_line_detector.h"
 #include "room_detector.h"
+#include "nominal_room.h"
+#include "image_processor.h"
+#include "door_detector.h"
 
 
 /**
@@ -104,16 +107,6 @@ private:
      */
 	bool startup_check_flag;
 
-	// graphics
-	QRectF dimensions;
-	QRectF room_dimensions{-5000, -2500, 10000, 5000};
-	AbstractGraphicViewer *viewer, *viewer_room;
-	Eigen::Affine2d robot_pose;  // Eigen type to represent a rotation+translation
-	rc::Room_Detector room_detector; // object to compute the corners
-	rc::Hungarian hungarian; // object to match the two sets of corners
-	QGraphicsPolygonItem *robot_polygon;
-	QGraphicsPolygonItem *robot_room_draw; // to draw the robot inside room
-
 	struct LidarAngles
 	{
 		static constexpr float FRONT = 0.0f;
@@ -126,32 +119,24 @@ private:
 		static constexpr float BACK_LEFT = -5.f*M_PI/8.f; // BACK_RIGHT is positive
 	};
 
-	struct NominalRoom
-	{
-		float width;
-		float length;
-		Corners corners;
-			explicit NominalRoom(const float width_=10000.f, const float length_=5000.f, Corners corners_ = {}) :
-			width(width_), length(length_), corners(std::move(corners_)){};
-		Corners transform_corners_to(const Eigen::Affine2d &transform) const //for room to robot pass the inverse of
-		// robot_pose
-		{
-			Corners transformed_corners;
-			for (const auto&[p,_,__]:corners)
-			{
-				auto ep = Eigen::Vector2d{p.x(), p.y()};
-				Eigen::Vector2d tp = transform * ep;
-				transformed_corners.emplace_back(QPointF{static_cast<float>(tp.x()), static_cast<float>(tp.y())}, 0.f, 0.f);
-			}
-			return transformed_corners;
-		}
-	};
-	NominalRoom room{10000.f, 5000.f,
-			{{QPointF{-5000.f, -2500.f}, 0.f, 0.f},
-				   {QPointF{5000.f, -2500.f}, 0.f, 0.f},
-				   {QPointF{5000.f, 2500.f}, 0.f, 0.f},
-				   {QPointF{-5000.f, 2500.f}, 0.f, 0.f}}};
+	// robot
+	Eigen::Affine2d robot_pose;  // Eigen type to represent a rotation+translation
 
+	// rooms
+	std::vector<NominalRoom> nominal_rooms{NominalRoom{5500.f, 4000.f}, NominalRoom{8000.f, 4000.f}};
+	rc::Room_Detector room_detector; // object to compute the corners
+	rc::Hungarian hungarian; // object to match the two sets of corners
+
+	// Doors
+	DoorDetector door_detector;
+
+	// viewer
+	AbstractGraphicViewer *viewer, *viewer_room;
+	QGraphicsPolygonItem *robot_draw, * robot_room_draw;
+
+	// graphics
+	QRectF dimensions{-5000, 2500, 10000, -5000};
+	QRectF room_dimensions{-5000, -2500, 10000, 5000};
 
 	const float ROBOT_LENGTH = 400.f;
 	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2.f;
@@ -161,8 +146,6 @@ private:
 	bool rotating = false;
 	bool rot_direction = false; // true: right - false: left
 	bool spiraling = false;
-
-
 
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
@@ -180,7 +163,6 @@ private:
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
-	void draw_room();
 
 
 

@@ -196,7 +196,7 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/4B7W4TDGLD/../../../../../robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/4B7W4TDGLD/../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -453,7 +453,7 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/c++/13/iostream \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/UITLZZOD3R/moc_GRAFCETStep.cpp \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/UITLZZOD3R/../../../../../robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/UITLZZOD3R/../../../../../../robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -986,8 +986,8 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
- /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
- /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
@@ -1043,8 +1043,8 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/local/include/toml++/impl/toml_formatter.inl \
  /usr/local/include/toml++/impl/json_formatter.inl \
  /usr/local/include/toml++/impl/yaml_formatter.inl \
- /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
- /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
+ /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
@@ -1098,6 +1098,197 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /home/usuario/robomk/actividad3/generated/Lidar3D.h \
  /home/usuario/robomk/actividad3/generated/OmniRobot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/moc_qcustomplot.cpp \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/qcustomplot.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainterPath \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QWheelEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMultiMap \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QStack \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QCache \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QtNumeric \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/QtPrintSupport \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/QtPrintSupportDepends \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaccessiblewidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qaccessibleobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaction.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qactiongroup.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QActionGroup \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qbuttongroup.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcalendarwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcheckbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcolordialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcolormap.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcolumnview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcombobox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcommandlinkbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcommonstyle.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcompleter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdatawidgetmapper.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdatetimeedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdial.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdrawutil.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qerrormessage.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfiledialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfileiconprovider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qabstractfileiconprovider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfilesystemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QFileSystemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfocusframe.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfontcombobox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcombobox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfontdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgesture.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgesturerecognizer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsanchorlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicseffect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitemanimation.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslinearlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsproxywidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicswidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicssceneevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicstransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QVector3D \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QMatrix4x4 \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicswidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgroupbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qinputdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qitemeditorfactory.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qkeysequenceedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdisubwindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenubar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qplaintextedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qabstracttextdocumentlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qproxystyle.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QCommonStyle \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qradiobutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscroller.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollerProperties \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollerproperties.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qshortcut.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QShortcut \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizegrip.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplashscreen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleditemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstylefactory.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstylepainter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleplugin.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsystemtrayicon.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtablewidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextbrowser.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtooltip.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreeview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreeview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qundoview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwhatsthis.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidgetaction.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwizard.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupport-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qabstractprintdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qpagesetupdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qabstractprintdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintengine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinterinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/moc_specificworker.cpp \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/specificworker.h \
  /usr/include/c++/13/expected \
@@ -1140,7 +1331,7 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
  /usr/local/include/cppitertools/unique_justseen.hpp \
- /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/common_types.h \
  /usr/include/Eigen/Dense /usr/include/Eigen/Core \
@@ -1515,4 +1706,92 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/opencv4/opencv2/core/utility.hpp \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h /usr/include/c++/13/ranges
+ /usr/include/opencv4/opencv2/core/cvdef.h /usr/include/c++/13/ranges \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/nominal_room.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRectF \
+ /home/usuario/robomk/actividad3/src/common_types.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/image_processor.h \
+ /usr/include/opencv4/opencv2/opencv.hpp \
+ /usr/include/opencv4/opencv2/calib3d.hpp \
+ /usr/include/opencv4/opencv2/features2d.hpp \
+ /usr/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/config.h \
+ /usr/include/opencv4/opencv2/core/affine.hpp \
+ /usr/include/opencv4/opencv2/dnn.hpp \
+ /usr/include/opencv4/opencv2/dnn/dnn.hpp \
+ /usr/include/opencv4/opencv2/core/async.hpp \
+ /usr/include/opencv4/opencv2/dnn/version.hpp \
+ /usr/include/opencv4/opencv2/dnn/dict.hpp \
+ /usr/include/opencv4/opencv2/dnn/layer.hpp \
+ /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+ /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+ /usr/include/opencv4/opencv2/dnn/dnn.hpp \
+ /usr/include/opencv4/opencv2/flann.hpp \
+ /usr/include/opencv4/opencv2/flann/flann_base.hpp \
+ /usr/include/opencv4/opencv2/flann/general.h \
+ /usr/include/opencv4/opencv2/flann/matrix.h \
+ /usr/include/opencv4/opencv2/flann/params.h \
+ /usr/include/opencv4/opencv2/flann/any.h \
+ /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/saving.h \
+ /usr/include/opencv4/opencv2/flann/nn_index.h \
+ /usr/include/opencv4/opencv2/flann/result_set.h \
+ /usr/include/opencv4/opencv2/flann/all_indices.h \
+ /usr/include/opencv4/opencv2/flann/kdtree_index.h \
+ /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
+ /usr/include/opencv4/opencv2/flann/dist.h \
+ /usr/include/opencv4/opencv2/flann/heap.h \
+ /usr/include/opencv4/opencv2/flann/allocator.h \
+ /usr/include/opencv4/opencv2/flann/random.h \
+ /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
+ /usr/include/opencv4/opencv2/flann/kmeans_index.h \
+ /usr/include/opencv4/opencv2/flann/logger.h \
+ /usr/include/opencv4/opencv2/flann/composite_index.h \
+ /usr/include/opencv4/opencv2/flann/linear_index.h \
+ /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+ /usr/include/opencv4/opencv2/flann/lsh_index.h \
+ /usr/include/opencv4/opencv2/flann/lsh_table.h \
+ /usr/include/c++/13/math.h \
+ /usr/include/opencv4/opencv2/flann/autotuned_index.h \
+ /usr/include/opencv4/opencv2/flann/ground_truth.h \
+ /usr/include/opencv4/opencv2/flann/index_testing.h \
+ /usr/include/opencv4/opencv2/flann/timer.h \
+ /usr/include/opencv4/opencv2/flann/sampling.h \
+ /usr/include/opencv4/opencv2/highgui.hpp \
+ /usr/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/include/opencv4/opencv2/videoio.hpp \
+ /usr/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/include/opencv4/opencv2/ml.hpp \
+ /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
+ /usr/include/opencv4/opencv2/objdetect.hpp \
+ /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+ /usr/include/opencv4/opencv2/objdetect/face.hpp \
+ /usr/include/opencv4/opencv2/photo.hpp \
+ /usr/include/opencv4/opencv2/stitching.hpp \
+ /usr/include/opencv4/opencv2/stitching/warpers.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /usr/include/opencv4/opencv2/core/cuda.hpp \
+ /usr/include/opencv4/opencv2/core/cuda_types.hpp \
+ /usr/include/opencv4/opencv2/core/cuda.inl.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+ /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+ /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /usr/include/opencv4/opencv2/video.hpp \
+ /usr/include/opencv4/opencv2/video/tracking.hpp \
+ /usr/include/opencv4/opencv2/video/background_segm.hpp \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/door_detector.h

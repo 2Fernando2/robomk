@@ -7,8 +7,8 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/usuario/robomk/actividad3/generated/CMakeLists.txt",
-		"/home/usuario/robocomp/cmake/robocomp.cmake",
-		"/home/usuario/robocomp/cmake/modules/qt.cmake",
+		"/home/robocomp/robocomp/cmake/robocomp.cmake",
+		"/home/robocomp/robocomp/cmake/modules/qt.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
@@ -196,7 +196,7 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake",
 		"/home/usuario/robomk/actividad3/src/CMakeLists.txt",
-		"/home/usuario/robocomp/cmake/modules/opencv4.cmake",
+		"/home/robocomp/robocomp/cmake/modules/opencv4.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake",
 		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
@@ -227,31 +227,31 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h",
+			"/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h",
 			"MU",
 			"EVVQFOUPAI/moc_ConfigLoader.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
+			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
 			"MU",
 			"4B7W4TDGLD/moc_abstract_graphic_viewer.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h",
+			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h",
 			"MU",
 			"UITLZZOD3R/moc_GRAFCETStep.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/rapplication/rapplication.h",
+			"/home/robocomp/robocomp/classes/rapplication/rapplication.h",
 			"MU",
 			"EMJXXFBHS2/moc_rapplication.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/sigwatch/sigwatch.h",
+			"/home/robocomp/robocomp/classes/sigwatch/sigwatch.h",
 			"MU",
 			"I7T5MHM6VT/moc_sigwatch.cpp",
 			null
@@ -263,9 +263,21 @@
 			null
 		],
 		[
+			"/home/usuario/robomk/actividad3/src/door_detector.h",
+			"MU",
+			"VNU7RW3YIC/moc_door_detector.cpp",
+			null
+		],
+		[
 			"/home/usuario/robomk/actividad3/src/hungarian.h",
 			"MU",
 			"VNU7RW3YIC/moc_hungarian.cpp",
+			null
+		],
+		[
+			"/home/usuario/robomk/actividad3/src/qcustomplot.h",
+			"MU",
+			"VNU7RW3YIC/moc_qcustomplot.cpp",
 			null
 		],
 		[
@@ -284,6 +296,12 @@
 			"/home/usuario/robomk/actividad3/src/specificworker.h",
 			"MU",
 			"VNU7RW3YIC/moc_specificworker.cpp",
+			null
+		],
+		[
+			"/home/usuario/robomk/actividad3/src/time_series_plotter.h",
+			"MU",
+			"VNU7RW3YIC/moc_time_series_plotter.cpp",
 			null
 		]
 	],
@@ -315,9 +333,9 @@
 		"/opt/robocomp/include",
 		"/classes",
 		"/home/usuario/robomk/actividad3",
-		"/home/usuario/robocomp/classes",
-		"/home/usuario/robocomp/libs",
-		"/home/usuario/robocomp/interfaces",
+		"/home/robocomp/robocomp/classes",
+		"/home/robocomp/robocomp/libs",
+		"/home/robocomp/robocomp/interfaces",
 		"/include",
 		"/usr/include/opencv4",
 		"/usr/include/x86_64-linux-gnu/qt6/QtGui",
@@ -375,40 +393,47 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.cpp",
+			"/home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
+			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
+			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/classes/rapplication/rapplication.cpp",
+			"/home/robocomp/robocomp/classes/rapplication/rapplication.cpp",
 			"MU",
 			null
 		],
-		[ "/home/usuario/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
+		[ "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
 		[
 			"/home/usuario/robomk/actividad3/generated/genericworker.cpp",
 			"MU",
 			null
 		],
 		[ "/home/usuario/robomk/actividad3/generated/main.cpp", "MU", null ],
+		[ "/home/usuario/robomk/actividad3/src/door_detector.cpp", "MU", null ],
 		[ "/home/usuario/robomk/actividad3/src/hungarian.cpp", "MU", null ],
+		[ "/home/usuario/robomk/actividad3/src/qcustomplot.cpp", "MU", null ],
 		[
 			"/home/usuario/robomk/actividad3/src/ransac_line_detector.cpp",
 			"MU",
 			null
 		],
 		[ "/home/usuario/robomk/actividad3/src/room_detector.cpp", "MU", null ],
-		[ "/home/usuario/robomk/actividad3/src/specificworker.cpp", "MU", null ]
+		[ "/home/usuario/robomk/actividad3/src/specificworker.cpp", "MU", null ],
+		[
+			"/home/usuario/robomk/actividad3/src/time_series_plotter.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [ "/home/usuario/robomk/actividad3/src" ],

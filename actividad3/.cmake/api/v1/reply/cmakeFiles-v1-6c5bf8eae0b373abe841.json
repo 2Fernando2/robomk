@@ -128,11 +128,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/usuario/robocomp/cmake/robocomp.cmake"
+			"path" : "/home/robocomp/robocomp/cmake/robocomp.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/usuario/robocomp/cmake/modules/qt.cmake"
+			"path" : "/home/robocomp/robocomp/cmake/modules/qt.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -932,7 +932,7 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/usuario/robocomp/cmake/modules/opencv4.cmake"
+			"path" : "/home/robocomp/robocomp/cmake/modules/opencv4.cmake"
 		},
 		{
 			"isExternal" : true,

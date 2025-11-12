@@ -1,253 +1,10 @@
-/home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/moc_specificworker.cpp: /home/usuario/robomk/actividad3/src/specificworker.h \
+/home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/moc_qcustomplot.cpp: /home/usuario/robomk/actividad3/src/qcustomplot.h \
   /home/usuario/robomk/actividad3/generated/multi_room_autogen/moc_predefs.h \
-  /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
-  /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
-  /home/usuario/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-  /home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
-  /home/usuario/robomk/actividad3/generated/Camera360RGB.h \
-  /home/usuario/robomk/actividad3/generated/GenericBase.h \
-  /home/usuario/robomk/actividad3/generated/Lidar3D.h \
-  /home/usuario/robomk/actividad3/generated/OmniRobot.h \
-  /home/usuario/robomk/actividad3/generated/genericworker.h \
-  /home/usuario/robomk/actividad3/src/common_types.h \
-  /home/usuario/robomk/actividad3/src/door_detector.h \
-  /home/usuario/robomk/actividad3/src/hungarian.h \
-  /home/usuario/robomk/actividad3/src/image_processor.h \
-  /home/usuario/robomk/actividad3/src/munkres.hpp \
-  /home/usuario/robomk/actividad3/src/nominal_room.h \
-  /home/usuario/robomk/actividad3/src/ransac_line_detector.h \
-  /home/usuario/robomk/actividad3/src/room_detector.h \
   /usr/include/GL/gl.h \
-  /usr/include/Ice/AsyncResult.h \
-  /usr/include/Ice/BatchRequestQueueF.h \
-  /usr/include/Ice/Buffer.h \
-  /usr/include/Ice/BuiltinSequences.h \
-  /usr/include/Ice/CommunicatorF.h \
-  /usr/include/Ice/Comparable.h \
-  /usr/include/Ice/Config.h \
-  /usr/include/Ice/ConnectionF.h \
-  /usr/include/Ice/ConnectionIF.h \
-  /usr/include/Ice/Current.h \
-  /usr/include/Ice/DefaultValueFactory.h \
-  /usr/include/Ice/EndpointF.h \
-  /usr/include/Ice/EndpointTypes.h \
-  /usr/include/Ice/Exception.h \
-  /usr/include/Ice/ExceptionHelpers.h \
-  /usr/include/Ice/FactoryTable.h \
-  /usr/include/Ice/FactoryTableInit.h \
-  /usr/include/Ice/Format.h \
-  /usr/include/Ice/GCObject.h \
-  /usr/include/Ice/Handle.h \
-  /usr/include/Ice/Identity.h \
-  /usr/include/Ice/Incoming.h \
-  /usr/include/Ice/IncomingAsyncF.h \
-  /usr/include/Ice/InputStream.h \
-  /usr/include/Ice/InstanceF.h \
-  /usr/include/Ice/Instrumentation.h \
-  /usr/include/Ice/LocalException.h \
-  /usr/include/Ice/LocalObject.h \
-  /usr/include/Ice/LoggerF.h \
-  /usr/include/Ice/Object.h \
-  /usr/include/Ice/ObjectAdapterF.h \
-  /usr/include/Ice/ObjectF.h \
-  /usr/include/Ice/ObserverHelper.h \
-  /usr/include/Ice/Optional.h \
-  /usr/include/Ice/OutgoingAsync.h \
-  /usr/include/Ice/OutgoingAsyncF.h \
-  /usr/include/Ice/OutputStream.h \
-  /usr/include/Ice/Protocol.h \
-  /usr/include/Ice/Proxy.h \
-  /usr/include/Ice/ProxyF.h \
-  /usr/include/Ice/ProxyFactoryF.h \
-  /usr/include/Ice/ProxyHandle.h \
-  /usr/include/Ice/ReferenceF.h \
-  /usr/include/Ice/RequestHandlerF.h \
-  /usr/include/Ice/ResponseHandlerF.h \
-  /usr/include/Ice/ServantLocatorF.h \
-  /usr/include/Ice/ServantManagerF.h \
-  /usr/include/Ice/SlicedDataF.h \
-  /usr/include/Ice/StreamHelpers.h \
-  /usr/include/Ice/UniquePtr.h \
-  /usr/include/Ice/UserExceptionFactory.h \
-  /usr/include/Ice/Value.h \
-  /usr/include/Ice/ValueF.h \
-  /usr/include/Ice/ValueFactory.h \
-  /usr/include/Ice/Version.h \
-  /usr/include/IceUtil/Atomic.h \
-  /usr/include/IceUtil/Cond.h \
-  /usr/include/IceUtil/Config.h \
-  /usr/include/IceUtil/Exception.h \
-  /usr/include/IceUtil/Handle.h \
-  /usr/include/IceUtil/Lock.h \
-  /usr/include/IceUtil/Monitor.h \
-  /usr/include/IceUtil/Mutex.h \
-  /usr/include/IceUtil/MutexProtocol.h \
-  /usr/include/IceUtil/PopDisableWarnings.h \
-  /usr/include/IceUtil/PushDisableWarnings.h \
-  /usr/include/IceUtil/ScopedArray.h \
-  /usr/include/IceUtil/Shared.h \
-  /usr/include/IceUtil/Thread.h \
-  /usr/include/IceUtil/ThreadException.h \
-  /usr/include/IceUtil/Time.h \
-  /usr/include/IceUtil/Timer.h \
-  /usr/include/IceUtil/UndefSysMacros.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
-  /usr/include/boost/assert/source_location.hpp \
-  /usr/include/boost/circular_buffer.hpp \
-  /usr/include/boost/circular_buffer/base.hpp \
-  /usr/include/boost/circular_buffer/debug.hpp \
-  /usr/include/boost/circular_buffer/details.hpp \
-  /usr/include/boost/circular_buffer/space_optimized.hpp \
-  /usr/include/boost/circular_buffer_fwd.hpp \
-  /usr/include/boost/concept/assert.hpp \
-  /usr/include/boost/concept/detail/backward_compatibility.hpp \
-  /usr/include/boost/concept/detail/concept_def.hpp \
-  /usr/include/boost/concept/detail/concept_undef.hpp \
-  /usr/include/boost/concept/detail/general.hpp \
-  /usr/include/boost/concept/detail/has_constraints.hpp \
-  /usr/include/boost/concept/usage.hpp \
-  /usr/include/boost/concept_check.hpp \
-  /usr/include/boost/config.hpp \
-  /usr/include/boost/config/detail/cxx_composite.hpp \
-  /usr/include/boost/config/detail/select_compiler_config.hpp \
-  /usr/include/boost/config/detail/select_platform_config.hpp \
-  /usr/include/boost/config/detail/select_stdlib_config.hpp \
-  /usr/include/boost/config/detail/suffix.hpp \
-  /usr/include/boost/config/helper_macros.hpp \
-  /usr/include/boost/config/workaround.hpp \
-  /usr/include/boost/core/addressof.hpp \
-  /usr/include/boost/core/allocator_access.hpp \
-  /usr/include/boost/core/empty_value.hpp \
-  /usr/include/boost/core/no_exceptions_support.hpp \
-  /usr/include/boost/core/pointer_traits.hpp \
-  /usr/include/boost/cstdint.hpp \
-  /usr/include/boost/current_function.hpp \
-  /usr/include/boost/detail/workaround.hpp \
-  /usr/include/boost/exception/exception.hpp \
-  /usr/include/boost/limits.hpp \
-  /usr/include/boost/move/adl_move_swap.hpp \
-  /usr/include/boost/move/algo/move.hpp \
-  /usr/include/boost/move/algorithm.hpp \
-  /usr/include/boost/move/core.hpp \
-  /usr/include/boost/move/detail/addressof.hpp \
-  /usr/include/boost/move/detail/config_begin.hpp \
-  /usr/include/boost/move/detail/config_end.hpp \
-  /usr/include/boost/move/detail/iterator_to_raw_pointer.hpp \
-  /usr/include/boost/move/detail/iterator_traits.hpp \
-  /usr/include/boost/move/detail/meta_utils.hpp \
-  /usr/include/boost/move/detail/meta_utils_core.hpp \
-  /usr/include/boost/move/detail/pointer_element.hpp \
-  /usr/include/boost/move/detail/to_raw_pointer.hpp \
-  /usr/include/boost/move/detail/type_traits.hpp \
-  /usr/include/boost/move/detail/workaround.hpp \
-  /usr/include/boost/move/iterator.hpp \
-  /usr/include/boost/move/move.hpp \
-  /usr/include/boost/move/traits.hpp \
-  /usr/include/boost/move/utility.hpp \
-  /usr/include/boost/move/utility_core.hpp \
-  /usr/include/boost/preprocessor/arithmetic/dec.hpp \
-  /usr/include/boost/preprocessor/arithmetic/inc.hpp \
-  /usr/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
-  /usr/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
-  /usr/include/boost/preprocessor/cat.hpp \
-  /usr/include/boost/preprocessor/comma_if.hpp \
-  /usr/include/boost/preprocessor/config/config.hpp \
-  /usr/include/boost/preprocessor/config/limits.hpp \
-  /usr/include/boost/preprocessor/control/expr_iif.hpp \
-  /usr/include/boost/preprocessor/control/if.hpp \
-  /usr/include/boost/preprocessor/control/iif.hpp \
-  /usr/include/boost/preprocessor/debug/error.hpp \
-  /usr/include/boost/preprocessor/detail/auto_rec.hpp \
-  /usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
-  /usr/include/boost/preprocessor/facilities/check_empty.hpp \
-  /usr/include/boost/preprocessor/facilities/empty.hpp \
-  /usr/include/boost/preprocessor/facilities/expand.hpp \
-  /usr/include/boost/preprocessor/facilities/overload.hpp \
-  /usr/include/boost/preprocessor/logical/bool.hpp \
-  /usr/include/boost/preprocessor/logical/compl.hpp \
-  /usr/include/boost/preprocessor/logical/limits/bool_256.hpp \
-  /usr/include/boost/preprocessor/punctuation/comma.hpp \
-  /usr/include/boost/preprocessor/punctuation/comma_if.hpp \
-  /usr/include/boost/preprocessor/repetition/detail/for.hpp \
-  /usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp \
-  /usr/include/boost/preprocessor/repetition/for.hpp \
-  /usr/include/boost/preprocessor/repetition/limits/for_256.hpp \
-  /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
-  /usr/include/boost/preprocessor/seq/elem.hpp \
-  /usr/include/boost/preprocessor/seq/enum.hpp \
-  /usr/include/boost/preprocessor/seq/for_each_i.hpp \
-  /usr/include/boost/preprocessor/seq/limits/elem_256.hpp \
-  /usr/include/boost/preprocessor/seq/limits/enum_256.hpp \
-  /usr/include/boost/preprocessor/seq/limits/size_256.hpp \
-  /usr/include/boost/preprocessor/seq/seq.hpp \
-  /usr/include/boost/preprocessor/seq/size.hpp \
-  /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
-  /usr/include/boost/preprocessor/tuple/eat.hpp \
-  /usr/include/boost/preprocessor/tuple/elem.hpp \
-  /usr/include/boost/preprocessor/tuple/rem.hpp \
-  /usr/include/boost/preprocessor/variadic/detail/has_opt.hpp \
-  /usr/include/boost/preprocessor/variadic/elem.hpp \
-  /usr/include/boost/preprocessor/variadic/has_opt.hpp \
-  /usr/include/boost/preprocessor/variadic/limits/elem_64.hpp \
-  /usr/include/boost/preprocessor/variadic/limits/size_64.hpp \
-  /usr/include/boost/preprocessor/variadic/size.hpp \
-  /usr/include/boost/static_assert.hpp \
-  /usr/include/boost/throw_exception.hpp \
-  /usr/include/boost/type_traits/add_lvalue_reference.hpp \
-  /usr/include/boost/type_traits/add_reference.hpp \
-  /usr/include/boost/type_traits/add_rvalue_reference.hpp \
-  /usr/include/boost/type_traits/conditional.hpp \
-  /usr/include/boost/type_traits/conversion_traits.hpp \
-  /usr/include/boost/type_traits/declval.hpp \
-  /usr/include/boost/type_traits/detail/config.hpp \
-  /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
-  /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
-  /usr/include/boost/type_traits/detail/yes_no_type.hpp \
-  /usr/include/boost/type_traits/enable_if.hpp \
-  /usr/include/boost/type_traits/has_nothrow_assign.hpp \
-  /usr/include/boost/type_traits/has_trivial_constructor.hpp \
-  /usr/include/boost/type_traits/has_trivial_copy.hpp \
-  /usr/include/boost/type_traits/has_trivial_destructor.hpp \
-  /usr/include/boost/type_traits/has_trivial_move_assign.hpp \
-  /usr/include/boost/type_traits/integral_constant.hpp \
-  /usr/include/boost/type_traits/intrinsics.hpp \
-  /usr/include/boost/type_traits/is_abstract.hpp \
-  /usr/include/boost/type_traits/is_arithmetic.hpp \
-  /usr/include/boost/type_traits/is_array.hpp \
-  /usr/include/boost/type_traits/is_assignable.hpp \
-  /usr/include/boost/type_traits/is_class.hpp \
-  /usr/include/boost/type_traits/is_complete.hpp \
-  /usr/include/boost/type_traits/is_const.hpp \
-  /usr/include/boost/type_traits/is_constructible.hpp \
-  /usr/include/boost/type_traits/is_convertible.hpp \
-  /usr/include/boost/type_traits/is_copy_constructible.hpp \
-  /usr/include/boost/type_traits/is_default_constructible.hpp \
-  /usr/include/boost/type_traits/is_destructible.hpp \
-  /usr/include/boost/type_traits/is_empty.hpp \
-  /usr/include/boost/type_traits/is_enum.hpp \
-  /usr/include/boost/type_traits/is_floating_point.hpp \
-  /usr/include/boost/type_traits/is_function.hpp \
-  /usr/include/boost/type_traits/is_integral.hpp \
-  /usr/include/boost/type_traits/is_lvalue_reference.hpp \
-  /usr/include/boost/type_traits/is_member_function_pointer.hpp \
-  /usr/include/boost/type_traits/is_member_pointer.hpp \
-  /usr/include/boost/type_traits/is_nothrow_move_assignable.hpp \
-  /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp \
-  /usr/include/boost/type_traits/is_pod.hpp \
-  /usr/include/boost/type_traits/is_pointer.hpp \
-  /usr/include/boost/type_traits/is_reference.hpp \
-  /usr/include/boost/type_traits/is_rvalue_reference.hpp \
-  /usr/include/boost/type_traits/is_same.hpp \
-  /usr/include/boost/type_traits/is_scalar.hpp \
-  /usr/include/boost/type_traits/is_stateless.hpp \
-  /usr/include/boost/type_traits/is_void.hpp \
-  /usr/include/boost/type_traits/is_volatile.hpp \
-  /usr/include/boost/type_traits/remove_cv.hpp \
-  /usr/include/boost/type_traits/remove_reference.hpp \
-  /usr/include/boost/version.hpp \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
   /usr/include/c++/13/atomic \
@@ -275,7 +32,6 @@
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
-  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -285,13 +41,11 @@
   /usr/include/c++/13/bits/fs_fwd.h \
   /usr/include/c++/13/bits/fs_ops.h \
   /usr/include/c++/13/bits/fs_path.h \
-  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
-  /usr/include/c++/13/bits/istream.tcc \
   /usr/include/c++/13/bits/iterator_concepts.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
@@ -331,7 +85,6 @@
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
   /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/specfun.h \
-  /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/std_mutex.h \
@@ -339,7 +92,6 @@
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
-  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -348,13 +100,10 @@
   /usr/include/c++/13/bits/stl_list.h \
   /usr/include/c++/13/bits/stl_map.h \
   /usr/include/c++/13/bits/stl_multimap.h \
-  /usr/include/c++/13/bits/stl_multiset.h \
   /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
-  /usr/include/c++/13/bits/stl_queue.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
-  /usr/include/c++/13/bits/stl_set.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -370,21 +119,17 @@
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/bits/vector.tcc \
-  /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
-  /usr/include/c++/13/cfloat \
   /usr/include/c++/13/chrono \
   /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
-  /usr/include/c++/13/complex \
   /usr/include/c++/13/concepts \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
-  /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
   /usr/include/c++/13/cstring \
   /usr/include/c++/13/ctime \
@@ -392,9 +137,7 @@
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
-  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
-  /usr/include/c++/13/expected \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
@@ -403,22 +146,18 @@
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/filesystem \
-  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
-  /usr/include/c++/13/iostream \
-  /usr/include/c++/13/istream \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
-  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/numeric \
@@ -428,13 +167,8 @@
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
-  /usr/include/c++/13/queue \
   /usr/include/c++/13/random \
-  /usr/include/c++/13/ranges \
   /usr/include/c++/13/ratio \
-  /usr/include/c++/13/set \
-  /usr/include/c++/13/span \
-  /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -456,194 +190,10 @@
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
   /usr/include/c++/13/unordered_map \
-  /usr/include/c++/13/unordered_set \
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
-  /usr/include/eigen3/Eigen/Cholesky \
-  /usr/include/eigen3/Eigen/Core \
-  /usr/include/eigen3/Eigen/Dense \
-  /usr/include/eigen3/Eigen/Eigenvalues \
-  /usr/include/eigen3/Eigen/Geometry \
-  /usr/include/eigen3/Eigen/Householder \
-  /usr/include/eigen3/Eigen/Jacobi \
-  /usr/include/eigen3/Eigen/LU \
-  /usr/include/eigen3/Eigen/QR \
-  /usr/include/eigen3/Eigen/SVD \
-  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h \
-  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h \
-  /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
-  /usr/include/eigen3/Eigen/src/Core/Array.h \
-  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h \
-  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
-  /usr/include/eigen3/Eigen/src/Core/Assign.h \
-  /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
-  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/Block.h \
-  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h \
-  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h \
-  /usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
-  /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
-  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
-  /usr/include/eigen3/Eigen/src/Core/DenseBase.h \
-  /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
-  /usr/include/eigen3/Eigen/src/Core/DenseStorage.h \
-  /usr/include/eigen3/Eigen/src/Core/Diagonal.h \
-  /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
-  /usr/include/eigen3/Eigen/src/Core/Dot.h \
-  /usr/include/eigen3/Eigen/src/Core/EigenBase.h \
-  /usr/include/eigen3/Eigen/src/Core/Fuzzy.h \
-  /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h \
-  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
-  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/IO.h \
-  /usr/include/eigen3/Eigen/src/Core/IndexedView.h \
-  /usr/include/eigen3/Eigen/src/Core/Inverse.h \
-  /usr/include/eigen3/Eigen/src/Core/Map.h \
-  /usr/include/eigen3/Eigen/src/Core/MapBase.h \
-  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
-  /usr/include/eigen3/Eigen/src/Core/Matrix.h \
-  /usr/include/eigen3/Eigen/src/Core/MatrixBase.h \
-  /usr/include/eigen3/Eigen/src/Core/NestByValue.h \
-  /usr/include/eigen3/Eigen/src/Core/NoAlias.h \
-  /usr/include/eigen3/Eigen/src/Core/NumTraits.h \
-  /usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
-  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
-  /usr/include/eigen3/Eigen/src/Core/Product.h \
-  /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
-  /usr/include/eigen3/Eigen/src/Core/Random.h \
-  /usr/include/eigen3/Eigen/src/Core/Redux.h \
-  /usr/include/eigen3/Eigen/src/Core/Ref.h \
-  /usr/include/eigen3/Eigen/src/Core/Replicate.h \
-  /usr/include/eigen3/Eigen/src/Core/Reshaped.h \
-  /usr/include/eigen3/Eigen/src/Core/ReturnByValue.h \
-  /usr/include/eigen3/Eigen/src/Core/Reverse.h \
-  /usr/include/eigen3/Eigen/src/Core/Select.h \
-  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
-  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /usr/include/eigen3/Eigen/src/Core/Solve.h \
-  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h \
-  /usr/include/eigen3/Eigen/src/Core/SolverBase.h \
-  /usr/include/eigen3/Eigen/src/Core/StableNorm.h \
-  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
-  /usr/include/eigen3/Eigen/src/Core/Stride.h \
-  /usr/include/eigen3/Eigen/src/Core/Swap.h \
-  /usr/include/eigen3/Eigen/src/Core/Transpose.h \
-  /usr/include/eigen3/Eigen/src/Core/Transpositions.h \
-  /usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h \
-  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
-  /usr/include/eigen3/Eigen/src/Core/Visitor.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
-  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
-  /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Constants.h \
-  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
-  /usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
-  /usr/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
-  /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Memory.h \
-  /usr/include/eigen3/Eigen/src/Core/util/Meta.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
-  /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
-  /usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
-  /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
-  /usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h \
-  /usr/include/eigen3/Eigen/src/Geometry/EulerAngles.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Hyperplane.h \
-  /usr/include/eigen3/Eigen/src/Geometry/OrthoMethods.h \
-  /usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Quaternion.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h \
-  /usr/include/eigen3/Eigen/src/Geometry/RotationBase.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Scaling.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Transform.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Translation.h \
-  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
-  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
-  /usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h \
-  /usr/include/eigen3/Eigen/src/Householder/Householder.h \
-  /usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h \
-  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h \
-  /usr/include/eigen3/Eigen/src/LU/Determinant.h \
-  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h \
-  /usr/include/eigen3/Eigen/src/LU/InverseImpl.h \
-  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h \
-  /usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h \
-  /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h \
-  /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h \
-  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h \
-  /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h \
-  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h \
-  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h \
-  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h \
-  /usr/include/eigen3/Eigen/src/misc/Image.h \
-  /usr/include/eigen3/Eigen/src/misc/Kernel.h \
-  /usr/include/eigen3/Eigen/src/misc/RealSvd2x2.h \
-  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h \
-  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
   /usr/include/features-time64.h \
@@ -654,106 +204,6 @@
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
-  /usr/include/math.h \
-  /usr/include/opencv4/opencv2/calib3d.hpp \
-  /usr/include/opencv4/opencv2/core.hpp \
-  /usr/include/opencv4/opencv2/core/affine.hpp \
-  /usr/include/opencv4/opencv2/core/async.hpp \
-  /usr/include/opencv4/opencv2/core/base.hpp \
-  /usr/include/opencv4/opencv2/core/bufferpool.hpp \
-  /usr/include/opencv4/opencv2/core/check.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.inl.hpp \
-  /usr/include/opencv4/opencv2/core/cuda_types.hpp \
-  /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
-  /usr/include/opencv4/opencv2/core/cvdef.h \
-  /usr/include/opencv4/opencv2/core/cvstd.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
-  /usr/include/opencv4/opencv2/core/fast_math.hpp \
-  /usr/include/opencv4/opencv2/core/hal/interface.h \
-  /usr/include/opencv4/opencv2/core/mat.hpp \
-  /usr/include/opencv4/opencv2/core/mat.inl.hpp \
-  /usr/include/opencv4/opencv2/core/matx.hpp \
-  /usr/include/opencv4/opencv2/core/neon_utils.hpp \
-  /usr/include/opencv4/opencv2/core/operations.hpp \
-  /usr/include/opencv4/opencv2/core/optim.hpp \
-  /usr/include/opencv4/opencv2/core/ovx.hpp \
-  /usr/include/opencv4/opencv2/core/persistence.hpp \
-  /usr/include/opencv4/opencv2/core/saturate.hpp \
-  /usr/include/opencv4/opencv2/core/traits.hpp \
-  /usr/include/opencv4/opencv2/core/types.hpp \
-  /usr/include/opencv4/opencv2/core/utility.hpp \
-  /usr/include/opencv4/opencv2/core/version.hpp \
-  /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
-  /usr/include/opencv4/opencv2/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dict.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
-  /usr/include/opencv4/opencv2/dnn/layer.hpp \
-  /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
-  /usr/include/opencv4/opencv2/dnn/version.hpp \
-  /usr/include/opencv4/opencv2/features2d.hpp \
-  /usr/include/opencv4/opencv2/flann.hpp \
-  /usr/include/opencv4/opencv2/flann/all_indices.h \
-  /usr/include/opencv4/opencv2/flann/allocator.h \
-  /usr/include/opencv4/opencv2/flann/any.h \
-  /usr/include/opencv4/opencv2/flann/autotuned_index.h \
-  /usr/include/opencv4/opencv2/flann/composite_index.h \
-  /usr/include/opencv4/opencv2/flann/config.h \
-  /usr/include/opencv4/opencv2/flann/defines.h \
-  /usr/include/opencv4/opencv2/flann/dist.h \
-  /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
-  /usr/include/opencv4/opencv2/flann/flann_base.hpp \
-  /usr/include/opencv4/opencv2/flann/general.h \
-  /usr/include/opencv4/opencv2/flann/ground_truth.h \
-  /usr/include/opencv4/opencv2/flann/heap.h \
-  /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
-  /usr/include/opencv4/opencv2/flann/index_testing.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_index.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
-  /usr/include/opencv4/opencv2/flann/kmeans_index.h \
-  /usr/include/opencv4/opencv2/flann/linear_index.h \
-  /usr/include/opencv4/opencv2/flann/logger.h \
-  /usr/include/opencv4/opencv2/flann/lsh_index.h \
-  /usr/include/opencv4/opencv2/flann/lsh_table.h \
-  /usr/include/opencv4/opencv2/flann/matrix.h \
-  /usr/include/opencv4/opencv2/flann/miniflann.hpp \
-  /usr/include/opencv4/opencv2/flann/nn_index.h \
-  /usr/include/opencv4/opencv2/flann/params.h \
-  /usr/include/opencv4/opencv2/flann/random.h \
-  /usr/include/opencv4/opencv2/flann/result_set.h \
-  /usr/include/opencv4/opencv2/flann/sampling.h \
-  /usr/include/opencv4/opencv2/flann/saving.h \
-  /usr/include/opencv4/opencv2/flann/timer.h \
-  /usr/include/opencv4/opencv2/highgui.hpp \
-  /usr/include/opencv4/opencv2/imgcodecs.hpp \
-  /usr/include/opencv4/opencv2/imgproc.hpp \
-  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /usr/include/opencv4/opencv2/ml.hpp \
-  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
-  /usr/include/opencv4/opencv2/objdetect.hpp \
-  /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
-  /usr/include/opencv4/opencv2/objdetect/face.hpp \
-  /usr/include/opencv4/opencv2/opencv.hpp \
-  /usr/include/opencv4/opencv2/opencv_modules.hpp \
-  /usr/include/opencv4/opencv2/photo.hpp \
-  /usr/include/opencv4/opencv2/stitching.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/warpers.hpp \
-  /usr/include/opencv4/opencv2/video.hpp \
-  /usr/include/opencv4/opencv2/video/background_segm.hpp \
-  /usr/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/include/opencv4/opencv2/videoio.hpp \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -780,21 +230,12 @@
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -853,10 +294,8 @@
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -868,27 +307,39 @@
   /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QCache \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDeadlineTimer \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QHash \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMargins \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMultiMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMutex \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRectF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QScopedPointer \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStack \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtNumeric \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20algorithm.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h \
@@ -1111,14 +562,22 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxpfunctional.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QActionGroup \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QFileSystemModel \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QMatrix4x4 \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDevice \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDeviceWindow \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintEvent \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainterPath \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/QResizeEvent \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QShortcut \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QSurfaceFormat \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QVector3D \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QWheelEvent \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
@@ -1232,45 +691,152 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qabstractstate.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachineglobal.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachine-config.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachineexports.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/QtPrintSupport \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/QtPrintSupportDepends \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qabstractprintdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qpagesetupdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintengine.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinter.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinterinfo.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupport-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QCommonStyle \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollerProperties \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgetsDepends \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaccessiblewidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaction.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qactiongroup.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qbuttongroup.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcalendarwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcheckbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcolordialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcolormap.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcolumnview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcombobox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcommandlinkbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcommonstyle.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcompleter.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdatawidgetmapper.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdatetimeedit.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdial.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdrawutil.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qerrormessage.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfiledialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfileiconprovider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfilesystemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfocusframe.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfontcombobox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfontdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgesture.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgesturerecognizer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsanchorlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicseffect.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitemanimation.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicslinearlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsproxywidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicssceneevent.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicstransform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicswidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgroupbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qinputdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qitemeditorfactory.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qkeysequenceedit.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlcdnumber.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdisubwindow.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenubar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qplaintextedit.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qproxystyle.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qradiobutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscroller.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollerproperties.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qshortcut.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizegrip.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplashscreen.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleditemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstylefactory.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstylepainter.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleplugin.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsystemtrayicon.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtablewidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextbrowser.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextedit.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtooltip.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreeview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsversion.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qundoview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwhatsthis.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidgetaction.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwizard.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h \
@@ -1323,7 +889,6 @@
   /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h \
@@ -1369,88 +934,4 @@
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h \
-  /usr/local/include/cppitertools/accumulate.hpp \
-  /usr/local/include/cppitertools/batched.hpp \
-  /usr/local/include/cppitertools/chain.hpp \
-  /usr/local/include/cppitertools/chunked.hpp \
-  /usr/local/include/cppitertools/combinations.hpp \
-  /usr/local/include/cppitertools/combinations_with_replacement.hpp \
-  /usr/local/include/cppitertools/compress.hpp \
-  /usr/local/include/cppitertools/count.hpp \
-  /usr/local/include/cppitertools/cycle.hpp \
-  /usr/local/include/cppitertools/dropwhile.hpp \
-  /usr/local/include/cppitertools/enumerate.hpp \
-  /usr/local/include/cppitertools/filter.hpp \
-  /usr/local/include/cppitertools/filterfalse.hpp \
-  /usr/local/include/cppitertools/groupby.hpp \
-  /usr/local/include/cppitertools/imap.hpp \
-  /usr/local/include/cppitertools/internal/iter_tuples.hpp \
-  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
-  /usr/local/include/cppitertools/internal/iteratoriterator.hpp \
-  /usr/local/include/cppitertools/internal/iterbase.hpp \
-  /usr/local/include/cppitertools/itertools.hpp \
-  /usr/local/include/cppitertools/permutations.hpp \
-  /usr/local/include/cppitertools/powerset.hpp \
-  /usr/local/include/cppitertools/product.hpp \
-  /usr/local/include/cppitertools/range.hpp \
-  /usr/local/include/cppitertools/repeat.hpp \
-  /usr/local/include/cppitertools/reversed.hpp \
-  /usr/local/include/cppitertools/slice.hpp \
-  /usr/local/include/cppitertools/sliding_window.hpp \
-  /usr/local/include/cppitertools/sorted.hpp \
-  /usr/local/include/cppitertools/starmap.hpp \
-  /usr/local/include/cppitertools/takewhile.hpp \
-  /usr/local/include/cppitertools/unique_everseen.hpp \
-  /usr/local/include/cppitertools/unique_justseen.hpp \
-  /usr/local/include/cppitertools/zip.hpp \
-  /usr/local/include/toml++/impl/array.hpp \
-  /usr/local/include/toml++/impl/array.inl \
-  /usr/local/include/toml++/impl/at_path.hpp \
-  /usr/local/include/toml++/impl/at_path.inl \
-  /usr/local/include/toml++/impl/date_time.hpp \
-  /usr/local/include/toml++/impl/formatter.hpp \
-  /usr/local/include/toml++/impl/formatter.inl \
-  /usr/local/include/toml++/impl/forward_declarations.hpp \
-  /usr/local/include/toml++/impl/header_end.hpp \
-  /usr/local/include/toml++/impl/header_start.hpp \
-  /usr/local/include/toml++/impl/json_formatter.hpp \
-  /usr/local/include/toml++/impl/json_formatter.inl \
-  /usr/local/include/toml++/impl/key.hpp \
-  /usr/local/include/toml++/impl/make_node.hpp \
-  /usr/local/include/toml++/impl/node.hpp \
-  /usr/local/include/toml++/impl/node.inl \
-  /usr/local/include/toml++/impl/node_view.hpp \
-  /usr/local/include/toml++/impl/parse_error.hpp \
-  /usr/local/include/toml++/impl/parse_result.hpp \
-  /usr/local/include/toml++/impl/parser.hpp \
-  /usr/local/include/toml++/impl/parser.inl \
-  /usr/local/include/toml++/impl/path.hpp \
-  /usr/local/include/toml++/impl/path.inl \
-  /usr/local/include/toml++/impl/preprocessor.hpp \
-  /usr/local/include/toml++/impl/print_to_stream.hpp \
-  /usr/local/include/toml++/impl/print_to_stream.inl \
-  /usr/local/include/toml++/impl/simd.hpp \
-  /usr/local/include/toml++/impl/source_region.hpp \
-  /usr/local/include/toml++/impl/std_except.hpp \
-  /usr/local/include/toml++/impl/std_initializer_list.hpp \
-  /usr/local/include/toml++/impl/std_map.hpp \
-  /usr/local/include/toml++/impl/std_new.hpp \
-  /usr/local/include/toml++/impl/std_optional.hpp \
-  /usr/local/include/toml++/impl/std_string.hpp \
-  /usr/local/include/toml++/impl/std_string.inl \
-  /usr/local/include/toml++/impl/std_utility.hpp \
-  /usr/local/include/toml++/impl/std_vector.hpp \
-  /usr/local/include/toml++/impl/table.hpp \
-  /usr/local/include/toml++/impl/table.inl \
-  /usr/local/include/toml++/impl/toml_formatter.hpp \
-  /usr/local/include/toml++/impl/toml_formatter.inl \
-  /usr/local/include/toml++/impl/unicode.hpp \
-  /usr/local/include/toml++/impl/unicode.inl \
-  /usr/local/include/toml++/impl/unicode_autogenerated.hpp \
-  /usr/local/include/toml++/impl/value.hpp \
-  /usr/local/include/toml++/impl/version.hpp \
-  /usr/local/include/toml++/impl/yaml_formatter.hpp \
-  /usr/local/include/toml++/impl/yaml_formatter.inl \
-  /usr/local/include/toml++/toml.h \
-  /usr/local/include/toml++/toml.hpp
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h

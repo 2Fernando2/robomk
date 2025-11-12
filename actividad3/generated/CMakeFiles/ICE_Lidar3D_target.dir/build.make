@@ -68,9 +68,9 @@ include generated/CMakeFiles/ICE_Lidar3D_target.dir/progress.make
 
 generated/CMakeFiles/ICE_Lidar3D_target: generated/Lidar3D.ice
 
-generated/Lidar3D.ice: /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad3/generated/Lidar3D.ice from /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl"
-	cd /home/usuario/robomk/actividad3/generated && robocompdsl /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl /home/usuario/robomk/actividad3/generated/Lidar3D.ice
+generated/Lidar3D.ice: /home/robocomp/robocomp/interfaces/IDSLs/Lidar3D.idsl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad3/generated/Lidar3D.ice from /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl"
+	cd /home/usuario/robomk/actividad3/generated && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl /home/usuario/robomk/actividad3/generated/Lidar3D.ice
 
 ICE_Lidar3D_target: generated/CMakeFiles/ICE_Lidar3D_target
 ICE_Lidar3D_target: generated/Lidar3D.ice
