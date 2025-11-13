@@ -17,11 +17,24 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
     {
         const auto &p1 = p[0];
         const auto &p2 = p[1];
-        auto den = (p2.phi - p1.phi);
-        den = (den == 0) ? 1 : den;
-        auto derived = (p2.distance2d - p1.distance2d) / den;
-        if (derived > 1000.f) peaks.push_back(p1);
+        auto difference = abs((p2.distance2d - p1.distance2d));
+        auto closest = p1.distance2d < p2.distance2d ? p1 : p2;
+        if (difference > 1000.f) peaks.push_back(closest);
     }
+
+    /*//no-maximum suppression filter
+    for (auto i = 0; i < peaks.size(); i++)
+    {
+        for (auto j = i + 1; j < peaks.size(); j++)
+        {
+            auto dist = std::sqrt(std::pow((peaks[j].x - peaks[i].x), 2) + std::pow((peaks[j].y - peaks[i].y), 2));
+            if (dist < MIN_PEAK_THRESHOLD) peaks.erase(peaks.begin() + j);
+        }
+    }*/
+
+    draw_peaks(peaks, scene);
+
+    if (peaks.empty()) return {};
 
     // compute doors in peaks data
     Doors doors;
@@ -30,13 +43,12 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
         const auto &p1 = c[0];
         const auto &p2 = c[1];
         auto dist = std::sqrt(std::pow((p2.x - p1.x), 2) + std::pow((p2.y - p1.y), 2));
-        // if (MIN_DOOR_THRESHOLD < dist && dist < MAX_DOOR_THRESHOLD) doors.push_back()
+        if (MIN_DOOR_THRESHOLD < dist and dist < MAX_DOOR_THRESHOLD)
+            doors.push_back(Door(Eigen::Vector2f(p1.x, p1.y), p1.phi,Eigen::Vector2f(p2.x, p2.y), p2.phi));
     }
+    draw_doors(doors, scene);
 
-    // filter lidar points
-    
-
-    return {};
+    return doors;
 }
 
 // Method to use the Doors vector to filter out the LiDAR points that como from a room outside the current one
@@ -76,4 +88,54 @@ RoboCompLidar3D::TPoints DoorDetector::filter_points(const RoboCompLidar3D::TPoi
         }
     }
     return filtered;
+}
+
+
+
+void DoorDetector::draw_peaks(RoboCompLidar3D::TPoints &peaks, QGraphicsScene *scene)
+{
+    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
+
+    // remove all items drawn in the previous iteration
+    for(auto i: items)
+    {
+        scene->removeItem(i);
+        delete i;
+    }
+    items.clear();
+
+    for (const auto& peak : peaks)
+    {
+        auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::red), QBrush(QColorConstants::Svg::red));
+        item->setPos(peak.x, peak.y);
+        items.push_back(item);
+    }
+}
+
+void DoorDetector::draw_doors(Doors &doors, QGraphicsScene *scene)
+{
+    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
+
+    // remove all items drawn in the previous iteration
+    for(auto i: items)
+    {
+        scene->removeItem(i);
+        delete i;
+    }
+    items.clear();
+
+
+    for (const auto& door : doors)
+    {
+        auto item = scene->addEllipse(-100, -100, 200, 200, QColor(QColorConstants::Svg::grey), QBrush(QColor(QColorConstants::Svg::grey)));
+        item->setPos(door.p1.x(), door.p1.y());
+        items.push_back(item);
+
+        item = scene->addEllipse(-100, -100, 200, 200, QColor(QColorConstants::Svg::grey), QBrush(QColor(QColorConstants::Svg::grey)));
+        item->setPos(door.p2.x(), door.p2.y());
+        items.push_back(item);
+
+        auto line = scene->addLine(door.p1.x(), door.p1.y(), door.p2.x(), door.p2.y(),QPen(QColor(QColorConstants::Svg::grey), 30));
+        items.push_back(line);
+    }
 }

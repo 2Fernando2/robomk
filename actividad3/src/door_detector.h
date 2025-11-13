@@ -19,9 +19,13 @@ class DoorDetector
         RoboCompLidar3D::TPoints filter_points(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene);
         [[nodiscard]] Doors doors() const { return doors_cache; };
 
+        void draw_peaks(RoboCompLidar3D::TPoints &peaks, QGraphicsScene *scene);
+        void draw_doors(Doors &doors, QGraphicsScene *scene);
+
     private:
         Doors doors_cache;
         const float PEAKS_THRESHOLD = 1000.f;
+        const float MIN_PEAK_THRESHOLD = 300.f;
         const float MIN_DOOR_THRESHOLD = 800.f;
         const float MAX_DOOR_THRESHOLD = 1200.f;
 

@@ -8,6 +8,9 @@
   CMakeFiles/multi_room.dir/__/src/hungarian.cpp.o \
   CMakeFiles/multi_room.dir/__/src/ransac_line_detector.cpp.o \
   CMakeFiles/multi_room.dir/__/src/room_detector.cpp.o \
+  CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o \
+  CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o \
+  CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o \
   CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o \
   CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o \
   CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o \
@@ -19,6 +22,7 @@
   CMakeFiles/multi_room.dir/OmniRobot.cpp.o \
   CMakeFiles/multi_room.dir/Lidar3D.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libtbb.so \
+  /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libQt6PrintSupport.so \
   /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.6.0 \
   /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.6.0 \
   /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.6.0 \
@@ -56,6 +60,7 @@
   /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.6.0 \
   /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.6.0 \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libtbb.so \
+  /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libQt6PrintSupport.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libosgViewer.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libosg.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libosgUtil.so \
@@ -180,6 +185,12 @@ CMakeFiles/multi_room.dir/__/src/ransac_line_detector.cpp.o:
 
 CMakeFiles/multi_room.dir/__/src/room_detector.cpp.o:
 
+CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o:
+
+CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o:
+
+CMakeFiles/multi_room.dir/__/src/time_series_plotter.cpp.o:
+
 CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o:
 
 CMakeFiles/multi_room.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o:
@@ -201,6 +212,8 @@ CMakeFiles/multi_room.dir/OmniRobot.cpp.o:
 CMakeFiles/multi_room.dir/Lidar3D.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libtbb.so:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libQt6PrintSupport.so:
 
 /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.6.0:
 
@@ -275,6 +288,8 @@ CMakeFiles/multi_room.dir/Lidar3D.cpp.o:
 /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.6.0:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libtbb.so:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libQt6PrintSupport.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libosgViewer.so:
 

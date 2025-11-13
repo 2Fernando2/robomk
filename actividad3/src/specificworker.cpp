@@ -385,7 +385,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
 	// Try-Catch block to read the laser data
 	RoboCompLidar3D::TData data;
 	try
-	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 15000, 1);
+	{ data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 15000, 2);
 	} catch(const Ice::Exception& ex){std::cout << ex.what() << std::endl; return {};}
 
 	// filter
@@ -588,7 +588,6 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     items.push_back(line1);
     items.push_back(line2);
 }
-
 
 
 void SpecificWorker::new_target_slot(QPointF point)

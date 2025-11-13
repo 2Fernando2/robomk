@@ -165,7 +165,6 @@ private:
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
 
-
 signals:
 	//void customSignal();
 };
