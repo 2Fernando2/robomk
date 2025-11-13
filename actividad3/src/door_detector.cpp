@@ -21,24 +21,40 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
         auto closest = p1.distance2d < p2.distance2d ? p1 : p2;
         if (difference > 1000.f) peaks.push_back(closest);
     }
-
-    /*//no-maximum suppression filter
-    for (auto i = 0; i < peaks.size(); i++)
-    {
-        for (auto j = i + 1; j < peaks.size(); j++)
-        {
-            auto dist = std::sqrt(std::pow((peaks[j].x - peaks[i].x), 2) + std::pow((peaks[j].y - peaks[i].y), 2));
-            if (dist < MIN_PEAK_THRESHOLD) peaks.erase(peaks.begin() + j);
-        }
-    }*/
-
-    draw_peaks(peaks, scene);
-
     if (peaks.empty()) return {};
+
+
+    //no-maximum suppression filter
+    RoboCompLidar3D::TPoints filtered_peaks;
+    for (size_t i = 0; i < peaks.size(); i++)
+    {
+        RoboCompLidar3D::TPoints ordered_peaks (peaks.begin() + i + 1, peaks.end());
+        int counter = 0;
+        for (const auto &p : ordered_peaks)
+        {
+            counter++;
+            auto distance = std::sqrt(std::pow((p.x - peaks[i].x), 2) + std::pow((p.y - peaks[i].y), 2));
+            if (distance > MIN_PEAK_THRESHOLD)
+            {
+                filtered_peaks.push_back(peaks[i]);
+                filtered_peaks.push_back(p);
+                break;
+            }
+
+        }
+        i += counter;
+    }
+
+    if (filtered_peaks.empty()) return {};
+
+
+    draw_peaks(filtered_peaks, scene);
+
+
 
     // compute doors in peaks data
     Doors doors;
-    for (const auto &c : iter::combinations(peaks, 2))
+    for (const auto &c : iter::combinations(filtered_peaks, 2))
     {
         const auto &p1 = c[0];
         const auto &p2 = c[1];
