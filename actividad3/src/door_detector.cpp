@@ -45,6 +45,43 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
         i += counter;
     }
 
+    /*RoboCompLidar3D::TPoints filtered_peaks;
+    auto it_start = peaks.begin();
+
+    while (it_start != peaks.end())
+    {
+        // El iterador 'it_current' comienza una posición después de 'it_start'
+        auto it_current = it_start + 1;
+
+        // 1. Usa std::find_if para buscar el primer pico que esté
+        //    a una distancia mayor que MIN_PEAK_THRESHOLD.
+        auto it_match = std::find_if(it_current, peaks.end(), [&](const auto& p) {
+            auto distance = std::hypot(p.x - it_start->x, p.y - it_start->y); // std::hypot es más limpio
+            return distance > MIN_PEAK_THRESHOLD;
+        });
+
+        // 2. Si se encuentra una coincidencia:
+        if (it_match != peaks.end())
+        {
+            // Se añaden el pico inicial y el pico encontrado.
+            filtered_peaks.push_back(*it_start);
+            filtered_peaks.push_back(*it_match);
+
+            // Se actualiza el iterador de inicio al pico encontrado más uno,
+            // replicando el comportamiento de 'i += counter'
+            it_start = it_match + 1;
+        }
+        // 3. Si NO se encuentra una coincidencia en el resto del vector:
+        else
+        {
+            // Se avanza el iterador de inicio al final para terminar el bucle,
+            // ya que el pico actual no tiene un par distante.
+            it_start = peaks.end();
+        }*/
+
+
+
+
     if (filtered_peaks.empty()) return {};
 
 
