@@ -43,6 +43,7 @@
 #include "nominal_room.h"
 #include "image_processor.h"
 #include "door_detector.h"
+#include "time_series_plotter.h"
 
 
 /**
@@ -138,6 +139,16 @@ private:
 	QRectF dimensions{-5000, 2500, 10000, -5000};
 	QRectF room_dimensions{-5000, -2500, 10000, 5000};
 
+	// plotter
+	std::unique_ptr<TimeSeriesPlotter> time_series_plotter;
+	int match_error_graph; // To store the index of the speed graph
+
+	//relocalization
+	bool relocal_centered = false;
+	bool localised = false;
+	bool update_robot_pose(const Corners &corners, const Match &match);
+
+
 	const float ROBOT_LENGTH = 400.f;
 	const float MIN_THRESHOLD = static_cast<float>(ROBOT_LENGTH) * 2.f;
 	const float MAX_ADV_SPEED = 1000.f;
@@ -147,9 +158,35 @@ private:
 	bool rot_direction = false; // true: right - false: left
 	bool spiraling = false;
 
+	// state machine
+	enum class STATE {GOTO_DOOR, ORIENT_TO_DOOR, LOCALISE, GOTO_ROOM_CENTER, TURN, IDLE, CROSS_DOOR};
+	inline const char* to_string(const STATE s) const
+	{
+		switch(s) {
+		case STATE::IDLE:               return "IDLE";
+		case STATE::LOCALISE:           return "LOCALISE";
+		case STATE::GOTO_DOOR:          return "GOTO_DOOR";
+		case STATE::TURN:               return "TURN";
+		case STATE::ORIENT_TO_DOOR:     return "ORIENT_TO_DOOR";
+		case STATE::GOTO_ROOM_CENTER:   return "GOTO_ROOM_CENTER";
+		case STATE::CROSS_DOOR:         return "CROSS_DOOR";
+		default:                        return "UNKNOWN";
+		}
+	}
+	STATE state = STATE::LOCALISE;
+	using RetVal = std::tuple<STATE, float, float>;
+
+	RetVal goto_room_center(const RoboCompLidar3D::TPoints &points);
+	RetVal turn(const Corners &corners);
+	RetVal orient_to_door(const RoboCompLidar3D::TPoints &points);
+	RetVal goto_door(const RoboCompLidar3D::TPoints &points);
+	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
+	RetVal localise(const Match &match);
+	RetVal update_pose(const Corners &corners, const Match &match);
+	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
 
 	enum class State{IDLE, FORWARD, TURN, FOLLOW_WALL, SPIRAL};
-	SpecificWorker::State state = SpecificWorker::State::FORWARD;
+	SpecificWorker::State state_ = SpecificWorker::State::FORWARD;
 	std::optional<RoboCompLidar3D::TPoints> read_data();
 	std::tuple<SpecificWorker::State, float, float> forward(auto &points);
 	std::tuple<SpecificWorker::State, float, float> turn(auto &points);
@@ -162,7 +199,8 @@ private:
 
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	std::expected<int, std::string> closest_lidar_index_to_given_angle(const auto &points, float angle);
-	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
+	void draw_lidar(auto &filtered_points, Eigen::Vector2d room_center, QGraphicsScene *scene);
+
 
 
 signals:

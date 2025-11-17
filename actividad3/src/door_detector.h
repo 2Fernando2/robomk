@@ -19,7 +19,7 @@ class DoorDetector
         RoboCompLidar3D::TPoints filter_points(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene);
         [[nodiscard]] Doors doors() const { return doors_cache; };
 
-        void draw_peaks(RoboCompLidar3D::TPoints &peaks, QGraphicsScene *scene);
+        void draw_peaks(Peaks &peaks, QGraphicsScene *scene);
         void draw_doors(Doors &doors, QGraphicsScene *scene);
 
     private:

@@ -196,7 +196,7 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/4B7W4TDGLD/../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/4B7W4TDGLD/../../../../../robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -453,7 +453,7 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/c++/13/iostream \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/UITLZZOD3R/moc_GRAFCETStep.cpp \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/UITLZZOD3R/../../../../../../robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/UITLZZOD3R/../../../../../robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -986,8 +986,8 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
- /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
@@ -1043,8 +1043,8 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/local/include/toml++/impl/toml_formatter.inl \
  /usr/local/include/toml++/impl/json_formatter.inl \
  /usr/local/include/toml++/impl/yaml_formatter.inl \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
@@ -1331,7 +1331,7 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
  /usr/local/include/cppitertools/unique_justseen.hpp \
- /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/common_types.h \
  /usr/include/Eigen/Dense /usr/include/Eigen/Core \
@@ -1794,4 +1794,9 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/door_detector.h
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/door_detector.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/time_series_plotter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/qcustomplot.h

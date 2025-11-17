@@ -1191,7 +1191,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/langinfo.h /usr/include/nl_types.h /usr/include/Ice/UUID.h \
  /usr/include/IceUtil/UUID.h /usr/include/IceStorm/IceStorm.h \
  /usr/include/IceStorm/Metrics.h /usr/include/IceStorm/Config.h \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
@@ -1247,9 +1247,9 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/local/include/toml++/impl/toml_formatter.inl \
  /usr/local/include/toml++/impl/json_formatter.inl \
  /usr/local/include/toml++/impl/yaml_formatter.inl \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
- /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /home/usuario/robomk/actividad3/generated/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
@@ -1263,7 +1263,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qabstractstate.h \
@@ -1321,7 +1321,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
  /usr/local/include/cppitertools/unique_justseen.hpp \
- /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
@@ -1797,4 +1797,48 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
- /home/usuario/robomk/actividad3/generated/../src/door_detector.h
+ /home/usuario/robomk/actividad3/generated/../src/door_detector.h \
+ /home/usuario/robomk/actividad3/generated/../src/time_series_plotter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
+ /home/usuario/robomk/actividad3/generated/../src/qcustomplot.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainterPath \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QWheelEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMultiMap \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QStack \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QCache \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QtNumeric \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/QtPrintSupport \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/QtPrintSupportDepends \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupport-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qabstractprintdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qpagesetupdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qabstractprintdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintengine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprinterinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewdialog.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone
