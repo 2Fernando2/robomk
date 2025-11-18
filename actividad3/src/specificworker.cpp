@@ -17,23 +17,7 @@
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "specificworker.h"
-#include <ranges>
-#include <random>
-#include <expected>
-#include <vector>
 
-#ifdef emit
-#undef emit
-#endif
-#include <execution>
-#include <expected>
-#include <algorithm>
-#include <cppitertools/enumerate.hpp>
-#include "common_types.h"
-#include "hungarian.h"
-#include "ransac_line_detector.h"
-#include "room_detector.h"
-#include "time_series_plotter.h"
 
 SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, bool startup_check) : GenericWorker(configLoader, tprx)
 {
@@ -47,22 +31,6 @@ SpecificWorker::SpecificWorker(const ConfigLoader& configLoader, TuplePrx tprx, 
 		#ifdef HIBERNATION_ENABLED
 			hibernationChecker.start(500);
 		#endif
-		
-		// Example statemachine:
-		/***
-		//Your definition for the statesmachine (if you dont want use a execute function, use nullptr)
-		states["CustomState"] = std::make_unique<GRAFCETStep>("CustomState", period, 
-															std::bind(&SpecificWorker::customLoop, this),  // Cyclic function
-															std::bind(&SpecificWorker::customEnter, this), // On-enter function
-															std::bind(&SpecificWorker::customExit, this)); // On-exit function
-
-		//Add your definition of transitions (addTransition(originOfSignal, signal, dstState))
-		states["CustomState"]->addTransition(states["CustomState"].get(), SIGNAL(entered()), states["OtherState"].get());
-		states["Compute"]->addTransition(this, SIGNAL(customSignal()), states["CustomState"].get()); //Define your signal in the .h file under the "Signals" section.
-
-		//Add your custom state
-		statemachine.addState(states["CustomState"].get());
-		***/
 
 		statemachine.setChildMode(QState::ExclusiveStates);
 		statemachine.start();
@@ -90,12 +58,12 @@ void SpecificWorker::initialize()
 	{
 		// Viewer
 		viewer = new AbstractGraphicViewer(this->frame, this->dimensions);
-		auto [r, e] = viewer->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+		auto [r, e] = viewer->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
 		robot_draw = r;
 		//this->resize(900, 450);
 
 		viewer_room = new AbstractGraphicViewer(this->frame_room, this->dimensions);
-		auto [rr, re] = viewer_room->add_robot(ROBOT_LENGTH, ROBOT_LENGTH, 0, 100, QColor("Blue"));
+		auto [rr, re] = viewer_room->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
 		robot_room_draw = rr;
 
 		// draw room in viewer_room
@@ -129,12 +97,11 @@ void SpecificWorker::initialize()
 void SpecificWorker::compute()
 {
 	RoboCompLidar3D::TPoints points;
-	if ( auto filter_data = read_data(); not filter_data.has_value())
+	if ( const auto filter_data = read_data(); not filter_data.has_value())
 	{ std::cerr << "No filter data found" << std::endl; return;}
 	else points = filter_data.value();
 	points = door_detector.filter_points(points, &viewer->scene);
-//	draw_lidar(points, &viewer->scene);
-
+	//draw_lidar(points, &viewer->scene);
 
 	// compute corners
 	const auto &[corners, lines] = room_detector.compute_corners(points, &viewer->scene);
@@ -144,43 +111,38 @@ void SpecificWorker::compute()
 	else
 	{ std::cerr << "No center room point found" << std::endl; return;}
 
-	// match corners  transforming first nominal corners to robot's frame
-	const auto match = hungarian.match(corners, nominal_rooms[0].transform_corners_to(robot_pose.inverse()));
+	 // match corners  transforming first nominal corners to robot's frame
+	 const auto match = hungarian.match(corners, nominal_rooms[0].transform_corners_to(robot_pose.inverse()));
 
+	 // compute max of  match error
+	 float max_match_error = 99999.f;
+	 if (not match.empty())
+	 {
+	 	const auto max_error_iter = std::ranges::max_element(match, [](const auto &a, const auto &b)
+	 		{ return std::get<2>(a) < std::get<2>(b); });
+	 	max_match_error = static_cast<float>(std::get<2>(*max_error_iter));
+	 	time_series_plotter->addDataPoint(0,max_match_error);
+	 	//print_match(match, max_match_error); //debugging
+	 }
 
-	// compute max of  match error
-	float max_match_error = 99999.f;
-	if (not match.empty())
-	{
-		const auto max_error_iter = std::ranges::max_element(match, [](const auto &a, const auto &b)
-			{ return std::get<2>(a) < std::get<2>(b); });
-		max_match_error = static_cast<float>(std::get<2>(*max_error_iter));
-		time_series_plotter->addDataPoint(match_error_graph,max_match_error);
-		//print_match(match, max_match_error); //debugging
-	}
+	 // update robot pose
+	 if (localised)
+	 	update_robot_pose(corners, match);
 
+	 // Process state machine
+	 RetVal ret_val = state_machine(points, match, corners,lines);
 
-	// update robot pose
-	if (localised)
-		update_robot_pose(corners, match);
+	 auto [st, adv, rot] = ret_val;
+	 state = st;
 
-
-	// Process state machine
-	RetVal ret_val = process_state(data, corners, match, viewer);
-	auto [st, adv, rot] = ret_val;
-	state = st;
-
-
-	// Send movements commands to the robot constrained by the match_error
-	//qInfo() << __FUNCTION__ << "Adv: " << adv << " Rot: " << rot;
+	//Send movements commands to the robot constrained by the match_error
+	qInfo() << __FUNCTION__ << "Adv: " << adv << " Rot: " << rot;
 	move_robot(adv, rot, max_match_error);
 
-
-	// draw robot in viewer
+	//draw robot in viewer
 	robot_room_draw->setPos(robot_pose.translation().x(), robot_pose.translation().y());
 	const double angle = qRadiansToDegrees(std::atan2(robot_pose.rotation()(1, 0), robot_pose.rotation()(0, 0)));
 	robot_room_draw->setRotation(angle);
-
 
 	// update GUI
 	time_series_plotter->update();
@@ -191,118 +153,44 @@ void SpecificWorker::compute()
 	lcdNumber_angle->display(angle);
 	last_time = std::chrono::high_resolution_clock::now();;
 
-
-	// corners,match, max_distance
-	// compute corners
-	//const auto &[corners, lines] = room_detector.compute_corners(points, &viewer->scene);
-	// room_detector.estimate_center_from_walls(lines);
-
-	// match
-	// const auto match = hungarian.match(corners, nominal_rooms[0].transform_corners_to(robot_pose.inverse()));
-
-	// compute max of match error
-
-	// if(localised)
-		  // update_robot_pose(corners, match);
-
-	//state machine
-
-
-	// const auto corners = room_detector.compute_corners(filter_data.value(), &viewer->scene);
-	// const auto match = hungarian.match(std::get<0>(corners), nominal_rooms[0].transform_corners_to(robot_pose.inverse()), 1000);
-	// // robot to room -> robot_pose | room to robot -> robot_pose.inverse()
-	// for (auto &m : match)
- //    {
- //        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
- //        qDebug() << std::get<0>(std::get<0>(m)).x() << " " << std::get<0>(std::get<0>(m)).y();
- //    }
- //    qDebug() << "----------------------------";
- //
-	// // matrix
-	// Eigen::MatrixXd W(match.size()*2,3);
- //    Eigen::VectorXd b(match.size()*2);
- //    for (const auto &&[i, m] : match | iter::enumerate)
- //    {
- //        auto &[meas_c, nom_c, _] = m;
- //        auto &[p_meas, __, ___] = meas_c;
- //        auto &[p_nom, ____, _____] = nom_c;
- //        b(2*i) = p_nom.x() - p_meas.x();
-	// 	b(2*i+1) = p_nom.y() - p_meas.y();
-	// 	W.block<1, 3>(2*i, 0) << 1.0, 0.0, -p_meas.y();
-	// 	W.block<1, 3>(2*i+1, 0) << 0.0, 1.0, p_meas.x();
- //    }
- //    // estimate new pose with pseudoinverse
- //    const auto r = (W.transpose()*W).inverse()*W.transpose()*b;
- //    if (r.array().isNaN().any()) return;
- //
- //    // update robot pose
- //    robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
- //    robot_pose.rotate(r(2));
- //
- //    // update robot draw
- //    robot_room_draw->setPos(robot_pose.translation().x(), robot_pose.translation().y());
- //    double angle = std::atan2(robot_pose.rotation()(1, 0), robot_pose.rotation()(0, 0));
-	// robot_room_draw->setRotation(qRadiansToDegrees(angle));
- //
 	// auto result = state_Machine(filter_data);
 	// omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
 }
 
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::state_Machine(auto& points)
+SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines lines)
 {
-	auto result = std::tuple<SpecificWorker::State, float, float>();
-
-	switch (state_)
+	RetVal res;
+	switch (state)
 	{
-	case SpecificWorker::State::IDLE:
+	case STATE::GOTO_ROOM_CENTER:
+		res = goto_room_center(lines);
 		break;
 
-	case SpecificWorker::State::FORWARD:
-		qInfo() << "State: FORWARD";
-		result = forward(points.value());
-		break;
-
-	case SpecificWorker::State::TURN:
-		qInfo() << "State: TURN";
-		result = turn(points.value());
-		break;
-
-	case State::FOLLOW_WALL:
-		qInfo() << "State: FOLLOW_WALL";
-		result = follow_wall(points.value());
-		break;
-	case State::SPIRAL:
-		qInfo() << "State: SPIRAL";
-		result = spiral(points.value());
-		break;
-	default: break;
 	}
-	state_ = std::get<SpecificWorker::State>(result);
-
-	return result;
+	return res;
 }
 
-SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints &points)
-{
-	return{};
-}
-
-SpecificWorker::RetVal SpecificWorker::orient_to_door(const RoboCompLidar3D::TPoints &points)
-{
-	return{};
-}
-
-SpecificWorker::RetVal SpecificWorker::cross_door(const RoboCompLidar3D::TPoints &points)
-{
-	return{};
-}
 
 SpecificWorker::RetVal SpecificWorker::localise(const Match &match)
 {
+
+
 	return{};
 }
 
-SpecificWorker::RetVal SpecificWorker::goto_room_center(const RoboCompLidar3D::TPoints &points)
+SpecificWorker::RetVal SpecificWorker::goto_room_center(const Lines &lines)
+{
+	auto center = room_detector.estimate_center_from_walls(lines);
+	if (not center.has_value()) return {};
+	auto angle = atan2(center.value().x(), center.value().y());
+
+	float k = 0.5f;
+	float rot_vel = k * angle;
+
+	return {STATE::GOTO_ROOM_CENTER, rot_vel, 0.f};
+}
+
+SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
 {
 	return{};
 }
@@ -312,7 +200,18 @@ SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const
 	return{};
 }
 
-SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
+SpecificWorker::RetVal SpecificWorker::orient_to_door(const RoboCompLidar3D::TPoints &points)
+{
+	return{};
+}
+
+SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints &points)
+{
+
+	return{};
+}
+
+SpecificWorker::RetVal SpecificWorker::cross_door(const RoboCompLidar3D::TPoints &points)
 {
 	return{};
 }
@@ -321,175 +220,6 @@ SpecificWorker::RetVal SpecificWorker::process_state(const RoboCompLidar3D::TPoi
 {
 	return{};
 }
-
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::spiral(auto &points)
-{
-	// Switch state condition
-
-	auto min_point = get_min_point(points, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION);
-
-	if (min_point->distance2d <= MIN_THRESHOLD){
-		//qInfo() << "SPIRAL ending, turning now..";
-		spiraling = false;
-		return std::make_tuple(SpecificWorker::State::TURN, 0.f, 0.f);}
-
-	// vel  100.f --++
-	// rot  -1/1 ++--
-	if (!spiraling){ // first time
-		// Lateral check: ¿right or left?
-		//qInfo() << "SPIRAL starting..";
-		auto left = closest_lidar_index_to_given_angle(points, LidarAngles::LEFT);
-		auto right = closest_lidar_index_to_given_angle(points, LidarAngles::RIGHT);
-		if (not left or not right){std::cout << left.error() << " " << right.error() << std::endl; return {};}
-		auto left_point = points[left.value()];
-		auto right_point = points[right.value()];
-		bool left_side = left_point.distance2d < right_point.distance2d;
-		                              
-		spiraling = true;
-		adv_speed = 30.f;
-		rot_direction = !left_side;
-		rot_speed = left_side ? 1.f : -1.f;
-	}
-	if (adv_speed < MAX_ADV_SPEED) adv_speed += 5.f*std::sqrt(0.9f)/2.f;
-	if (rot_direction){ // left (-)
-		rot_speed+=0.001f;
-		if(rot_speed >= 0.f) rot_speed = 0.f;}
-	else{ // right (+)
-		rot_speed-=0.001f;
-		if(rot_speed <= 0.f) rot_speed = 0.f;}
-	//qInfo() << "adv_speed: " << adv_speed << " - rot_speed: " << rot_speed;
-	return std::make_tuple(SpecificWorker::State::SPIRAL, adv_speed, rot_speed);
-}
-
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::turn(auto& points)
-{
-	// Switch state condition
-	auto begin_offset = closest_lidar_index_to_given_angle(points,  -LidarAngles::FRONT_VISION);
-	auto end_offset = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_VISION);
-	if (not begin_offset or not end_offset){std::cout << begin_offset.error() << " " << end_offset.error() << std::endl; return {};}
-	auto min = std::min_element(std::begin(points) + begin_offset.value(),  std::begin(points) + end_offset.value(),
-								[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-
-	if (!rotating){ // first time rotating
-		auto left_begin_offset = closest_lidar_index_to_given_angle(points, LidarAngles::LEFT);
-		auto left_end_offset = closest_lidar_index_to_given_angle(points, -LidarAngles::FRONT_LEFT);
-		if (not left_begin_offset or not left_end_offset){std::cout << left_begin_offset.error() << " " << left_end_offset.error() << std::endl; return {};}
-		auto left_avg_distance = std::accumulate(std::begin(points) + left_begin_offset.value(), std::begin(points) + left_end_offset.value(), 0.0f,
-												 [](const float acu, const auto& p){return acu + p.distance2d;});
-		auto right_begin_offset = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_LEFT);
-		auto right_end_offset = closest_lidar_index_to_given_angle(points, LidarAngles::RIGHT);
-		if (not right_begin_offset or not right_end_offset){std::cout << right_begin_offset.error() << " " << right_end_offset.error() << std::endl; return {};}
-		auto right_avg_distance = std::accumulate(std::begin(points) + right_begin_offset.value(), std::begin(points) + right_end_offset.value(), 0.0f,
-												  [](const float acu, const auto& p){return acu + p.distance2d;});
-		left_avg_distance /= static_cast<float>(left_end_offset.value() - left_begin_offset.value());
-		right_avg_distance /= static_cast<float>(right_end_offset.value() - right_begin_offset.value());
-		rot_speed = left_avg_distance <= right_avg_distance ? 0.7f : -0.7f;
-		rot_direction = left_avg_distance <= right_avg_distance;
-	}
-	if (min->distance2d > MIN_THRESHOLD) // to stop turning
-	{
-		rotating = false;
-		std::random_device rd;
-		std::mt19937 gen(rd());
-		std::uniform_int_distribution<int> dice(1, 2);
-		auto _state = (dice(gen) == 1) ? SpecificWorker::State::FORWARD : SpecificWorker::State::FOLLOW_WALL;
-		return std::make_tuple(_state, 0.f, 0.f);
-	}
-	rotating = true;
-	return std::make_tuple(SpecificWorker::State::TURN, 0.f, rot_speed);
-}
-
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::forward(auto &points)
-{
-	// Switch state condition
-	auto begin_offset = closest_lidar_index_to_given_angle(points,  -LidarAngles::FRONT_VISION);
-	auto end_offset = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_VISION);
-	if (not begin_offset or not end_offset){std::cout << begin_offset.error() << " " << end_offset.error() << std::endl; return {};}
-	auto min = std::min_element(std::begin(points) + begin_offset.value(),  std::begin(points) + end_offset.value(),
-								[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-
-	//  && point->phi == std::clamp(point->phi, -LidarAngles::FRONT_VISION, LidarAngles::FRONT_VISION)
-	if (min->distance2d <= MIN_THRESHOLD)
-		return std::make_tuple(SpecificWorker::State::TURN, 0.f, 0.f);
-	min = std::min_element(std::begin(points), std::end(points), [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-	if (min->distance2d > MIN_THRESHOLD)
-		return std::make_tuple(SpecificWorker::State::SPIRAL, 0.f, 0.f);
-	return std::make_tuple(SpecificWorker::State::FORWARD, 1000.f, 0.f);
-}
-
-
-
-std::tuple<SpecificWorker::State, float, float> SpecificWorker::follow_wall(auto &points)
-{
-	// Switch state condition
-	auto begin_offset = closest_lidar_index_to_given_angle(points, -LidarAngles::FRONT_VISION);
-	auto end_offset = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_VISION);
-	if (not begin_offset or not end_offset){std::cout << begin_offset.error() << " " << end_offset.error() << std::endl; return {};}
-	auto min_point = std::min_element(std::begin(points) + begin_offset.value(), std::begin(points) + end_offset.value(),
-									  [](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
-	if (min_point->distance2d <= MIN_THRESHOLD)
-		return std::make_tuple(SpecificWorker::State::TURN, 0.f, 0.f);
-
-	// Side check
-	auto left = closest_lidar_index_to_given_angle(points, LidarAngles::LEFT);
-	auto right = closest_lidar_index_to_given_angle(points, LidarAngles::RIGHT);
-	if (not left or not right){std::cout << left.error() << " " << right.error() << std::endl; return {};}
-	auto left_point = points[left.value()];
-	auto right_point = points[right.value()];
-	bool left_side = (left_point.distance2d < right_point.distance2d);
-	auto lat_side_point = left_side ? left_point : right_point;
-	float angle_side_begin = left_side ? LidarAngles::BACK_LEFT : -LidarAngles::FRONT_LEFT;
-	float angle_side_end = left_side ? LidarAngles::FRONT_LEFT : -LidarAngles::BACK_LEFT;
-	auto side_begin_offset = closest_lidar_index_to_given_angle(points, angle_side_begin);
-	auto side_end_offset = closest_lidar_index_to_given_angle(points, angle_side_end);
-	if (not side_begin_offset or not side_end_offset){std::cout << side_begin_offset.error() << "" << side_end_offset.error() << std::endl; return {};}
-	auto min_side_point = std::min_element(std::begin(points) + side_begin_offset.value(), std::begin(points) + side_end_offset.value(),
-										   [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-	// qInfo() << "Side angle: " << lat_side_point.phi << " - Min side angle: " << min_side_point->phi;
-
-	rot_speed = min_side_point->phi > lat_side_point.phi ? 0.05f : -0.05f;
-	bool angle_check = min_side_point->phi < lat_side_point.phi+0.01f and min_side_point->phi > lat_side_point.phi-0.01f;
-	bool distance_check = min_side_point->distance2d < MIN_THRESHOLD+50.f and min_side_point->distance2d > MIN_THRESHOLD-50.f;
-	if (angle_check and distance_check){
-		//qInfo() << "Going straight!";
-		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 1000.f, 0.f);}
-	//if(rot == 0.05f) qInfo() << "Adjusting right!"; else qInfo() << "Adjusting left!";
-	return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 1000.f, rot_speed);
-}
-
-std::optional<RoboCompLidar3D::TPoint> SpecificWorker::get_min_point(const auto &points, const auto &angle_begin, const auto &angle_end)
-{
-	auto begin_offset = closest_lidar_index_to_given_angle(points, angle_begin);
-	auto end_offset = closest_lidar_index_to_given_angle(points, angle_end);
-	if (not begin_offset or not end_offset){std::cout << begin_offset.error() << " " << end_offset.error() << std::endl; return {};}
-	auto min = std::min_element(std::begin(points)+begin_offset.value(), std::begin(points)+end_offset.value(),
-		[](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-	return *min;
-}
-
-std::expected<bool, std::string> SpecificWorker::open_space(auto &points)
-{
-	auto front_begin_offset = closest_lidar_index_to_given_angle(points, LidarAngles::BACK_LEFT);
-	auto front_end_offset = closest_lidar_index_to_given_angle(points, -LidarAngles::BACK_LEFT);
-	if (not front_begin_offset or not front_end_offset){std::cout << front_begin_offset.error() << " " << front_end_offset.error() << std::endl;
-		return std::unexpected("Error calculating front begin or end offset in <open_space> method");}
-	auto front_avg_distance = std::accumulate(std::begin(points) + front_begin_offset.value(),
-											  std::begin(points) + front_end_offset.value(), 0.0f,
-											  [](const float acu, const auto& p) {return acu + p.distance2d;});
-	front_avg_distance /= (3.f*static_cast<float>(points.size())/4.f);
-
-	auto back_end_offset_1 = closest_lidar_index_to_given_angle(points, LidarAngles::FRONT_LEFT);
-	auto back_begin_offset_2 = closest_lidar_index_to_given_angle(points, -LidarAngles::FRONT_LEFT);
-	if (not back_end_offset_1 or not back_begin_offset_2){std::cout << back_end_offset_1.error() << " " << back_begin_offset_2.error() << std::endl;
-		return std::unexpected("Error calculating back begin or end offset in <open_space> method");}
-	auto back_avg_distance = std::accumulate(std::begin(points), std::begin(points)+back_end_offset_1.value(), 0.0f,
-											 [](const float acu, const auto& p) {return acu + p.distance2d;});
-	back_avg_distance +=std::accumulate(std::begin(points)+back_begin_offset_2.value(), std::end(points), 0.0f,
-										[](const float acu, const auto& p) {return acu + p.distance2d;});
-	back_avg_distance /= (3.f*static_cast<float>(points.size())/4.f);
-	return front_avg_distance > back_avg_distance + 1000.f; // big difference
-}
-
 
 //=========================================================================================================================================
 std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()
@@ -618,14 +348,14 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
     }
 
     // compute and draw minimum distance point in frontal range
-    auto offset_begin = closest_lidar_index_to_given_angle(filtered_points, -LidarAngles::FRONT_VISION);
-    auto offset_end = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::FRONT_VISION);
+    auto offset_begin = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
+    auto offset_end = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
     if(not offset_begin or not offset_end)
     { std::cout << offset_begin.error() << " " << offset_end.error() << std::endl; return ;}    // abandon the ship
     auto min_point = std::min_element(std::begin(filtered_points) + offset_begin.value(), std::begin(filtered_points) + offset_end.value(), [](auto &a, auto &b)
     { return a.distance2d < b.distance2d; });
     QColor dcolor;
-    if(min_point->distance2d < MIN_THRESHOLD)
+    if(min_point->distance2d < params.STOP_THRESHOLD)
         dcolor = QColor(Qt::red);
     else
         dcolor = QColor(Qt::magenta);
@@ -634,8 +364,8 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
     items.push_back(ditem);
 
     // compute and draw minimum distance point to wall
-    auto wall_res_right = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::RIGHT);
-    auto wall_res_left = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::LEFT);
+    auto wall_res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_RIGHT_SIDE_SECTION);
+    auto wall_res_left = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_LEFT_SIDE_SECTION);
     if(not wall_res_right or not wall_res_left)   // abandon the ship
     {
         qWarning() << "No valid lateral readings" << QString::fromStdString(wall_res_right.error()) << QString::fromStdString(wall_res_left.error());
@@ -655,23 +385,11 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
     auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f), QPointF(min_obj.x, min_obj.y)), QPen(QColorConstants::Svg::orange, 10));
     items.push_back(item_line);
 
-	// Draw min side point
-	bool left_side = (left_point.distance2d < right_point.distance2d);
-	float angle_side_begin = left_side ? LidarAngles::BACK_LEFT : -LidarAngles::FRONT_LEFT;
-	float angle_side_end = left_side ? LidarAngles::FRONT_LEFT : -LidarAngles::BACK_LEFT;
-	auto side_begin_offset = closest_lidar_index_to_given_angle(filtered_points, angle_side_begin);
-	auto side_end_offset = closest_lidar_index_to_given_angle(filtered_points, angle_side_end);
-	if (not side_begin_offset or not side_end_offset){std::cout << side_begin_offset.error() << "" << side_end_offset.error() << std::endl; return;}
-	auto min_side_point = std::min_element(std::begin(filtered_points) + side_begin_offset.value(), std::begin(filtered_points) + side_end_offset.value(),
-										   [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
-	auto side_point_item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::black), QBrush(QColorConstants::Svg::black));
-	side_point_item->setPos(min_side_point->x, min_side_point->y);
-	items.push_back(side_point_item);
 
     // Draw two lines coming out from the robot at angles given by params.LIDAR_OFFSET
     // Calculate the end points of the lines
-    auto res_right = closest_lidar_index_to_given_angle(filtered_points, LidarAngles::FRONT_VISION);
-    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -LidarAngles::FRONT_VISION);
+    auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
+    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
     if(not res_right or not res_left)
     { std::cout << res_right.error() << " " << res_left.error() << std::endl; return ;}
     // draw two lines at the edges of the range

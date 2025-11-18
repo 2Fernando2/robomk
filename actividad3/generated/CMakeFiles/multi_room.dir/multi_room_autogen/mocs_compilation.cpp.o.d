@@ -1291,50 +1291,79 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/moc_specificworker.cpp \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/specificworker.h \
- /usr/include/c++/13/expected \
  /home/usuario/robomk/actividad3/generated/genericworker.h \
- /usr/local/include/cppitertools/itertools.hpp \
- /usr/local/include/cppitertools/accumulate.hpp \
- /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
- /usr/local/include/cppitertools/internal/iterbase.hpp \
- /usr/local/include/cppitertools/internal/iterbase.hpp \
- /usr/local/include/cppitertools/batched.hpp \
- /usr/local/include/cppitertools/internal/iteratoriterator.hpp \
- /usr/local/include/cppitertools/chain.hpp \
- /usr/local/include/cppitertools/internal/iter_tuples.hpp \
- /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
- /usr/local/include/cppitertools/chunked.hpp \
- /usr/local/include/cppitertools/combinations.hpp \
- /usr/local/include/cppitertools/combinations_with_replacement.hpp \
- /usr/local/include/cppitertools/compress.hpp \
- /usr/local/include/cppitertools/count.hpp \
- /usr/local/include/cppitertools/range.hpp \
- /usr/local/include/cppitertools/cycle.hpp \
- /usr/local/include/cppitertools/dropwhile.hpp \
- /usr/local/include/cppitertools/filter.hpp \
- /usr/local/include/cppitertools/enumerate.hpp \
- /usr/local/include/cppitertools/filterfalse.hpp \
- /usr/local/include/cppitertools/groupby.hpp \
- /usr/local/include/cppitertools/imap.hpp \
- /usr/local/include/cppitertools/starmap.hpp \
- /usr/local/include/cppitertools/zip.hpp \
- /usr/local/include/cppitertools/permutations.hpp \
- /usr/local/include/cppitertools/powerset.hpp \
- /usr/local/include/cppitertools/product.hpp \
- /usr/local/include/cppitertools/repeat.hpp \
- /usr/local/include/cppitertools/reversed.hpp \
- /usr/local/include/cppitertools/slice.hpp \
- /usr/local/include/cppitertools/sliding_window.hpp \
- /usr/local/include/cppitertools/sorted.hpp \
- /usr/local/include/cppitertools/takewhile.hpp \
- /usr/local/include/cppitertools/unique_everseen.hpp \
- /usr/include/c++/13/unordered_set \
- /usr/include/c++/13/bits/unordered_set.h \
- /usr/local/include/cppitertools/unique_justseen.hpp \
  /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/common_types.h \
- /usr/include/Eigen/Dense /usr/include/Eigen/Core \
+ /usr/include/c++/13/expected \
+ /home/usuario/robocomp/classes/doublebuffer/DoubleBuffer.h \
+ /usr/include/c++/13/shared_mutex \
+ /home/usuario/robocomp/classes/threadpool/threadpool.h \
+ /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/thread \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/time_series_plotter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/qcustomplot.h \
+ /usr/include/c++/13/execution \
+ /usr/include/c++/13/pstl/glue_execution_defs.h \
+ /usr/include/c++/13/pstl/algorithm_impl.h \
+ /usr/include/c++/13/pstl/execution_impl.h \
+ /usr/include/c++/13/pstl/memory_impl.h \
+ /usr/include/c++/13/pstl/unseq_backend_simd.h \
+ /usr/include/c++/13/pstl/utils.h \
+ /usr/include/c++/13/pstl/parallel_backend_utils.h \
+ /usr/include/c++/13/pstl/parallel_backend.h \
+ /usr/include/c++/13/pstl/parallel_backend_tbb.h \
+ /usr/include/tbb/blocked_range.h /usr/include/oneapi/tbb/blocked_range.h \
+ /usr/include/oneapi/tbb/detail/_range_common.h \
+ /usr/include/oneapi/tbb/detail/_config.h \
+ /usr/include/oneapi/tbb/detail/_export.h \
+ /usr/include/oneapi/tbb/detail/_utils.h \
+ /usr/include/oneapi/tbb/detail/_assert.h \
+ /usr/include/oneapi/tbb/detail/_machine.h \
+ /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+ /usr/include/oneapi/tbb/version.h \
+ /usr/include/oneapi/tbb/detail/_config.h /usr/include/tbb/parallel_for.h \
+ /usr/include/oneapi/tbb/parallel_for.h \
+ /usr/include/oneapi/tbb/detail/_exception.h \
+ /usr/include/oneapi/tbb/detail/_task.h \
+ /usr/include/oneapi/tbb/detail/_template_helpers.h \
+ /usr/include/oneapi/tbb/detail/_small_object_pool.h \
+ /usr/include/oneapi/tbb/profiling.h \
+ /usr/include/oneapi/tbb/detail/_string_resource.h \
+ /usr/include/oneapi/tbb/detail/_small_object_pool.h \
+ /usr/include/oneapi/tbb/profiling.h \
+ /usr/include/oneapi/tbb/partitioner.h \
+ /usr/include/oneapi/tbb/detail/_aligned_space.h \
+ /usr/include/oneapi/tbb/detail/_utils.h \
+ /usr/include/oneapi/tbb/detail/_template_helpers.h \
+ /usr/include/oneapi/tbb/cache_aligned_allocator.h \
+ /usr/include/c++/13/memory_resource /usr/include/oneapi/tbb/task_group.h \
+ /usr/include/oneapi/tbb/detail/_assert.h \
+ /usr/include/oneapi/tbb/detail/_intrusive_list_node.h \
+ /usr/include/oneapi/tbb/detail/_task_handle.h \
+ /usr/include/oneapi/tbb/detail/_task.h \
+ /usr/include/oneapi/tbb/task_arena.h \
+ /usr/include/oneapi/tbb/detail/_attach.h /usr/include/oneapi/tbb/info.h \
+ /usr/include/oneapi/tbb/blocked_range.h \
+ /usr/include/tbb/parallel_reduce.h \
+ /usr/include/oneapi/tbb/parallel_reduce.h \
+ /usr/include/tbb/parallel_scan.h /usr/include/oneapi/tbb/parallel_scan.h \
+ /usr/include/tbb/parallel_invoke.h \
+ /usr/include/oneapi/tbb/parallel_invoke.h /usr/include/tbb/task_arena.h \
+ /usr/include/oneapi/tbb/task_arena.h /usr/include/tbb/tbb_allocator.h \
+ /usr/include/oneapi/tbb/tbb_allocator.h \
+ /usr/include/oneapi/tbb/detail/_utils.h /usr/include/tbb/task.h \
+ /usr/include/oneapi/tbb/task.h /usr/include/c++/13/pstl/parallel_impl.h \
+ /usr/include/c++/13/pstl/numeric_impl.h \
+ /usr/include/c++/13/pstl/pstl_config.h \
+ /usr/include/c++/13/pstl/algorithm_fwd.h \
+ /usr/include/c++/13/pstl/glue_algorithm_impl.h \
+ /usr/include/c++/13/pstl/numeric_fwd.h \
+ /usr/include/c++/13/pstl/glue_numeric_impl.h \
+ /usr/include/c++/13/pstl/glue_memory_impl.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/room_detector.h \
+ /usr/include/Eigen/Geometry /usr/include/Eigen/Core \
  /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/Eigen/src/Core/util/Macros.h \
  /usr/include/Eigen/src/Core/util/ConfigureVectorization.h \
@@ -1459,18 +1488,10 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/Eigen/src/Core/StlIterators.h \
  /usr/include/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /usr/include/Eigen/LU /usr/include/Eigen/src/misc/Kernel.h \
- /usr/include/Eigen/src/misc/Image.h \
- /usr/include/Eigen/src/LU/FullPivLU.h \
- /usr/include/Eigen/src/LU/PartialPivLU.h \
- /usr/include/Eigen/src/LU/Determinant.h \
- /usr/include/Eigen/src/LU/InverseImpl.h \
- /usr/include/Eigen/src/LU/arch/InverseSize4.h \
- /usr/include/Eigen/Cholesky /usr/include/Eigen/Jacobi \
- /usr/include/Eigen/src/Jacobi/Jacobi.h \
+ /usr/include/Eigen/SVD /usr/include/Eigen/QR /usr/include/Eigen/Cholesky \
+ /usr/include/Eigen/Jacobi /usr/include/Eigen/src/Jacobi/Jacobi.h \
  /usr/include/Eigen/src/Cholesky/LLT.h \
- /usr/include/Eigen/src/Cholesky/LDLT.h /usr/include/Eigen/QR \
- /usr/include/Eigen/Householder \
+ /usr/include/Eigen/src/Cholesky/LDLT.h /usr/include/Eigen/Householder \
  /usr/include/Eigen/src/Householder/Householder.h \
  /usr/include/Eigen/src/Householder/HouseholderSequence.h \
  /usr/include/Eigen/src/Householder/BlockHouseholder.h \
@@ -1478,11 +1499,17 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/Eigen/src/QR/FullPivHouseholderQR.h \
  /usr/include/Eigen/src/QR/ColPivHouseholderQR.h \
  /usr/include/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
- /usr/include/Eigen/SVD /usr/include/Eigen/src/misc/RealSvd2x2.h \
+ /usr/include/Eigen/src/misc/RealSvd2x2.h \
  /usr/include/Eigen/src/SVD/UpperBidiagonalization.h \
  /usr/include/Eigen/src/SVD/SVDBase.h \
  /usr/include/Eigen/src/SVD/JacobiSVD.h \
- /usr/include/Eigen/src/SVD/BDCSVD.h /usr/include/Eigen/Geometry \
+ /usr/include/Eigen/src/SVD/BDCSVD.h /usr/include/Eigen/LU \
+ /usr/include/Eigen/src/misc/Kernel.h /usr/include/Eigen/src/misc/Image.h \
+ /usr/include/Eigen/src/LU/FullPivLU.h \
+ /usr/include/Eigen/src/LU/PartialPivLU.h \
+ /usr/include/Eigen/src/LU/Determinant.h \
+ /usr/include/Eigen/src/LU/InverseImpl.h \
+ /usr/include/Eigen/src/LU/arch/InverseSize4.h \
  /usr/include/Eigen/src/Geometry/OrthoMethods.h \
  /usr/include/Eigen/src/Geometry/EulerAngles.h \
  /usr/include/Eigen/src/Geometry/Homogeneous.h \
@@ -1498,6 +1525,36 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/Eigen/src/Geometry/Umeyama.h \
  /usr/include/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /usr/include/opencv4/opencv2/core.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/version.hpp \
+ /usr/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/include/opencv4/opencv2/core/check.hpp \
+ /usr/include/opencv4/opencv2/core/traits.hpp \
+ /usr/include/opencv4/opencv2/core/matx.hpp \
+ /usr/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/include/opencv4/opencv2/core/types.hpp \
+ /usr/include/opencv4/opencv2/core/mat.hpp \
+ /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/include/opencv4/opencv2/core/operations.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/opencv4/opencv2/core/optim.hpp \
+ /usr/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h /usr/include/c++/13/ranges \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/common_types.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
+ /usr/include/Eigen/Dense /usr/include/Eigen/Geometry \
  /usr/include/Eigen/Eigenvalues \
  /usr/include/Eigen/src/Eigenvalues/Tridiagonalization.h \
  /usr/include/Eigen/src/Eigenvalues/RealSchur.h \
@@ -1675,41 +1732,13 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/boost/circular_buffer/space_optimized.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
  /usr/include/Eigen/src/Geometry/ParametrizedLine.h \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/hungarian.h \
- /usr/include/Eigen/Geometry \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/munkres.hpp \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/ransac_line_detector.h \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/room_detector.h \
- /usr/include/opencv4/opencv2/core.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/opencv4/opencv2/core/version.hpp \
- /usr/include/opencv4/opencv2/core/hal/interface.h \
- /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
- /usr/include/opencv4/opencv2/core/base.hpp \
- /usr/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/include/opencv4/opencv2/core/cvstd.hpp \
- /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /usr/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/include/opencv4/opencv2/core/check.hpp \
- /usr/include/opencv4/opencv2/core/traits.hpp \
- /usr/include/opencv4/opencv2/core/matx.hpp \
- /usr/include/opencv4/opencv2/core/saturate.hpp \
- /usr/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/include/opencv4/opencv2/core/types.hpp \
- /usr/include/opencv4/opencv2/core/mat.hpp \
- /usr/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/include/opencv4/opencv2/core/persistence.hpp \
- /usr/include/opencv4/opencv2/core/operations.hpp \
- /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /usr/include/opencv4/opencv2/core/utility.hpp \
- /usr/include/opencv4/opencv2/core/optim.hpp \
- /usr/include/opencv4/opencv2/core/ovx.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h /usr/include/c++/13/ranges \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/hungarian.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/munkres.hpp \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/nominal_room.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRectF \
  /home/usuario/robomk/actividad3/src/common_types.h \
+ /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/door_detector.h \
  /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/image_processor.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/calib3d.hpp \
@@ -1782,7 +1811,6 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
- /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h \
  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
@@ -1794,9 +1822,42 @@ generated/CMakeFiles/multi_room.dir/multi_room_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/door_detector.h \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/time_series_plotter.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
- /home/usuario/robomk/actividad3/generated/multi_room_autogen/VNU7RW3YIC/../../../src/qcustomplot.h
+ /usr/local/include/cppitertools/enumerate.hpp \
+ /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+ /usr/local/include/cppitertools/internal/iterbase.hpp \
+ /usr/local/include/cppitertools/internal/iterbase.hpp \
+ /usr/local/include/cppitertools/itertools.hpp \
+ /usr/local/include/cppitertools/accumulate.hpp \
+ /usr/local/include/cppitertools/batched.hpp \
+ /usr/local/include/cppitertools/internal/iteratoriterator.hpp \
+ /usr/local/include/cppitertools/chain.hpp \
+ /usr/local/include/cppitertools/internal/iter_tuples.hpp \
+ /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+ /usr/local/include/cppitertools/chunked.hpp \
+ /usr/local/include/cppitertools/combinations.hpp \
+ /usr/local/include/cppitertools/combinations_with_replacement.hpp \
+ /usr/local/include/cppitertools/compress.hpp \
+ /usr/local/include/cppitertools/count.hpp \
+ /usr/local/include/cppitertools/range.hpp \
+ /usr/local/include/cppitertools/cycle.hpp \
+ /usr/local/include/cppitertools/dropwhile.hpp \
+ /usr/local/include/cppitertools/filter.hpp \
+ /usr/local/include/cppitertools/enumerate.hpp \
+ /usr/local/include/cppitertools/filterfalse.hpp \
+ /usr/local/include/cppitertools/groupby.hpp \
+ /usr/local/include/cppitertools/imap.hpp \
+ /usr/local/include/cppitertools/starmap.hpp \
+ /usr/local/include/cppitertools/zip.hpp \
+ /usr/local/include/cppitertools/permutations.hpp \
+ /usr/local/include/cppitertools/powerset.hpp \
+ /usr/local/include/cppitertools/product.hpp \
+ /usr/local/include/cppitertools/repeat.hpp \
+ /usr/local/include/cppitertools/reversed.hpp \
+ /usr/local/include/cppitertools/slice.hpp \
+ /usr/local/include/cppitertools/sliding_window.hpp \
+ /usr/local/include/cppitertools/sorted.hpp \
+ /usr/local/include/cppitertools/takewhile.hpp \
+ /usr/local/include/cppitertools/unique_everseen.hpp \
+ /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/bits/unordered_set.h \
+ /usr/local/include/cppitertools/unique_justseen.hpp

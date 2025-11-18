@@ -3,7 +3,9 @@
   /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
   /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
   /home/usuario/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+  /home/usuario/robocomp/core/classes/doublebuffer/DoubleBuffer.h \
   /home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
+  /home/usuario/robocomp/core/classes/threadpool/threadpool.h \
   /home/usuario/robomk/actividad3/generated/Camera360RGB.h \
   /home/usuario/robomk/actividad3/generated/GenericBase.h \
   /home/usuario/robomk/actividad3/generated/Lidar3D.h \
@@ -384,6 +386,7 @@
   /usr/include/c++/13/compare \
   /usr/include/c++/13/complex \
   /usr/include/c++/13/concepts \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -396,6 +399,7 @@
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
+  /usr/include/c++/13/execution \
   /usr/include/c++/13/expected \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -426,15 +430,32 @@
   /usr/include/c++/13/numeric \
   /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
+  /usr/include/c++/13/pstl/algorithm_fwd.h \
+  /usr/include/c++/13/pstl/algorithm_impl.h \
   /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/execution_impl.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_impl.h \
+  /usr/include/c++/13/pstl/glue_execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_impl.h \
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_impl.h \
+  /usr/include/c++/13/pstl/memory_impl.h \
+  /usr/include/c++/13/pstl/numeric_fwd.h \
+  /usr/include/c++/13/pstl/numeric_impl.h \
+  /usr/include/c++/13/pstl/parallel_backend.h \
+  /usr/include/c++/13/pstl/parallel_backend_utils.h \
+  /usr/include/c++/13/pstl/parallel_impl.h \
+  /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/pstl/unseq_backend_simd.h \
+  /usr/include/c++/13/pstl/utils.h \
   /usr/include/c++/13/queue \
   /usr/include/c++/13/random \
   /usr/include/c++/13/ranges \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/set \
+  /usr/include/c++/13/shared_mutex \
   /usr/include/c++/13/span \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
@@ -442,6 +463,7 @@
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tr1/bessel_function.tcc \
   /usr/include/c++/13/tr1/beta_function.tcc \
   /usr/include/c++/13/tr1/ell_integral.tcc \
@@ -863,6 +885,7 @@
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
