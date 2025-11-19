@@ -167,14 +167,14 @@ private:
 	STATE state = STATE::GOTO_ROOM_CENTER;
 	using RetVal = std::tuple<STATE, float, float>;
 
-	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines);
+	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d target);
 
 	RetVal localise(const Match &match);
 	RetVal goto_room_center(const Lines &lines);
 	RetVal turn(const Corners &corners);
 	RetVal update_pose(const Corners &corners, const Match &match);
 
-	RetVal orient_to_door(const RoboCompLidar3D::TPoints &points);
+	RetVal orient_to_door(const Eigen::Vector2d target);
 	RetVal goto_door(const RoboCompLidar3D::TPoints &points);
 	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
 	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
@@ -188,7 +188,8 @@ private:
 	std::optional<RoboCompLidar3D::TPoints> filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints &points);
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	void print_match(const Match &match, const float error =1.f) const;
-	std::tuple<float, float> do_work(const std::optional<Eigen::Vector2d> target);
+	std::tuple<float, float, double> do_work(const Eigen::Vector2d target);
+	Eigen::Vector2d target_;
 
 	// random number generator
 	std::random_device rd;
@@ -203,7 +204,7 @@ private:
 
 	// Doors
 	DoorDetector door_detector;
-
+	Doors doors;
 
 	// graphics
 	QRectF dimensions{-5000, 2500, 10000, -5000};
@@ -214,7 +215,6 @@ private:
 
 	// timing
 	std::chrono::time_point<std::chrono::high_resolution_clock> last_time = std::chrono::high_resolution_clock::now();
-
 
 	// relocalization
 	bool relocal_centered = false;

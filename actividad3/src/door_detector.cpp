@@ -50,10 +50,10 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
 }
 
 // Method to use the Doors vector to filter out the LiDAR points that como from a room outside the current one
-RoboCompLidar3D::TPoints DoorDetector::filter_points(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene)
+std::tuple<RoboCompLidar3D::TPoints, Doors> DoorDetector::filter_points(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene)
 {
     const auto doors = detect(points, scene);
-    if(doors.empty()) return points;
+    if(doors.empty()) return {points, Doors{}};
 
     // for each door, check if the distance from the robot to each lidar point is smaller than the distance from the robot to the door
     RoboCompLidar3D::TPoints filtered;
@@ -85,7 +85,7 @@ RoboCompLidar3D::TPoints DoorDetector::filter_points(const RoboCompLidar3D::TPoi
             filtered.emplace_back(p);
         }
     }
-    return filtered;
+    return {filtered, doors};
 }
 
 

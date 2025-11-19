@@ -16,7 +16,7 @@ class DoorDetector
         ~DoorDetector() = default;
 
         Doors detect(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene = nullptr);
-        RoboCompLidar3D::TPoints filter_points(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene);
+        std::tuple<RoboCompLidar3D::TPoints, Doors> filter_points(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene);
         [[nodiscard]] Doors doors() const { return doors_cache; };
 
         void draw_peaks(Peaks &peaks, QGraphicsScene *scene);

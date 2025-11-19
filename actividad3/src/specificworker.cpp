@@ -100,14 +100,15 @@ void SpecificWorker::compute()
 	if ( const auto filter_data = read_data(); not filter_data.has_value())
 	{ std::cerr << "No filter data found" << std::endl; return;}
 	else points = filter_data.value();
-	points = door_detector.filter_points(points, &viewer->scene);
+	const auto &[filtered_points, doors_] = door_detector.filter_points(points, &viewer->scene);
+	doors = doors_;
 	//draw_lidar(points, &viewer->scene);
 
 	// compute corners
-	const auto &[corners, lines] = room_detector.compute_corners(points, &viewer->scene);
+	const auto &[corners, lines] = room_detector.compute_corners(filtered_points, &viewer->scene);
 	const auto center_opt = room_detector.estimate_center_from_walls(lines);
 	if (center_opt.has_value())
-		draw_lidar(points, center_opt.value(), &viewer->scene);
+		draw_lidar(filtered_points, center_opt.value(), &viewer->scene);
 	else
 	{ std::cerr << "No center room point found" << std::endl; return;}
 
@@ -130,13 +131,14 @@ void SpecificWorker::compute()
 	 	update_robot_pose(corners, match);
 
 	 // Process state machine
-	 RetVal ret_val = state_machine(points, match, corners,lines);
+	 RetVal ret_val = state_machine(filtered_points, match, corners, lines, center_opt.value());
 
 	 auto [st, adv, rot] = ret_val;
 	 state = st;
 
 	//Send movements commands to the robot constrained by the match_error
-	qInfo() << __FUNCTION__ << "Adv: " << adv << " Rot: " << rot << " Center: " << center_opt.value().norm();
+	const auto &[_, __, angle_] = do_work(center_opt.value());
+	qInfo() << __FUNCTION__ << "Adv: " << adv << " Rot: " << rot << " Center: " << center_opt.value().norm() << " Angle_to_center: " << angle_;
 	move_robot(adv, rot, max_match_error);
 
 	//draw robot in viewer
@@ -156,7 +158,7 @@ void SpecificWorker::compute()
 	// auto result = state_Machine(filter_data);
 }
 
-SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines)
+SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d target)
 {
 	RetVal res;
 	switch (state)
@@ -167,7 +169,15 @@ SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoi
 	case STATE::TURN:
 		res = turn(corners);
 		break;
-
+	case STATE::GOTO_DOOR:
+		res = goto_door(points);
+		break;
+	case STATE::ORIENT_TO_DOOR:
+		res = orient_to_door(target);
+		break;
+	case STATE::CROSS_DOOR:
+		res = cross_door(points);
+		break;
 	}
 	return res;
 }
@@ -180,21 +190,20 @@ SpecificWorker::RetVal SpecificWorker::localise(const Match &match)
 	return{};
 }
 
-std::tuple<float, float> SpecificWorker::do_work(const std::optional<Eigen::Vector2d> target)
+std::tuple<float, float, double> SpecificWorker::do_work(const Eigen::Vector2d target)
 {
-	auto angle = atan2(target.value().x(), target.value().y());
+	// rotation
+	auto angle = atan2(target.x(), target.y());
 	double k = 0.5f;
 	double rot_vel = angle * k;
 
-	// advance (sigmoid break)
-	auto break_adv = 1 / (1 + std::exp(k * (target.value().norm() - params.STOP_THRESHOLD)));
-	auto adv = params.MAX_ADV_SPEED;
-
-	// rotation (gaussian break)
+	// break rotation
 	const double R = std::log(0.3) / -M_PI_4*M_PI_4;
 	auto break_rot = std::exp(-angle*angle * R);
+
+	// advance
 	double adv_vel = params.MAX_ADV_SPEED * break_rot;
-	return {adv_vel, rot_vel};
+	return {adv_vel, rot_vel, angle};
 }
 
 SpecificWorker::RetVal SpecificWorker::goto_room_center(const Lines &lines)
@@ -205,7 +214,7 @@ SpecificWorker::RetVal SpecificWorker::goto_room_center(const Lines &lines)
 	if (center.value().norm() < 300.f)
 		return {STATE::TURN, 0, 0};
 
-	const auto &[adv_vel, rot_vel] = do_work(center);
+	const auto &[adv_vel, rot_vel, _] = do_work(center.value());
 	return {STATE::GOTO_ROOM_CENTER, adv_vel, rot_vel};
 }
 
@@ -214,7 +223,7 @@ SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
 	if (const auto &[success, giro] = image_processor.check_red_patch_in_image(camera360rgb_proxy, label_img); success)
 	{
 		localised = true;
-		return {STATE::IDLE, 0, 0};
+		return {STATE::GOTO_DOOR, 0, 0};
 	}
 	else
 	{
@@ -223,23 +232,35 @@ SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
 	}
 }
 
-SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const Match &match)
-{
-	return{};
-}
-
-SpecificWorker::RetVal SpecificWorker::orient_to_door(const RoboCompLidar3D::TPoints &points)
-{
-	return{};
-}
-
 SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints &points)
 {
+	if (doors.empty()) return {};
+	const auto door_center_point = doors[0].center();
+	Eigen::Vector2d robot_position(robot_pose.translation().x(), robot_pose.translation().y());
+	const auto target = doors[0].center_before(robot_position, 1000.f);
+	if (target.norm() < 1000.f)
+		return {STATE::ORIENT_TO_DOOR, 0.f, 0.f};
 
-	return{};
+	const auto &[adv_speed, rot_speed, _] = do_work(Eigen::Vector2d(target.x(), target.y()));
+	return{STATE::GOTO_DOOR, 0.f, 0.f};
 }
 
+SpecificWorker::RetVal SpecificWorker::orient_to_door(const Eigen::Vector2d target)
+{
+	const auto &[_, rot_vel, angle] = do_work(target);
+	if (std::abs(rot_vel) < 0.1f)
+		return {STATE::CROSS_DOOR, 0.f, 0.f};
+	return{STATE::ORIENT_TO_DOOR, 0.f, rot_vel};
+}
+
+
+
 SpecificWorker::RetVal SpecificWorker::cross_door(const RoboCompLidar3D::TPoints &points)
+{
+	return{STATE::IDLE, 0.f, 0.f};
+}
+
+SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const Match &match)
 {
 	return{};
 }
