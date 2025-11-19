@@ -136,7 +136,7 @@ void SpecificWorker::compute()
 	 state = st;
 
 	//Send movements commands to the robot constrained by the match_error
-	qInfo() << __FUNCTION__ << "Adv: " << adv << " Rot: " << rot;
+	qInfo() << __FUNCTION__ << "Adv: " << adv << " Rot: " << rot << " Center: " << center_opt.value().norm();
 	move_robot(adv, rot, max_match_error);
 
 	//draw robot in viewer
@@ -154,16 +154,18 @@ void SpecificWorker::compute()
 	last_time = std::chrono::high_resolution_clock::now();;
 
 	// auto result = state_Machine(filter_data);
-	// omnirobot_proxy->setSpeedBase(0, std::get<1>(result), std::get<2>(result));
 }
 
-SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines lines)
+SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines)
 {
 	RetVal res;
 	switch (state)
 	{
 	case STATE::GOTO_ROOM_CENTER:
 		res = goto_room_center(lines);
+		break;
+	case STATE::TURN:
+		res = turn(corners);
 		break;
 
 	}
@@ -178,21 +180,47 @@ SpecificWorker::RetVal SpecificWorker::localise(const Match &match)
 	return{};
 }
 
+std::tuple<float, float> SpecificWorker::do_work(const std::optional<Eigen::Vector2d> target)
+{
+	auto angle = atan2(target.value().x(), target.value().y());
+	double k = 0.5f;
+	double rot_vel = angle * k;
+
+	// advance (sigmoid break)
+	auto break_adv = 1 / (1 + std::exp(k * (target.value().norm() - params.STOP_THRESHOLD)));
+	auto adv = params.MAX_ADV_SPEED;
+
+	// rotation (gaussian break)
+	const double R = std::log(0.3) / -M_PI_4*M_PI_4;
+	auto break_rot = std::exp(-angle*angle * R);
+	double adv_vel = params.MAX_ADV_SPEED * break_rot;
+	return {adv_vel, rot_vel};
+}
+
 SpecificWorker::RetVal SpecificWorker::goto_room_center(const Lines &lines)
 {
 	auto center = room_detector.estimate_center_from_walls(lines);
 	if (not center.has_value()) return {};
-	auto angle = atan2(center.value().x(), center.value().y());
 
-	float k = 0.5f;
-	float rot_vel = k * angle;
+	if (center.value().norm() < 300.f)
+		return {STATE::TURN, 0, 0};
 
-	return {STATE::GOTO_ROOM_CENTER, rot_vel, 0.f};
+	const auto &[adv_vel, rot_vel] = do_work(center);
+	return {STATE::GOTO_ROOM_CENTER, adv_vel, rot_vel};
 }
 
 SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
 {
-	return{};
+	if (const auto &[success, giro] = image_processor.check_red_patch_in_image(camera360rgb_proxy, label_img); success)
+	{
+		localised = true;
+		return {STATE::IDLE, 0, 0};
+	}
+	else
+	{
+		float vel_rot = 0.4f;
+		return{STATE::TURN, 0, giro * vel_rot};
+	}
 }
 
 SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const Match &match)
@@ -220,6 +248,37 @@ SpecificWorker::RetVal SpecificWorker::process_state(const RoboCompLidar3D::TPoi
 {
 	return{};
 }
+
+bool SpecificWorker::update_robot_pose(const Corners &corners, const Match &match)
+{
+	Eigen::MatrixXd W(match.size()*2,3);
+	Eigen::VectorXd b(match.size()*2);
+	for (const auto &&[i, m] : match | iter::enumerate)
+	{
+		auto &[meas_c, nom_c, _] = m;
+		auto &[p_meas, __, ___] = meas_c;
+		auto &[p_nom, ____, _____] = nom_c;
+		b(2*i) = p_nom.x() - p_meas.x();
+		b(2*i+1) = p_nom.y() - p_meas.y();
+		W.block<1, 3>(2*i, 0) << 1.0, 0.0, -p_meas.y();
+		W.block<1, 3>(2*i+1, 0) << 0.0, 1.0, p_meas.x();
+	}
+	// estimate new pose with pseudoinverse
+	const auto r = (W.transpose()*W).inverse()*W.transpose()*b;
+	if (r.array().isNaN().any()) return false;
+	// update robot pose
+	robot_pose.translate(Eigen::Vector2d(r(0), r(1)));
+	robot_pose.rotate(r(2));
+
+	return true;
+}
+void SpecificWorker::move_robot(float adv, float rot, float max_match_error)
+{
+	omnirobot_proxy->setSpeedBase(0, adv, rot);
+}
+Eigen::Vector3d SpecificWorker::solve_pose(const Corners &corners, const Match &match){return {};}
+void SpecificWorker::predict_robot_pose(){}
+std::tuple<float, float> SpecificWorker::robot_controller(const Eigen::Vector2f &target){return {};}
 
 //=========================================================================================================================================
 std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data()

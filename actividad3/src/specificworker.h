@@ -39,6 +39,7 @@
 #include <random>
 #include <doublebuffer/DoubleBuffer.h>
 #include "time_series_plotter.h"
+#include <cmath>
 
 #ifdef emit
 #undef emit
@@ -166,7 +167,7 @@ private:
 	STATE state = STATE::GOTO_ROOM_CENTER;
 	using RetVal = std::tuple<STATE, float, float>;
 
-	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines lines);
+	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines);
 
 	RetVal localise(const Match &match);
 	RetVal goto_room_center(const Lines &lines);
@@ -187,6 +188,7 @@ private:
 	std::optional<RoboCompLidar3D::TPoints> filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints &points);
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	void print_match(const Match &match, const float error =1.f) const;
+	std::tuple<float, float> do_work(const std::optional<Eigen::Vector2d> target);
 
 	// random number generator
 	std::random_device rd;
