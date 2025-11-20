@@ -146,8 +146,10 @@ private:
 
 	// rooms
 	std::vector<NominalRoom> nominal_rooms{NominalRoom{5500.f, 4000.f}, NominalRoom{8000.f, 4000.f}};
+	int room_index = 0;
 	rc::Room_Detector room_detector; // object to compute the corners
 	rc::Hungarian hungarian; // object to match the two sets of corners
+	QColor colors[2] = {QColor(Qt::red), QColor(Qt::green)};
 
 	// state machine
 	enum class STATE {GOTO_DOOR, ORIENT_TO_DOOR, LOCALISE, GOTO_ROOM_CENTER, TURN, IDLE, CROSS_DOOR};
@@ -167,20 +169,21 @@ private:
 	STATE state = STATE::GOTO_ROOM_CENTER;
 	using RetVal = std::tuple<STATE, float, float>;
 
-	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d target);
+	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d &door_center);
 
 	RetVal localise(const Match &match);
 	RetVal goto_room_center(const Lines &lines);
 	RetVal turn(const Corners &corners);
 	RetVal update_pose(const Corners &corners, const Match &match);
 
-	RetVal orient_to_door(const Eigen::Vector2d target);
+	RetVal orient_to_door(const Eigen::Vector2d &target);
 	RetVal goto_door(const RoboCompLidar3D::TPoints &points);
 	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
 	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
 
 	//Draw
 	void draw_lidar(auto &filtered_points, Eigen::Vector2d room_center, QGraphicsScene *scene);
+	void draw_target(const Eigen::Vector2d &point, QGraphicsScene *scene);
 
 	//aux
 	std::optional<RoboCompLidar3D::TPoints> read_data();
@@ -205,6 +208,7 @@ private:
 	// Doors
 	DoorDetector door_detector;
 	Doors doors;
+	Eigen::Vector2d door_center;
 
 	// graphics
 	QRectF dimensions{-5000, 2500, 10000, -5000};
@@ -214,7 +218,6 @@ private:
 	rc::ImageProcessor image_processor;
 
 	// timing
-	std::chrono::time_point<std::chrono::high_resolution_clock> last_time = std::chrono::high_resolution_clock::now();
 
 	// relocalization
 	bool relocal_centered = false;

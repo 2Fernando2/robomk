@@ -128,19 +128,21 @@
   /lib/x86_64-linux-gnu/libbz2.so.1.0 \
   /lib/x86_64-linux-gnu/libcrypto.so.3 \
   /lib/x86_64-linux-gnu/libsystemd.so.0 \
+  /lib/x86_64-linux-gnu/libz.so.1 \
+  /usr/lib/x86_64-linux-gnu/libGLX.so \
+  /lib/x86_64-linux-gnu/liblapack.so.3 \
+  /lib/x86_64-linux-gnu/libblas.so.3 \
   /lib/x86_64-linux-gnu/libEGL.so.1 \
   /lib/x86_64-linux-gnu/libfontconfig.so.1 \
   /lib/x86_64-linux-gnu/libX11.so.6 \
   /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
   /lib/x86_64-linux-gnu/libQt6DBus.so.6 \
   /lib/x86_64-linux-gnu/libxkbcommon.so.0 \
-  /usr/lib/x86_64-linux-gnu/libGLX.so \
   /usr/lib/x86_64-linux-gnu/libOpenGL.so \
   /lib/x86_64-linux-gnu/libpng16.so.16 \
   /lib/x86_64-linux-gnu/libharfbuzz.so.0 \
   /lib/x86_64-linux-gnu/libmd4c.so.0 \
   /lib/x86_64-linux-gnu/libfreetype.so.6 \
-  /lib/x86_64-linux-gnu/libz.so.1 \
   /lib/x86_64-linux-gnu/libicui18n.so.74 \
   /lib/x86_64-linux-gnu/libicuuc.so.74 \
   /lib/x86_64-linux-gnu/libdouble-conversion.so.3 \
@@ -152,6 +154,8 @@
   /lib/x86_64-linux-gnu/liblz4.so.1 \
   /lib/x86_64-linux-gnu/liblzma.so.5 \
   /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
+  /lib/x86_64-linux-gnu/libopenblas.so.0 \
+  /lib/x86_64-linux-gnu/libgfortran.so.5 \
   /lib/x86_64-linux-gnu/libexpat.so.1 \
   /lib/x86_64-linux-gnu/libxcb.so.1 \
   /lib/x86_64-linux-gnu/libpcre2-8.so.0 \
@@ -425,6 +429,14 @@ CMakeFiles/multi_room.dir/Lidar3D.cpp.o:
 
 /lib/x86_64-linux-gnu/libsystemd.so.0:
 
+/lib/x86_64-linux-gnu/libz.so.1:
+
+/usr/lib/x86_64-linux-gnu/libGLX.so:
+
+/lib/x86_64-linux-gnu/liblapack.so.3:
+
+/lib/x86_64-linux-gnu/libblas.so.3:
+
 /lib/x86_64-linux-gnu/libEGL.so.1:
 
 /lib/x86_64-linux-gnu/libfontconfig.so.1:
@@ -437,8 +449,6 @@ CMakeFiles/multi_room.dir/Lidar3D.cpp.o:
 
 /lib/x86_64-linux-gnu/libxkbcommon.so.0:
 
-/usr/lib/x86_64-linux-gnu/libGLX.so:
-
 /usr/lib/x86_64-linux-gnu/libOpenGL.so:
 
 /lib/x86_64-linux-gnu/libpng16.so.16:
@@ -448,8 +458,6 @@ CMakeFiles/multi_room.dir/Lidar3D.cpp.o:
 /lib/x86_64-linux-gnu/libmd4c.so.0:
 
 /lib/x86_64-linux-gnu/libfreetype.so.6:
-
-/lib/x86_64-linux-gnu/libz.so.1:
 
 /lib/x86_64-linux-gnu/libicui18n.so.74:
 
@@ -472,6 +480,10 @@ CMakeFiles/multi_room.dir/Lidar3D.cpp.o:
 /lib/x86_64-linux-gnu/liblzma.so.5:
 
 /lib/x86_64-linux-gnu/libGLdispatch.so.0:
+
+/lib/x86_64-linux-gnu/libopenblas.so.0:
+
+/lib/x86_64-linux-gnu/libgfortran.so.5:
 
 /lib/x86_64-linux-gnu/libexpat.so.1:
 
