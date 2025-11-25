@@ -149,7 +149,7 @@ private:
 	int room_index = 0;
 	rc::Room_Detector room_detector; // object to compute the corners
 	rc::Hungarian hungarian; // object to match the two sets of corners
-	QColor colors[2] = {QColor(Qt::red), QColor(Qt::green)};
+	QColor colors[2] = {QColor("red"), QColor("green")};
 
 	// state machine
 	enum class STATE {GOTO_DOOR, ORIENT_TO_DOOR, LOCALISE, GOTO_ROOM_CENTER, TURN, IDLE, CROSS_DOOR};
@@ -169,15 +169,16 @@ private:
 	STATE state = STATE::GOTO_ROOM_CENTER;
 	using RetVal = std::tuple<STATE, float, float>;
 
-	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d &door_center);
+	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d &door_center
+		, const float &max_math_error);
 
 	RetVal localise(const Match &match);
 	RetVal goto_room_center(const Lines &lines);
 	RetVal turn(const Corners &corners);
 	RetVal update_pose(const Corners &corners, const Match &match);
 
-	RetVal orient_to_door(const Eigen::Vector2d &target);
-	RetVal goto_door(const RoboCompLidar3D::TPoints &points);
+	RetVal orient_to_door(const Eigen::Vector2d &target, const float &max_match_error);
+	RetVal goto_door(const RoboCompLidar3D::TPoints &points, const float &max_match_error);
 	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
 	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
 

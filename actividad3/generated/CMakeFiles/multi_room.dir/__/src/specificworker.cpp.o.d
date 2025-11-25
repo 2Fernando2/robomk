@@ -951,7 +951,7 @@ generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -961,7 +961,7 @@ generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachineexports.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
  /usr/include/c++/13/iostream \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
@@ -1017,8 +1017,8 @@ generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: \
  /usr/local/include/toml++/impl/toml_formatter.inl \
  /usr/local/include/toml++/impl/json_formatter.inl \
  /usr/local/include/toml++/impl/yaml_formatter.inl \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
- /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.tpp \
+ /home/usuario/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
@@ -1071,7 +1071,7 @@ generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: \
  /home/usuario/robomk/actividad3/generated/GenericBase.h \
  /home/usuario/robomk/actividad3/generated/Lidar3D.h \
  /home/usuario/robomk/actividad3/generated/OmniRobot.h \
- /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
@@ -1095,9 +1095,9 @@ generated/CMakeFiles/multi_room.dir/__/src/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/c++/13/expected \
- /home/robocomp/robocomp/classes/doublebuffer/DoubleBuffer.h \
+ /home/usuario/robocomp/classes/doublebuffer/DoubleBuffer.h \
  /usr/include/c++/13/shared_mutex \
- /home/robocomp/robocomp/classes/threadpool/threadpool.h \
+ /home/usuario/robocomp/classes/threadpool/threadpool.h \
  /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h \
  /usr/include/c++/13/thread \
  /home/usuario/robomk/actividad3/src/time_series_plotter.h \

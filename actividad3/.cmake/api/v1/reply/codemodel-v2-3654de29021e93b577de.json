@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-99053f5ddaab49d552dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "generated",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-generated-Debug-bad1130348e50e3c1e79.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "generated",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "multi_room",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ICES__home_usuario_robomk_actividad3_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_usuario_robomk_actividad3_generated-Debug-aa8aec8d1bf0638eb4ca.json",
+					"name" : "ICES__home_usuario_robomk_actividad3_generated",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_Camera360RGB_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_Camera360RGB_target-Debug-0a482a4d3ce990ea546f.json",
+					"name" : "ICE_Camera360RGB_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_GenericBase_target-Debug-a9f5621596054f64ebf0.json",
+					"name" : "ICE_GenericBase_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_Lidar3D_target-Debug-ed19db56f778d8ef166f.json",
+					"name" : "ICE_Lidar3D_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_OmniRobot_target-Debug-6f747443caeb22fc22c9.json",
+					"name" : "ICE_OmniRobot_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "multi_room::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-multi_room-Debug-dacf67bc9db5b0f6d904.json",
+					"name" : "multi_room",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "multi_room_autogen::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-multi_room_autogen-Debug-b7ab08d59891de077082.json",
+					"name" : "multi_room_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "multi_room_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-multi_room_autogen_timestamp_deps-Debug-5669e49f98056a76455a.json",
+					"name" : "multi_room_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/usuario/robomk/actividad3",
+		"source" : "/home/usuario/robomk/actividad3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

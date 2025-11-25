@@ -7,6 +7,7 @@ CMake Warning at CMakeLists.txt:5 (MESSAGE):
 -- Using g++ 13 or higher, setting the C++23 standard.
 -- COMPILING WITH QT6
 -- Configuring for x86_64 architecture
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 -- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
 -- opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoioopencv_alphamatopencv_arucoopencv_barcodeopencv_bgsegmopencv_bioinspiredopencv_ccalibopencv_cvvopencv_datasetsopencv_dnn_objdetectopencv_dnn_superresopencv_dpmopencv_faceopencv_freetypeopencv_fuzzyopencv_hdfopencv_hfsopencv_img_hashopencv_intensity_transformopencv_line_descriptoropencv_mccopencv_optflowopencv_phase_unwrappingopencv_plotopencv_qualityopencv_rapidopencv_regopencv_rgbdopencv_saliencyopencv_shapeopencv_stereoopencv_structured_lightopencv_superresopencv_surface_matchingopencv_textopencv_trackingopencv_videostabopencv_vizopencv_wechat_qrcodeopencv_ximgprocopencv_xobjdetectopencv_xphoto
 -- Ice version: 3.7.10
@@ -32,6 +33,6 @@ CMake Warning at CMakeLists.txt:5 (MESSAGE):
 -- BU ice=>h/cpp: Adding rule to generate Camera360RGB.h and Camera360RGB.cpp from /home/usuario/robomk/actividad3/generated/Camera360RGB.ice
 -- BU ice=>h/cpp: Adding rule to generate OmniRobot.h and OmniRobot.cpp from /home/usuario/robomk/actividad3/generated/OmniRobot.ice
 -- BU ice=>h/cpp: Adding rule to generate Lidar3D.h and Lidar3D.cpp from /home/usuario/robomk/actividad3/generated/Lidar3D.ice
--- Configuring done (0.2s)
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/usuario/robomk/actividad3
