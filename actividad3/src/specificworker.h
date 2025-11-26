@@ -140,6 +140,7 @@ private:
 	// viewer
 	AbstractGraphicViewer *viewer, *viewer_room;
 	QGraphicsPolygonItem *robot_draw, * robot_room_draw;
+	QGraphicsRectItem *room_draw;
 
 	// robot
 	Eigen::Affine2d robot_pose;  // Eigen type to represent a rotation+translation
@@ -184,7 +185,7 @@ private:
 
 	//Draw
 	void draw_lidar(auto &filtered_points, Eigen::Vector2d room_center, QGraphicsScene *scene);
-	void draw_target(const Eigen::Vector2d &point, QGraphicsScene *scene);
+	void draw_target(const Eigen::Vector2d &point, QGraphicsScene *scene, bool last_iteratior);
 
 	//aux
 	std::optional<RoboCompLidar3D::TPoints> read_data();

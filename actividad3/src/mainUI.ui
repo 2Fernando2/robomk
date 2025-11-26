@@ -178,7 +178,14 @@
              <item>
               <widget class="QLabel" name="label_state">
                <property name="text">
-                <string>TextLabel</string>
+                <string>room_index</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_localised">
+               <property name="text">
+                <string>localised</string>
                </property>
               </widget>
              </item>

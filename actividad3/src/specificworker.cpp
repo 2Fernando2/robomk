@@ -67,7 +67,7 @@ void SpecificWorker::initialize()
 		robot_room_draw = rr;
 
 		// draw room in viewer_room
-		viewer_room->scene.addRect(nominal_rooms[0].rect(), QPen(Qt::black, 30));
+		room_draw = viewer_room->scene.addRect(nominal_rooms[0].rect(), QPen(Qt::black, 30));
 
 		//viwer_room->show();
 		show();
@@ -127,14 +127,13 @@ void SpecificWorker::compute()
 	 }
 
 	 // update robot pose
-	 if (localised)
-	 	update_robot_pose(corners, match);
+	 localised = update_robot_pose(corners, match);
 
 	 // Process state machine
-	RetVal ret_val = state_machine(filtered_points, match, corners, lines, door_center, max_match_error);
+	 RetVal ret_val = state_machine(filtered_points, match, corners, lines, door_center, max_match_error);
 
 	 auto [st, adv, rot] = ret_val;
-	 state = st;
+	 state = localised ? st : STATE::GOTO_ROOM_CENTER;
 
 	//Send movements commands to the robot constrained by the match_error
 	const auto &[_, __, angle_] = do_work(center_opt.value());
@@ -155,7 +154,11 @@ void SpecificWorker::compute()
 	lcdNumber_angle->display(angle);
 	label_state_name->setText(to_string(state));
 	label_state->setText(QString::number(room_index));
-	// auto result = state_Machine(filter_data);
+
+	if (localised)
+		label_localised->setText("Localised");
+	else
+		label_localised->setText("Lost");
 }
 
 SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d &door_center, const float &max_match_error)
@@ -198,7 +201,7 @@ std::tuple<float, float, double> SpecificWorker::do_work(const Eigen::Vector2d t
 	double rot_vel = angle * k;
 
 	// break rotation
-	const double R = std::log(0.2) / -M_PI_4*M_PI_4;
+	const double R = std::log(0.2)*2 / -M_PI_4*M_PI_4;
 	auto break_rot = std::exp(-angle*angle * R);
 
 	// advance
@@ -206,7 +209,7 @@ std::tuple<float, float, double> SpecificWorker::do_work(const Eigen::Vector2d t
 	return {adv_vel, rot_vel, angle};
 }
 
-void SpecificWorker::draw_target(const Eigen::Vector2d &target, QGraphicsScene *scene)
+void SpecificWorker::draw_target(const Eigen::Vector2d &target, QGraphicsScene *scene, bool last_iteratior)
 {
 	static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
 
@@ -218,7 +221,10 @@ void SpecificWorker::draw_target(const Eigen::Vector2d &target, QGraphicsScene *
 	}
 	items.clear();
 
-	auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::magenta), QBrush(QColorConstants::Svg::magenta));
+	if (last_iteratior)
+		return;
+
+	auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::silver), QBrush(QColorConstants::Svg::silver));
 	item->setPos(target.x(), target.y());
 	items.push_back(item);
 }
@@ -267,10 +273,14 @@ SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints 
 	Eigen::Vector2d robot_position(robot_pose.translation().x(), robot_pose.translation().y());
 	const auto target = doors[0].center_before(robot_position, 650.f);
 	Eigen::Vector2d target_2d(target.x(), target.y());
-	draw_target(target_2d, &viewer->scene);
-	if (target.norm() < 300.f)
-		return {STATE::ORIENT_TO_DOOR, 0.f, 0.f};
 
+	if (target.norm() < 300.f)
+	{
+		draw_target(target_2d, &viewer->scene, true);
+		return {STATE::ORIENT_TO_DOOR, 0.f, 0.f};
+	}
+
+	draw_target(target_2d, &viewer->scene, false);
 	const auto &[adv_speed, rot_speed, _] = do_work(target_2d);
 	return{STATE::GOTO_DOOR, adv_speed, rot_speed};
 }
@@ -285,8 +295,10 @@ SpecificWorker::RetVal SpecificWorker::orient_to_door(const Eigen::Vector2d &tar
 	const auto &[_, rot_vel, angle] = do_work(target);
 	if (std::abs(rot_vel) < 0.15f)
 	{
+		draw_target(target, &viewer->scene, true);
 		return {STATE::CROSS_DOOR, 0.f, 0.f};
 	}
+	draw_target(target, &viewer->scene, false);
 	return{STATE::ORIENT_TO_DOOR, 0.f, rot_vel};
 }
 
@@ -304,9 +316,27 @@ SpecificWorker::RetVal SpecificWorker::cross_door(const RoboCompLidar3D::TPoints
 		first_time = true;
 		localised = false;
 		room_index = (room_index+1) % std::size(nominal_rooms);
+
+
+		//Clear items
+		// viewer_room->scene.clear();
+		//viewer_room->scene.removeItem(robot_room_draw);
+		viewer_room->scene.removeItem(room_draw);
+		delete room_draw;
+
+		// Update robot in room viewer
+		//viewer_room = new AbstractGraphicViewer(this->frame_room, this->dimensions);
+		//auto [rr, re] = viewer_room->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
+		//robot_room_draw = rr;
+		// viewer_room->updateSceneRect(robot_room_draw);
+
+		// draw room in viewer_room
+		room_draw = viewer_room->scene.addRect(nominal_rooms[room_index].rect(), QPen(Qt::black, 30));
+		//show();
+
 		return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
 	}
-	return{STATE::CROSS_DOOR, 700.f, 0.f};
+	return{STATE::CROSS_DOOR, 1000.f, 0.f};
 }
 
 SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const Match &match)

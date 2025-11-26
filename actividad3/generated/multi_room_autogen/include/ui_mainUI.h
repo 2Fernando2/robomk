@@ -53,6 +53,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label_state_name;
     QLabel *label_state;
+    QLabel *label_localised;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_stop;
     QFrame *frame_plot_error;
@@ -203,6 +204,11 @@ public:
 
         horizontalLayout->addWidget(label_state);
 
+        label_localised = new QLabel(guiDlg);
+        label_localised->setObjectName("label_localised");
+
+        horizontalLayout->addWidget(label_localised);
+
 
         verticalLayout->addLayout(horizontalLayout);
 
@@ -257,7 +263,8 @@ public:
         label_4->setText(QCoreApplication::translate("guiDlg", "adv", nullptr));
         label_5->setText(QCoreApplication::translate("guiDlg", "rot", nullptr));
         label_state_name->setText(QCoreApplication::translate("guiDlg", "state:", nullptr));
-        label_state->setText(QCoreApplication::translate("guiDlg", "TextLabel", nullptr));
+        label_state->setText(QCoreApplication::translate("guiDlg", "room_index", nullptr));
+        label_localised->setText(QCoreApplication::translate("guiDlg", "localised", nullptr));
         pushButton_stop->setText(QCoreApplication::translate("guiDlg", "Stop", nullptr));
         label_img->setText(QCoreApplication::translate("guiDlg", "TextLabel", nullptr));
     } // retranslateUi
