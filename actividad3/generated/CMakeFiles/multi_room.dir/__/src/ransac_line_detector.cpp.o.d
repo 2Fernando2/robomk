@@ -1,7 +1,7 @@
 generated/CMakeFiles/multi_room.dir/__/src/ransac_line_detector.cpp.o: \
- /home/usuario/robomk/actividad3/src/ransac_line_detector.cpp \
+ /home/varo/robomk/actividad3/src/ransac_line_detector.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robomk/actividad3/src/ransac_line_detector.h \
+ /home/varo/robomk/actividad3/src/ransac_line_detector.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -400,7 +400,7 @@ generated/CMakeFiles/multi_room.dir/__/src/ransac_line_detector.cpp.o: \
  /usr/include/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/Eigen/src/Geometry/Umeyama.h \
  /usr/include/Eigen/src/Geometry/arch/Geometry_SIMD.h \
- /home/usuario/robomk/actividad3/src/common_types.h \
+ /home/varo/robomk/actividad3/src/common_types.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \

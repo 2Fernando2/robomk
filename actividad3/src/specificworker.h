@@ -53,6 +53,7 @@
 #include "nominal_room.h"
 #include "door_detector.h"
 #include "image_processor.h"
+#include "pointcloud_center_estimator.h"
 
 #include <ranges>
 #include <expected>
@@ -127,7 +128,7 @@ private:
 		float RELOCAL_DELTA = 5.0f * M_PI/180.f; // small probe angle in radians
 		float RELOCAL_MATCH_MAX_DIST = 2000.f;   // mm for Hungarian gating
 		float RELOCAL_DONE_COST = 500.f;
-		float RELOCAL_DONE_MATCH_MAX_ERROR = 1000.f;
+		float RELOCAL_DONE_MATCH_MAX_ERROR = 2000.f;
 
 		bool rotating = false;
 		bool rot_direction = false; // true: right - false: left
@@ -136,6 +137,8 @@ private:
 
 	};
 	Params params;
+
+	float max_error_registered = -1.0;
 
 	// viewer
 	AbstractGraphicViewer *viewer, *viewer_room;
@@ -149,8 +152,10 @@ private:
 	std::vector<NominalRoom> nominal_rooms{NominalRoom{5500.f, 4000.f}, NominalRoom{8000.f, 4000.f}};
 	int room_index = 0;
 	rc::Room_Detector room_detector; // object to compute the corners
-	rc::Hungarian hungarian; // object to match the two sets of corners
+	rc::PointcloudCenterEstimator room_detector_estimator;
+    rc::Hungarian hungarian; // object to match the two sets of corners
 	QColor colors[2] = {QColor("red"), QColor("green")};
+
 
 	// state machine
 	enum class STATE {GOTO_DOOR, ORIENT_TO_DOOR, LOCALISE, GOTO_ROOM_CENTER, TURN, IDLE, CROSS_DOOR};
@@ -170,15 +175,14 @@ private:
 	STATE state = STATE::GOTO_ROOM_CENTER;
 	using RetVal = std::tuple<STATE, float, float>;
 
-	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const Lines &lines, const Eigen::Vector2d &door_center
-		, const float &max_math_error);
+	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const float &max_math_error);
 
 	RetVal localise(const Match &match);
-	RetVal goto_room_center(const Lines &lines);
+	RetVal goto_room_center(const RoboCompLidar3D::TPoints &points);
 	RetVal turn(const Corners &corners);
 	RetVal update_pose(const Corners &corners, const Match &match);
 
-	RetVal orient_to_door(const Eigen::Vector2d &target, const float &max_match_error);
+	RetVal orient_to_door(const float &max_match_error);
 	RetVal goto_door(const RoboCompLidar3D::TPoints &points, const float &max_match_error);
 	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
 	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
@@ -225,7 +229,7 @@ private:
 	bool relocal_centered = false;
 	bool localised = false;
 
-	bool update_robot_pose(const Corners &corners, const Match &match);
+	void update_robot_pose(const Corners &corners, const Match &match);
 	void move_robot(float adv, float rot, float max_match_error);
 	Eigen::Vector3d solve_pose(const Corners &corners, const Match &match);
 	void predict_robot_pose();

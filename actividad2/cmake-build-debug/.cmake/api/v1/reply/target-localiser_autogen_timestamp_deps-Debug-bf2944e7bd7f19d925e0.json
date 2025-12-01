@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"generated/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "localiser_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
+	"isGeneratorProvided" : true,
+	"name" : "localiser_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "generated",
+		"source" : "generated"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
