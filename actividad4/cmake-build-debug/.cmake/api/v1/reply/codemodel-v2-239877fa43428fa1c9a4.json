@@ -1,0 +1,132 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e76c0da098249a65619d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "generated",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-generated-Debug-f47cb77fa6246c30a432.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "generated",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "multi_room",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ICES__home_usuario_robomk_actividad3_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_usuario_robomk_actividad3_generated-Debug-779e72cb41e6346d41a9.json",
+					"name" : "ICES__home_usuario_robomk_actividad3_generated",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_GenericBase_target-Debug-b15f2aba97697e369bc2.json",
+					"name" : "ICE_GenericBase_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_Lidar3D_target-Debug-f4fb895af29a9db9bbe1.json",
+					"name" : "ICE_Lidar3D_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_OmniRobot_target-Debug-a78e3db8ec164bfa2aec.json",
+					"name" : "ICE_OmniRobot_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "localiser::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-localiser-Debug-4aa8893032caf40da6e8.json",
+					"name" : "localiser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "localiser_autogen::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-localiser_autogen-Debug-f953b3e92fc8c9b4e96d.json",
+					"name" : "localiser_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "localiser_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-localiser_autogen_timestamp_deps-Debug-bf2944e7bd7f19d925e0.json",
+					"name" : "localiser_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/usuario/robomk/actividad3/cmake-build-debug",
+		"source" : "/home/usuario/robomk/actividad3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
