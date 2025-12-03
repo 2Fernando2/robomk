@@ -144,9 +144,9 @@ void SpecificWorker::compute() {
 
     // Send movements commands to the robot constrained by the match_error
     // const auto &[_, __, angle_] = do_work(center_opt.value());
-    qInfo() << __FUNCTION__ << to_string(state) << " Adv: " << adv
+    /*qInfo() << __FUNCTION__ << to_string(state) << " Adv: " << adv
             << " Rot: " << rot << " MaxError: " << max_match_error
-            << " MaxMatchError: " << params.RELOCAL_DONE_MATCH_MAX_ERROR;
+            << " MaxMatchError: " << params.RELOCAL_DONE_MATCH_MAX_ERROR;*/
     //" Center: " << center_opt.value().norm(); // << " Angle_to_center: " << // angle_;
     // move_robot(adv, rot, max_match_error);
 
@@ -446,7 +446,16 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data() {
     // Try-Catch block to read the laser data
     RoboCompLidar3D::TData data;
     try {
-        data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 15000, 2);
+        float max_distance = 0;
+        for (const auto n : nominal_rooms)
+        {
+            if (n.length > max_distance)
+                max_distance = n.length;
+            if (n.width > max_distance)
+                max_distance = n.width;
+        }
+        data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", max_distance, 2);
+        // data = lidar3d_proxy->getLidarDataWithThreshold2d("pearl", 15000, 2);
     } catch (const Ice::Exception &ex) {
         std::cout << ex.what() << std::endl;
         return {};

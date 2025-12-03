@@ -42,10 +42,27 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
         const auto &p2 = c[1];
         auto dist = std::sqrt(std::pow(std::get<0>(p2).x()-std::get<0>(p1).x(), 2) + std::pow(std::get<0>(p2).y()-std::get<0>(p1).y(), 2));
         if (MIN_DOOR_THRESHOLD < dist && dist < MAX_DOOR_THRESHOLD)
-            doors.push_back(Door(std::get<0>(p1), std::get<1>(p1), std::get<0>(p2), std::get<1>(p2)));
+        {
+            doors.push_back(Door(std::get<0>(p1), std::get<1>(p1), std::get<0>(p2), std::get<1>(p2)));  //caso normal
+            // if (std::get<1>(p1) > std::get<1>(p2))
+            // {
+            //     doors.push_back(Door(std::get<0>(p2), std::get<1>(p2), std::get<0>(p1), std::get<1>(p1)));  //caso especial
+            //     qInfo() << "Caso especial";
+            // }
+            // else
+            // {
+            //     doors.push_back(Door(std::get<0>(p1), std::get<1>(p1), std::get<0>(p2), std::get<1>(p2)));  //caso normal
+            //     // qInfo() << "Caso normal";
+            // }
+        }
     }
     draw_doors(doors, scene);
 
+    // for (const auto door : doors)
+    // {
+    //     qInfo() << door.p1_angle << door.p2_angle;
+    // }
+    // qInfo() << "=============================";
     return doors;
 }
 
@@ -57,10 +74,19 @@ std::tuple<RoboCompLidar3D::TPoints, Doors> DoorDetector::filter_points(const Ro
 
     // for each door, check if the distance from the robot to each lidar point is smaller than the distance from the robot to the door
     RoboCompLidar3D::TPoints filtered;
+    float offset = 0.0;
+    int door_index = 0;
+    bool erased = false;
     for(const auto &p : points)
     {
+        erased = false;
+        door_index = 0;
         for(const auto &d : doors)
         {
+            if (erased)
+                continue;
+
+
             const float dist_to_door = d.center().norm();
             // Check if the angular range wraps around the -π/+π boundary
             const bool angle_wraps = d.p2_angle < d.p1_angle;
@@ -68,21 +94,32 @@ std::tuple<RoboCompLidar3D::TPoints, Doors> DoorDetector::filter_points(const Ro
             bool point_in_angular_range;
             if (angle_wraps)
             {
+                // Caso especial
                 // If the range wraps around, point is in range if it's > p1_angle OR < p2_angle
-                point_in_angular_range = (p.phi > d.p1_angle) or (p.phi < d.p2_angle);
+                point_in_angular_range = (p.phi > d.p1_angle + offset) or (p.phi < d.p2_angle - offset);
             }
             else
             {
                 // Normal case: point is in range if it's between p1_angle and p2_angle
-                point_in_angular_range = (p.phi > d.p1_angle) and (p.phi < d.p2_angle);
+                point_in_angular_range = (p.phi > d.p1_angle - offset) and (p.phi < d.p2_angle + offset);
             }
 
             // Filter out points that are through the door (in angular range and farther than door)
             if(point_in_angular_range and p.distance2d >= dist_to_door)
+            {
+                // qInfo() << p.phi << d.p1_angle << d.p2_angle << "||" << p.distance2d << ">=" << dist_to_door;
+                // qInfo() << "==========================================================";
+                erased = true;
                 continue;
+            }
 
-            //qInfo() << __FUNCTION__ << "Point angle: " << p.phi << " Door angles: " << d.p1_angle << ", " << d.p2_angle << " Point distance: " << p.distance2d << " Door distance: " << dist_to_door;
+            //debuggin
+            if ( -M_PI_2/4 < p.phi and p.phi < M_PI_2/4)
+            {
+                qInfo() << __FUNCTION__ << "Point angle: " << p.phi << " Door angles: " << d.p1_angle << ", " << d.p2_angle << " Point distance: " << p.distance2d << " Door distance: " << dist_to_door << door_index;
+            }
             filtered.emplace_back(p);
+            door_index++;
         }
     }
     return {filtered, doors};
