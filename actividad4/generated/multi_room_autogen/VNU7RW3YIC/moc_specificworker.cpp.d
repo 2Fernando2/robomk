@@ -1,27 +1,27 @@
-/home/usuario/robomk/actividad4/generated/multi_room_autogen/VNU7RW3YIC/moc_specificworker.cpp: /home/usuario/robomk/actividad4/src/specificworker.h \
-  /home/usuario/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
-  /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
-  /home/usuario/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
-  /home/usuario/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-  /home/usuario/robocomp/core/classes/doublebuffer/DoubleBuffer.h \
-  /home/usuario/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
-  /home/usuario/robocomp/core/classes/threadpool/threadpool.h \
-  /home/usuario/robomk/actividad4/generated/Camera360RGB.h \
-  /home/usuario/robomk/actividad4/generated/GenericBase.h \
-  /home/usuario/robomk/actividad4/generated/Lidar3D.h \
-  /home/usuario/robomk/actividad4/generated/OmniRobot.h \
-  /home/usuario/robomk/actividad4/generated/genericworker.h \
-  /home/usuario/robomk/actividad4/src/common_types.h \
-  /home/usuario/robomk/actividad4/src/door_detector.h \
-  /home/usuario/robomk/actividad4/src/hungarian.h \
-  /home/usuario/robomk/actividad4/src/image_processor.h \
-  /home/usuario/robomk/actividad4/src/munkres.hpp \
-  /home/usuario/robomk/actividad4/src/nominal_room.h \
-  /home/usuario/robomk/actividad4/src/pointcloud_center_estimator.h \
-  /home/usuario/robomk/actividad4/src/qcustomplot.h \
-  /home/usuario/robomk/actividad4/src/ransac_line_detector.h \
-  /home/usuario/robomk/actividad4/src/room_detector.h \
-  /home/usuario/robomk/actividad4/src/time_series_plotter.h \
+/home/varo/robomk/actividad4/generated/multi_room_autogen/VNU7RW3YIC/moc_specificworker.cpp: /home/varo/robomk/actividad4/src/specificworker.h \
+  /home/varo/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
+  /home/varo/robocomp/core/classes/ConfigLoader/ConfigLoader.h \
+  /home/varo/robocomp/core/classes/ConfigLoader/ConfigLoader.tpp \
+  /home/varo/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+  /home/varo/robocomp/core/classes/doublebuffer/DoubleBuffer.h \
+  /home/varo/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
+  /home/varo/robocomp/core/classes/threadpool/threadpool.h \
+  /home/varo/robomk/actividad4/generated/Camera360RGB.h \
+  /home/varo/robomk/actividad4/generated/GenericBase.h \
+  /home/varo/robomk/actividad4/generated/Lidar3D.h \
+  /home/varo/robomk/actividad4/generated/OmniRobot.h \
+  /home/varo/robomk/actividad4/generated/genericworker.h \
+  /home/varo/robomk/actividad4/src/common_types.h \
+  /home/varo/robomk/actividad4/src/door_detector.h \
+  /home/varo/robomk/actividad4/src/hungarian.h \
+  /home/varo/robomk/actividad4/src/image_processor.h \
+  /home/varo/robomk/actividad4/src/munkres.hpp \
+  /home/varo/robomk/actividad4/src/nominal_room.h \
+  /home/varo/robomk/actividad4/src/pointcloud_center_estimator.h \
+  /home/varo/robomk/actividad4/src/qcustomplot.h \
+  /home/varo/robomk/actividad4/src/ransac_line_detector.h \
+  /home/varo/robomk/actividad4/src/room_detector.h \
+  /home/varo/robomk/actividad4/src/time_series_plotter.h \
   /usr/include/GL/gl.h \
   /usr/include/Ice/AsyncResult.h \
   /usr/include/Ice/BatchRequestQueueF.h \
@@ -788,6 +788,7 @@
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/syscall.h \
+  /usr/include/termios.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
   /usr/include/wchar.h \
@@ -837,6 +838,16 @@
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -1445,6 +1456,7 @@
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h \

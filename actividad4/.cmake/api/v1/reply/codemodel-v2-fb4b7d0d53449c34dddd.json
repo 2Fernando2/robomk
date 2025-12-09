@@ -11,7 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-7675e72b8e97af5ae3ee.json",
+					"jsonFile" : "directory-.-Debug-7675e72b8e97af5ae3ee.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -22,7 +22,7 @@
 				{
 					"build" : "generated",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-generated-d29868e2454b95dc17ae.json",
+					"jsonFile" : "directory-generated-Debug-d29868e2454b95dc17ae.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -43,7 +43,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -70,57 +70,57 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_usuario_robomk_actividad4_generated::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICES__home_usuario_robomk_actividad4_generated-4c470eb8261e8c26af13.json",
-					"name" : "ICES__home_usuario_robomk_actividad4_generated",
+					"id" : "ICES__home_varo_robomk_actividad4_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_varo_robomk_actividad4_generated-Debug-8b2a9853d451d83b4311.json",
+					"name" : "ICES__home_varo_robomk_actividad4_generated",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ICE_Camera360RGB_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_Camera360RGB_target-0a482a4d3ce990ea546f.json",
+					"jsonFile" : "target-ICE_Camera360RGB_target-Debug-f4dc76e5a3dc97f814f9.json",
 					"name" : "ICE_Camera360RGB_target",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_GenericBase_target-a9f5621596054f64ebf0.json",
+					"jsonFile" : "target-ICE_GenericBase_target-Debug-9f173fd6d6f7ba33363a.json",
 					"name" : "ICE_GenericBase_target",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_Lidar3D_target-ed19db56f778d8ef166f.json",
+					"jsonFile" : "target-ICE_Lidar3D_target-Debug-b231c5aae2c8bc86f660.json",
 					"name" : "ICE_Lidar3D_target",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-ICE_OmniRobot_target-6f747443caeb22fc22c9.json",
+					"jsonFile" : "target-ICE_OmniRobot_target-Debug-4bdaf86b90ce12625ab5.json",
 					"name" : "ICE_OmniRobot_target",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "multi_room::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-multi_room-1f0c6bd0c728c29db49e.json",
+					"jsonFile" : "target-multi_room-Debug-3246d95afa7c616b5188.json",
 					"name" : "multi_room",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "multi_room_autogen::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-multi_room_autogen-b7ab08d59891de077082.json",
+					"jsonFile" : "target-multi_room_autogen-Debug-b7ab08d59891de077082.json",
 					"name" : "multi_room_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "multi_room_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-multi_room_autogen_timestamp_deps-5669e49f98056a76455a.json",
+					"jsonFile" : "target-multi_room_autogen_timestamp_deps-Debug-41d44f69e6cfd0dfe4a4.json",
 					"name" : "multi_room_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
@@ -130,12 +130,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robomk/actividad4",
-		"source" : "/home/usuario/robomk/actividad4"
+		"build" : "/home/varo/robomk/actividad4",
+		"source" : "/home/varo/robomk/actividad4"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 8
 	}
 }

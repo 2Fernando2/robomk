@@ -18,6 +18,8 @@
  */
 #include "specificworker.h"
 
+struct termios SpecificWorker::original_terminal;
+
 SpecificWorker::SpecificWorker(const ConfigLoader &configLoader, TuplePrx tprx, bool startup_check)
         : GenericWorker(configLoader, tprx) {
     this->startup_check_flag = startup_check;
@@ -41,11 +43,13 @@ SpecificWorker::SpecificWorker(const ConfigLoader &configLoader, TuplePrx tprx, 
 
 SpecificWorker::~SpecificWorker() {
     qInfo() << "MaxErrorRegistered: " << max_error_registered;
+    restore_blocking_mode();
     std::cout << "Destroying SpecificWorker" << std::endl;
 }
 
 void SpecificWorker::initialize() {
     std::cout << "initialize worker" << std::endl;
+    set_non_blocking_mode();
 
     if (this->startup_check_flag) {
         this->startup_check();
@@ -90,22 +94,21 @@ void SpecificWorker::initialize() {
 }
 
 void SpecificWorker::compute() {
+    // read lidar data and filter points
     RoboCompLidar3D::TPoints points;
     if (const auto filter_data = read_data(); not filter_data.has_value()) {
         std::cerr << "No filter data found" << std::endl;
         return;
     } else
         points = filter_data.value();
+
+    // detect doors and filter beyond points -> doors from robot perspective (?)
     const auto &[filtered_points, doors_] = door_detector.filter_points(points, &viewer->scene);
     doors = doors_;
-    // draw_lidar(points, &viewer->scene);
 
-    // compute corners
-    const auto &[corners, lines] =
-            room_detector.compute_corners(filtered_points, &viewer->scene);
-    // const auto center_opt = room_detector.estimate_center_from_walls(lines);
+    // compute corners - detect and draw them
+    const auto &[corners, lines] = room_detector.compute_corners(filtered_points, &viewer->scene);
     const auto center_opt = room_detector_estimator.estimate(filtered_points);
-
     if (center_opt.has_value())
         draw_lidar(filtered_points, center_opt.value(), &viewer->scene);
     else {
@@ -114,9 +117,7 @@ void SpecificWorker::compute() {
     }
 
     // match corners transforming first nominal corners to robot's frame
-    const auto match = hungarian.match(
-            corners,
-            nominal_rooms[room_index].transform_corners_to(robot_pose.inverse()));
+    const auto match = hungarian.match(corners, nominal_rooms[room_index].transform_corners_to(robot_pose.inverse()));
 
     // compute max of match error
     float max_match_error = 99999.f;
@@ -136,7 +137,6 @@ void SpecificWorker::compute() {
 
     // Process state machine
     RetVal ret_val = state_machine(filtered_points, match, corners, max_match_error);
-
     auto [st, adv, rot] = ret_val;
     state = st;
     if (max_match_error < 99999.f)
@@ -148,11 +148,10 @@ void SpecificWorker::compute() {
             << " Rot: " << rot << " MaxError: " << max_match_error
             << " MaxMatchError: " << params.RELOCAL_DONE_MATCH_MAX_ERROR;*/
     //" Center: " << center_opt.value().norm(); // << " Angle_to_center: " << // angle_;
-    // move_robot(adv, rot, max_match_error);
+    if (keyw_mode) keyw(); else move_robot(adv, rot, max_match_error);
 
     // draw robot in viewer
-    robot_room_draw->setPos(robot_pose.translation().x(),
-                            robot_pose.translation().y());
+    robot_room_draw->setPos(robot_pose.translation().x(), robot_pose.translation().y());
     const double angle = qRadiansToDegrees(std::atan2(robot_pose.rotation()(1, 0), robot_pose.rotation()(0, 0)));
     robot_room_draw->setRotation(angle);
 
@@ -172,8 +171,8 @@ void SpecificWorker::compute() {
         label_localised->setText("Lost");
 }
 
-SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match,
-                                                     const Corners &corners, const float &max_match_error) {
+
+SpecificWorker::RetVal SpecificWorker::state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const float &max_match_error) {
     RetVal res;
     switch (state) {
         case STATE::GOTO_ROOM_CENTER:
@@ -215,8 +214,7 @@ std::tuple<float, float, double> SpecificWorker::do_work(const Eigen::Vector2d t
 }
 
 void SpecificWorker::draw_target(const Eigen::Vector2d &target, QGraphicsScene *scene, bool last_iteratior) {
-    static std::vector<QGraphicsItem *>
-            items; // store items so they can be shown between iterations
+    static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
 
     // remove all items drawn in the previous iteration
     for (auto i : items) {
@@ -261,22 +259,59 @@ SpecificWorker::RetVal SpecificWorker::goto_room_center(const RoboCompLidar3D::T
 }
 
 SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners) {
-    if (const auto &[success, giro] = image_processor.check_colour_patch_in_image(
-                camera360rgb_proxy, colors[room_index], label_img); success) {
-        // localised = ... localise(..)
-        // if (localised) return {..}
-        // else return {..}
-
+    if (const auto &[success, rot] = image_processor.check_colour_patch_in_image(camera360rgb_proxy, colors[room_index], label_img); success) {
         localised = true;
+
+        if (doors.empty()) {
+            std::cerr << "GOTO_DOOR: DOORS EMPTY";
+            return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+        }
+
+        // Iterate each ROBOT room to localise doors in that room
+        for (const auto &rd : doors){
+            // robot / room to reference which frame coordinates are from
+            Eigen::Vector2d robot_d1(rd.p1.x(), rd.p1.y());
+            Eigen::Vector2d robot_d2(rd.p2.x(), rd.p2.y());
+            Eigen::Vector2d room_d1 = robot_pose * robot_d1;
+            Eigen::Vector2d room_d2 = robot_pose * robot_d2;
+
+            Eigen::Vector2f p1_projected = nominal_rooms[room_index].get_projection_of_points_on_closest_wall(room_d1.cast<float>());
+            Eigen::Vector2f p2_projected = nominal_rooms[room_index].get_projection_of_points_on_closest_wall(room_d2.cast<float>());
+            doors[0].set_global_pos(p1_projected, p2_projected); // [0] for using any one, the important thing is the method access
+        }
+
+        // update room data inside corresponding nominal room
+        nominal_rooms[room_index].set_doors(doors);
+
+        // draw doors on viewer_room
+        draw_doors(&viewer_room->scene);
+
         return {STATE::GOTO_DOOR, 0.f, 0.f};
     } else {
         float vel_rot = 0.4f;
-        return {STATE::TURN, 0, giro * vel_rot};
+        return {STATE::TURN, 0.f, rot * vel_rot};
     }
 }
 
-SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints &points,
-                                                 const float &max_match_error) {
+void SpecificWorker::draw_doors(QGraphicsScene *scene) {
+    static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
+    items.clear();
+    for (const auto &d : doors){
+        // draw p1 and p2 points from door
+        auto p1_point = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange),QBrush(QColorConstants::Svg::orange));
+        p1_point->setPos(d.p1_global.x(), d.p1_global.y());
+        items.push_back(p1_point);
+        auto p2_point = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange),QBrush(QColorConstants::Svg::orange));
+        p2_point->setPos(d.p2_global.x(), d.p2_global.y());
+        items.push_back(p2_point);
+
+        // draw line between p1 and p2
+        auto item_line = scene->addLine(QLineF(QPointF(d.p1_global.x(), d.p1_global.y()), QPointF(d.p2_global.x(), d.p2_global.y())), QPen(QColorConstants::Svg::crimson, 10));
+        items.push_back(item_line);
+    }
+}
+
+SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints &points, const float &max_match_error) {
     static std::chrono::time_point<std::chrono::high_resolution_clock> last_time =
             std::chrono::high_resolution_clock::now();
     static bool first_time = true;
@@ -294,6 +329,7 @@ SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints 
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
     }
+
     if (doors.empty()) {
         std::cerr << "GOTO_DOOR: DOORS EMPTY";
         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
@@ -341,6 +377,7 @@ SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_err
         std::cerr << "GOTO_DOOR: DOORS EMPTY";
         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
     }
+
     Eigen::Vector2d door_center_2d(doors[0].center().x(), doors[0].center().y());
     door_center = door_center_2d;
     const auto &[adv_vel, rot_vel, angle] = do_work(door_center);
@@ -395,20 +432,11 @@ SpecificWorker::RetVal SpecificWorker::cross_door(const RoboCompLidar3D::TPoints
     return {STATE::CROSS_DOOR, 750.f, 0.f};
 }
 
-SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners,
-                                                   const Match &match) {
-    return {};
-}
+SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const Match &match) { return {}; }
 
-SpecificWorker::RetVal
-SpecificWorker::process_state(const RoboCompLidar3D::TPoints &data,
-                              const Corners &corners, const Match &match,
-                              AbstractGraphicViewer *viewer) {
-    return {};
-}
+SpecificWorker::RetVal SpecificWorker::process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer) { return {}; }
 
-void SpecificWorker::update_robot_pose(const Corners &corners,
-                                       const Match &match) {
+void SpecificWorker::update_robot_pose(const Corners &corners, const Match &match) {
     Eigen::MatrixXd W(match.size() * 2, 3);
     Eigen::VectorXd b(match.size() * 2);
     for (const auto &&[i, m] : match | iter::enumerate) {
@@ -431,15 +459,9 @@ void SpecificWorker::update_robot_pose(const Corners &corners,
 void SpecificWorker::move_robot(float adv, float rot, float max_match_error) {
     omnirobot_proxy->setSpeedBase(0, adv, rot);
 }
-Eigen::Vector3d SpecificWorker::solve_pose(const Corners &corners,
-                                           const Match &match) {
-    return {};
-}
+Eigen::Vector3d SpecificWorker::solve_pose(const Corners &corners, const Match &match) { return {}; }
 void SpecificWorker::predict_robot_pose() {}
-std::tuple<float, float>
-SpecificWorker::robot_controller(const Eigen::Vector2f &target) {
-    return {};
-}
+std::tuple<float, float> SpecificWorker::robot_controller(const Eigen::Vector2f &target) { return {}; }
 
 //=========================================================================================================================================
 std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data() {
@@ -482,9 +504,7 @@ std::optional<RoboCompLidar3D::TPoints> SpecificWorker::read_data() {
     return filter_isolated_points(filter_data, 200);
 }
 
-std::optional<RoboCompLidar3D::TPoints>
-SpecificWorker::filter_isolated_points(const RoboCompLidar3D::TPoints &points,
-                                       float d) {
+std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d) {
     if (points.empty())
         return {};
 
@@ -521,9 +541,7 @@ SpecificWorker::filter_isolated_points(const RoboCompLidar3D::TPoints &points,
     return result;
 }
 
-std::optional<RoboCompLidar3D::TPoints>
-SpecificWorker::filter_min_distance_cppitertools(
-        const RoboCompLidar3D::TPoints &points) {
+std::optional<RoboCompLidar3D::TPoints> SpecificWorker::filter_min_distance_cppitertools(const RoboCompLidar3D::TPoints &points) {
     // non-empty condition
     if (points.empty())
         return {};
@@ -554,8 +572,7 @@ std::expected<int, std::string> SpecificWorker::closest_lidar_index_to_given_ang
     if (res != std::end(points))
         return std::distance(std::begin(points), res);
     else
-        return std::unexpected("No closest value found in method "
-                               "<closest_lidar_index_to_given_angle>");
+        return std::unexpected("No closest value found in method <closest_lidar_index_to_given_angle>");
 }
 
 void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_center, QGraphicsScene *scene) {
@@ -619,29 +636,23 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
     auto left_point = filtered_points[wall_res_left.value()];
     // qInfo() << "R: " << right_point.phi << " - L: " << left_point.phi;
     // compare both to get the one with minimum distance
-    auto min_obj = (right_point.distance2d < left_point.distance2d) ? right_point
-                                                                    : left_point;
+    auto min_obj = (right_point.distance2d < left_point.distance2d) ? right_point : left_point;
     // std::cout << right_point.r << " " << left_point.r << " " <<
     // wall_res_right.value() << " " << wall_res_left.value() << " Size: " <<
     // filtered_points.size() << std::endl;
-    auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange),
-                           QBrush(QColor(QColorConstants::Svg::orange)));
+    auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange), QBrush(QColor(QColorConstants::Svg::orange)));
     item->setPos(min_obj.x, min_obj.y);
     items.push_back(item);
     // qInfo() << "Indice wall_res_right" << wall_res_right.value() <<
     // right_point.r << right_point.x << right_point.y;
     // draw a line from the robot to the minimum distance point
-    auto item_line =
-            scene->addLine(QLineF(QPointF(0.f, 0.f), QPointF(min_obj.x, min_obj.y)),
-                           QPen(QColorConstants::Svg::orange, 10));
+    auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f), QPointF(min_obj.x, min_obj.y)), QPen(QColorConstants::Svg::orange, 10));
     items.push_back(item_line);
 
     // Draw two lines coming out from the robot at angles given by
     // params.LIDAR_OFFSET Calculate the end points of the lines
-    auto res_right = closest_lidar_index_to_given_angle(
-            filtered_points, params.LIDAR_FRONT_SECTION);
-    auto res_left = closest_lidar_index_to_given_angle(
-            filtered_points, -params.LIDAR_FRONT_SECTION);
+    auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
+    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
     if (not res_right or not res_left) {
         std::cout << "No valid lateral readings" << std::endl;
         if (not res_right) std::cout << res_right.error() << std::endl;
@@ -653,12 +664,8 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
     float left_line_length = filtered_points[res_left.value()].distance2d;
     float angle1 = filtered_points[res_left.value()].phi;
     float angle2 = filtered_points[res_right.value()].phi;
-    QLineF line_left{QPointF(0.f, 0.f),
-                     robot_draw->mapToScene(left_line_length * sin(angle1),
-                                            left_line_length * cos(angle1))};
-    QLineF line_right{QPointF(0.f, 0.f),
-                      robot_draw->mapToScene(right_line_length * sin(angle2),
-                                             right_line_length * cos(angle2))};
+    QLineF line_left{QPointF(0.f, 0.f), robot_draw->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
+    QLineF line_right{QPointF(0.f, 0.f), robot_draw->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
     QPen left_pen(Qt::blue, 10); // Blue color pen with thickness 3
     QPen right_pen(Qt::red, 10); // Blue color pen with thickness 3
     auto line1 = scene->addLine(line_left, left_pen);
@@ -667,9 +674,7 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
     items.push_back(line2);
 
     // draw center point
-    auto center = scene->addRect(-100, -100, 200, 200,
-                                 QColor(QColorConstants::Svg::red),
-                                 QBrush(QColor(QColorConstants::Svg::red)));
+    auto center = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::red), QBrush(QColor(QColorConstants::Svg::red)));
     center->setPos(room_center.x(), room_center.y());
     items.push_back(center);
 }
@@ -705,8 +710,7 @@ void SpecificWorker::update_report_posotion() {
         omnirobot_proxy->getBaseState(bState);
         robot_draw->setRotation(bState.alpha * 180 / M_PI);
         robot_draw->setPos(bState.x, bState.z);
-        std::cout << bState.alpha << " " << bState.x << " " << bState.z
-                  << std::endl;
+        std::cout << bState.alpha << " " << bState.x << " " << bState.z << std::endl;
     } catch (const Ice::Exception &e) {
         std::cout << e.what() << std::endl;
     }

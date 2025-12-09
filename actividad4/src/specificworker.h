@@ -65,6 +65,13 @@
 #include "time_series_plotter.h"
 #include "cppitertools/itertools.hpp"
 
+
+// input de teclado manual
+#include <iostream>
+#include <termios.h>
+#include <unistd.h>
+#include <cctype>
+
 /**
  * \brief Class SpecificWorker implements the core functionality of the component.
  */
@@ -93,6 +100,39 @@ public slots:
 	void update_report_posotion();
 
 private:
+
+	/* Para entrada de teclado manual */
+	// Los dos primeros métodos se llaman en el constructor y destructor respectivamente
+	// 'keyw' se llama en el compute
+    bool keyw_mode = true; // poner a true o false para activar o desactivar máquina de estados por la entrada manual ;)
+	static struct termios original_terminal;
+	void set_non_blocking_mode(){
+		struct termios new_terminal;
+		tcgetattr(STDIN_FILENO, &original_terminal);
+		new_terminal = original_terminal;
+		new_terminal.c_lflag &= ~(ICANON | ECHO);
+		new_terminal.c_cc[VMIN] = 0;
+		new_terminal.c_cc[VTIME] = 0;
+		tcsetattr(STDIN_FILENO, TCSANOW, &new_terminal);
+	}
+	void restore_blocking_mode(){
+		tcsetattr(STDIN_FILENO, TCSANOW, &original_terminal);
+	}
+
+	void keyw(){
+		char input;
+		if (read(STDIN_FILENO, &input, 1) > 0){
+			input = std::toupper(input);
+			switch(input){
+				case 'W': move_robot(500.f, 0.f, 0.f); break;
+				case 'S': move_robot(-500.f, 0.f, 0.f); break;
+				case 'A': move_robot(0.f, -0.5, 0.f); break;
+				case 'D': move_robot(0.f, 0.5, 0.f); break;
+			}
+		}
+		else{move_robot(0.f, 0.f, 0.f);}
+	}
+	/* Para entrada de teclado manual */
 
 	bool startup_check_flag;
 
@@ -134,7 +174,6 @@ private:
 		bool rot_direction = false; // true: right - false: left
 		bool spiraling = false;
 		float rot_speed = 0.f;
-
 	};
 	Params params;
 
@@ -142,7 +181,7 @@ private:
 
 	// viewer
 	AbstractGraphicViewer *viewer, *viewer_room;
-	QGraphicsPolygonItem *robot_draw, * robot_room_draw;
+	QGraphicsPolygonItem *robot_draw, *robot_room_draw;
 	QGraphicsRectItem *room_draw;
 
 	// robot
@@ -156,14 +195,40 @@ private:
     rc::Hungarian hungarian; // object to match the two sets of corners
 	QColor colors[2] = {QColor("red"), QColor("green")};
 
+	// Doors
+	DoorDetector door_detector;
+	Eigen::Vector2d door_center;
+	Doors doors;
+
+	// random number generator
+	std::random_device rd;
+
+	// DoubleBuffer for velocity commands
+	DoubleBuffer<std::tuple<float, float, float, long>, std::tuple<float, float, float, long>> commands_buffer;
+	std::tuple<float, float, float, long> last_velocities{0.f, 0.f, 0.f, 0.f};
+
+	// plotter
+	std::unique_ptr<TimeSeriesPlotter> time_series_plotter;
+	int match_error_graph; // To store the index of the speed graph
+
+	// graphics
+	QRectF dimensions{-5000, 2500, 10000, -5000};
+	QRectF room_dimensions{-5000, -2500, 10000, 5000};
+
+	// image processor
+	rc::ImageProcessor image_processor;
+
+	// relocalization
+	bool relocal_centered = false;
+	bool localised = false;
 
 	// state machine
-	enum class STATE {GOTO_DOOR, ORIENT_TO_DOOR, LOCALISE, GOTO_ROOM_CENTER, TURN, IDLE, CROSS_DOOR};
+	enum class STATE {GOTO_ROOM_CENTER, TURN, GOTO_DOOR, ORIENT_TO_DOOR, CROSS_DOOR};
 	inline const char* to_string(const STATE s) const
 	{
 		switch(s) {
-		case STATE::IDLE:               return "IDLE";
-		case STATE::LOCALISE:           return "LOCALISE";
+		//case STATE::IDLE:               return "IDLE";
+		//case STATE::LOCALISE:           return "LOCALISE";
 		case STATE::GOTO_DOOR:          return "GOTO_DOOR";
 		case STATE::TURN:               return "TURN";
 		case STATE::ORIENT_TO_DOOR:     return "ORIENT_TO_DOOR";
@@ -190,6 +255,7 @@ private:
 	//Draw
 	void draw_lidar(auto &filtered_points, Eigen::Vector2d room_center, QGraphicsScene *scene);
 	void draw_target(const Eigen::Vector2d &point, QGraphicsScene *scene, bool last_iteratior);
+	void draw_doors(QGraphicsScene *scene);
 
 	//aux
 	std::optional<RoboCompLidar3D::TPoints> read_data();
@@ -199,35 +265,6 @@ private:
 	void print_match(const Match &match, const float error =1.f) const;
 	std::tuple<float, float, double> do_work(const Eigen::Vector2d target);
 	Eigen::Vector2d target_;
-
-	// random number generator
-	std::random_device rd;
-
-	// DoubleBuffer for velocity commands
-	DoubleBuffer<std::tuple<float, float, float, long>, std::tuple<float, float, float, long>> commands_buffer;
-	std::tuple<float, float, float, long> last_velocities{0.f, 0.f, 0.f, 0.f};
-
-	// plotter
-	std::unique_ptr<TimeSeriesPlotter> time_series_plotter;
-	int match_error_graph; // To store the index of the speed graph
-
-	// Doors
-	DoorDetector door_detector;
-	Doors doors;
-	Eigen::Vector2d door_center;
-
-	// graphics
-	QRectF dimensions{-5000, 2500, 10000, -5000};
-	QRectF room_dimensions{-5000, -2500, 10000, 5000};
-
-	// image processor
-	rc::ImageProcessor image_processor;
-
-	// timing
-
-	// relocalization
-	bool relocal_centered = false;
-	bool localised = false;
 
 	void update_robot_pose(const Corners &corners, const Match &match);
 	void move_robot(float adv, float rot, float max_match_error);

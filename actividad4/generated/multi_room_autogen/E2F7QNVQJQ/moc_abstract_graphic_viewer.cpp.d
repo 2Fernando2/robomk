@@ -1,5 +1,5 @@
-/home/varo/robomk/actividad3/generated/multi_room_autogen/E2F7QNVQJQ/moc_abstract_graphic_viewer.cpp: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-  /home/varo/robomk/actividad3/generated/multi_room_autogen/moc_predefs.h \
+/home/varo/robomk/actividad4/generated/multi_room_autogen/E2F7QNVQJQ/moc_abstract_graphic_viewer.cpp: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+  /home/varo/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

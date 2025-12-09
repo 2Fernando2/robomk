@@ -1,5 +1,5 @@
-/home/varo/robomk/actividad3/generated/multi_room_autogen/RTU3I37G4L/moc_GRAFCETStep.cpp: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
-  /home/varo/robomk/actividad3/generated/multi_room_autogen/moc_predefs.h \
+/home/varo/robomk/actividad4/generated/multi_room_autogen/RTU3I37G4L/moc_GRAFCETStep.cpp: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+  /home/varo/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
