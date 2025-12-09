@@ -312,20 +312,69 @@ void SpecificWorker::draw_doors(QGraphicsScene *scene) {
 }
 
 SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints &points, const float &max_match_error) {
+    // 1. INICIALIZACIÓN DE VARIABLES ESTÁTICAS
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+
+    // 2. GESTIÓN DEL TIEMPO
     static std::chrono::time_point<std::chrono::high_resolution_clock> last_time =
             std::chrono::high_resolution_clock::now();
     static bool first_time = true;
+
     if (first_time) {
         first_time = false;
         last_time = std::chrono::high_resolution_clock::now();
+
+        // ---------------------------------------------------------
+        // A. INICIALIZACIÓN DE LISTAS Y DETECCIÓN DE ENTRADA
+        // ---------------------------------------------------------
+        // Si las listas están vacías (inicio del programa o cambio de habitación)
+        if (unvisited_indices.empty() && visited_indices.empty()) {
+
+             // 1. Llenamos unvisited con TODAS las puertas
+             for(size_t i = 0; i < doors.size(); ++i) {
+                 unvisited_indices.push_back(i);
+             }
+
+             // 2. DETECTAR PUERTA DE ENTRADA (Para no volver atrás)
+             // Calculamos qué puerta está más cerca del robot ahora mismo.
+             int entry_door_idx = -1;
+             float min_dist = std::numeric_limits<float>::max();
+
+             Eigen::Vector2d robot_pos(robot_pose.translation().x(), robot_pose.translation().y());
+
+             for(size_t i = 0; i < doors.size(); ++i) {
+                 Eigen::Vector2d d_center(doors[i].center().x(), doors[i].center().y());
+                 float dist = (d_center - robot_pos).norm();
+                 if(dist < min_dist) {
+                     min_dist = dist;
+                     entry_door_idx = i;
+                 }
+             }
+
+             // 3. Si hay una puerta a menos de 1.5m, asumimos que acabamos de entrar por ella.
+             if (entry_door_idx != -1 && min_dist < 1500.f) {
+                 std::cout << "GOTO_DOOR: Detectada puerta de entrada (ID " << entry_door_idx
+                           << "). Marcandola como visitada." << std::endl;
+
+                 // La movemos de 'unvisited' a 'visited'
+                 auto it = std::find(unvisited_indices.begin(), unvisited_indices.end(), entry_door_idx);
+                 if(it != unvisited_indices.end()) {
+                     unvisited_indices.erase(it);
+                     visited_indices.push_back(entry_door_idx);
+                 }
+             }
+        }
     }
+
     auto now = std::chrono::high_resolution_clock::now();
-    auto elapsed =
-            std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+
     if (elapsed > 3000) {
         first_time = true;
         if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
             localised = false;
+            current_door_idx = -1; // Reset de emergencia
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
     }
@@ -334,57 +383,124 @@ SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints 
         std::cerr << "GOTO_DOOR: DOORS EMPTY";
         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
     }
-    Eigen::Vector2d door_center_2d(doors[0].center().x(), doors[0].center().y());
-    door_center = door_center_2d;
-    // const auto door_center_point = doors[0].center();
-    Eigen::Vector2d robot_position(robot_pose.translation().x(),
-                                   robot_pose.translation().y());
-    const auto target = doors[0].center_before(Eigen::Vector2d(0.f,0.f), 650.f);
+
+    // ---------------------------------------------------------
+    // B. SELECCIÓN DE OBJETIVO (LÓGICA DE CERROJO)
+    // ---------------------------------------------------------
+    // Solo elegimos si no tenemos una puerta asignada (-1)
+    if (current_door_idx == -1) {
+
+        // Si no quedan puertas nuevas, reiniciamos el ciclo (volver a visitar las viejas)
+        if (unvisited_indices.empty()) {
+            std::cout << "GOTO_DOOR: Todas visitadas. Reiniciando ciclo." << std::endl;
+            unvisited_indices = visited_indices;
+            visited_indices.clear();
+        }
+
+        // Selección aleatoria segura
+        if (!unvisited_indices.empty()) {
+            std::uniform_int_distribution<> distrib(0, unvisited_indices.size() - 1);
+            int random_pos = distrib(gen);
+
+            // Asignamos a la variable persistente
+            current_door_idx = unvisited_indices[random_pos];
+            std::cout << "GOTO_DOOR: Nueva puerta objetivo: " << current_door_idx << std::endl;
+        } else {
+             // Caso borde rarísimo donde no hay puertas
+             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+        }
+    }
+
+    // ---------------------------------------------------------
+    // C. CÁLCULO DE MOVIMIENTO RELATIVO AL ROBOT
+    // ---------------------------------------------------------
+    // Posición actual del robot
+    Eigen::Vector2d robot_pos(robot_pose.translation().x(), robot_pose.translation().y());
+
+    // Debug visual
+    door_center = Eigen::Vector2d(doors[current_door_idx].center().x(), doors[current_door_idx].center().y());
+
+    Eigen::Vector2f target;
+    // IMPORTANTE: center_before desde 'robot_pos' asegura que el punto se genere
+    // en el mismo lado de la pared donde está el robot.
+    target = doors[current_door_idx].center_before(robot_pos, 650.f);
     Eigen::Vector2d target_2d(target.x(), target.y());
 
+    // ---------------------------------------------------------
+    // D. TRANSICIÓN
+    // ---------------------------------------------------------
     if (target.norm() < 300.f) {
         draw_target(target_2d, &viewer->scene, true);
+
+        // NO reseteamos current_door_idx aquí. Lo necesitamos para orient_to_door.
         return {STATE::ORIENT_TO_DOOR, 0.f, 0.f};
     }
 
     draw_target(target_2d, &viewer->scene, false);
     const auto &[adv_speed, rot_speed, _] = do_work(target_2d);
+
     return {STATE::GOTO_DOOR, adv_speed, rot_speed};
 }
 
+#include <algorithm> // IMPORTANTE: Necesario para std::find
+
 SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_error) {
+    // 1. GESTIÓN DEL TIEMPO
     static std::chrono::time_point<std::chrono::high_resolution_clock> last_time =
             std::chrono::high_resolution_clock::now();
     static bool first_time = true;
+
     if (first_time) {
         first_time = false;
         last_time = std::chrono::high_resolution_clock::now();
     }
+
     auto now = std::chrono::high_resolution_clock::now();
-    auto elapsed =
-            std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time)
-                    .count();
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+
     if (elapsed > 3000) {
         first_time = true;
-        if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR or
-            not door_center.any()) {
+        if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR or not door_center.any()) {
             localised = false;
+            current_door_idx = -1; // Reset por error
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
     }
 
     if (doors.empty()) {
-        std::cerr << "GOTO_DOOR: DOORS EMPTY";
         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
     }
 
-    Eigen::Vector2d door_center_2d(doors[0].center().x(), doors[0].center().y());
+    // 2. SEGURIDAD: Verificar índice válido
+    if (current_door_idx == -1 || current_door_idx >= doors.size()) {
+        current_door_idx = -1;
+        return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+    }
+
+    // 3. MOVIMIENTO (Rotación hacia la puerta seleccionada)
+    Eigen::Vector2d door_center_2d(
+        doors[current_door_idx].center().x(),
+        doors[current_door_idx].center().y()
+    );
+
     door_center = door_center_2d;
     const auto &[adv_vel, rot_vel, angle] = do_work(door_center);
-    //	if(door_center.norm() < 300.f)
-    //	if(std::abs(rot_vel) < 0.15f)
+
+    // 4. CONDICIÓN DE ÉXITO Y ACTUALIZACIÓN DE LISTAS
     if (angle < M_PI_4 && std::abs(rot_vel) < 0.15f) {
         draw_target(door_center, &viewer->scene, true);
+
+        // A) Buscamos el ID en unvisited y lo borramos
+        auto it = std::find(unvisited_indices.begin(), unvisited_indices.end(), current_door_idx);
+        if (it != unvisited_indices.end()) {
+            unvisited_indices.erase(it);
+            visited_indices.push_back(current_door_idx);
+            std::cout << "ORIENT_TO_DOOR: Puerta " << current_door_idx << " visitada y archivada." << std::endl;
+        }
+
+        // B) Liberamos el cerrojo para que goto_door pueda elegir una nueva en el futuro
+        current_door_idx = -1;
+
         return {STATE::CROSS_DOOR, 0.f, 0.f};
     }
 
@@ -393,45 +509,48 @@ SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_err
 }
 
 SpecificWorker::RetVal SpecificWorker::cross_door(const RoboCompLidar3D::TPoints &points) {
+    // 1. GESTIÓN DE TIEMPO (2 segundos para cruzar a ciegas)
     static std::chrono::time_point<std::chrono::high_resolution_clock> last_time =
             std::chrono::high_resolution_clock::now();
     static bool first_time = true;
+
     if (first_time) {
         first_time = false;
         last_time = std::chrono::high_resolution_clock::now();
     }
+
     auto now = std::chrono::high_resolution_clock::now();
-    auto elapsed =
-            std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time)
-                    .count();
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+
+    // 2. FIN DEL CRUCE Y CAMBIO DE HABITACIÓN
     if (elapsed > 2000) {
         first_time = true;
         localised = false;
+
+        // Cambiar índice de habitación
         room_index = (room_index + 1) % std::size(nominal_rooms);
 
-        // Clear items
-        //  viewer_room->scene.clear();
-        // viewer_room->scene.removeItem(robot_room_draw);
-        viewer_room->scene.removeItem(room_draw);
-        delete room_draw;
+        // --- LIMPIEZA CRÍTICA ---
+        // Vaciamos las listas para que goto_door detecte que es una habitación nueva
+        unvisited_indices.clear();
+        visited_indices.clear();
+        current_door_idx = -1;
+        // ------------------------
 
-        // Update robot in room viewer
-        // viewer_room = new AbstractGraphicViewer(this->frame_room,
-        // this->dimensions); auto [rr, re] =
-        // viewer_room->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100,
-        // QColor("Blue")); robot_room_draw = rr;
-        // viewer_room->updateSceneRect(robot_room_draw);
+        // Actualización gráfica
+        if(room_draw) {
+            viewer_room->scene.removeItem(room_draw);
+            delete room_draw;
+        }
 
-        // draw room in viewer_room
-        room_draw = viewer_room->scene.addRect(nominal_rooms[room_index].rect(),
-                                               QPen(Qt::black, 30));
-        // show();
+        room_draw = viewer_room->scene.addRect(nominal_rooms[room_index].rect(), QPen(Qt::black, 30));
 
         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
     }
+
+    // Velocidad constante hacia adelante
     return {STATE::CROSS_DOOR, 750.f, 0.f};
 }
-
 SpecificWorker::RetVal SpecificWorker::update_pose(const Corners &corners, const Match &match) { return {}; }
 
 SpecificWorker::RetVal SpecificWorker::process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer) { return {}; }

@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/varo/robomk/actividad4"
+			"value" : "/home/usuario/robomk/actividad4"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/varo/robomk/actividad4/CMakeFiles/pkgRedirects"
+			"value" : "/home/usuario/robomk/actividad4/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/varo/robomk/actividad4"
+			"value" : "/home/usuario/robomk/actividad4"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1110,6 +1110,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "CMAKE_PROJECT_COMPAT_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
+		},
+		{
 			"name" : "CMAKE_PROJECT_DESCRIPTION",
 			"properties" : 
 			[
@@ -1187,7 +1199,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/share/cmake-4.0"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/share/cmake-4.1"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1311,7 +1323,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during all build types."
+					"value" : "Flags used by the archiver during the creation of static libraries during all build types."
 				}
 			],
 			"type" : "STRING",
@@ -1327,7 +1339,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during DEBUG builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during DEBUG builds."
 				}
 			],
 			"type" : "STRING",
@@ -1343,7 +1355,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during MINSIZEREL builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during MINSIZEREL builds."
 				}
 			],
 			"type" : "STRING",
@@ -1359,7 +1371,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during RELEASE builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during RELEASE builds."
 				}
 			],
 			"type" : "STRING",
@@ -1375,7 +1387,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during RELWITHDEBINFO builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during RELWITHDEBINFO builds."
 				}
 			],
 			"type" : "STRING",
@@ -7547,7 +7559,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/varo/robomk/actividad4"
+			"value" : "/home/usuario/robomk/actividad4"
 		},
 		{
 			"name" : "RC_COMPONENT_INSTALL_PATH",
@@ -7571,7 +7583,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/varo/robomk/actividad4"
+			"value" : "/home/usuario/robomk/actividad4"
 		},
 		{
 			"name" : "RoboComp_VERSION",
@@ -7771,7 +7783,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/varo/robomk/actividad4"
+			"value" : "/home/usuario/robomk/actividad4"
 		},
 		{
 			"name" : "multi_room_IS_TOP_LEVEL",
@@ -7795,7 +7807,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/varo/robomk/actividad4"
+			"value" : "/home/usuario/robomk/actividad4"
 		},
 		{
 			"name" : "pkgcfg_lib_PKG_XKB_xkbcommon",

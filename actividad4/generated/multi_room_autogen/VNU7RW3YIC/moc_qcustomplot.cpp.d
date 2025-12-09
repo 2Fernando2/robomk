@@ -1,5 +1,5 @@
-/home/varo/robomk/actividad4/generated/multi_room_autogen/VNU7RW3YIC/moc_qcustomplot.cpp: /home/varo/robomk/actividad4/src/qcustomplot.h \
-  /home/varo/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
+/home/usuario/robomk/actividad4/generated/multi_room_autogen/VNU7RW3YIC/moc_qcustomplot.cpp: /home/usuario/robomk/actividad4/src/qcustomplot.h \
+  /home/usuario/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

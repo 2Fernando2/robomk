@@ -48,6 +48,7 @@
 #include <tuple>
 #include <utility>
 #include <vector>
+#include <limits>    // Para std::numeric_limits
 #include "room_detector.h"
 #include "hungarian.h"
 #include "nominal_room.h"
@@ -104,7 +105,7 @@ private:
 	/* Para entrada de teclado manual */
 	// Los dos primeros métodos se llaman en el constructor y destructor respectivamente
 	// 'keyw' se llama en el compute
-    bool keyw_mode = true; // poner a true o false para activar o desactivar máquina de estados por la entrada manual ;)
+    bool keyw_mode = false; // poner a true o false para activar o desactivar máquina de estados por la entrada manual ;)
 	static struct termios original_terminal;
 	void set_non_blocking_mode(){
 		struct termios new_terminal;
@@ -199,6 +200,10 @@ private:
 	DoorDetector door_detector;
 	Eigen::Vector2d door_center;
 	Doors doors;
+
+	std::vector<int> unvisited_indices;
+	std::vector<int> visited_indices;
+	int current_door_idx = -1;
 
 	// random number generator
 	std::random_device rd;
