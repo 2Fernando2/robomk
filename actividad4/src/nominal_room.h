@@ -57,13 +57,13 @@
             {
                 return QRectF{-width/2.f, -length/2.f, width, length};
             }
-            [[nodiscard]] Corners transform_corners_to(const Eigen::Affine2d &transform) const  // for room to robot pass the inverse of robot_pose
+            [[nodiscard]] Corners transform_corners_to(const Eigen::Affine2f &transform) const  // for room to robot pass the inverse of robot_pose
             {
                 Corners transformed_corners;
                 for(const auto &[p, _, __] : corners())
                 {
                     auto ep = Eigen::Vector2d{p.x(), p.y()};
-                    Eigen::Vector2d tp = transform * ep;
+                    Eigen::Vector2d tp = transform.cast<double>() * ep;
                     transformed_corners.emplace_back(QPointF{static_cast<float>(tp.x()), static_cast<float>(tp.y())}, 0.f, 0.f);
                 }
                 return transformed_corners;

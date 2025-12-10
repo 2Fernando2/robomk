@@ -186,7 +186,7 @@ private:
 	QGraphicsRectItem *room_draw;
 
 	// robot
-	Eigen::Affine2d robot_pose;  // Eigen type to represent a rotation+translation
+	Eigen::Affine2f robot_pose;  // Eigen type to represent a rotation+translation
 
 	// rooms
 	std::vector<NominalRoom> nominal_rooms{NominalRoom{5500.f, 4000.f}, NominalRoom{8000.f, 4000.f}};
@@ -201,8 +201,6 @@ private:
 	Eigen::Vector2d door_center;
 	Doors doors;
 
-	std::vector<int> unvisited_indices;
-	std::vector<int> visited_indices;
 	int current_door_idx = -1;
 
 	// random number generator
