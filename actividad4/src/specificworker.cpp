@@ -256,9 +256,16 @@ SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
 
+        // Doors doors_ = doors; // -> el drive dice usar una copia aquí y trabajar con ella
         for (auto &d : doors) {
+            // d.p1 = robot_pose * d.p1;
+            // d.p2 = robot_pose * d.p2;
             d.p1_global = nominal_rooms[room_index].get_projection_of_point_on_closest_wall(robot_pose * d.p1);
             d.p2_global = nominal_rooms[room_index].get_projection_of_point_on_closest_wall(robot_pose * d.p2);
+
+            qInfo() << "Door p1 robot:  " << d.p1.x() << d.p1.y();
+            qInfo() << "Door p1 global: " << d.p1_global.x() << d.p1_global.y();
+            qInfo() << "Robot pose:     " << robot_pose.translation().x() << robot_pose.translation().y();
         }
 
         nominal_rooms[room_index].set_doors(doors);
