@@ -105,7 +105,7 @@ private:
 	/* Para entrada de teclado manual */
 	// Los dos primeros métodos se llaman en el constructor y destructor respectivamente
 	// 'keyw' se llama en el compute
-    bool keyw_mode = false; // poner a true o false para activar o desactivar máquina de estados por la entrada manual ;)
+    bool keyw_mode = true; // poner a true o false para desactivar o activar máquina de estados por la entrada manual ;)
 	static struct termios original_terminal;
 	void set_non_blocking_mode(){
 		struct termios new_terminal;
@@ -125,10 +125,10 @@ private:
 		if (read(STDIN_FILENO, &input, 1) > 0){
 			input = std::toupper(input);
 			switch(input){
-				case 'W': move_robot(500.f, 0.f, 0.f); break;
-				case 'S': move_robot(-500.f, 0.f, 0.f); break;
-				case 'A': move_robot(0.f, -0.5, 0.f); break;
-				case 'D': move_robot(0.f, 0.5, 0.f); break;
+				case 'W': move_robot(1000.f, 0.f, 0.f); break;
+				case 'S': move_robot(-1000.f, 0.f, 0.f); break;
+				case 'A': move_robot(0.f, -1.f, 0.f); break;
+				case 'D': move_robot(0.f, 1.f, 0.f); break;
 			}
 		}
 		else{move_robot(0.f, 0.f, 0.f);}
@@ -200,7 +200,6 @@ private:
 	DoorDetector door_detector;
 	Eigen::Vector2d door_center;
 	Doors doors;
-
 	int current_door_idx = -1;
 
 	// random number generator

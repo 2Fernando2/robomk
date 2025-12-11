@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/usuario/robomk/actividad4"
+			"value" : "/home/varo/robomk/actividad4"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_CACHE_MINOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "28"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/usr/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/usr/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/usr/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -170,7 +170,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/c++"
 		},
 		{
@@ -298,7 +298,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/cc"
 		},
 		{
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/usuario/robomk/actividad4/CMakeFiles/pkgRedirects"
+			"value" : "/home/varo/robomk/actividad4/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/usuario/robomk/actividad4"
+			"value" : "/home/varo/robomk/actividad4"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1199,7 +1199,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/405/bin/cmake/linux/x64/share/cmake-4.1"
+			"value" : "/usr/share/cmake-3.28"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1487,7 +1487,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][ ][v()]"
+			"value" : "[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -7559,7 +7559,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/usuario/robomk/actividad4"
+			"value" : "/home/varo/robomk/actividad4"
 		},
 		{
 			"name" : "RC_COMPONENT_INSTALL_PATH",
@@ -7583,7 +7583,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/usuario/robomk/actividad4"
+			"value" : "/home/varo/robomk/actividad4"
 		},
 		{
 			"name" : "RoboComp_VERSION",
@@ -7722,6 +7722,18 @@
 			"value" : "/usr/lib/x86_64-linux-gnu/libxkbcommon.so"
 		},
 		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
 			"name" : "_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX",
 			"properties" : 
 			[
@@ -7783,7 +7795,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/usuario/robomk/actividad4"
+			"value" : "/home/varo/robomk/actividad4"
 		},
 		{
 			"name" : "multi_room_IS_TOP_LEVEL",
@@ -7807,7 +7819,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/usuario/robomk/actividad4"
+			"value" : "/home/varo/robomk/actividad4"
 		},
 		{
 			"name" : "pkgcfg_lib_PKG_XKB_xkbcommon",

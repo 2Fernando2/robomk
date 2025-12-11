@@ -1,8 +1,8 @@
 generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o: \
- /home/usuario/robomk/actividad4/src/door_detector.cpp \
+ /home/varo/robomk/actividad4/src/door_detector.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robomk/actividad4/src/door_detector.h \
- /home/usuario/robomk/actividad4/src/common_types.h \
+ /home/varo/robomk/actividad4/src/door_detector.h \
+ /home/varo/robomk/actividad4/src/common_types.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -629,7 +629,7 @@ generated/CMakeFiles/multi_room.dir/__/src/door_detector.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
  /usr/include/Eigen/src/Geometry/ParametrizedLine.h \
- /home/usuario/robomk/actividad4/generated/Lidar3D.h \
+ /home/varo/robomk/actividad4/generated/Lidar3D.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/future \

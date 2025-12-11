@@ -21,11 +21,10 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
         auto difference = abs((p2.distance2d - p1.distance2d));
         auto closest = p1.distance2d < p2.distance2d ? p1 : p2;
 
-        // ver si la distancia media está lejos o cerca
-        float threshold = (((p1.distance2d + p2.distance2d) / 2.0f) > 3000.f) ? 700.f : 1000.f; // más estricto cerca, más permisivo lejos
-        if (difference > threshold) {
+        float avg_distance = ((p1.distance2d + p2.distance2d) / 2.0f);
+        float threshold = ( avg_distance < 3000.f) ? 700.f : 1000.f; // más estricto cerca, más permisivo lejos
+        if (difference > threshold)
             peaks.push_back(std::make_tuple(Eigen::Vector2f(closest.x,closest.y), closest.phi));
-        }
     }
     if (peaks.empty()) return {};
 
@@ -74,20 +73,22 @@ std::tuple<RoboCompLidar3D::TPoints, Doors> DoorDetector::filter_points(const Ro
     // for each door, check if the distance from the robot to each lidar point is smaller than the distance from the robot to the door
     RoboCompLidar3D::TPoints filtered;
     float offset = 0.05;
-    bool erased = false;
     for(const auto &p : points)
     {
-        erased = false;
+        bool erased = false;
+        //qInfo() << "--------------------------------------------------------------------------------------------------";
         for(const auto &d : doors) {
             const float dist_to_door = d.center().norm();
             // Check if the angular range wraps around the -π/+π boundary
             const bool angle_wraps = d.p2_angle < d.p1_angle;
+            //qInfo() << "Angle wraps - angles (p2 - p1): (" << d.p2_angle << d.p1_angle << ") DIFF: " << d.p2_angle - d.p1_angle;
+            // const bool angle_wraps = (d.p2_angle - d.p1_angle) > M_PI;
             // Determine if point is within the door's angular range
             bool point_in_angular_range;
             if (angle_wraps) {
                 // Caso especial
                 // If the range wraps around, point is in range if it's > p1_angle OR < p2_angle
-                point_in_angular_range = (p.phi > d.p1_angle) or (p.phi < d.p2_angle);
+                point_in_angular_range = (p.phi > d.p1_angle - offset) or (p.phi < d.p2_angle + offset);
             } else {
                 // Normal case: point is in range if it's between p1_angle and p2_angle
                 point_in_angular_range = (p.phi > d.p1_angle - offset) and (p.phi < d.p2_angle + offset);

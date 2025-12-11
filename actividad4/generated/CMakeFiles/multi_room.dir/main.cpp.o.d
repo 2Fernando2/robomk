@@ -1,5 +1,5 @@
 generated/CMakeFiles/multi_room.dir/main.cpp.o: \
- /home/usuario/robomk/actividad4/generated/main.cpp \
+ /home/varo/robomk/actividad4/generated/main.cpp \
  /usr/include/stdc-predef.h /usr/include/signal.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -1251,9 +1251,9 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /home/robocomp/robocomp/classes/ConfigLoader/ConfigLoader.h \
  /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /home/usuario/robomk/actividad4/generated/genericworker.h \
+ /home/varo/robomk/actividad4/generated/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/usuario/robomk/actividad4/generated/multi_room_autogen/include/ui_mainUI.h \
+ /home/varo/robomk/actividad4/generated/multi_room_autogen/include/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
@@ -1276,12 +1276,12 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/usuario/robomk/actividad4/generated/Camera360RGB.h \
- /home/usuario/robomk/actividad4/generated/GenericBase.h \
- /home/usuario/robomk/actividad4/generated/Lidar3D.h \
- /home/usuario/robomk/actividad4/generated/OmniRobot.h \
- /home/usuario/robomk/actividad4/generated/../src/specificworker.h \
- /home/usuario/robomk/actividad4/generated/genericworker.h \
+ /home/varo/robomk/actividad4/generated/Camera360RGB.h \
+ /home/varo/robomk/actividad4/generated/GenericBase.h \
+ /home/varo/robomk/actividad4/generated/Lidar3D.h \
+ /home/varo/robomk/actividad4/generated/OmniRobot.h \
+ /home/varo/robomk/actividad4/generated/../src/specificworker.h \
+ /home/varo/robomk/actividad4/generated/genericworker.h \
  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
@@ -1302,11 +1302,11 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /home/robocomp/robocomp/classes/threadpool/threadpool.h \
  /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h \
  /usr/include/c++/13/thread \
- /home/usuario/robomk/actividad4/generated/../src/time_series_plotter.h \
+ /home/varo/robomk/actividad4/generated/../src/time_series_plotter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
- /home/usuario/robomk/actividad4/generated/../src/qcustomplot.h \
+ /home/varo/robomk/actividad4/generated/../src/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
@@ -1404,7 +1404,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/c++/13/pstl/numeric_fwd.h \
  /usr/include/c++/13/pstl/glue_numeric_impl.h \
  /usr/include/c++/13/pstl/glue_memory_impl.h \
- /home/usuario/robomk/actividad4/generated/../src/room_detector.h \
+ /home/varo/robomk/actividad4/generated/../src/room_detector.h \
  /usr/include/Eigen/Geometry /usr/include/Eigen/Core \
  /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/Eigen/src/Core/util/Macros.h \
@@ -1594,7 +1594,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h /usr/include/c++/13/ranges \
- /home/usuario/robomk/actividad4/generated/../src/common_types.h \
+ /home/varo/robomk/actividad4/generated/../src/common_types.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
  /usr/include/Eigen/Dense /usr/include/Eigen/Geometry \
  /usr/include/Eigen/Eigenvalues \
@@ -1774,19 +1774,19 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/boost/circular_buffer/space_optimized.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
  /usr/include/Eigen/src/Geometry/ParametrizedLine.h \
- /home/usuario/robomk/actividad4/generated/../src/ransac_line_detector.h \
- /home/usuario/robomk/actividad4/generated/../src/hungarian.h \
- /home/usuario/robomk/actividad4/generated/../src/munkres.hpp \
- /home/usuario/robomk/actividad4/generated/../src/nominal_room.h \
+ /home/varo/robomk/actividad4/generated/../src/ransac_line_detector.h \
+ /home/varo/robomk/actividad4/generated/../src/hungarian.h \
+ /home/varo/robomk/actividad4/generated/../src/munkres.hpp \
+ /home/varo/robomk/actividad4/generated/../src/nominal_room.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRectF \
- /home/usuario/robomk/actividad4/src/common_types.h \
+ /home/varo/robomk/actividad4/src/common_types.h \
  /usr/local/include/cppitertools/sliding_window.hpp \
  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
  /usr/local/include/cppitertools/internal/iterbase.hpp \
  /usr/local/include/cppitertools/internal/iteratoriterator.hpp \
  /usr/local/include/cppitertools/internal/iterbase.hpp \
- /home/usuario/robomk/actividad4/generated/../src/door_detector.h \
- /home/usuario/robomk/actividad4/generated/../src/image_processor.h \
+ /home/varo/robomk/actividad4/generated/../src/door_detector.h \
+ /home/varo/robomk/actividad4/generated/../src/image_processor.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/calib3d.hpp \
  /usr/include/opencv4/opencv2/features2d.hpp \
@@ -1869,7 +1869,7 @@ generated/CMakeFiles/multi_room.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
- /home/usuario/robomk/actividad4/generated/../src/pointcloud_center_estimator.h \
+ /home/varo/robomk/actividad4/generated/../src/pointcloud_center_estimator.h \
  /usr/local/include/cppitertools/enumerate.hpp \
  /usr/local/include/cppitertools/itertools.hpp \
  /usr/local/include/cppitertools/accumulate.hpp \
