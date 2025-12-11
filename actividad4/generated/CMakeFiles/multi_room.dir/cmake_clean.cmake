@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../bin/multi_room"
   "../bin/multi_room.pdb"
+  "CMakeFiles/multi_room.dir/link.d"
   "CMakeFiles/multi_room_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/multi_room_autogen.dir/ParseCache.txt"
   "multi_room_autogen"

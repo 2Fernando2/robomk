@@ -1,7 +1,7 @@
 generated/CMakeFiles/multi_room.dir/__/src/qcustomplot.cpp.o: \
- /home/varo/robomk/actividad4/src/qcustomplot.cpp \
+ /home/usuario/robomk/actividad4/src/qcustomplot.cpp \
  /usr/include/stdc-predef.h \
- /home/varo/robomk/actividad4/src/qcustomplot.h \
+ /home/usuario/robomk/actividad4/src/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
  /usr/include/c++/13/type_traits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

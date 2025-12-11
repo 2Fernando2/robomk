@@ -1,7 +1,7 @@
 generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o: \
- /home/varo/robomk/actividad4/generated/OmniRobot.cpp \
+ /home/usuario/robomk/actividad4/generated/OmniRobot.cpp \
  /usr/include/stdc-predef.h \
- /home/varo/robomk/actividad4/generated/OmniRobot.h \
+ /home/usuario/robomk/actividad4/generated/OmniRobot.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/13/stdlib.h /usr/include/c++/13/cstdlib \
@@ -279,4 +279,4 @@ generated/CMakeFiles/multi_room.dir/OmniRobot.cpp.o: \
  /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
  /usr/include/c++/13/bits/deque.tcc /usr/include/Ice/FactoryTableInit.h \
  /usr/include/Ice/DefaultValueFactory.h \
- /home/varo/robomk/actividad4/generated/GenericBase.h
+ /home/usuario/robomk/actividad4/generated/GenericBase.h

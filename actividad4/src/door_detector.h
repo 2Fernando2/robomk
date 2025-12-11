@@ -25,8 +25,8 @@ class DoorDetector
     private:
         Doors doors_cache;
         const float PEAKS_THRESHOLD = 1000.f;
-        const float MIN_PEAK_THRESHOLD = 300.f;
-        const float MIN_DOOR_THRESHOLD = 800.f;
+        const float MIN_PEAK_THRESHOLD = 200.f;
+        const float MIN_DOOR_THRESHOLD = 600.f;
         const float MAX_DOOR_THRESHOLD = 1200.f;
 
 };

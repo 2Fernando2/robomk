@@ -256,19 +256,19 @@ SpecificWorker::RetVal SpecificWorker::turn(const Corners &corners)
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
 
-        // Doors doors_ = doors; // -> el drive dice usar una copia aquí y trabajar con ella
+        // Doors doors_copy = doors;
         for (auto &d : doors) {
             // d.p1 = robot_pose * d.p1;
             // d.p2 = robot_pose * d.p2;
             d.p1_global = nominal_rooms[room_index].get_projection_of_point_on_closest_wall(robot_pose * d.p1);
             d.p2_global = nominal_rooms[room_index].get_projection_of_point_on_closest_wall(robot_pose * d.p2);
 
-            qInfo() << "Door p1 robot:  " << d.p1.x() << d.p1.y();
-            qInfo() << "Door p1 global: " << d.p1_global.x() << d.p1_global.y();
-            qInfo() << "Robot pose:     " << robot_pose.translation().x() << robot_pose.translation().y();
+            // qInfo() << "Door p1 robot:  " << d.p1.x() << d.p1.y();
+            // qInfo() << "Door p1 global: " << d.p1_global.x() << d.p1_global.y();
+            // qInfo() << "Robot pose:     " << robot_pose.translation().x() << robot_pose.translation().y();
         }
 
-        nominal_rooms[room_index].set_doors(doors);
+        nominal_rooms[room_index].doors = doors;
         current_door_idx = 0;
         draw_doors(&viewer_room->scene);
 
@@ -311,17 +311,35 @@ SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints 
         last_time = std::chrono::high_resolution_clock::now();
     }
 
-    auto now = std::chrono::high_resolution_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
-    if (elapsed > 3000) {
-        first_time = true;
-        // std::cout << "GOTO_DOOR: Timeout." << std::endl;
-        if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
+    // auto now = std::chrono::high_resolution_clock::now();
+    // auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+    // if (elapsed > 3000) {
+    //     first_time = true;
+    //     // std::cout << "GOTO_DOOR: Timeout." << std::endl;
+    //     if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
+    //         localised = false;
+    //         // current_door_idx = -1;
+    //         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+    //     }
+    // }
+
+    // 1. Comprobar si el error excede el umbral
+    if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
+        // Si es la primera vez que se detecta el error malo, o si el timeout ya se reseteó, actualizamos last_time.
+        if (first_time) {
+            last_time = std::chrono::high_resolution_clock::now();
+            first_time = false;
+        }
+
+        // 2. Comprobar si el error ha estado superando el umbral por más de 3 segundos
+        auto now = std::chrono::high_resolution_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+
+        if (elapsed > 3000) {
             localised = false;
-            current_door_idx = -1;
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
-    }
+    } else first_time = true;
 
     if (doors.empty()) return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
 
@@ -348,35 +366,61 @@ SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_err
         last_time = std::chrono::high_resolution_clock::now();
     }
 
-    auto now = std::chrono::high_resolution_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
-    if (elapsed > 10000) { // 10s
-        first_time = true;
-        if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
+    // auto now = std::chrono::high_resolution_clock::now();
+    // auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+    // if (elapsed > 10000) { // 10s
+    //     first_time = true;
+    //     if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
+    //         localised = false;
+    //         current_door_idx = -1; // Reset solo por error
+    //         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+    //     }
+    //     return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+    // }
+
+    // 1. Comprobar si el error excede el umbral
+    if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
+        // Si es la primera vez que se detecta el error malo, o si el timeout ya se reseteó, actualizamos last_time.
+        if (first_time) {
+            last_time = std::chrono::high_resolution_clock::now();
+            first_time = false;
+        }
+
+        // 2. Comprobar si el error ha estado superando el umbral por más de 3 segundos
+        auto now = std::chrono::high_resolution_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - last_time).count();
+
+        if (elapsed > 3000) {
             localised = false;
-            current_door_idx = -1; // Reset solo por error
             return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
-        return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
-    }
+    } else first_time = true;
 
-    if (doors.empty() || current_door_idx == -1 || current_door_idx >= static_cast<int>(doors.size())) {
+    if (nominal_rooms[room_index].doors.empty() or current_door_idx == -1 or current_door_idx >= static_cast<int>(nominal_rooms[room_index].doors.size())) {
         current_door_idx = -1;
         return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
     }
 
-    Eigen::Vector2d door_center_2d(doors[current_door_idx].center().x(), doors[current_door_idx].center().y());
+    if (nominal_rooms[room_index].doors.empty() or current_door_idx == -1 or current_door_idx >= static_cast<int>(nominal_rooms[room_index].doors.size())) {
+        current_door_idx = -1;
+        return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+    }
 
-    door_center = door_center_2d;
+    // 1. Obtener el centro de la puerta actual en coordenadas GLOBALES.
+    const Eigen::Vector2f door_center_global = nominal_rooms[room_index].doors[current_door_idx].centerglobal();
+
+    // 2. Transformar el centro de la puerta GLOBAL a coordenadas del ROBOT.
+    // Usamos robot_pose.inverse() para ir de Global a Robot Frame.
+    const Eigen::Vector2f door_center_robot_frame = robot_pose.inverse() * door_center_global;
+
+    // 3. Pasar el target en el sistema de referencia del ROBOT a do_work.
+    // door_center se usa para dibujar, lo mantenemos.
+    door_center = door_center_robot_frame.cast<double>(); // Actualizamos door_center (en robot frame)
+
     const auto &[adv_vel, rot_vel, angle] = do_work(door_center);
 
     if (angle < M_PI_4 && std::abs(rot_vel) < 0.15f) {
         draw_target(door_center, &viewer->scene, true);
-
-        // AQUÍ EL CAMBIO: No reseteamos current_door_idx.
-        // Se mantiene válido para que (si fuera necesario) cross_door sepa qué puerta es.
-        // El reset ocurrirá en cross_door.
-
         return {STATE::CROSS_DOOR, 0.f, 0.f};
     }
 
@@ -568,82 +612,6 @@ void SpecificWorker::draw_lidar(auto &filtered_points, Eigen::Vector2d room_cent
         items.push_back(item);
         // qInfo() << std::hypot(p.x, p.y) << p.distance2d << p.r;
     }
-
-    // compute and draw minimum distance point in frontal range
-    auto offset_begin = closest_lidar_index_to_given_angle(
-            filtered_points, -params.LIDAR_FRONT_SECTION);
-    auto offset_end = closest_lidar_index_to_given_angle(
-            filtered_points, params.LIDAR_FRONT_SECTION);
-    if (not offset_begin or not offset_end) {
-        // std::cout << offset_begin.error() << " " << offset_end.error() << std::endl;
-        std::cout << "No valid lateral readings." << std::endl;
-        if (not offset_begin) std::cout << offset_begin.error() << std::endl;
-        if (not offset_end) std::cout << offset_end.error() << std::endl;
-        return;
-    } // abandon the ship
-    auto min_point = std::min_element(
-            std::begin(filtered_points) + offset_begin.value(),
-            std::begin(filtered_points) + offset_end.value(),
-            [](auto &a, auto &b) { return a.distance2d < b.distance2d; });
-    QColor dcolor;
-    if (min_point->distance2d < params.STOP_THRESHOLD)
-        dcolor = QColor(Qt::red);
-    else
-        dcolor = QColor(Qt::magenta);
-    auto ditem = scene->addRect(-100, -100, 200, 200, dcolor, QBrush(dcolor));
-    ditem->setPos(min_point->x, min_point->y);
-    items.push_back(ditem);
-
-    // compute and draw minimum distance point to wall
-    auto wall_res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_RIGHT_SIDE_SECTION);
-    auto wall_res_left = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_LEFT_SIDE_SECTION);
-    if (not wall_res_right or not wall_res_left) // abandon the ship
-    {
-        qWarning() << "No valid lateral readings";
-        if (not wall_res_right) qWarning() << QString::fromStdString(wall_res_right.error());
-        if (not wall_res_left) qWarning() << QString::fromStdString(wall_res_left.error());
-        return;
-    }
-    auto right_point = filtered_points[wall_res_right.value()];
-    auto left_point = filtered_points[wall_res_left.value()];
-    // qInfo() << "R: " << right_point.phi << " - L: " << left_point.phi;
-    // compare both to get the one with minimum distance
-    auto min_obj = (right_point.distance2d < left_point.distance2d) ? right_point : left_point;
-    // std::cout << right_point.r << " " << left_point.r << " " <<
-    // wall_res_right.value() << " " << wall_res_left.value() << " Size: " <<
-    // filtered_points.size() << std::endl;
-    auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange), QBrush(QColor(QColorConstants::Svg::orange)));
-    item->setPos(min_obj.x, min_obj.y);
-    items.push_back(item);
-    // qInfo() << "Indice wall_res_right" << wall_res_right.value() <<
-    // right_point.r << right_point.x << right_point.y;
-    // draw a line from the robot to the minimum distance point
-    auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f), QPointF(min_obj.x, min_obj.y)), QPen(QColorConstants::Svg::orange, 10));
-    items.push_back(item_line);
-
-    // Draw two lines coming out from the robot at angles given by
-    // params.LIDAR_OFFSET Calculate the end points of the lines
-    auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
-    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
-    if (not res_right or not res_left) {
-        std::cout << "No valid lateral readings" << std::endl;
-        if (not res_right) std::cout << res_right.error() << std::endl;
-        if (not res_left) std::cout << res_left.error() << std::endl;
-        return;
-    }
-    // draw two lines at the edges of the range
-    float right_line_length = filtered_points[res_right.value()].distance2d;
-    float left_line_length = filtered_points[res_left.value()].distance2d;
-    float angle1 = filtered_points[res_left.value()].phi;
-    float angle2 = filtered_points[res_right.value()].phi;
-    QLineF line_left{QPointF(0.f, 0.f), robot_draw->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
-    QLineF line_right{QPointF(0.f, 0.f), robot_draw->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
-    QPen left_pen(Qt::blue, 10); // Blue color pen with thickness 3
-    QPen right_pen(Qt::red, 10); // Blue color pen with thickness 3
-    auto line1 = scene->addLine(line_left, left_pen);
-    auto line2 = scene->addLine(line_right, right_pen);
-    items.push_back(line1);
-    items.push_back(line2);
 
     // draw center point
     auto center = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::red), QBrush(QColor(QColorConstants::Svg::red)));

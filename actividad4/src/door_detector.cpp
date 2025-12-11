@@ -18,12 +18,11 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
     {
         const auto &p1 = p[0];
         const auto &p2 = p[1];
-        auto difference = abs((p2.distance2d - p1.distance2d));
+        auto difference = abs(p2.distance2d - p1.distance2d);
         auto closest = p1.distance2d < p2.distance2d ? p1 : p2;
 
         float avg_distance = ((p1.distance2d + p2.distance2d) / 2.0f);
-        float threshold = ( avg_distance < 3000.f) ? 700.f : 1000.f; // más estricto cerca, más permisivo lejos
-        if (difference > threshold)
+        if (difference > MIN_PEAK_THRESHOLD)
             peaks.push_back(std::make_tuple(Eigen::Vector2f(closest.x,closest.y), closest.phi));
     }
     if (peaks.empty()) return {};
@@ -36,6 +35,7 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
     peaks = nms_peaks;
 
     if (nms_peaks.empty()) return {};
+    qInfo() << "Total peaks: " << peaks.size() << " --- Filtered peaks: " << nms_peaks.size();
     draw_peaks(nms_peaks, scene);
 
     // compute doors in peaks data
@@ -45,7 +45,7 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
         const auto &p1 = c[0];
         const auto &p2 = c[1];
         auto dist = std::sqrt(std::pow(std::get<0>(p2).x()-std::get<0>(p1).x(), 2) + std::pow(std::get<0>(p2).y()-std::get<0>(p1).y(), 2));
-        if (MIN_DOOR_THRESHOLD < dist && dist < MAX_DOOR_THRESHOLD)
+        if (MIN_DOOR_THRESHOLD < dist and dist < MAX_DOOR_THRESHOLD)
         {
             // doors.push_back(Door(std::get<0>(p1), std::get<1>(p1), std::get<0>(p2), std::get<1>(p2)));  //caso normal
             if (std::get<1>(p1) <= std::get<1>(p2))
@@ -54,6 +54,7 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
                 doors.push_back(Door(std::get<0>(p2), std::get<1>(p2), std::get<0>(p1), std::get<1>(p1)));  //caso especial
         }
     }
+    qInfo() << "Total doors: " << doors.size();
     draw_doors(doors, scene);
 
     // for (const auto door : doors)
