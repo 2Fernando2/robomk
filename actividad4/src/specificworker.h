@@ -55,6 +55,7 @@
 #include "door_detector.h"
 #include "image_processor.h"
 #include "pointcloud_center_estimator.h"
+#include "door_crossing_tracker.h"
 
 #include <ranges>
 #include <expected>
@@ -156,7 +157,7 @@ private:
 		// match error correction
 		float MATCH_ERROR_SIGMA = 150.f; // mm
 		float DOOR_REACHED_DIST = 300.f;
-		std::string LIDAR_NAME_LOW = "bpearl";
+		std::string LIDAR_NAME_LOW = "pearl";
 		std::string LIDAR_NAME_HIGH = "helios";
 		QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 
@@ -190,7 +191,7 @@ private:
 
 	// rooms
 	std::vector<NominalRoom> nominal_rooms{NominalRoom{5500.f, 4000.f}, NominalRoom{8000.f, 4000.f}};
-	int room_index = 0;
+	int current_room = 0;
 	rc::Room_Detector room_detector; // object to compute the corners
 	rc::PointcloudCenterEstimator room_detector_estimator;
     rc::Hungarian hungarian; // object to match the two sets of corners
@@ -200,7 +201,8 @@ private:
 	DoorDetector door_detector;
 	Eigen::Vector2d door_center;
 	Doors doors;
-	int current_door_idx = -1;
+	DoorCrossing door_crossing;
+	int current_door = -1;
 
 	// random number generator
 	std::random_device rd;
@@ -250,14 +252,15 @@ private:
 	RetVal update_pose(const Corners &corners, const Match &match);
 
 	RetVal orient_to_door(const float &max_match_error);
-	RetVal goto_door(const RoboCompLidar3D::TPoints &points, const float &max_match_error);
+	RetVal goto_door(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene);
 	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
 	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
 
 	//Draw
 	void draw_lidar(auto &filtered_points, Eigen::Vector2d room_center, QGraphicsScene *scene);
 	void draw_target(const Eigen::Vector2d &point, QGraphicsScene *scene, bool last_iteratior);
-	void draw_doors(QGraphicsScene *scene);
+	void draw_nominal_room();
+	void draw_nominal_doors(QGraphicsScene *scene);
 
 	//aux
 	std::optional<RoboCompLidar3D::TPoints> read_data();
@@ -268,7 +271,7 @@ private:
 	std::tuple<float, float, double> do_work(const Eigen::Vector2d target);
 	Eigen::Vector2d target_;
 
-	void update_robot_pose(const Corners &corners, const Match &match);
+	std::optional<std::pair<Eigen::Affine2f, float>> update_robot_pose(const Corners &corners, const Eigen::Affine2f &r_pose, bool transform_corners);
 	void move_robot(float adv, float rot, float max_match_error);
 	Eigen::Vector3d solve_pose(const Corners &corners, const Match &match);
 	void predict_robot_pose();

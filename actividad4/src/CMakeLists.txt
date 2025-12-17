@@ -23,6 +23,7 @@ LIST(APPEND HEADERS
         ../src/time_series_plotter.h
         ../src/nominal_room.h
         ../src/pointcloud_center_estimator.h
+        ../src/door_crossing_tracker.h
 )
 
 INCLUDE($ENV{ROBOCOMP}/cmake/modules/opencv4.cmake)

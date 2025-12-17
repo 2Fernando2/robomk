@@ -35,7 +35,7 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
     peaks = nms_peaks;
 
     if (nms_peaks.empty()) return {};
-    qInfo() << "Total peaks: " << peaks.size() << " --- Filtered peaks: " << nms_peaks.size();
+    //qInfo() << "Total peaks: " << peaks.size() << " --- Filtered peaks: " << nms_peaks.size();
     draw_peaks(nms_peaks, scene);
 
     // compute doors in peaks data
@@ -54,7 +54,7 @@ Doors DoorDetector::detect(const RoboCompLidar3D::TPoints &points, QGraphicsScen
                 doors.push_back(Door(std::get<0>(p2), std::get<1>(p2), std::get<0>(p1), std::get<1>(p1)));  //caso especial
         }
     }
-    qInfo() << "Total doors: " << doors.size();
+    //qInfo() << "Total doors: " << doors.size();
     draw_doors(doors, scene);
 
     // for (const auto door : doors)

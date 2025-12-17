@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -1110,6 +1110,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "CMAKE_PROJECT_COMPAT_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
+		},
+		{
 			"name" : "CMAKE_PROJECT_DESCRIPTION",
 			"properties" : 
 			[
@@ -1187,7 +1199,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/share/cmake-4.0"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/share/cmake-4.1"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1311,7 +1323,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during all build types."
+					"value" : "Flags used by the archiver during the creation of static libraries during all build types."
 				}
 			],
 			"type" : "STRING",
@@ -1327,7 +1339,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during DEBUG builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during DEBUG builds."
 				}
 			],
 			"type" : "STRING",
@@ -1343,7 +1355,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during MINSIZEREL builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during MINSIZEREL builds."
 				}
 			],
 			"type" : "STRING",
@@ -1359,7 +1371,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during RELEASE builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during RELEASE builds."
 				}
 			],
 			"type" : "STRING",
@@ -1375,7 +1387,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during RELWITHDEBINFO builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during RELWITHDEBINFO builds."
 				}
 			],
 			"type" : "STRING",
@@ -1526,6 +1538,18 @@
 			"value" : "[/usr/include][v()]"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_XKB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding XKB"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/lib/x86_64-linux-gnu/libxkbcommon.so][/usr/include][v1.6.0(0.5.0)]"
+		},
+		{
 			"name" : "Freeze_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -1639,7 +1663,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_ARCHIVE_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_archive"
 		},
 		{
 			"name" : "Ice_DB_CHECKPOINT_EXECUTABLE",
@@ -1651,7 +1675,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_CHECKPOINT_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_checkpoint"
 		},
 		{
 			"name" : "Ice_DB_DEADLOCK_EXECUTABLE",
@@ -1663,7 +1687,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_DEADLOCK_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_deadlock"
 		},
 		{
 			"name" : "Ice_DB_DUMP_EXECUTABLE",
@@ -1675,7 +1699,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_DUMP_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_dump"
 		},
 		{
 			"name" : "Ice_DB_HOTBACKUP_EXECUTABLE",
@@ -1687,7 +1711,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_HOTBACKUP_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_hotbackup"
 		},
 		{
 			"name" : "Ice_DB_LOAD_EXECUTABLE",
@@ -1699,7 +1723,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_LOAD_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_load"
 		},
 		{
 			"name" : "Ice_DB_LOG_VERIFY_EXECUTABLE",
@@ -1711,7 +1735,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_LOG_VERIFY_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_log_verify"
 		},
 		{
 			"name" : "Ice_DB_PRINTLOG_EXECUTABLE",
@@ -1723,7 +1747,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_PRINTLOG_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_printlog"
 		},
 		{
 			"name" : "Ice_DB_RECOVER_EXECUTABLE",
@@ -1735,7 +1759,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_RECOVER_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_recover"
 		},
 		{
 			"name" : "Ice_DB_STAT_EXECUTABLE",
@@ -1747,7 +1771,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_STAT_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_stat"
 		},
 		{
 			"name" : "Ice_DB_TUNER_EXECUTABLE",
@@ -1771,7 +1795,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_UPGRADE_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_upgrade"
 		},
 		{
 			"name" : "Ice_DB_VERIFY_EXECUTABLE",
@@ -1783,7 +1807,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "Ice_DB_VERIFY_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/db_verify"
 		},
 		{
 			"name" : "Ice_DUMPDB_EXECUTABLE",
@@ -2651,7 +2675,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-I/usr/include"
 		},
 		{
 			"name" : "PKG_XKB_CFLAGS_I",
@@ -2687,10 +2711,46 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "1"
 		},
 		{
 			"name" : "PKG_XKB_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_XKB_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_XKB_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib/x86_64-linux-gnu;-lxkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_LDFLAGS_OTHER",
 			"properties" : 
 			[
 				{
@@ -2711,7 +2771,31 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "/usr/lib/x86_64-linux-gnu"
+		},
+		{
+			"name" : "PKG_XKB_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "xkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "PKG_XKB_LIBS",
@@ -2771,7 +2855,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "xkbcommon"
 		},
 		{
 			"name" : "PKG_XKB_PREFIX",
@@ -2783,7 +2867,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "/usr"
 		},
 		{
 			"name" : "PKG_XKB_STATIC_CFLAGS",
@@ -2795,7 +2879,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "-I/usr/include"
 		},
 		{
 			"name" : "PKG_XKB_STATIC_CFLAGS_I",
@@ -2822,6 +2906,42 @@
 			"value" : ""
 		},
 		{
+			"name" : "PKG_XKB_STATIC_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib/x86_64-linux-gnu;-lxkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
 			"name" : "PKG_XKB_STATIC_LIBDIR",
 			"properties" : 
 			[
@@ -2832,6 +2952,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : ""
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "xkbcommon"
+		},
+		{
+			"name" : "PKG_XKB_STATIC_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		},
 		{
 			"name" : "PKG_XKB_STATIC_LIBS",
@@ -2891,7 +3035,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "1.6.0"
 		},
 		{
 			"name" : "PKG_XKB_xkbcommon_INCLUDEDIR",
@@ -7563,7 +7707,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "XKB_INCLUDE_DIR-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "XKB_LIBRARY",
@@ -7575,7 +7719,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "XKB_LIBRARY-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxkbcommon.so"
 		},
 		{
 			"name" : "_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX",
@@ -7588,6 +7732,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "/usr/local"
+		},
+		{
+			"name" : "__pkg_config_arguments_PKG_XKB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "QUIET;xkbcommon"
 		},
 		{
 			"name" : "__pkg_config_checked_PKG_XKB",
@@ -7652,6 +7808,34 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/usuario/robomk/actividad4"
+		},
+		{
+			"name" : "pkgcfg_lib_PKG_XKB_xkbcommon",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/libxkbcommon.so"
+		},
+		{
+			"name" : "prefix_result",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib/x86_64-linux-gnu"
 		}
 	],
 	"kind" : "cache",

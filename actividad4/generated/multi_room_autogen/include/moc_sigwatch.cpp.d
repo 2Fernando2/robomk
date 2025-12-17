@@ -1,4 +1,4 @@
-/home/usuario/robomk/actividad4/generated/multi_room_autogen/include/moc_sigwatch.cpp: /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
+/home/usuario/robomk/actividad4/generated/multi_room_autogen/include/moc_sigwatch.cpp: /home/usuario/robocomp/classes/sigwatch/sigwatch.h \
   /home/usuario/robomk/actividad4/generated/multi_room_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

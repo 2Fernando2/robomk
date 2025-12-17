@@ -12,6 +12,7 @@
   /home/usuario/robomk/actividad4/generated/OmniRobot.h \
   /home/usuario/robomk/actividad4/generated/genericworker.h \
   /home/usuario/robomk/actividad4/src/common_types.h \
+  /home/usuario/robomk/actividad4/src/door_crossing_tracker.h \
   /home/usuario/robomk/actividad4/src/door_detector.h \
   /home/usuario/robomk/actividad4/src/hungarian.h \
   /home/usuario/robomk/actividad4/src/image_processor.h \
