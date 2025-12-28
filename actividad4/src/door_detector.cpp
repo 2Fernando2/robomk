@@ -109,6 +109,7 @@ std::tuple<RoboCompLidar3D::TPoints, Doors> DoorDetector::filter_points(const Ro
         if(!erased)
             filtered.emplace_back(p);
     }
+    doors_cache = doors;
     return {filtered, doors};
 }
 

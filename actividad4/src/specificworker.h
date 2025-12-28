@@ -106,7 +106,7 @@ private:
 	/* Para entrada de teclado manual */
 	// Los dos primeros métodos se llaman en el constructor y destructor respectivamente
 	// 'keyw' se llama en el compute
-    bool keyw_mode = true; // poner a true o false para desactivar o activar máquina de estados por la entrada manual ;)
+    bool keyw_mode = false; // poner a true o false para desactivar o activar máquina de estados por la entrada manual ;)
 	static struct termios original_terminal;
 	void set_non_blocking_mode(){
 		struct termios new_terminal;
@@ -273,9 +273,6 @@ private:
 
 	std::optional<std::pair<Eigen::Affine2f, float>> update_robot_pose(const Corners &corners, const Eigen::Affine2f &r_pose, bool transform_corners);
 	void move_robot(float adv, float rot, float max_match_error);
-	Eigen::Vector3d solve_pose(const Corners &corners, const Match &match);
-	void predict_robot_pose();
-	std::tuple<float, float> robot_controller(const Eigen::Vector2f &target);
 
 
 signals:

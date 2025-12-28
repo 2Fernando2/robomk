@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/405/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/409/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/405/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/409/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robomk/actividad4
+CMAKE_SOURCE_DIR = /home/varo/robomk/actividad4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robomk/actividad4
+CMAKE_BINARY_DIR = /home/varo/robomk/actividad4
 
 # Utility rule file for ICE_Lidar3D_target.
 
@@ -68,9 +68,9 @@ include generated/CMakeFiles/ICE_Lidar3D_target.dir/progress.make
 
 generated/CMakeFiles/ICE_Lidar3D_target: generated/Lidar3D.ice
 
-generated/Lidar3D.ice: /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robomk/actividad4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/usuario/robomk/actividad4/generated/Lidar3D.ice from /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl"
-	cd /home/usuario/robomk/actividad4/generated && robocompdsl /home/usuario/robocomp/interfaces/IDSLs/Lidar3D.idsl /home/usuario/robomk/actividad4/generated/Lidar3D.ice
+generated/Lidar3D.ice: /home/robocomp/robocomp/interfaces/IDSLs/Lidar3D.idsl
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/varo/robomk/actividad4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/varo/robomk/actividad4/generated/Lidar3D.ice from /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl"
+	cd /home/varo/robomk/actividad4/generated && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl /home/varo/robomk/actividad4/generated/Lidar3D.ice
 
 generated/CMakeFiles/ICE_Lidar3D_target.dir/codegen:
 .PHONY : generated/CMakeFiles/ICE_Lidar3D_target.dir/codegen
@@ -85,10 +85,10 @@ generated/CMakeFiles/ICE_Lidar3D_target.dir/build: ICE_Lidar3D_target
 .PHONY : generated/CMakeFiles/ICE_Lidar3D_target.dir/build
 
 generated/CMakeFiles/ICE_Lidar3D_target.dir/clean:
-	cd /home/usuario/robomk/actividad4/generated && $(CMAKE_COMMAND) -P CMakeFiles/ICE_Lidar3D_target.dir/cmake_clean.cmake
+	cd /home/varo/robomk/actividad4/generated && $(CMAKE_COMMAND) -P CMakeFiles/ICE_Lidar3D_target.dir/cmake_clean.cmake
 .PHONY : generated/CMakeFiles/ICE_Lidar3D_target.dir/clean
 
 generated/CMakeFiles/ICE_Lidar3D_target.dir/depend:
-	cd /home/usuario/robomk/actividad4 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robomk/actividad4 /home/usuario/robomk/actividad4/generated /home/usuario/robomk/actividad4 /home/usuario/robomk/actividad4/generated /home/usuario/robomk/actividad4/generated/CMakeFiles/ICE_Lidar3D_target.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/varo/robomk/actividad4 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/varo/robomk/actividad4 /home/varo/robomk/actividad4/generated /home/varo/robomk/actividad4 /home/varo/robomk/actividad4/generated /home/varo/robomk/actividad4/generated/CMakeFiles/ICE_Lidar3D_target.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : generated/CMakeFiles/ICE_Lidar3D_target.dir/depend
 
