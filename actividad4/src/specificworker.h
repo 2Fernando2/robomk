@@ -156,7 +156,7 @@ private:
 		float WALL_MIN_DISTANCE = ROBOT_WIDTH*1.2;
 		// match error correction
 		float MATCH_ERROR_SIGMA = 150.f; // mm
-		float DOOR_REACHED_DIST = 300.f;
+		float DOOR_REACHED_DIST = 400.f;
 		std::string LIDAR_NAME_LOW = "pearl";
 		std::string LIDAR_NAME_HIGH = "helios";
 		QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
@@ -166,11 +166,12 @@ private:
 		float RELOCAL_KP = 0.002f;           // gain to convert mean (mm) -> speed (magnitude)
 		float RELOCAL_MAX_ADV = 300.f;       // mm/s cap while re-centering
 		float RELOCAL_MAX_SIDE = 300.f;      // mm/s cap while re-centering
-		float RELOCAL_ROT_SPEED = 0.3f;     // rad/s while aligning
+		float RELOCAL_ROT_SPEED = 0.8f;     // rad/s while aligning
 		float RELOCAL_DELTA = 5.0f * M_PI/180.f; // small probe angle in radians
 		float RELOCAL_MATCH_MAX_DIST = 2000.f;   // mm for Hungarian gating
 		float RELOCAL_DONE_COST = 500.f;
 		float RELOCAL_DONE_MATCH_MAX_ERROR = 2000.f;
+		float RELOCAL_MAX_ORIENTED_ERROR = 0.1f;
 
 		bool rotating = false;
 		bool rot_direction = false; // true: right - false: left
@@ -244,7 +245,7 @@ private:
 	STATE state = STATE::GOTO_ROOM_CENTER;
 	using RetVal = std::tuple<STATE, float, float>;
 
-	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Match &match, const Corners &corners, const float &max_math_error);
+	RetVal state_machine(const RoboCompLidar3D::TPoints &points, const Eigen::Vector2f &center_point, const Corners &corners, const float &max_math_error);
 
 	RetVal localise(const Match &match);
 	RetVal goto_room_center(const RoboCompLidar3D::TPoints &points);
@@ -252,7 +253,7 @@ private:
 	RetVal update_pose(const Corners &corners, const Match &match);
 
 	RetVal orient_to_door(const float &max_match_error);
-	RetVal goto_door(const RoboCompLidar3D::TPoints &points, QGraphicsScene *scene);
+	RetVal goto_door(const RoboCompLidar3D::TPoints &points, const Eigen::Vector2f &center_point, QGraphicsScene *scene);
 	RetVal cross_door(const RoboCompLidar3D::TPoints &points);
 	RetVal process_state(const RoboCompLidar3D::TPoints &data, const Corners &corners, const Match &match, AbstractGraphicViewer *viewer);
 

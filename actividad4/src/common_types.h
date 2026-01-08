@@ -86,22 +86,23 @@ struct Door
     [[nodiscard]] Eigen::Vector2f center() const { return 0.5f * (p1 + p2); }
     [[nodiscard]] float center_angle() const { const auto c=center(); return atan2(c.x(),c.y()); }
     [[nodiscard]] Eigen::Vector2f center_global() const { return 0.5f * (p1_global + p2_global); }
-    [[nodiscard]] Eigen::Vector2f center_before(const Eigen::Vector2f &robot_pos, float offset = 500.f) const   // a point 500mm before the center along the door direction
+    [[nodiscard]] Eigen::Vector2f center_before(const Eigen::Vector2f &robot_pos, const Eigen::Vector2f &center_point, float offset = 500.f) const   // a point 500mm before the center along the door direction
     {
         // computer the normal to the door direction pointing towards the robot
         Eigen::Vector2f dir = p2 - p1;
         const float dir_norm = dir.norm();
-        if (dir_norm == 0.f)
-            return center(); // degenerate door, return center
+        const float EPSILON = 1e-6f;
+        if (dir_norm < EPSILON) return center(); // degenerate door, return center
         dir /= dir_norm;
         // perpendicular (normal) to door direction
         Eigen::Vector2f normal(-dir.y(), dir.x());
         // choose the normal that points toward the robot
-        const Eigen::Vector2f to_robot = robot_pos.cast<float>() - center();
-        if (to_robot.dot(normal) < 0.f)
-            normal = -normal;
-        Eigen::Vector2f before = center() + offset * normal;
-        return before;
+        Eigen::Vector2f pA = center() + offset * normal;
+        Eigen::Vector2f pB = center() - offset * normal;
+        float dist_A = (pA - center_point).norm();
+        float dist_B = (pB - center_point).norm();
+        if (dist_A < dist_B) return pA;
+        else return pB;
     }
     [[nodiscard]] float direction() const
     {
