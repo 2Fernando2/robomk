@@ -138,6 +138,8 @@ private:
 
 	bool startup_check_flag;
 
+	bool finished_ = false;
+
 	struct Params
 	{
 		float ROBOT_WIDTH = 460;  // mm
@@ -151,6 +153,7 @@ private:
 		float ADVANCE_THRESHOLD = ROBOT_WIDTH * 3; // mm // float adv_speed = MAX_ADV_SPEED;
 		float LIDAR_FRONT_SECTION = 0.2; // rads, aprox 12 degrees
 		// wall
+		float LIDAR_DISTANCE = 12000.f;
 		float LIDAR_RIGHT_SIDE_SECTION = M_PI/3; // rads, 90 degrees
 		float LIDAR_LEFT_SIDE_SECTION = -M_PI/3; // rads, 90 degrees
 		float WALL_MIN_DISTANCE = ROBOT_WIDTH*1.2;
@@ -198,12 +201,17 @@ private:
     rc::Hungarian hungarian; // object to match the two sets of corners
 	QColor colors[2] = {QColor("red"), QColor("green")};
 
+	// Door Crossing
+	DoorCrossing door_crossing;
+	std::vector<std::vector<std::optional<DoorCrossing>>> door_crossing_data;
+
 	// Doors
 	DoorDetector door_detector;
 	Eigen::Vector2d door_center;
 	Doors doors;
-	DoorCrossing door_crossing;
+	Doors last_doors;
 	int current_door = -1;
+	bool door_selected = false;
 
 	// random number generator
 	std::random_device rd;
@@ -270,6 +278,7 @@ private:
 	std::optional<RoboCompLidar3D::TPoints> filter_isolated_points(const RoboCompLidar3D::TPoints &points, float d);
 	void print_match(const Match &match, const float error =1.f) const;
 	std::tuple<float, float, double> do_work(const Eigen::Vector2d target);
+	Doors validate_doors(const Doors &current_doors);
 	Eigen::Vector2d target_;
 
 	std::optional<std::pair<Eigen::Affine2f, float>> update_robot_pose(const Corners &corners, const Eigen::Affine2f &r_pose, bool transform_corners);
