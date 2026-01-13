@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/varo/robomk/actividad4/cmake_install.cmake",
-		"/home/varo/robomk/actividad4/generated/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

@@ -1,0 +1,5 @@
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/ICES__home_varo_robocomp_components_robomk_actividad4_mnist_detector.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
