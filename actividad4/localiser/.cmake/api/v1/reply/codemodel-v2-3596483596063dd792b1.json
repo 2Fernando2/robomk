@@ -115,7 +115,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "multi_room::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-multi_room-a7547bd2c5c009c14a1b.json",
+					"jsonFile" : "target-multi_room-66ddf478baf324e76d00.json",
 					"name" : "multi_room",
 					"projectIndex" : 0
 				},
@@ -129,7 +129,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "multi_room_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
-					"jsonFile" : "target-multi_room_autogen_timestamp_deps-5669e49f98056a76455a.json",
+					"jsonFile" : "target-multi_room_autogen_timestamp_deps-41d44f69e6cfd0dfe4a4.json",
 					"name" : "multi_room_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
@@ -145,6 +145,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 8
 	}
 }

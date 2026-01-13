@@ -26,9 +26,9 @@
 		"files" : 
 		[
 			"generated/CMakeLists.txt",
-			"/usr/share/cmake-3.28/Modules/FindOpenGL.cmake",
+			"/snap/clion/411/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindOpenGL.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/clion/411/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -108,7 +108,7 @@
 			{
 				"command" : 3,
 				"file" : 3,
-				"line" : 76,
+				"line" : 78,
 				"parent" : 12
 			},
 			{
@@ -128,13 +128,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 673,
+				"line" : 712,
 				"parent" : 16
 			},
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 671,
+				"line" : 710,
 				"parent" : 16
 			},
 			{
@@ -374,10 +374,6 @@
 	{
 		"commandFragments" : 
 		[
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
 			{
 				"backtrace" : 2,
 				"fragment" : "-ltbb",

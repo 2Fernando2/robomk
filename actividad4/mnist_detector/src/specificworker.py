@@ -136,70 +136,6 @@ class SpecificWorker(GenericWorker):
                                     best_rect = [x1, y1, x2, y2]
         return best_rect
 
-        # color_copy = color.copy()
-        # gray = cv2.cvtColor(color, cv2.COLOR_BGR2GRAY)
-        # # gray = cv2.GaussianBlur(gray, (5, 5), 0)
-        
-        # # _, edges = cv2.threshold( gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-        # _, edges = cv2.threshold( gray, 80, 255, cv2.THRESH_BINARY_INV)
-
-        # # Find contours
-        # contours, _ = cv2.findContours( edges, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE )
-
-        # if not contours:
-        #     print("No contours found")
-        #     return None
-
-        # best_cnt = None
-        # best_score = -1
-
-        # h, w = gray.shape
-
-        # candidates = []
-        # for cnt in contours:
-        #     area = cv2.contourArea(cnt)
-        #     if area < 0.01 * w * h:  # skip tiny contours
-        #         continue
-
-        #     # Approximate contour to polygon
-        #     peri = cv2.arcLength(cnt, True)
-        #     approx = cv2.approxPolyDP(cnt, 0.05 * peri, True)
-
-        #     # Get bounding box
-        #     x, y, bw, bh = cv2.boundingRect(approx)
-        #     aspect_ratio = bw / float(bh)
-
-        #     # Check "squareness"
-        #     if 0.5 <= aspect_ratio <= 2.0:
-        #         candidates.append((area,x, y, bw, bh))
-
-        # for c in candidates:
-        #     _, x, y, bw, bh = c
-
-        #     # Score candidates based on the amount of white pixels inside
-        #     image = edges[y:y+bh, x:x+bw]
-        #     white_pixels = cv2.countNonZero(image)
-        #     total_pixels = bw * bh
-        #     white_ratio = white_pixels / total_pixels
-        #     score = white_ratio
-        #     if score > best_score:
-        #         best_score = score
-        #         best_cnt = c
-
-        # if best_cnt is not None:
-        #     # Crop inside the frame to get the white area + digit only
-        #     margin = int(min(bw, bh) * 5 / 100)  # 5% margin
-        #     x1 = max(0, x + margin)
-        #     y1 = max(0, y + margin)
-        #     x2 = min(w, x + bw - margin)
-        #     y2 = min(h, y + bh - margin)
-
-        #     if x2 <= x1 or y2 <= y1:
-        #         return None
-
-        #     return [x1, y1, x2, y2]
-        # else:
-        #     return None
 
     ####################################################################
     def startup_check(self):
@@ -265,7 +201,7 @@ class SpecificWorker(GenericWorker):
                 mat = np.float32([[1, 0, shift_x], [0, 1, shift_y]])
                 canvas = cv2.warpAffine(canvas, mat, (28, 28))
             # Debug
-            cv2.imshow("Input to MNIST (28x28)", cv2.resize(canvas, (280, 280), interpolation=cv2.INTER_NEAREST))
+            # cv2.imshow("Input to MNIST (28x28)", cv2.resize(canvas, (280, 280), interpolation=cv2.INTER_NEAREST))
             # PyTorch normalization
             final_img = canvas.astype(np.float32) / 255.0
             final_img = (final_img - 0.1307) / 0.3081

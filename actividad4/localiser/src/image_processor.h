@@ -27,7 +27,46 @@ namespace rc
         static std::tuple<bool, int, int> check_number_in_image(RoboCompMNIST::MNISTPrxPtr mnist_proxy,
                                                                 RoboCompCamera360RGB::Camera360RGBPrxPtr camera_proxy=nullptr,
                                                                 QLabel *label_img = nullptr) {
-            // If visualization si requested and camera proxy available
+            struct DetectionState {
+                std::map<int, int> votes;
+                int frames_with_detection = 0;
+                int frames_without_detection = 0;
+                int frames_centered = 0;
+                std::chrono::steady_clock::time_point last_detection_time;
+
+                void reset() {
+                    votes.clear();
+                    frames_with_detection = 0;
+                    frames_without_detection = 0;
+                    frames_centered = 0;
+                }
+
+                bool has_confidence_result(int &winner, int &confidence) const {
+                    if (votes.empty()) return false;
+                    auto winner_it = std::max_element(votes.begin(), votes.end(),
+                        [](const auto &a, const auto &b){return a.second < b.second;});
+                    winner = winner_it->first;
+                    confidence = winner_it->second;
+
+                    int total_votes = 0;
+                    for (const auto &count: votes | std::views::values) total_votes += count;
+
+                    if (total_votes < 5) return false;
+
+                    float win_ratio = static_cast<float>(confidence) / static_cast<float>(total_votes);
+                    return (win_ratio >= 0.6f) || (confidence >= 8);
+                }
+            };
+            static DetectionState state;
+
+            auto now = std::chrono::steady_clock::now();
+            if (state.frames_without_detection == 0 && !state.votes.empty()) state.last_detection_time = now;
+            if (!state.votes.empty()) {
+                auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - state.last_detection_time).count();
+                if (elapsed > 2) state.reset();
+            }
+
+            // Proxies availability
             if (!label_img || !camera_proxy) {qWarning() << "[IMAGE PROCESSOR] Proxies no inicializados."; return {false, -1, 0};};
             try {
                 RoboCompCamera360RGB::TImage img = camera_proxy->getROI(-1, -1, -1, -1, -1, -1);
@@ -88,7 +127,15 @@ namespace rc
                 // Visualization (debug)
                 cv::Mat display_img;
                 cv::cvtColor(roi, display_img, cv::COLOR_BGR2RGB);
-                if (!candidate_found){ if (label_img) update_label(label_img, display_img); return {false, -1, 1};}
+                if (!candidate_found) {
+                    state.frames_without_detection++;
+                    if (state.frames_without_detection > 20) if (!state.votes.empty()) state.reset();
+                    if (label_img) update_label(label_img, display_img);
+                    return {false, -1, 1};
+                }
+
+                state.frames_without_detection = 0;
+                state.frames_with_detection++;
 
                 // Visual Servoing
                 cv::Point2f rect_center = (best_rect.tl() + best_rect.br()) * 0.5f;
@@ -98,39 +145,51 @@ namespace rc
                 cv::circle(display_img, rect_center, 5, cv::Scalar(0, 255, 0), -1);
 
                 // Tolerance central zone
-                const int img_center_x = display_img.cols / 2;
-                const int tolerance = display_img.cols / 10; // 10% tolerance
+                const float img_center_x = static_cast<float>(display_img.cols) / 2.0f;
+                const float align_tolerance = static_cast<float>(display_img.cols) / 10.0f;
+                const float capture_tolerance = static_cast<float>(display_img.cols) / 2.2f;
 
+                float offset_from_center = rect_center.x - img_center_x;
                 int direction = 0;
-                if (rect_center.x < (img_center_x - tolerance)) direction = -1; // left
-                else if (rect_center.x > (img_center_x + tolerance)) direction = 1; // right
-                else direction = 0; // centered
+                if (offset_from_center < -align_tolerance) direction = -1; // left
+                else if (offset_from_center > align_tolerance) direction = 1; // right
+                else { direction = 0; state.frames_centered++;} // centered
 
-                int detected_number = -1;
-                // Call MNIST if centered
-                if (direction == 0) {
+                if (std::abs(offset_from_center) < capture_tolerance) {
                     try {
                         RoboCompMNIST::Digit digit = mnist_proxy->getNumber();
-                        detected_number = digit.value;
-                        qInfo() << "Detected number: " << detected_number;
-
-                        if (detected_number > 0 && detected_number <= 2) {
-                            std::string num_str = std::to_string(detected_number);
-                            cv::putText(display_img, "ID: " + num_str, best_rect.tl(), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(0, 255, 0), 3);
-                        }
-                    } catch (const Ice::Exception &e) {qWarning() << "[IMAGE PROCESSOR] Error calling MNIST" << e.what();}
+                        int detected_val = digit.value;
+                        if (detected_val > 0 && detected_val <= 9)
+                            state.votes[detected_val]++;
+                    } catch (const Ice::Exception &e) {}
                 }
 
                 // update GUI
                 if (label_img) update_label(label_img, display_img);
 
+                // Not centered, keep turning
                 if (direction != 0) { return {false, -1, direction}; }
-                else {
-                    if (detected_number > 0 && detected_number <= 2) return {true, detected_number, 0};
-                    else return {false, -1, 0};
+
+                // Confidence timeout - quicker turning
+                if (state.frames_centered > 50) {
+                    state.reset();
+                    return {false, -1, 1};
                 }
+
+                // Centered, search for confidence result
+                int winner = -1;
+                int confidence = 0;
+                if (state.has_confidence_result(winner, confidence))
+                    if (winner > 0 && winner <= 2) {
+                        qInfo() << "Number detected with high confidence: " << winner << " - Confidence: " << confidence;
+                        state.reset();
+                        return {true, winner, 0};
+                    }
+                qInfo() << "Not enough conficende, keep turning.." ;
+                // Not enough confidence, keep turning a bit
+                return {false, -1, 0.1};
             } catch (const Ice::Exception &e) {qWarning() << "[IMAGE PROCESSOR] Error reading camera for visualization";}
-            return {false, -1, 0};
+            return {false, -1, 0.1};
         }
 
 

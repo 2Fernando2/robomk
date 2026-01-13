@@ -379,6 +379,10 @@ SpecificWorker::RetVal SpecificWorker::goto_door(const RoboCompLidar3D::TPoints 
     // Exit condition
     if (dist_to_door < params.DOOR_REACHED_DIST)
     {
+        if (door_target_draw != nullptr) {
+            scene->removeItem(door_target_draw);
+            door_target_draw = nullptr;
+        }
         door_selected = false;
         return {STATE::ORIENT_TO_DOOR, 0.0f, 0.0f};
     }
@@ -410,6 +414,7 @@ Doors SpecificWorker::validate_doors(const Doors &current_doors) {
 SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_error) {
     static std::chrono::time_point<std::chrono::high_resolution_clock> last_time = std::chrono::high_resolution_clock::now();
     static bool first_time = true;
+    bool lost = false;
     //if (first_time) {first_time = false; last_time = std::chrono::high_resolution_clock::now();}
     if (max_match_error > params.RELOCAL_DONE_MATCH_MAX_ERROR) {
         if (first_time) {last_time = std::chrono::high_resolution_clock::now(); first_time = false;}
@@ -418,21 +423,21 @@ SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_err
         if (elapsed > 3000) {
             localised = false;
             first_time = true;
-            return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+            lost = true;
+            // return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
         }
     } else first_time = true;
 
     const auto doors = door_detector.doors();
     // const auto doors = validate_doors(_doors);
-    if (localised && !door_selected) {
+    if (localised) { // && !door_selected
         auto nominal_door = nominal_rooms[current_room].doors[current_door];
         const auto selected_door = std::ranges::min_element(doors, [nominal_door, this](const auto &a, const auto &b) {
             return (a.center() - robot_pose.inverse() * nominal_door.center_global()).norm() < (b.center() - robot_pose.inverse() * nominal_door.center_global()).norm(); });
-        door_selected = true;
+        // door_selected = true;
         draw_target(Eigen::Vector2d(selected_door->center().x(), selected_door->center().y()), &viewer->scene, false);
-        //qInfo() << __FUNCTION__ << abs(selected_door->center_angle()) << params.RELOCAL_MAX_ORIENTED_ERROR;
         if (abs(selected_door->center_angle()) < params.RELOCAL_MAX_ORIENTED_ERROR) {
-            door_selected = false;
+            // door_selected = false;
             draw_target(Eigen::Vector2d(selected_door->center().x(), selected_door->center().y()), &viewer->scene, true);
             return {STATE::CROSS_DOOR, 0.7f, 0.f};
         }
@@ -444,7 +449,11 @@ SpecificWorker::RetVal SpecificWorker::orient_to_door(const float &max_match_err
     else { // select the one closest to the robot's heading direction
         const auto selected_door = std::ranges::min_element(doors, [](const auto &a, const auto &b)
             {return std::fabs(a.center_angle()) < std::fabs(b.center_angle()); });
-        door_selected = true;
+        // door_selected = true;
+        if (lost) {
+            draw_target(Eigen::Vector2d(selected_door->center().x(), selected_door->center().y()), &viewer->scene, true);
+            return {STATE::GOTO_ROOM_CENTER, 0.f, 0.f};
+        }
         draw_target(Eigen::Vector2d(selected_door->center().x(), selected_door->center().y()), &viewer->scene, false);
         if (abs(selected_door->center_angle()) < params.RELOCAL_MAX_ORIENTED_ERROR) {
             draw_target(Eigen::Vector2d(selected_door->center().x(), selected_door->center().y()), &viewer->scene, true);
