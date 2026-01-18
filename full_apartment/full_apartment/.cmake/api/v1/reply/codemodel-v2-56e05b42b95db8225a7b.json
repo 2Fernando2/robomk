@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-704a6333498575303ad6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "generated",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-generated-e4a0d71f4f80ea5f26b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "generated",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "full_apartment",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ICES__home_varo_robocomp_components_robomk_full_apartment_full_apartment_generated::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICES__home_varo_robocomp_components_robomk_full_apartment_full_apartment_generated-8de620b01f69cec29268.json",
+					"name" : "ICES__home_varo_robocomp_components_robomk_full_apartment_full_apartment_generated",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_Camera360RGB_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_Camera360RGB_target-380c2c6aaa4345cf8c46.json",
+					"name" : "ICE_Camera360RGB_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_GenericBase_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_GenericBase_target-0c7c950428822d997306.json",
+					"name" : "ICE_GenericBase_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_Lidar3D_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_Lidar3D_target-9a84d3ac2826bfd511f5.json",
+					"name" : "ICE_Lidar3D_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_MNIST_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_MNIST_target-9bb15e945400b302f929.json",
+					"name" : "ICE_MNIST_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ICE_OmniRobot_target::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-ICE_OmniRobot_target-50cbbd6765c9f657c4b4.json",
+					"name" : "ICE_OmniRobot_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "full_apartment::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-full_apartment-1c14caf2df93188df36a.json",
+					"name" : "full_apartment",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "full_apartment_autogen::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-full_apartment_autogen-2f8cfd3c295c84695bd8.json",
+					"name" : "full_apartment_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "full_apartment_autogen_timestamp_deps::@21bfa6e54ac71a0c1a55",
+					"jsonFile" : "target-full_apartment_autogen_timestamp_deps-4a2d203fe856143e394e.json",
+					"name" : "full_apartment_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/varo/robocomp/components/robomk/full_apartment/full_apartment",
+		"source" : "/home/varo/robocomp/components/robomk/full_apartment/full_apartment"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/varo/robocomp/components/robomk/actividad4/localiser/cmake_install.cmake",
-		"/home/varo/robocomp/components/robomk/actividad4/localiser/generated/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

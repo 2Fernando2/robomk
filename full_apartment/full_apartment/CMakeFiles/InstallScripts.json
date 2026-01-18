@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/varo/robocomp/components/robomk/full_apartment/full_apartment/cmake_install.cmake",
+		"/home/varo/robocomp/components/robomk/full_apartment/full_apartment/generated/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

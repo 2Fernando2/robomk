@@ -1,0 +1,28 @@
+// Switch state condition
+	auto begin_offset = closest_lidar_index_to_given_angle(points.value(), -LidarAngles::FRONT_VISION_FW);
+	auto end_offset = closest_lidar_index_to_given_angle(points.value(), LidarAngles::FRONT_VISION_FW);
+	if (not begin_offset or not end_offset){std::cout << begin_offset.error() <<   << end_offset.error() << std::endl; return {};}
+	auto min_point = std::min_element(std::begin(points.value()) + begin_offset.value(), std::begin(points.value()) + end_offset.value(),
+									  [](const auto& p1, const auto& p2) {return p1.distance2d < p2.distance2d;});
+	if (min_point->distance2d <= MIN_THRESHOLD)
+		return std::make_tuple(SpecificWorker::State::TURN, 0.f, 0.f);
+
+	// Lateral check: ¿right or left?
+	auto left = closest_lidar_index_to_given_angle(points.value(), LidarAngles::LEFT);
+	auto right = closest_lidar_index_to_given_angle(points.value(), LidarAngles::RIGHT);
+	if (not left or not right){std::cout << left.error() <<   << right.error() << std::endl; return {};}
+	auto left_point = points.value()[left.value()];
+	auto right_point = points.value()[right.value()];
+	bool left_side = (left_point.distance2d < right_point.distance2d);
+
+	auto side_begin_offset = closest_lidar_index_to_given_angle(points.value(), (left_side) ? LidarAngles::FRONT_LEFT : -LidarAngles::BACK_LEFT);
+	auto side_end_offset = closest_lidar_index_to_given_angle(points.value(), (left_side) ? LidarAngles::BACK_LEFT : -LidarAngles::FRONT_LEFT);
+	if (not side_begin_offset or not side_end_offset){std::cout << side_begin_offset.error() <<   << side_end_offset.error() << std::endl; return {};}
+	auto min_lateral_point = std::min_element(std::begin(points.value()) + side_begin_offset.value(), std::begin(points.value()) + side_end_offset.value(),
+											  [](const auto& p1, const auto& p2){return p1.distance2d < p2.distance2d;});
+	if (min_lateral_point->phi != ((left_side) ? LidarAngles::LEFT : LidarAngles::RIGHT)){
+		//if(left_side) qInfo() << Turn: right; else qInfo() << Turn: left;
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 0.f, adjusted_dir);}
+	else{
+		qInfo() << Following wall!;
+		return std::make_tuple(SpecificWorker::State::FOLLOW_WALL, 1000.f, 0.f);}

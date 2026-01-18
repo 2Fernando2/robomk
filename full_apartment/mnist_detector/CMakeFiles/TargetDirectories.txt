@@ -1,0 +1,8 @@
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/CMakeFiles/ICES__home_varo_robocomp_components_robomk_actividad4_mnist_detector.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/CMakeFiles/ICE_Camera360RGB_target.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/CMakeFiles/ICE_MNIST_target.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/CMakeFiles/create_symlink.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/CMakeFiles/edit_cache.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/CMakeFiles/rebuild_cache.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/src/CMakeFiles/edit_cache.dir
+/home/varo/robocomp/components/robomk/actividad4/mnist_detector/src/CMakeFiles/rebuild_cache.dir
